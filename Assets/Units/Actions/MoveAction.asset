@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e74bb2ab94cafc24aa0e1b7f8092da3e, type: 3}
+  m_Name: MoveAction
+  m_EditorClassIdentifier: Assembly-CSharp::MoveAction
+  <Name>k__BackingField: Move
+  <Icon>k__BackingField: {fileID: 21300000, guid: d2c72d76ba867bc438c5cd1e2635e5c5, type: 3}
+  <HotKey>k__BackingField: 27
+  <UIPosition>k__BackingField: 0
+  <IsSingleUnitCommand>k__BackingField: 0
