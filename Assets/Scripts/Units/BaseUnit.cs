@@ -4,11 +4,9 @@ using UnityEngine.AI;
 
 [RequireComponent (typeof(NavMeshAgent), typeof(BehaviorGraphAgent))]
 public class BaseUnit : CommonActions, IMoveable
-{
-    
-
-    private BehaviorGraphAgent behaviorGraphAgent;
-    private NavMeshAgent navMeshAgent;
+{   
+    protected BehaviorGraphAgent behaviorGraphAgent;
+    protected NavMeshAgent navMeshAgent;
 
    
     void Awake()

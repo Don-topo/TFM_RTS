@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using static UnityEngine.UI.GridLayoutGroup;
 
-public class CommonActions : MonoBehaviour, ISelectable
+public abstract class CommonActions : MonoBehaviour, ISelectable
 {
     [field: SerializeField] public bool IsSelected { get; protected set; }
 

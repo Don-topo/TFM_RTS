@@ -5,5 +5,8 @@ using Unity.Behavior;
 public enum UnitActions
 {
 	Move,
-	Stop
+	Stop,
+	Attack,
+	Patrol,
+	Heal
 }

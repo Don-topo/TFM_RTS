@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
@@ -7,6 +8,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private UIActions uiActions;
     [SerializeField] private UIUnitBaseInfo uiUnitBase;
     [SerializeField] private UISingleUnit uiSingleUnit;
+    [SerializeField] private UIMultipleUnits uIMultipleUnits;
 
     public UnitSelectedEvent unitSelectedEvent;
     public UnitDeselectEvent unitDeselectEvent;
@@ -20,9 +22,10 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        //UIActions.DisableActionButtons();
+        uiActions.DisableActionButtons();
         uiUnitBase.Disable();
         uiSingleUnit.Disable();
+        uIMultipleUnits.Disable();
     }
 
     private void OnDestroy()
@@ -45,16 +48,31 @@ public class UIManager : MonoBehaviour
 
     private void UpdateUI()
     {
-        if(selectedUnits.Count == 1)
+        if(selectedUnits.Count > 0)
         {
-            CommonActions selectedUnit = (CommonActions)selectedUnits.First();
-            uiUnitBase.Enable(selectedUnit);
-            uiSingleUnit.Enable(selectedUnit);
+            if(selectedUnits.Count == 1)
+            {
+                CommonActions selectedUnit = (CommonActions)selectedUnits.First();
+                uiUnitBase.Enable(selectedUnit);
+                uiSingleUnit.Enable(selectedUnit);
+                List<CommonActions> list = new() { selectedUnit };
+                uiActions.EnableActionButtons(list);
+            }
+            else
+            {
+                uiUnitBase.Disable();
+                uiSingleUnit.Disable();
+                List<CommonActions> list = new();
+                list.AddRange(selectedUnits);
+                uIMultipleUnits.Enable(list);
+            }                        
         }
         else
         {
             uiUnitBase.Disable();
             uiSingleUnit.Disable();
+            uiActions.DisableActionButtons();
+            uIMultipleUnits.Disable();
         }
     }
 }

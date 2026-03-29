@@ -13,6 +13,7 @@ public class UIActionButton : MonoBehaviour
 
     private Button button;
     private Key hotkey;
+    private bool assignedThisFrame;
 
     private void Awake()
     {
@@ -22,10 +23,11 @@ public class UIActionButton : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current[hotkey].wasReleasedThisFrame && hotkey != Key.None)
+        if (button.interactable && Keyboard.current[hotkey].wasReleasedThisFrame && hotkey != Key.None && !assignedThisFrame)
         {
-            button.onClick.Invoke();
+            button.onClick?.Invoke();
         }
+        assignedThisFrame = false;
     }
 
     public void Enable(BaseAction action, List<CommonActions> commonActions, UnityAction unityAction)
@@ -34,8 +36,9 @@ public class UIActionButton : MonoBehaviour
         button.onClick.RemoveAllListeners();
         SetIcon(action.Icon);
         hotkey = action.HotKey;
-        button.onClick.AddListener(unityAction);     
-        //button.interactable = commonActions.Any(commonAction => act)
+        button.onClick.AddListener(unityAction);
+        button.interactable = true;
+        assignedThisFrame = true;
     }
 
     public void Disable()

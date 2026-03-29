@@ -35,9 +35,13 @@ public class UIActions : MonoBehaviour
         BaseAction[] baseActions = 
             unitsSelected.Count > 0 ? unitsSelected.ElementAt(0).Actions : null;
 
-        for(int i = 0; i < uIActionButtons.Length; i++)
+        if(baseActions.Length == 0) return;
+
+        //
+
+        for(int i = 0; i < baseActions.Length; i++)
         {
-            uIActionButtons[i].Enable(baseActions[0], unitsSelected, Click(baseActions[0]));
+            uIActionButtons[baseActions[i].UIPosition].Enable(baseActions[i], unitsSelected, Click(baseActions[i]));            
         }
     }
 }

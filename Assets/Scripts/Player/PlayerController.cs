@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     // Events
     public UnitSelectedEvent selectUnitEvent;
     public UnitDeselectEvent deselectUnitEvent;
+    public ActionExecuted actionExecuted;
 
     public float edgeSize = 50f;
 
@@ -27,13 +29,16 @@ public class PlayerController : MonoBehaviour
     public List<CommonActions> playerUnits = new List<CommonActions>(24);
     private List<CommonActions> addedUnits = new(24);
     private float zoom;
+    private bool clickOnUI = false;
 
-
+    // Actions
+    private BaseAction selectedAction;
 
     private void Awake()
     {
         selectUnitEvent.Register(SelectedUnit);
         deselectUnitEvent.Register(DeselectUnit);
+        //actionExecuted.Register(ExecuteAction);
         zoom = camera.transform.localPosition.y;
     }
 
@@ -155,7 +160,7 @@ public class PlayerController : MonoBehaviour
         }
 
         Ray ray = camera.ScreenPointToRay(Mouse.current.position.ReadValue());
-
+        // IssueRightClick
         if(Mouse.current.rightButton.wasReleasedThisFrame 
             && Physics.Raycast(ray, out RaycastHit hitInfo, float.MaxValue, floorLayers | interactableLayers))
         {
@@ -177,6 +182,7 @@ public class PlayerController : MonoBehaviour
                     if (action.CanExecute(actionInfo))
                     {
                         action.Execute(actionInfo);
+                        if (action.IsSingleUnitCommand) return;
                         break;
                     }
                 }
@@ -192,15 +198,17 @@ public class PlayerController : MonoBehaviour
 
         if (addedUnits.Count == 0
             && Physics.Raycast(cameraRay, out RaycastHit hit, float.MaxValue, selectableUnitsLayers)
-            && hit.collider.TryGetComponent(out ISelectable selectable))
+            && hit.collider.TryGetComponent(out ISelectable selectable)
+            && selectedAction == null)
         {
             selectable.Select();
         }
-        else
+        else if(selectedAction != null
+            && !EventSystem.current.IsPointerOverGameObject()
+            && Physics.Raycast(cameraRay, out hit, float.MaxValue, interactableLayers | floorLayers))
         {
-            DeselectUnits();
+            ExecuteAction(hit);
         }
-
     }
 
     private void DeselectUnits()
@@ -240,10 +248,12 @@ public class PlayerController : MonoBehaviour
         selectionBox.gameObject.SetActive(true);
         startingMousePosition = Mouse.current.position.ReadValue();
         addedUnits.Clear();
+        clickOnUI = EventSystem.current.IsPointerOverGameObject();
     }
 
     private void Drag()
     {
+        if (selectedAction != null || clickOnUI) return;
         Bounds selectionBoxBounds = ResizeSelectionBox();
         foreach (CommonActions unit in playerUnits)
         {
@@ -262,12 +272,16 @@ public class PlayerController : MonoBehaviour
 
     private void MouseUp()
     {
-        // Deselect all units
-        ISelectable[] test = selectedUnits.ToArray();
-        foreach (ISelectable item in test)
+        if(!clickOnUI && selectedAction == null)
         {
-            item.Deselect();
+            // Deselect all units
+            ISelectable[] test = selectedUnits.ToArray();
+            foreach (ISelectable item in test)
+            {
+                item.Deselect();
+            }
         }
+        
         LeftClick();
         // Select all units inside de square
         foreach (ISelectable item in addedUnits)
@@ -288,5 +302,26 @@ public class PlayerController : MonoBehaviour
         selectionBox.sizeDelta = new Vector2(Mathf.Abs(width), Mathf.Abs(heigth));
 
         return new Bounds(selectionBox.anchoredPosition, selectionBox.sizeDelta);
+    }
+
+    private void ExecuteAction(RaycastHit hit)
+    {
+        List<CommonActions> actions = selectedUnits.Where(unit => unit is CommonActions).Cast<CommonActions>().ToList();
+        foreach (CommonActions action in actions)
+        {
+            ActionInfo actionInfo = new(action, hit);
+            if (selectedAction.CanExecute(actionInfo))
+            {
+                selectedAction.Execute(actionInfo);
+                if (selectedAction.IsSingleUnitCommand)
+                {
+                    break;
+                }
+            }
+        }
+        Debug.Log("Execute action");
+        actionExecuted.Raise(selectedAction);
+
+        selectedAction = null;
     }
 }
