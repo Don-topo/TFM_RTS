@@ -177,7 +177,7 @@ public class PlayerController : MonoBehaviour
 
             foreach(BaseUnit unit in baseUnits)
             {
-                ActionInfo actionInfo = new ActionInfo(unit, hitInfo);
+                ActionInfo actionInfo = new ActionInfo(unit, hitInfo, baseUnits.IndexOf(unit));
                 
                 foreach(IAction action in unit.Actions)
                 {
@@ -320,7 +320,7 @@ public class PlayerController : MonoBehaviour
         List<CommonActions> actions = selectedUnits.Where(unit => unit is CommonActions).Cast<CommonActions>().ToList();
         foreach (CommonActions action in actions)
         {
-            ActionInfo actionInfo = new(action, hit);
+            ActionInfo actionInfo = new(action, hit, actions.IndexOf(action));
             if (selectedAction.CanExecute(actionInfo))
             {
                 selectedAction.Execute(actionInfo);

@@ -5,6 +5,7 @@ using UnityEngine.AI;
 [RequireComponent (typeof(NavMeshAgent), typeof(BehaviorGraphAgent))]
 public class BaseUnit : CommonActions, IMoveable
 {   
+    public float GetNavMeshAgentRadius => navMeshAgent.radius;
     protected BehaviorGraphAgent behaviorGraphAgent;
     protected NavMeshAgent navMeshAgent;
 
