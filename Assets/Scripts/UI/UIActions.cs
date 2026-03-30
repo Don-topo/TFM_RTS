@@ -32,14 +32,20 @@ public class UIActions : MonoBehaviour
 
     private void UpdateActionsUIButtons(List<CommonActions> unitsSelected)
     {
-        BaseAction[] baseActions = 
-            unitsSelected.Count > 0 ? unitsSelected.ElementAt(0).Actions : null;
+        List<BaseAction> baseActions = 
+            unitsSelected.Count > 0 ? unitsSelected.ElementAt(0).Actions.ToList() : new List<BaseAction>();
 
-        if(baseActions.Length == 0) return;
+        if(baseActions.Count == 0) return;
 
-        //
+        foreach(CommonActions unitSelected in unitsSelected)
+        {
+            if(unitSelected.Actions != null)
+            {
+                baseActions = baseActions.Intersect(unitSelected.Actions.ToList()).ToList();
+            }
+        }
 
-        for(int i = 0; i < baseActions.Length; i++)
+        for(int i = 0; i < baseActions.Count; i++)
         {
             uIActionButtons[baseActions[i].UIPosition].Enable(baseActions[i], unitsSelected, Click(baseActions[i]));            
         }

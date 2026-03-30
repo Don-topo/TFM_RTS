@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public UnitSelectedEvent selectUnitEvent;
     public UnitDeselectEvent deselectUnitEvent;
     public ActionExecuted actionExecuted;
+    public ActionClicked actionClicked;
 
     public float edgeSize = 50f;
 
@@ -39,6 +40,7 @@ public class PlayerController : MonoBehaviour
         selectUnitEvent.Register(SelectedUnit);
         deselectUnitEvent.Register(DeselectUnit);
         //actionExecuted.Register(ExecuteAction);
+        actionClicked.Register(ActionClicked);
         zoom = camera.transform.localPosition.y;
     }
 
@@ -302,6 +304,15 @@ public class PlayerController : MonoBehaviour
         selectionBox.sizeDelta = new Vector2(Mathf.Abs(width), Mathf.Abs(heigth));
 
         return new Bounds(selectionBox.anchoredPosition, selectionBox.sizeDelta);
+    }
+
+    private void ActionClicked(BaseAction actionClicked)
+    {
+        selectedAction = actionClicked;
+        if (!selectedAction.UseClickToExecute)
+        {
+            ExecuteAction(new RaycastHit());
+        }
     }
 
     private void ExecuteAction(RaycastHit hit)

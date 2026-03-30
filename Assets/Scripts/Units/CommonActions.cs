@@ -20,6 +20,21 @@ public abstract class CommonActions : MonoBehaviour, ISelectable
 
     }
 
+    protected virtual void Awake()
+    {
+
+    }
+
+    protected virtual void Update()
+    {
+        
+    }
+
+    protected virtual void OnDestroy()
+    {
+
+    }
+
     public void Deselect()
     {
         // Safety check to avoid errors

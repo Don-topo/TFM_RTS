@@ -6,6 +6,7 @@ using UnityEngine;
 public class AttackSystem : MonoBehaviour
 {
     [SerializeField] private UnitInRangeEvent unitInRangeEvent;
+    [SerializeField] private UnitDeathEvent unitDeathEvent;
     public List<IAttackable> GetAttackableEnemies() => enemiesVisible;
     public List<IAttackable> GetNearEnemies() => enemiesInRange;
     
@@ -20,7 +21,7 @@ public class AttackSystem : MonoBehaviour
 
     private void OnDestroy()
     {
-        
+        unitDeathEvent.Unregister(UnitDeath);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -43,5 +44,10 @@ public class AttackSystem : MonoBehaviour
             enemiesInRange.Remove(enemy);
 
         }
+    }
+
+    private void UnitDeath(BaseUnit unitDeathEvent)
+    {
+
     }
 }

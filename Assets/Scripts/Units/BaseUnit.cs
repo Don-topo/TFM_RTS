@@ -9,8 +9,9 @@ public class BaseUnit : CommonActions, IMoveable
     protected NavMeshAgent navMeshAgent;
 
    
-    void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         // Get components
         navMeshAgent = GetComponent<NavMeshAgent>();
         behaviorGraphAgent = GetComponent<BehaviorGraphAgent>();
@@ -20,7 +21,7 @@ public class BaseUnit : CommonActions, IMoveable
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
         
     }
