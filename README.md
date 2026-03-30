@@ -1,6 +1,7 @@
 v0.03 => 30/03/2026:
   - Fixed action buttons, now execute move action and stop action.
   - Fixed same destination point when multiple units are selected and move.
+  - TODO Attack Action not finished
 
 v0.02 => 29/03/2026:
   - Update UI when multiple units are selected.
