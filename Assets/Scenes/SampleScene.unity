@@ -365,6 +365,7 @@ GameObject:
   - component: {fileID: 47336907}
   - component: {fileID: 47336906}
   - component: {fileID: 47336905}
+  - component: {fileID: 47336909}
   m_Layer: 5
   m_Name: Button (4)
   m_TagString: Untagged
@@ -405,6 +406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIActionButton
   actionIcon: {fileID: 47336907}
+  tooltip: {fileID: 734291542}
 --- !u!114 &47336906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,7 +472,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -487,6 +489,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47336903}
   m_CullTransparentMesh: 1
+--- !u!114 &47336909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47336903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates: []
 --- !u!1 &126505021
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,6 +515,7 @@ GameObject:
   - component: {fileID: 126505025}
   - component: {fileID: 126505024}
   - component: {fileID: 126505023}
+  - component: {fileID: 126505027}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -540,6 +556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIActionButton
   actionIcon: {fileID: 126505025}
+  tooltip: {fileID: 501014977}
 --- !u!114 &126505024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,7 +622,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -622,6 +639,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 126505021}
   m_CullTransparentMesh: 1
+--- !u!114 &126505027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126505021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates: []
 --- !u!1 &158163931
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,6 +664,7 @@ GameObject:
   - component: {fileID: 158163935}
   - component: {fileID: 158163934}
   - component: {fileID: 158163933}
+  - component: {fileID: 158163936}
   m_Layer: 5
   m_Name: Tooltip
   m_TagString: Untagged
@@ -674,15 +705,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -714,6 +745,30 @@ MonoBehaviour:
   tooltipText: {fileID: 1170639737}
   <ShowWaitTime>k__BackingField: 0.5
   offset: 50
+  <RectTransform>k__BackingField: {fileID: 158163932}
+--- !u!223 &158163936
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158163931}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 100
+  m_TargetDisplay: 0
 --- !u!1 &194093933
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,6 +782,7 @@ GameObject:
   - component: {fileID: 194093937}
   - component: {fileID: 194093936}
   - component: {fileID: 194093935}
+  - component: {fileID: 194093939}
   m_Layer: 5
   m_Name: Button (6)
   m_TagString: Untagged
@@ -767,6 +823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIActionButton
   actionIcon: {fileID: 194093937}
+  tooltip: {fileID: 213891014}
 --- !u!114 &194093936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -832,7 +889,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -849,6 +906,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194093933}
   m_CullTransparentMesh: 1
+--- !u!114 &194093939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194093933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates: []
 --- !u!1 &213891010
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,6 +931,7 @@ GameObject:
   - component: {fileID: 213891014}
   - component: {fileID: 213891013}
   - component: {fileID: 213891012}
+  - component: {fileID: 213891015}
   m_Layer: 5
   m_Name: Tooltip
   m_TagString: Untagged
@@ -901,7 +972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -941,6 +1012,30 @@ MonoBehaviour:
   tooltipText: {fileID: 2105648287}
   <ShowWaitTime>k__BackingField: 0.5
   offset: 50
+  <RectTransform>k__BackingField: {fileID: 213891011}
+--- !u!223 &213891015
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213891010}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 100
+  m_TargetDisplay: 0
 --- !u!1 &270241667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,6 +1186,7 @@ GameObject:
   - component: {fileID: 281935537}
   - component: {fileID: 281935536}
   - component: {fileID: 281935539}
+  - component: {fileID: 281935540}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1183,7 +1279,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1213,6 +1309,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIActionButton
   actionIcon: {fileID: 281935537}
+  tooltip: {fileID: 158163935}
+--- !u!114 &281935540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281935534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates: []
 --- !u!1 &300661752
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,6 +1751,7 @@ GameObject:
   - component: {fileID: 414587449}
   - component: {fileID: 414587448}
   - component: {fileID: 414587447}
+  - component: {fileID: 414587450}
   m_Layer: 5
   m_Name: Tooltip
   m_TagString: Untagged
@@ -1681,7 +1792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1721,6 +1832,30 @@ MonoBehaviour:
   tooltipText: {fileID: 1734937507}
   <ShowWaitTime>k__BackingField: 0.5
   offset: 50
+  <RectTransform>k__BackingField: {fileID: 414587446}
+--- !u!223 &414587450
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414587445}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 100
+  m_TargetDisplay: 0
 --- !u!1 &456629463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,6 +2130,7 @@ GameObject:
   - component: {fileID: 501014977}
   - component: {fileID: 501014976}
   - component: {fileID: 501014975}
+  - component: {fileID: 501014978}
   m_Layer: 5
   m_Name: Tooltip
   m_TagString: Untagged
@@ -2035,15 +2171,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2075,6 +2211,30 @@ MonoBehaviour:
   tooltipText: {fileID: 270241669}
   <ShowWaitTime>k__BackingField: 0.5
   offset: 50
+  <RectTransform>k__BackingField: {fileID: 501014974}
+--- !u!223 &501014978
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501014973}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 100
+  m_TargetDisplay: 0
 --- !u!1 &610458672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2238,6 +2398,7 @@ GameObject:
   - component: {fileID: 624161098}
   - component: {fileID: 624161097}
   - component: {fileID: 624161096}
+  - component: {fileID: 624161100}
   m_Layer: 5
   m_Name: Button (8)
   m_TagString: Untagged
@@ -2278,6 +2439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIActionButton
   actionIcon: {fileID: 624161098}
+  tooltip: {fileID: 414587449}
 --- !u!114 &624161097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2343,7 +2505,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2360,6 +2522,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624161094}
   m_CullTransparentMesh: 1
+--- !u!114 &624161100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624161094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates: []
 --- !u!1 &677878623
 GameObject:
   m_ObjectHideFlags: 0
@@ -2509,6 +2684,7 @@ GameObject:
   - component: {fileID: 707813872}
   - component: {fileID: 707813871}
   - component: {fileID: 707813870}
+  - component: {fileID: 707813873}
   m_Layer: 5
   m_Name: Tooltip
   m_TagString: Untagged
@@ -2549,7 +2725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2589,6 +2765,30 @@ MonoBehaviour:
   tooltipText: {fileID: 1524994915}
   <ShowWaitTime>k__BackingField: 0.5
   offset: 50
+  <RectTransform>k__BackingField: {fileID: 707813869}
+--- !u!223 &707813873
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707813868}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 100
+  m_TargetDisplay: 0
 --- !u!1 &734291538
 GameObject:
   m_ObjectHideFlags: 0
@@ -2601,6 +2801,7 @@ GameObject:
   - component: {fileID: 734291542}
   - component: {fileID: 734291541}
   - component: {fileID: 734291540}
+  - component: {fileID: 734291543}
   m_Layer: 5
   m_Name: Tooltip
   m_TagString: Untagged
@@ -2641,7 +2842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2681,6 +2882,30 @@ MonoBehaviour:
   tooltipText: {fileID: 1565296643}
   <ShowWaitTime>k__BackingField: 0.5
   offset: 50
+  <RectTransform>k__BackingField: {fileID: 734291539}
+--- !u!223 &734291543
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734291538}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 100
+  m_TargetDisplay: 0
 --- !u!1 &750571468
 GameObject:
   m_ObjectHideFlags: 0
@@ -3377,6 +3602,7 @@ GameObject:
   - component: {fileID: 1199752430}
   - component: {fileID: 1199752429}
   - component: {fileID: 1199752428}
+  - component: {fileID: 1199752432}
   m_Layer: 5
   m_Name: Button (7)
   m_TagString: Untagged
@@ -3417,6 +3643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIActionButton
   actionIcon: {fileID: 1199752430}
+  tooltip: {fileID: 1875709080}
 --- !u!114 &1199752429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3482,7 +3709,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3499,6 +3726,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1199752426}
   m_CullTransparentMesh: 1
+--- !u!114 &1199752432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199752426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates: []
 --- !u!1 &1202897803
 GameObject:
   m_ObjectHideFlags: 0
@@ -3884,6 +4124,7 @@ GameObject:
   - component: {fileID: 1530974931}
   - component: {fileID: 1530974930}
   - component: {fileID: 1530974929}
+  - component: {fileID: 1530974933}
   m_Layer: 5
   m_Name: Button (5)
   m_TagString: Untagged
@@ -3924,6 +4165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIActionButton
   actionIcon: {fileID: 1530974931}
+  tooltip: {fileID: 707813872}
 --- !u!114 &1530974930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3989,7 +4231,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4006,6 +4248,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1530974927}
   m_CullTransparentMesh: 1
+--- !u!114 &1530974933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530974927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates: []
 --- !u!1 &1534730284
 GameObject:
   m_ObjectHideFlags: 0
@@ -4758,6 +5013,7 @@ GameObject:
   - component: {fileID: 1726785158}
   - component: {fileID: 1726785157}
   - component: {fileID: 1726785156}
+  - component: {fileID: 1726785159}
   m_Layer: 5
   m_Name: Tooltip
   m_TagString: Untagged
@@ -4798,7 +5054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4838,6 +5094,30 @@ MonoBehaviour:
   tooltipText: {fileID: 1608065530}
   <ShowWaitTime>k__BackingField: 0.5
   offset: 50
+  <RectTransform>k__BackingField: {fileID: 1726785155}
+--- !u!223 &1726785159
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726785154}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 100
+  m_TargetDisplay: 0
 --- !u!1 &1734937505
 GameObject:
   m_ObjectHideFlags: 0
@@ -4987,6 +5267,7 @@ GameObject:
   - component: {fileID: 1753110089}
   - component: {fileID: 1753110088}
   - component: {fileID: 1753110087}
+  - component: {fileID: 1753110090}
   m_Layer: 5
   m_Name: Tooltip
   m_TagString: Untagged
@@ -5027,7 +5308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5067,6 +5348,30 @@ MonoBehaviour:
   tooltipText: {fileID: 2118024861}
   <ShowWaitTime>k__BackingField: 0.5
   offset: 50
+  <RectTransform>k__BackingField: {fileID: 1753110086}
+--- !u!223 &1753110090
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753110085}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 100
+  m_TargetDisplay: 0
 --- !u!1 &1805967635
 GameObject:
   m_ObjectHideFlags: 0
@@ -5115,6 +5420,7 @@ GameObject:
   - component: {fileID: 1805989250}
   - component: {fileID: 1805989249}
   - component: {fileID: 1805989248}
+  - component: {fileID: 1805989252}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -5155,6 +5461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIActionButton
   actionIcon: {fileID: 1805989250}
+  tooltip: {fileID: 1753110089}
 --- !u!114 &1805989249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5220,7 +5527,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5237,6 +5544,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805989246}
   m_CullTransparentMesh: 1
+--- !u!114 &1805989252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805989246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates: []
 --- !u!1 &1846006241
 GameObject:
   m_ObjectHideFlags: 0
@@ -5304,11 +5624,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -5336,7 +5656,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1846006246
 RectTransform:
@@ -5372,6 +5692,7 @@ GameObject:
   - component: {fileID: 1855105791}
   - component: {fileID: 1855105790}
   - component: {fileID: 1855105789}
+  - component: {fileID: 1855105793}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -5412,6 +5733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIActionButton
   actionIcon: {fileID: 1855105791}
+  tooltip: {fileID: 1726785158}
 --- !u!114 &1855105790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5477,7 +5799,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5494,6 +5816,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855105787}
   m_CullTransparentMesh: 1
+--- !u!114 &1855105793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855105787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates: []
 --- !u!1 &1875709076
 GameObject:
   m_ObjectHideFlags: 0
@@ -5506,6 +5841,7 @@ GameObject:
   - component: {fileID: 1875709080}
   - component: {fileID: 1875709079}
   - component: {fileID: 1875709078}
+  - component: {fileID: 1875709081}
   m_Layer: 5
   m_Name: Tooltip
   m_TagString: Untagged
@@ -5546,7 +5882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5586,6 +5922,30 @@ MonoBehaviour:
   tooltipText: {fileID: 1079391038}
   <ShowWaitTime>k__BackingField: 0.5
   offset: 50
+  <RectTransform>k__BackingField: {fileID: 1875709077}
+--- !u!223 &1875709081
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875709076}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 100
+  m_TargetDisplay: 0
 --- !u!1 &2105648285
 GameObject:
   m_ObjectHideFlags: 0
