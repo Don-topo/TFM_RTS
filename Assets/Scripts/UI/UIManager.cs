@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private UIUnitBaseInfo uiUnitBase;
     [SerializeField] private UISingleUnit uiSingleUnit;
     [SerializeField] private UIMultipleUnits uIMultipleUnits;
+    [SerializeField] private UISelectedBuilding uiSelectedBuilding;
 
     public UnitSelectedEvent unitSelectedEvent;
     public UnitDeselectEvent unitDeselectEvent;
@@ -26,6 +27,7 @@ public class UIManager : MonoBehaviour
         uiUnitBase.Disable();
         uiSingleUnit.Disable();
         uIMultipleUnits.Disable();
+        uiSelectedBuilding.Disable();
     }
 
     private void OnDestroy()
@@ -52,11 +54,19 @@ public class UIManager : MonoBehaviour
         {
             if(selectedUnits.Count == 1)
             {
-                CommonActions selectedUnit = (CommonActions)selectedUnits.First();
-                uiUnitBase.Enable(selectedUnit);
-                uiSingleUnit.Enable(selectedUnit);
-                List<CommonActions> list = new() { selectedUnit };
-                uiActions.EnableActionButtons(list);
+                if(selectedUnits.First() is BaseBuilding)
+                {
+                    uiUnitBase.Enable((CommonActions)selectedUnits.First());
+                    uiSelectedBuilding.Enable((BaseBuilding)selectedUnits.First());
+                }
+                else
+                {
+                    CommonActions selectedUnit = (CommonActions)selectedUnits.First();
+                    uiUnitBase.Enable(selectedUnit);
+                    uiSingleUnit.Enable(selectedUnit);
+                    List<CommonActions> list = new() { selectedUnit };
+                    uiActions.EnableActionButtons(list);
+                }                
             }
             else
             {
@@ -65,6 +75,7 @@ public class UIManager : MonoBehaviour
                 List<CommonActions> list = new();
                 list.AddRange(selectedUnits);
                 uIMultipleUnits.Enable(list);
+                uiSelectedBuilding.Disable();
             }                        
         }
         else
@@ -73,6 +84,7 @@ public class UIManager : MonoBehaviour
             uiSingleUnit.Disable();
             uiActions.DisableActionButtons();
             uIMultipleUnits.Disable();
+            uiSelectedBuilding.Disable();
         }
     }
 }

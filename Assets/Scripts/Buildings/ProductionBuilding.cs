@@ -3,12 +3,12 @@ using UnityEngine;
 public class ProductionBuilding : BaseBuilding
 {
     // Resource to produce
-    [SerializeField] private SO_Resource resource;
+    [field: SerializeField] public SO_Resource resource { get; private set; }
     // Events to trigger
     [SerializeField] private ResourceEvent resourceEvent;
 
     // Variables to hold and count the time past
-    private float startTime;
+    public float StartTime { get; private set; }
 
     protected override void Awake()
     {
@@ -18,16 +18,16 @@ public class ProductionBuilding : BaseBuilding
     protected override void Start()
     {
         base.Start();
-        startTime = Time.time;
+        StartTime = Time.time;
     }
 
     protected override void Update()
     {
         // Check if the generation of the resource is completed
-        if(resource.ObtainingTime + startTime <= Time.time)
+        if(resource.ObtainingTime + StartTime <= Time.time)
         {
             // Generation complete, reset start value and raise resource event
-            startTime = Time.time;
+            StartTime = Time.time;
             ProduceResource();
         }
     }

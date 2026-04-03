@@ -15,3 +15,4 @@ MonoBehaviour:
   <ObtainingTime>k__BackingField: 8
   <ObtainedAmount>k__BackingField: 15
   <MaxAmount>k__BackingField: 1000
+  <Icon>k__BackingField: {fileID: 21300000, guid: 94441bae5d7c4d44ea014e9eda292579, type: 3}
