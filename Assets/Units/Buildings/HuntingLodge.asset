@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 264d44e3179a1494da63b7589bf08126, type: 3}
-  m_Name: SO_Food
-  m_EditorClassIdentifier: Assembly-CSharp::SO_Resource
-  <ObtainingTime>k__BackingField: 8
-  <ObtainedAmount>k__BackingField: 15
-  <MaxAmount>k__BackingField: 1000
+  m_Script: {fileID: 11500000, guid: e766ad877836f414490017ef6206d145, type: 3}
+  m_Name: HuntingLodge
+  m_EditorClassIdentifier: Assembly-CSharp::SO_BaseUnit
+  <Name>k__BackingField: Hunting Lodge
   <Icon>k__BackingField: {fileID: 21300000, guid: 7a46e7e8c4b5be7449b6f18e45fbb02c, type: 3}
-  <ProducesOnlyOneTime>k__BackingField: 1
+  <UnitPrefab>k__BackingField: {fileID: 0}
+  <Health>k__BackingField: 200

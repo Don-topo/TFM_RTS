@@ -7,4 +7,5 @@ public class SO_Resource : ScriptableObject
     [field: SerializeField] public int ObtainedAmount { get; private set; } = 15;
     [field: SerializeField] public int MaxAmount { get; private set; } = 1000;
     [field: SerializeField] public Sprite Icon { get; private set; }
+    [field: SerializeField] public bool ProducesOnlyOneTime { get; private set; } = false;
 }

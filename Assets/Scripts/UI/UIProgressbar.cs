@@ -20,4 +20,14 @@ public class UIProgressbar : MonoBehaviour
     {
         progressbarImage.fillAmount = progress;
     }
+
+    public void Enable()
+    {
+        gameObject.SetActive(true);
+    }
+
+    public void Disable()
+    {
+        gameObject.SetActive(false);
+    }
 }

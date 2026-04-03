@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIProductionBuildingSelected : MonoBehaviour
 {
-    [SerializeField] private UIProgressbar UIProgressbar;
+    [SerializeField] private UIProgressbar uiProgressbar;
     [SerializeField] private TextMeshProUGUI produceNumberText;
     [SerializeField] private Image resourceImage;
 
@@ -14,18 +14,18 @@ public class UIProductionBuildingSelected : MonoBehaviour
 
     private void Update()
     {
-        if(selectedBuilding != null)
+        if(selectedBuilding != null && !selectedBuilding.resource.ProducesOnlyOneTime)
         {
             float startTime = selectedBuilding.StartTime;
             float currentTime = Time.time;
             float finishTime = selectedBuilding.resource.ObtainingTime;
-            UIProgressbar.UpdateProgress(Mathf.Clamp01((Time.time - startTime) / (finishTime)));
+            uiProgressbar.UpdateProgress(Mathf.Clamp01((Time.time - startTime) / (finishTime)));
         }    
     }
 
     public void Enable(ProductionBuilding selectedBuild)
     {
-        gameObject.SetActive(true);
+        gameObject.SetActive(true);        
         selectedBuilding = selectedBuild;
         resourceImage.sprite = selectedBuilding.resource.Icon;
         produceNumberText.SetText(selectedBuilding.resource.ObtainedAmount.ToString());
@@ -33,6 +33,6 @@ public class UIProductionBuildingSelected : MonoBehaviour
 
     public void Disable()
     {
-        gameObject.SetActive(false);
+        gameObject.SetActive(false);        
     }
 }
