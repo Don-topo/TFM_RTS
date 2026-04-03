@@ -1,3 +1,8 @@
+v0.05 => 03/04/2026:
+  - Finished Resource generation.
+  - Finished Resource UI Update (resource value + progress bar + selected building).
+  - TODO Attack Action not finished.
+    
 v0.04 => 02/04/2026:
   - Finished Basic Tooltip.
   - TODO Attack Action not finished.
