@@ -1,3 +1,8 @@
+v0.06 => 05/04/2026:
+  - Fix resource generation progress bar bug.
+  - Start working on Recruit buildings: Building, recruit system, recruit UI.
+  - TODO Attack Action not finished.
+    
 v0.05 => 03/04/2026:
   - Finished Resource generation.
   - Finished Resource UI Update (resource value + progress bar + selected building).
