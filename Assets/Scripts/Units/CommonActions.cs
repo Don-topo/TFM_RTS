@@ -8,7 +8,7 @@ public abstract class CommonActions : MonoBehaviour, ISelectable
 
     [field: SerializeField] protected DecalProjector selectionDecal;
     [field: SerializeField] public BaseAction[] Actions { get; private set; }
-    [field: SerializeField] public SO_BaseUnit so_baseUnit { get; protected set; }
+    [field: SerializeField] public SO_BaseUnit SO_BaseUnit { get; protected set; }
     // Base Unit Events
     public UnitSelectedEvent unitSelectEvent;
     public UnitDeselectEvent unitDeselectEvent;

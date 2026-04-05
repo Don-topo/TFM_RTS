@@ -24,6 +24,7 @@ public class UIProgressbar : MonoBehaviour
     public void UpdateProgress(float amount)
     {
         progress = amount;
+        UpdateBar();
     }
 
     public void Enable()

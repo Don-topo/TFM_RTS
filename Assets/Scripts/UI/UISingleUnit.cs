@@ -11,7 +11,7 @@ public class UISingleUnit : MonoBehaviour
     {
         gameObject.SetActive(true);
         this.unitSelected = unitSelected;
-        unitNameText.SetText(unitSelected.so_baseUnit.Name);
+        unitNameText.SetText(unitSelected.SO_BaseUnit.Name);
     }
 
     public void Disable()

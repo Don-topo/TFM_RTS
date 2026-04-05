@@ -19,8 +19,8 @@ public class UIUnitBaseInfo : MonoBehaviour
     {
         action = newAction;
         gameObject.SetActive(true);
-        unitImage.sprite = action.so_baseUnit.Icon;
-        heathText.SetText(action.so_baseUnit.Health.ToString());
+        unitImage.sprite = action.SO_BaseUnit.Icon;
+        heathText.SetText(action.SO_BaseUnit.Health.ToString());
     }
 
     private void UpdateHealthText()

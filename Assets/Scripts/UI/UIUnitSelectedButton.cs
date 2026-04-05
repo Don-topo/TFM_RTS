@@ -17,7 +17,7 @@ public class UIUnitSelectedButton : MonoBehaviour
     public void Enable(CommonActions unit, UnityAction unityAction)
     {
         gameObject.SetActive(true);
-        unitImage.sprite = unit.so_baseUnit.Icon;
+        unitImage.sprite = unit.SO_BaseUnit.Icon;
         button.onClick.AddListener(unityAction);
     }
 

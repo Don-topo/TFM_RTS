@@ -28,7 +28,7 @@ public class UIMultipleUnits : MonoBehaviour
             // Create a new Button for each unit selected
             UIUnitSelectedButton newButton = Instantiate(unitButtonPrefab, transform);
             // Set unit image
-            newButton.GetComponent<Image>().sprite = unitSelected.so_baseUnit.Icon;
+            newButton.GetComponent<Image>().sprite = unitSelected.SO_BaseUnit.Icon;
             // Fill button
             newButton.Enable(unitSelected, () => HandleClick(unitSelected));
             
