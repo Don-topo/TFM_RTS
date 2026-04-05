@@ -29,10 +29,15 @@ public class UIProductionBuildingSelected : MonoBehaviour
         selectedBuilding = selectedBuild;
         resourceImage.sprite = selectedBuilding.resource.Icon;
         produceNumberText.SetText(selectedBuilding.resource.ObtainedAmount.ToString());
+        if (!selectedBuilding.resource.ProducesOnlyOneTime)
+        {
+            uiProgressbar.Enable();
+        }
     }
 
     public void Disable()
     {
+        uiProgressbar.Disable();
         gameObject.SetActive(false);        
     }
 }

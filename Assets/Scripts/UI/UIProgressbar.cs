@@ -13,12 +13,17 @@ public class UIProgressbar : MonoBehaviour
 
     private void Update()
     {
-        UpdateProgress(progress);
+        UpdateBar();
     }
 
-    public void UpdateProgress(float progress)
-    {
+    private void UpdateBar()
+    {        
         progressbarImage.fillAmount = progress;
+    }
+
+    public void UpdateProgress(float amount)
+    {
+        progress = amount;
     }
 
     public void Enable()
