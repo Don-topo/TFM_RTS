@@ -50,6 +50,8 @@ public class UIRecruitUnitBuilding : MonoBehaviour
         {
             coroutine = StartCoroutine(UpdateProgressBar());
         }
+
+        if (units.Count == 0) progressbar.UpdateProgress(0);
     }
 
     private void PrepareQueueButtons()

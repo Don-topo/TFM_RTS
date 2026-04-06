@@ -38,6 +38,7 @@ public class UIResources : MonoBehaviour
     private void Awake()
     {
         resourceEvent.Register(UpdateResource);
+        UpdateUI();
     }
 
     private void OnDestroy()
@@ -51,31 +52,38 @@ public class UIResources : MonoBehaviour
         {
             Food += resource.Amount;
             MaxFood += resource.MaxAmount;
-            foodText.SetText(Food.ToString() + " / " + MaxFood.ToString());
+            
         }
         else if(resource.SO_Resource == so_wood)
         {
             Wood += resource.Amount;
-            MaxWood = resource.MaxAmount;
-            woodText.SetText(Wood.ToString() + " / " + MaxIron.ToString());
+            MaxWood = resource.MaxAmount;            
         }
         else if(resource.SO_Resource == so_iron)
         {
             Iron += resource.Amount;
-            MaxIron += resource.MaxAmount;
-            ironText.SetText(Iron.ToString() + " / " + MaxIron.ToString());
+            MaxIron += resource.MaxAmount;            
         }
         else if(resource.SO_Resource == so_electricity)
         {
             Electricity += resource.Amount;
-            MaxElectricity += resource.MaxAmount;
-            electricityText.SetText(Electricity.ToString() + " / " + MaxElectricity.ToString());
+            MaxElectricity += resource.MaxAmount;            
         }
         else if(resource.SO_Resource == so_population)
         {
             Population += resource.Amount;
-            MaxPopulation += resource.MaxAmount;
-            populationText.SetText(Population.ToString() + " / " + MaxPopulation.ToString());
+            MaxPopulation += resource.MaxAmount;            
         }
+
+        UpdateUI();
+    }
+
+    private void UpdateUI()
+    {
+        foodText.SetText(Food.ToString() + " / " + MaxFood.ToString());
+        woodText.SetText(Wood.ToString() + " / " + MaxIron.ToString());
+        ironText.SetText(Iron.ToString() + " / " + MaxIron.ToString());
+        electricityText.SetText(Electricity.ToString() + " / " + MaxElectricity.ToString());
+        populationText.SetText(Population.ToString() + " / " + MaxPopulation.ToString());
     }
 }
