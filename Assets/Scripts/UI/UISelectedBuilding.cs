@@ -4,7 +4,7 @@ using UnityEngine;
 public class UISelectedBuilding : MonoBehaviour
 {
     [SerializeField] private UIProductionBuildingSelected uIProductionBuilding;
-    //[SerializeField] private UIRecruitUnit
+    [SerializeField] private UIRecruitUnitBuilding uIRecruitUnitBuilding;
     [SerializeField] private TextMeshProUGUI buildingNameText;
 
     public void Enable(BaseBuilding baseBuilding)
@@ -15,11 +15,19 @@ public class UISelectedBuilding : MonoBehaviour
             buildingNameText.enabled = true;
             buildingNameText.SetText(baseBuilding.SO_BaseUnit.name);
         }
+        else
+        {
+            // Recruiting building
+            uIRecruitUnitBuilding.Enable((RecruitBuilding)baseBuilding);
+            buildingNameText.enabled = true;
+            buildingNameText.SetText(baseBuilding.SO_BaseUnit.name);
+        }
     }
 
     public void Disable()
     {
         buildingNameText.enabled = false;
         uIProductionBuilding.Disable();
+        uIRecruitUnitBuilding.Disable();
     }
 }

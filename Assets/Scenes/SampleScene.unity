@@ -635,7 +635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4940a78f34c47bd4ba524ae3e7726a42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIRecruitButton
-  image: {fileID: 0}
+  image: {fileID: 92240835}
 --- !u!1 &126505021
 GameObject:
   m_ObjectHideFlags: 0
@@ -2578,7 +2578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4940a78f34c47bd4ba524ae3e7726a42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIRecruitButton
-  image: {fileID: 0}
+  image: {fileID: 442508146}
 --- !u!1 &456629463
 GameObject:
   m_ObjectHideFlags: 0
@@ -3128,7 +3128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4940a78f34c47bd4ba524ae3e7726a42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIRecruitButton
-  image: {fileID: 0}
+  image: {fileID: 586742371}
 --- !u!1 &610458672
 GameObject:
   m_ObjectHideFlags: 0
@@ -3925,6 +3925,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 750571468}
   m_CullTransparentMesh: 1
+--- !u!1 &804990560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 804990562}
+  - component: {fileID: 804990561}
+  m_Layer: 0
+  m_Name: Selection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &804990561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804990560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.DecalProjector
+  m_Material: {fileID: 2100000, guid: 6979e33ff88aacc4e8ef470628d1d4ca, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_RenderingLayerMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ScaleMode: 0
+  m_Offset: {x: 0, y: 0, z: 1}
+  m_Size: {x: 1.5, y: 1.5, z: 2}
+  m_FadeFactor: 1
+  version: 1
+  m_DecalLayerMask: 1
+--- !u!4 &804990562
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804990560}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1374267399}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &818446286
 GameObject:
   m_ObjectHideFlags: 0
@@ -5433,7 +5493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4940a78f34c47bd4ba524ae3e7726a42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIRecruitButton
-  image: {fileID: 0}
+  image: {fileID: 1254765053}
 --- !u!1 &1258791102
 GameObject:
   m_ObjectHideFlags: 0
@@ -5589,13 +5649,21 @@ MonoBehaviour:
   m_Graph: {fileID: 5411889504746037112, guid: 1acea659cf56ad14491accc9850a9c9c, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 1138904140139987932
-  - rid: 1138904140139987933
+  - rid: 522942171674050823
   m_OriginalGraph: {fileID: 0}
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
     version: 2
     RefIds:
+    - rid: 522942171674050823
+      type: {class: 'BlackboardVariable`1[[UnitActions, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 16208545908445908422
+          m_Value1: 12445388921349676129
+        Name: UnitActions
+        m_Value: 1
     - rid: 1138904140139987932
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -5604,14 +5672,6 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 1258791102}
-    - rid: 1138904140139987933
-      type: {class: 'BlackboardVariable`1[[UnitActions, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 16208545908445908422
-          m_Value1: 12445388921349676129
-        Name: UnitActions
-        m_Value: 1
 --- !u!114 &1258791110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5629,7 +5689,7 @@ MonoBehaviour:
   <Actions>k__BackingField:
   - {fileID: 11400000, guid: 294ac8375577a6641918538431387b6e, type: 2}
   - {fileID: 11400000, guid: 98ec6ba2f77d5294a91b60abc3edf252, type: 2}
-  <SO_BaseUnit>k__BackingField: {fileID: 0}
+  <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: a0d0923a84414ee4f888633614b65eed, type: 2}
   unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
 --- !u!1 &1331777768
@@ -5769,6 +5829,142 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331777768}
   m_CullTransparentMesh: 1
+--- !u!1 &1374267394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1374267399}
+  - component: {fileID: 1374267398}
+  - component: {fileID: 1374267397}
+  - component: {fileID: 1374267396}
+  - component: {fileID: 1374267395}
+  m_Layer: 6
+  m_Name: MilitarySchool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1374267395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374267394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96b2e1f2179e8d4db24f324886cec82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RecruitBuilding
+  <IsSelected>k__BackingField: 0
+  selectionDecal: {fileID: 804990561}
+  <Actions>k__BackingField:
+  - {fileID: 11400000, guid: 9f5d9bb4e1dfa884ea15e7e31e92447f, type: 2}
+  <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: b6e8e5618b825f8469bbbe6cc21eabf6, type: 2}
+  unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
+  unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
+  resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
+  queueEvent: {fileID: 11400000, guid: 1dd8e8867b7a3644e9d24fe108f29d73, type: 2}
+  RecruitStartTime: 0
+--- !u!65 &1374267396
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374267394}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1374267397
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374267394}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1374267398
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374267394}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1374267399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374267394}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 804990562}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1399939230 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5143012158482628716, guid: fc395491c2dcc6a41b2882dc7bbad1e8, type: 3}
@@ -7288,6 +7484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UISelectedBuilding
   uIProductionBuilding: {fileID: 2124502426}
+  uIRecruitUnitBuilding: {fileID: 1604377804}
   buildingNameText: {fileID: 1402603973}
 --- !u!1 &1723634957
 GameObject:
@@ -7887,6 +8084,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 0447c9f81e655a9409ec1f8119af8fab, type: 2}
     - target: {fileID: 4381371521741726491, guid: 70b9522fe2fe9d542bd53fbf73c3d147, type: 3}
+      propertyPath: <SO_BaseUnit>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: b6e8e5618b825f8469bbbe6cc21eabf6, type: 2}
+    - target: {fileID: 4381371521741726491, guid: 70b9522fe2fe9d542bd53fbf73c3d147, type: 3}
       propertyPath: <so_baseUnit>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: b6e8e5618b825f8469bbbe6cc21eabf6, type: 2}
@@ -8109,6 +8310,7 @@ MonoBehaviour:
   so_stone: {fileID: 11400000, guid: 22573a0b05ee6db4eae63b0e80fb06c2, type: 2}
   so_iron: {fileID: 11400000, guid: 6149a635b37dd2549911d28764195f66, type: 2}
   so_electricity: {fileID: 11400000, guid: 41ab553191e8b234396825a021fb9645, type: 2}
+  so_population: {fileID: 11400000, guid: 1442bde75b54a7242b78b38a81a4d2b4, type: 2}
   resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
 --- !u!1 &1805989246
 GameObject:
@@ -8393,7 +8595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4940a78f34c47bd4ba524ae3e7726a42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIRecruitButton
-  image: {fileID: 0}
+  image: {fileID: 1819313475}
 --- !u!1 &1846006241
 GameObject:
   m_ObjectHideFlags: 0
@@ -9503,6 +9705,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7875676953263606175, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
+      propertyPath: <SO_BaseUnit>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: a052a6ae6cd5113459276db4e40375f1, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9556,6 +9762,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4381371521741726491, guid: 70b9522fe2fe9d542bd53fbf73c3d147, type: 3}
+      propertyPath: <SO_BaseUnit>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: 2e45bcd820b14604a904609fedc72e12, type: 2}
     - target: {fileID: 6395415590388265114, guid: 70b9522fe2fe9d542bd53fbf73c3d147, type: 3}
       propertyPath: m_Name
       value: Sawmill
@@ -9573,6 +9783,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1625548516098031667, guid: fc395491c2dcc6a41b2882dc7bbad1e8, type: 3}
+      propertyPath: <SO_BaseUnit>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: e93b57d3fc1e0064983f6027661cbb28, type: 2}
     - target: {fileID: 1625548516098031667, guid: fc395491c2dcc6a41b2882dc7bbad1e8, type: 3}
       propertyPath: <so_baseUnit>k__BackingField
       value: 
@@ -9645,3 +9859,4 @@ SceneRoots:
   - {fileID: 1570811301}
   - {fileID: 34013407}
   - {fileID: 831853650}
+  - {fileID: 1374267399}

@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Recruit Unit", menuName = "Buildings/Actions/Recruit Unit", order = 100)]
 public class RecruitUnitAction : BaseAction
 {
-    [field: SerializeField] public BaseUnit UnitToBuild { get; private set; }
+    [field: SerializeField] public SO_BaseUnit UnitToBuild { get; private set; }
 
     public override bool CanExecute(ActionInfo actionInfo)
     {
@@ -19,15 +19,15 @@ public class RecruitUnitAction : BaseAction
         if (!CheckIfThereIsAvailableResources(actionInfo)) return;
 
         // Build Unit
-        building.RecruitUnit();
+        building.RecruitUnit(UnitToBuild);
     }
 
     private bool CheckIfThereIsAvailableResources(ActionInfo actionInfo)
     {
-        return UnitToBuild.SO_BaseUnit.Cost.Food <= UIResources.Food
-            && UnitToBuild.SO_BaseUnit.Cost.Wood <= UIResources.Wood
-            && UnitToBuild.SO_BaseUnit.Cost.Stone <= UIResources.Stone
-            && UnitToBuild.SO_BaseUnit.Cost.Iron <= UIResources.Iron
-            && UnitToBuild.SO_BaseUnit.Cost.Electricity <= UIResources.Electricity;
+        return UnitToBuild.Cost.Food + UIResources.Food <= UIResources.MaxFood
+            && UnitToBuild.Cost.Wood <= UIResources.Wood
+            && UnitToBuild.Cost.Stone <= UIResources.Stone
+            && UnitToBuild.Cost.Iron <= UIResources.Iron
+            && UnitToBuild.Cost.Population + UIResources.Population <= UIResources.MaxPopulation;
     }
 }

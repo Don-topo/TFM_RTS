@@ -56,8 +56,11 @@ public class UIManager : MonoBehaviour
             {
                 if(selectedUnits.First() is BaseBuilding)
                 {
+                    CommonActions selectedUnit = (CommonActions)selectedUnits.First();
                     uiUnitBase.Enable((CommonActions)selectedUnits.First());
                     uiSelectedBuilding.Enable((BaseBuilding)selectedUnits.First());
+                    List<CommonActions> list = new() { selectedUnit };
+                    uiActions.EnableActionButtons(list);
                 }
                 else
                 {

@@ -35,7 +35,7 @@ public abstract class CommonActions : MonoBehaviour, ISelectable
 
     }
 
-    public void Deselect()
+    public virtual void Deselect()
     {
         // Safety check to avoid errors
         if(selectionDecal != null)
@@ -47,7 +47,7 @@ public abstract class CommonActions : MonoBehaviour, ISelectable
         unitDeselectEvent.Raise(this);
     }
 
-    public void Select()
+    public virtual void Select()
     {
         // Safety check to avoid errors
         if(selectionDecal != null)

@@ -256,6 +256,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 294ac8375577a6641918538431387b6e, type: 2}
   - {fileID: 11400000, guid: 98ec6ba2f77d5294a91b60abc3edf252, type: 2}
   - {fileID: 11400000, guid: 0dfeed0d651d9914781d989d2175f4fb, type: 2}
-  <so_baseUnit>k__BackingField: {fileID: 11400000, guid: a052a6ae6cd5113459276db4e40375f1, type: 2}
+  <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: a0d0923a84414ee4f888633614b65eed, type: 2}
   unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}

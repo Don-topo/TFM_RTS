@@ -15,14 +15,14 @@ public class UIRecruitButton : MonoBehaviour
         Disable();
     }
 
-    public void Enable(BaseUnit unit, UnityAction unityAction)
+    public void Enable(SO_BaseUnit unit, UnityAction unityAction)
     {
         // Safety remove listeners, just in case
         button.onClick.RemoveAllListeners();
         button.onClick.AddListener(unityAction);
         button.interactable = true;
         // Set queue button icon
-        image.sprite = unit.SO_BaseUnit.Icon;
+        image.sprite = unit.Icon;
         image.gameObject.SetActive(true);
     }
 
@@ -30,6 +30,6 @@ public class UIRecruitButton : MonoBehaviour
     {
         button.onClick.RemoveAllListeners();
         button.interactable = false;
-        image.gameObject.SetActive(false);
+        image.sprite = null;
     }
 }
