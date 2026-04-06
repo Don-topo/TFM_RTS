@@ -5870,6 +5870,7 @@ MonoBehaviour:
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
   resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
   queueEvent: {fileID: 11400000, guid: 1dd8e8867b7a3644e9d24fe108f29d73, type: 2}
+  refreshEvent: {fileID: 11400000, guid: 2d6eed5983d3d1c42836ee74b2c39f02, type: 2}
   RecruitStartTime: 0
 --- !u!65 &1374267396
 BoxCollider:
@@ -8635,6 +8636,7 @@ MonoBehaviour:
   uiSelectedBuilding: {fileID: 1722134164}
   unitSelectedEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
+  refreshUIEvent: {fileID: 11400000, guid: 2d6eed5983d3d1c42836ee74b2c39f02, type: 2}
 --- !u!114 &1846006243
 MonoBehaviour:
   m_ObjectHideFlags: 0

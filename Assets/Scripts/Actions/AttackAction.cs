@@ -6,6 +6,8 @@ public class AttackAction : BaseAction
 {
     [SerializeField] MoveAction moveAction;
 
+    public override bool Blocked(ActionInfo actionInfo) => false;
+
     public override bool CanExecute(ActionInfo actionInfo)
     {
         return actionInfo.Action is IAttackable && actionInfo.Hit.collider != null;

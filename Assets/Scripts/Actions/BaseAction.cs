@@ -11,6 +11,7 @@ public abstract class BaseAction : ScriptableObject, IAction
     [field: SerializeField] public bool UseClickToExecute { get; private set; }
 
     public abstract bool CanExecute(ActionInfo actionInfo);
+    public abstract bool Blocked(ActionInfo actionInfo);
 
     public abstract void Execute(ActionInfo actionInfo);
 }

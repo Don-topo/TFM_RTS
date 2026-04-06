@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b946203f57b67204db1aaad5f7897041, type: 3}
   m_Name: SoldierCost
   m_EditorClassIdentifier: Assembly-CSharp::SO_ResourceCost
-  <Food>k__BackingField: 0
+  <Food>k__BackingField: 800
   <SO_Food>k__BackingField: {fileID: 11400000, guid: 0447c9f81e655a9409ec1f8119af8fab, type: 2}
   <Wood>k__BackingField: 0
   <SO_Wood>k__BackingField: {fileID: 11400000, guid: 0447c9f81e655a9409ec1f8119af8fab, type: 2}

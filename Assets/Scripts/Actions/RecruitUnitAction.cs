@@ -6,6 +6,11 @@ public class RecruitUnitAction : BaseAction
 {
     [field: SerializeField] public SO_BaseUnit UnitToBuild { get; private set; }
 
+    public override bool Blocked(ActionInfo actionInfo)
+    {
+        return !CheckIfThereIsAvailableResources(actionInfo);
+    }
+
     public override bool CanExecute(ActionInfo actionInfo)
     {
         return CheckIfThereIsAvailableResources(actionInfo) && actionInfo.Action is BaseBuilding;

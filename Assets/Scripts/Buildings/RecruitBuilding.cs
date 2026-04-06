@@ -6,6 +6,7 @@ public class RecruitBuilding : BaseBuilding
 {
     [SerializeField] private ResourceEvent resourceEvent;
     [field: SerializeField] public UpdateRecruitQueueEvent queueEvent;
+    [SerializeField] private RefreshUIEvent refreshEvent;
     private List<SO_BaseUnit> RecruitUnitsQueue = new List<SO_BaseUnit>(RECRUIT_QUEUE_SIZE);
     private const int RECRUIT_QUEUE_SIZE = 5;
     public float RecruitStartTime;
@@ -19,7 +20,7 @@ public class RecruitBuilding : BaseBuilding
         if (RecruitUnitsQueue.Count == RECRUIT_QUEUE_SIZE) return;
 
         // Spend resources
-        ResourceOP resourceOP = new ResourceOP(unitToRecruit.Cost.SO_Food, -unitToRecruit.Cost.Food, 0);
+        ResourceOP resourceOP = new ResourceOP(unitToRecruit.Cost.SO_Food, unitToRecruit.Cost.Food, 0);
         resourceEvent.Raise(resourceOP);
         resourceOP = new ResourceOP(unitToRecruit.Cost.SO_Wood, -unitToRecruit.Cost.Wood, 0);
         resourceEvent.Raise(resourceOP);
@@ -27,7 +28,7 @@ public class RecruitBuilding : BaseBuilding
         resourceEvent.Raise(resourceOP);
         resourceOP = new ResourceOP(unitToRecruit.Cost.SO_Iron, -unitToRecruit.Cost.Iron, 0);
         resourceEvent.Raise(resourceOP);
-        resourceOP = new ResourceOP(unitToRecruit.Cost.SO_Electricity, -unitToRecruit.Cost.Electricity, 0);
+        resourceOP = new ResourceOP(unitToRecruit.Cost.SO_Electricity, unitToRecruit.Cost.Electricity, 0);
         resourceEvent.Raise(resourceOP);
         resourceOP = new ResourceOP(unitToRecruit.Cost.SO_Population, unitToRecruit.Cost.Population, 0);
         resourceEvent.Raise(resourceOP);
@@ -54,7 +55,7 @@ public class RecruitBuilding : BaseBuilding
         // Get the unit from the queue
         SO_BaseUnit unitToRemove = RecruitUnitsQueue[queueIndex];
         // Return Recruiting resources
-        ResourceOP resourceOP = new ResourceOP(unitToRemove.Cost.SO_Food, unitToRemove.Cost.Food, 0);
+        ResourceOP resourceOP = new ResourceOP(unitToRemove.Cost.SO_Food, -unitToRemove.Cost.Food, 0);
         resourceEvent.Raise(resourceOP);
         resourceOP = new ResourceOP(unitToRemove.Cost.SO_Wood, unitToRemove.Cost.Wood, 0);
         resourceEvent.Raise(resourceOP);
@@ -62,7 +63,7 @@ public class RecruitBuilding : BaseBuilding
         resourceEvent.Raise(resourceOP);
         resourceOP = new ResourceOP(unitToRemove.Cost.SO_Iron, unitToRemove.Cost.Iron, 0);
         resourceEvent.Raise(resourceOP);
-        resourceOP = new ResourceOP(unitToRemove.Cost.SO_Electricity, unitToRemove.Cost.Electricity, 0);
+        resourceOP = new ResourceOP(unitToRemove.Cost.SO_Electricity, -unitToRemove.Cost.Electricity, 0);
         resourceEvent.Raise(resourceOP);
         resourceOP = new ResourceOP(unitToRemove.Cost.SO_Population, -unitToRemove.Cost.Population, 0);
         resourceEvent.Raise(resourceOP);
@@ -99,6 +100,8 @@ public class RecruitBuilding : BaseBuilding
     {
         while(RecruitUnitsQueue.Count > 0)
         {
+            // Refresh all UI
+            refreshEvent.Raise(true);
             // Start by the first unit in the queue
             SO_BaseUnit unitToRecruit = RecruitUnitsQueue[0];
             RecruitStartTime = Time.time;
@@ -112,6 +115,8 @@ public class RecruitBuilding : BaseBuilding
             RecruitUnitsQueue.RemoveAt(0);
             // Notify the update of the queue
             queueEvent.Raise(RecruitUnitsQueue);
+            // Refresh all UI
+            refreshEvent.Raise(true);
         }
     }
 }

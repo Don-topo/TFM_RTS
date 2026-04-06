@@ -7,7 +7,7 @@ public class UIRecruitUnitBuilding : MonoBehaviour
 {
     [SerializeField] private List<UIRecruitButton> recruitButtons = new List<UIRecruitButton>();
     [SerializeField] private UIProgressbar progressbar;
-    [SerializeField] private UpdateRecruitQueueEvent queueEvent;
+    [SerializeField] private UpdateRecruitQueueEvent queueEvent;    
 
     private RecruitBuilding productionBuilding;
     private Coroutine coroutine;

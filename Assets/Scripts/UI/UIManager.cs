@@ -13,12 +13,14 @@ public class UIManager : MonoBehaviour
 
     public UnitSelectedEvent unitSelectedEvent;
     public UnitDeselectEvent unitDeselectEvent;
+    public RefreshUIEvent refreshUIEvent;
     private List<ISelectable> selectedUnits = new List<ISelectable>(12);
     
     private void Awake()
     {
         unitSelectedEvent.Register(UnitSelected);
         unitDeselectEvent.Register(UnitDeselected);
+        refreshUIEvent.Register(HardRefreshByEvent);
     }
 
     private void Start()
@@ -45,6 +47,11 @@ public class UIManager : MonoBehaviour
     private void UnitDeselected(CommonActions unitDeselect)
     {
         selectedUnits.Remove(unitDeselect);
+        UpdateUI();
+    }
+
+    private void HardRefreshByEvent(bool refresh)
+    {
         UpdateUI();
     }
 

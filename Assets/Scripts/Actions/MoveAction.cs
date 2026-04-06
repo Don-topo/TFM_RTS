@@ -59,4 +59,6 @@ public class MoveAction : BaseAction
 
         return newMovePosition;
     }
+
+    public override bool Blocked(ActionInfo actionInfo) => false;
 }
