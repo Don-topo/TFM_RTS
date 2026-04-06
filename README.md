@@ -1,3 +1,7 @@
+v0.07 => 06/04/2026:
+  - Finished basic Recruit units.
+  - TODO Attack Action not finished.
+    
 v0.06 => 05/04/2026:
   - Fix resource generation progress bar bug.
   - Start working on Recruit buildings: Building, recruit system, recruit UI.
