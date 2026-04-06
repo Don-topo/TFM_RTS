@@ -43,6 +43,7 @@ public class ProductionBuilding : BaseBuilding
 
     private void ProduceResource()
     {
-        resourceEvent.Raise(resource);
+        ResourceOP resourceOP = new ResourceOP(resource, resource.ObtainedAmount, resource.MaxAmount);       
+        resourceEvent.Raise(resourceOP);
     }
 }

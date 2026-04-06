@@ -19,12 +19,18 @@ public class RecruitBuilding : BaseBuilding
         if (RecruitUnitsQueue.Count == RECRUIT_QUEUE_SIZE) return;
 
         // Spend resources
-        resourceEvent.Raise(unitToRecruit.Cost.SO_Food);
-        resourceEvent.Raise(unitToRecruit.Cost.SO_Wood);
-        resourceEvent.Raise(unitToRecruit.Cost.SO_Stone);
-        resourceEvent.Raise(unitToRecruit.Cost.SO_Iron);
-        resourceEvent.Raise(unitToRecruit.Cost.SO_Electricity);
-        resourceEvent.Raise(unitToRecruit.Cost.SO_Population);
+        ResourceOP resourceOP = new ResourceOP(unitToRecruit.Cost.SO_Food, -unitToRecruit.Cost.Food, 0);
+        resourceEvent.Raise(resourceOP);
+        resourceOP = new ResourceOP(unitToRecruit.Cost.SO_Wood, -unitToRecruit.Cost.Wood, 0);
+        resourceEvent.Raise(resourceOP);
+        resourceOP = new ResourceOP(unitToRecruit.Cost.SO_Stone, -unitToRecruit.Cost.Stone, 0);
+        resourceEvent.Raise(resourceOP);
+        resourceOP = new ResourceOP(unitToRecruit.Cost.SO_Iron, -unitToRecruit.Cost.Iron, 0);
+        resourceEvent.Raise(resourceOP);
+        resourceOP = new ResourceOP(unitToRecruit.Cost.SO_Electricity, -unitToRecruit.Cost.Electricity, 0);
+        resourceEvent.Raise(resourceOP);
+        resourceOP = new ResourceOP(unitToRecruit.Cost.SO_Population, unitToRecruit.Cost.Population, 0);
+        resourceEvent.Raise(resourceOP);
         
         // Add unit to the recruit queue
         RecruitUnitsQueue.Add(unitToRecruit);
@@ -48,12 +54,18 @@ public class RecruitBuilding : BaseBuilding
         // Get the unit from the queue
         SO_BaseUnit unitToRemove = RecruitUnitsQueue[queueIndex];
         // Return Recruiting resources
-        resourceEvent.Raise(unitToRemove.Cost.SO_Food);
-        resourceEvent.Raise(unitToRemove.Cost.SO_Wood);
-        resourceEvent.Raise(unitToRemove.Cost.SO_Iron);
-        resourceEvent.Raise(unitToRemove.Cost.SO_Stone);
-        resourceEvent.Raise(unitToRemove.Cost.SO_Electricity);
-        resourceEvent.Raise(unitToRemove.Cost.SO_Population);
+        ResourceOP resourceOP = new ResourceOP(unitToRemove.Cost.SO_Food, unitToRemove.Cost.Food, 0);
+        resourceEvent.Raise(resourceOP);
+        resourceOP = new ResourceOP(unitToRemove.Cost.SO_Wood, unitToRemove.Cost.Wood, 0);
+        resourceEvent.Raise(resourceOP);
+        resourceOP = new ResourceOP(unitToRemove.Cost.SO_Stone, unitToRemove.Cost.Stone, 0);
+        resourceEvent.Raise(resourceOP);
+        resourceOP = new ResourceOP(unitToRemove.Cost.SO_Iron, unitToRemove.Cost.Iron, 0);
+        resourceEvent.Raise(resourceOP);
+        resourceOP = new ResourceOP(unitToRemove.Cost.SO_Electricity, unitToRemove.Cost.Electricity, 0);
+        resourceEvent.Raise(resourceOP);
+        resourceOP = new ResourceOP(unitToRemove.Cost.SO_Population, -unitToRemove.Cost.Population, 0);
+        resourceEvent.Raise(resourceOP);
         // Delete unit from recruit queue
         RecruitUnitsQueue.RemoveAt(queueIndex);
 

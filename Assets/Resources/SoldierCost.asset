@@ -22,5 +22,5 @@ MonoBehaviour:
   <SO_Iron>k__BackingField: {fileID: 11400000, guid: 6149a635b37dd2549911d28764195f66, type: 2}
   <Electricity>k__BackingField: 0
   <SO_Electricity>k__BackingField: {fileID: 11400000, guid: 41ab553191e8b234396825a021fb9645, type: 2}
-  <Population>k__BackingField: 0
+  <Population>k__BackingField: 1
   <SO_Population>k__BackingField: {fileID: 11400000, guid: 1442bde75b54a7242b78b38a81a4d2b4, type: 2}

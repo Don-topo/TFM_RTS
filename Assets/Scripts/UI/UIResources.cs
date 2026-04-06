@@ -45,37 +45,37 @@ public class UIResources : MonoBehaviour
         resourceEvent.Unregister(UpdateResource);
     }
 
-    private void UpdateResource(SO_Resource resource)
+    private void UpdateResource(ResourceOP resource)
     {
-        if(resource == so_food)
+        if(resource.SO_Resource == so_food)
         {
-            Food += resource.ObtainedAmount;
-            MaxFood = resource.IncreaseMaxAmount;
-            foodText.SetText(Food.ToString());
+            Food += resource.Amount;
+            MaxFood += resource.MaxAmount;
+            foodText.SetText(Food.ToString() + " / " + MaxFood.ToString());
         }
-        else if(resource == so_wood)
+        else if(resource.SO_Resource == so_wood)
         {
-            Wood += resource.ObtainedAmount;
-            MaxWood = resource.IncreaseMaxAmount;
-            woodText.SetText(Wood.ToString());
+            Wood += resource.Amount;
+            MaxWood = resource.MaxAmount;
+            woodText.SetText(Wood.ToString() + " / " + MaxIron.ToString());
         }
-        else if(resource == so_iron)
+        else if(resource.SO_Resource == so_iron)
         {
-            Iron += resource.ObtainedAmount;
-            MaxIron = resource.IncreaseMaxAmount;
-            ironText.SetText(Iron.ToString());
+            Iron += resource.Amount;
+            MaxIron += resource.MaxAmount;
+            ironText.SetText(Iron.ToString() + " / " + MaxIron.ToString());
         }
-        else if(resource == so_electricity)
+        else if(resource.SO_Resource == so_electricity)
         {
-            Electricity += resource.ObtainedAmount;
-            MaxElectricity = resource.IncreaseMaxAmount;
-            electricityText.SetText(Electricity.ToString());
+            Electricity += resource.Amount;
+            MaxElectricity += resource.MaxAmount;
+            electricityText.SetText(Electricity.ToString() + " / " + MaxElectricity.ToString());
         }
-        else if(resource == so_population)
+        else if(resource.SO_Resource == so_population)
         {
-            Population += resource.ObtainedAmount;
-            MaxPopulation = resource.IncreaseMaxAmount;
-            populationText.SetText(Population.ToString());
+            Population += resource.Amount;
+            MaxPopulation += resource.MaxAmount;
+            populationText.SetText(Population.ToString() + " / " + MaxPopulation.ToString());
         }
     }
 }
