@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(10);
-            enemySpawner.GenerateWave(0, dificultyModifier, Vector3.zero);
+            enemySpawner.GenerateWave(0, DificultyMode.Easy, Vector3.zero);
         }
     }
 

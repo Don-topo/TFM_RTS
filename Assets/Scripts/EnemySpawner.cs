@@ -17,12 +17,14 @@ public class EnemySpawner : MonoBehaviour
 
     [Header("Waves configuration")]
     [SerializeField] private DificultyMode dificultyMode;
-    //[SerializeField] private int basic
+    [SerializeField] private int baseEnemiesPerWave = 10;
 
-    private int currentWave = 0;
+    private int currentWave;
     private bool activeWave = false;
-    private int baseEnemiesPerWave = 10;
-   
+    private Transform selectedSpawnPosition;
+
+    public bool IsWaveActive() => activeWave;
+    public void SetDificultyMode(DificultyMode mode) => dificultyMode = mode;
 
     private void Awake()
     {
@@ -37,8 +39,13 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    public void GenerateWave(int waveNumber, float dificultyModifier, Vector3 spawnPosition)
+    public void GenerateWave(int waveNumber, DificultyMode dificultyModifier, Vector3 spawnPosition)
     {
+        currentWave = waveNumber;
+        dificultyMode = dificultyModifier;
+        // Select a randomly spawn point for this wave
+        selectedSpawnPosition = SelectSpawnPosition();
+        // Spawn enemies
         StartCoroutine(SpawnEnemiesCoroutines());
     }
 
@@ -49,8 +56,10 @@ public class EnemySpawner : MonoBehaviour
 
     private int CalculateWaveEnemies()
     {
+        // Set the base enemies to spawn based on current way
         int enemiesToSpawn = baseEnemiesPerWave * 2 + 5;
 
+        // Add difficulty modifier
         switch (dificultyMode)
         {
             case DificultyMode.Easy: return enemiesToSpawn;
@@ -61,12 +70,7 @@ public class EnemySpawner : MonoBehaviour
         return enemiesToSpawn;
     }
 
-    private bool IsSPecialEnemy(EnemyType enemy)
-    {
-        return enemy == EnemyType.Harpy || enemy == EnemyType.Fatty || enemy == EnemyType.Spitter;
-    }
-
-    private EnemyType GetEnemyRandomly()
+    private EnemyType GetEnemyTypeRandomly()
     {
         int roll = Random.Range(0, 100);
 
@@ -110,8 +114,8 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        EnemyType enemyTypeToSpawn = GetEnemyRandomly();
-        Instantiate(GetEnemyPrefab(enemyTypeToSpawn), SelectSpawnPosition().position, Quaternion.identity);
+        EnemyType enemyTypeToSpawn = GetEnemyTypeRandomly();
+        Instantiate(GetEnemyPrefab(enemyTypeToSpawn), selectedSpawnPosition.position, Quaternion.identity);
     }
 
     private IEnumerator SpawnEnemiesCoroutines()
@@ -122,10 +126,7 @@ public class EnemySpawner : MonoBehaviour
         {
             SpawnEnemy();
 
-            //yield return new WaitForSeconds(0.5f); 
             yield return new WaitForSeconds(Mathf.Lerp(0.5f, 0.2f, currentWave / 20f));
         }
-
-        currentWave++;
     }
 }
