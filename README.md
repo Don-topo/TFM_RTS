@@ -1,3 +1,9 @@
+v0.08 => 07/04/2026:
+  - Implemented Day and Night.
+  - Implemented Enemy Spawner.
+  - Implemented Main menu + options + pause.
+  - TODO Attack Action not finished.
+    
 v0.07 => 06/04/2026:
   - Finished basic Recruit units.
   - TODO Attack Action not finished.
