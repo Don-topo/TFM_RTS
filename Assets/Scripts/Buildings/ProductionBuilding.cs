@@ -10,11 +10,6 @@ public class ProductionBuilding : BaseBuilding
     // Variables to hold and count the time past
     public float StartTime { get; private set; }
 
-    protected override void Awake()
-    {
-        // Start counting time to produce
-    }
-
     protected override void Start()
     {
         base.Start();
