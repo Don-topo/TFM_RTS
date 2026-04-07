@@ -1,33 +1,33 @@
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class DayManager : MonoBehaviour
 {
-    public Material skyboxMaterial;
-
     [Header("Skybox")]
-    public Gradient skyboxTint;
-    public AnimationCurve skyboxExposure;
-    public AnimationCurve atmosphereThickness;
+    [SerializeField] private Gradient skyboxTint;
+    [SerializeField] private AnimationCurve skyboxExposure;
+    [SerializeField] private AnimationCurve atmosphereThickness;
+    [SerializeField] private Material skyboxMaterial;
 
     [Header("Lights")]
-    public Light sun;
-    public Light moon;
+    [SerializeField] private Light sun;
+    [SerializeField] private Light moon;
 
     [Header("Time")]
-    [Range(0, 1)] public float timeOfDay;
-    public float dayDurationInMinutes = 5f;
+    [Range(0, 1)][SerializeField] private float timeOfDay;
+    [SerializeField] private float dayDurationInMinutes = 5f;
 
     [Header("Curves")]
-    public AnimationCurve sunIntensity;
-    public AnimationCurve moonIntensity;
-    public Gradient lightColor;
+    [SerializeField] private AnimationCurve sunIntensity;
+    [SerializeField] private AnimationCurve moonIntensity;
+    [SerializeField] private Gradient lightColor;
 
     [Header("Post Processing")]
-    public Volume globalVolume;
-    private UnityEngine.Rendering.Universal.ColorAdjustments colorAdjustments;
+    [SerializeField] private Volume globalVolume;
+    [SerializeField] private ColorAdjustments colorAdjustments;
 
-    void Start()
+    private void Start()
     {
         RenderSettings.skybox = skyboxMaterial;
 
@@ -37,7 +37,7 @@ public class DayManager : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Update()
     {
         float dayDurationInSeconds = dayDurationInMinutes * 60f;
         float speed = 1f / dayDurationInSeconds;
@@ -48,7 +48,7 @@ public class DayManager : MonoBehaviour
         UpdateLighting();
     }
 
-    void UpdateLighting()
+    private void UpdateLighting()
     {
         float sunInt = sunIntensity.Evaluate(timeOfDay);
         float moonInt = moonIntensity.Evaluate(timeOfDay);
@@ -64,7 +64,6 @@ public class DayManager : MonoBehaviour
         sun.transform.rotation = Quaternion.Euler(angle, 170, 0);
         moon.transform.rotation = Quaternion.Euler(angle + 180f, 170, 0);
 
-        // Ajuste de exposición para RTS (clave)
         if (colorAdjustments != null)
         {
             float exposure = Mathf.Lerp(1.5f, 0.3f, sunInt);
