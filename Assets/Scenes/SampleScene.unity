@@ -6291,12 +6291,14 @@ MonoBehaviour:
   selectionDecal: {fileID: 804990561}
   <Actions>k__BackingField:
   - {fileID: 11400000, guid: 9f5d9bb4e1dfa884ea15e7e31e92447f, type: 2}
+  - {fileID: 11400000, guid: b46cddd9723ed0d428f18f5d25b294f5, type: 2}
   <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: b6e8e5618b825f8469bbbe6cc21eabf6, type: 2}
   unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
   resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
   queueEvent: {fileID: 11400000, guid: 1dd8e8867b7a3644e9d24fe108f29d73, type: 2}
   refreshEvent: {fileID: 11400000, guid: 2d6eed5983d3d1c42836ee74b2c39f02, type: 2}
+  recruitDestination: {fileID: 6434967215031062788, guid: e2a5db46af34bb84097aa238fdbd9aea, type: 3}
   RecruitStartTime: 0
 --- !u!65 &1374267396
 BoxCollider:
@@ -8617,6 +8619,7 @@ MonoBehaviour:
   - {fileID: 2085302859}
   - {fileID: 2030225101}
   dificultyMode: 0
+  baseEnemiesPerWave: 10
 --- !u!1 &1784553464
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,12 +7,33 @@ public class RecruitBuilding : BaseBuilding
     [SerializeField] private ResourceEvent resourceEvent;
     [field: SerializeField] public UpdateRecruitQueueEvent queueEvent;
     [SerializeField] private RefreshUIEvent refreshEvent;
+    [SerializeField] private GameObject recruitDestination;
     private List<SO_BaseUnit> RecruitUnitsQueue = new List<SO_BaseUnit>(RECRUIT_QUEUE_SIZE);
     private const int RECRUIT_QUEUE_SIZE = 5;
+    private bool isRecruitDestinationSet = false;
+    private GameObject recruitDestinationInstance;
     public float RecruitStartTime;
 
     public List<SO_BaseUnit> GetRecruitQueue() => RecruitUnitsQueue;
     public int GetMaxQueueSize() => RECRUIT_QUEUE_SIZE;
+
+    public void SetRecruitDestination(Vector3 newPosition)
+    {
+        isRecruitDestinationSet = newPosition != null;
+        if (isRecruitDestinationSet && recruitDestinationInstance != null)
+        {
+            recruitDestinationInstance.transform.position = newPosition;
+            recruitDestinationInstance.SetActive(true);
+        }               
+    }
+
+    protected override void Awake()
+    {
+        base.Awake();
+        recruitDestinationInstance = Instantiate(recruitDestination);
+        recruitDestinationInstance.SetActive(false);
+        Deselect();        
+    }
 
     public void RecruitUnit(SO_BaseUnit unitToRecruit)
     {
@@ -89,11 +110,30 @@ public class RecruitBuilding : BaseBuilding
     public override void Select()
     {
         base.Select();
+        if (isRecruitDestinationSet)
+        {
+            recruitDestinationInstance.SetActive(true);
+        }
     }
 
     public override void Deselect()
     {
         base.Deselect();
+        if (isRecruitDestinationSet)
+        {
+            recruitDestinationInstance.SetActive(false);
+        }
+    }
+
+    private void SetRecruitDestination(GameObject recruitedUnit)
+    {
+        if (isRecruitDestinationSet)
+        {
+            if(recruitedUnit.TryGetComponent(out IMoveable moveable))
+            {
+                moveable.Move(recruitDestinationInstance.transform.position);
+            }
+        }
     }
 
     private IEnumerator RecruitUnits()
@@ -111,6 +151,8 @@ public class RecruitBuilding : BaseBuilding
             yield return new WaitForSeconds(unitToRecruit.GenerationTime);
             // Instantiate the recruited unit
             GameObject recruitedUnit = Instantiate(unitToRecruit.UnitPrefab, transform.position, Quaternion.identity);
+            // If the recruit destination is set move to them
+            SetRecruitDestination(recruitedUnit);
             // Remove the recruited unit
             RecruitUnitsQueue.RemoveAt(0);
             // Notify the update of the queue
