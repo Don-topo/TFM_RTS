@@ -18,3 +18,6 @@ MonoBehaviour:
   <UIPosition>k__BackingField: 5
   <IsSingleUnitCommand>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 1
+  <IgnoreTerrain>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 54
