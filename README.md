@@ -1,3 +1,8 @@
+v0.09 => 08/04/2026:
+  - Implemented recruit destination point action.
+  - Start working on minimap.
+  - TODO Attack Action not finished.
+    
 v0.08 => 07/04/2026:
   - Implemented Day and Night.
   - Implemented Enemy Spawner.
