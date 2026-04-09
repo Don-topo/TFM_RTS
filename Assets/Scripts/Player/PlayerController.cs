@@ -4,6 +4,7 @@ using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,10 +18,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform cameraMovementTransform;
 
     // Events
+    [Header("Events")]
     public UnitSelectedEvent selectUnitEvent;
     public UnitDeselectEvent deselectUnitEvent;
     public ActionExecuted actionExecuted;
     public ActionClicked actionClicked;
+    public MinimapClickEvent minimapClickEvent;
 
     public float edgeSize = 50f;
 
@@ -41,6 +44,7 @@ public class PlayerController : MonoBehaviour
         deselectUnitEvent.Register(DeselectUnit);
         //actionExecuted.Register(ExecuteAction);
         actionClicked.Register(ActionClicked);
+        minimapClickEvent.Register(MinimapClicked);
         zoom = camera.transform.localPosition.y;
     }
 
@@ -58,6 +62,8 @@ public class PlayerController : MonoBehaviour
     {
         selectUnitEvent.Unregister(SelectedUnit);
         deselectUnitEvent.Unregister(DeselectUnit);
+        actionClicked.Unregister(ActionClicked);
+        minimapClickEvent.Unregister(MinimapClicked);
     }
 
     private void SelectedUnit(CommonActions action)
@@ -312,6 +318,18 @@ public class PlayerController : MonoBehaviour
         if (!selectedAction.UseClickToExecute)
         {
             ExecuteAction(new RaycastHit());
+        }
+    }
+
+    private void MinimapClicked(MinimapEventInfo info)
+    {
+        if (info.MouseButton == MouseButton.Right)
+        {
+            ExecuteAction(info.RaycastHit);
+        }
+        else if (info.MouseButton == MouseButton.Left)
+        {
+            ExecuteAction(info.RaycastHit);
         }
     }
 
