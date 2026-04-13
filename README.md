@@ -1,3 +1,7 @@
+v.0.10 => 13/04/2026:
+  - Finished minimap.
+  - TODO Attack Action not finished.
+    
 v0.09 => 08/04/2026:
   - Implemented recruit destination point action.
   - Start working on minimap.
