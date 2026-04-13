@@ -8,9 +8,11 @@ using UnityEngine.InputSystem.LowLevel;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Camera")]
     [SerializeField] private new Camera camera;
     [SerializeField] private CameraConfig cameraConfig;
     [SerializeField] private Transform targetTransform;
+    [Header("Layers")]
     [SerializeField] private LayerMask selectableUnitsLayers;
     [SerializeField] private LayerMask floorLayers;
     [SerializeField] private LayerMask interactableLayers;
@@ -26,6 +28,8 @@ public class PlayerController : MonoBehaviour
     public MinimapClickEvent minimapClickEvent;
 
     public float edgeSize = 50f;
+
+    private Vector3 cameraStartPosition;
 
     // Unit Management
     private List<ISelectable> selectedUnits = new List<ISelectable>(12);
@@ -46,16 +50,17 @@ public class PlayerController : MonoBehaviour
         actionClicked.Register(ActionClicked);
         minimapClickEvent.Register(MinimapClicked);
         zoom = camera.transform.localPosition.y;
+        cameraStartPosition = camera.transform.position;
     }
 
     private void Update()
-    {        
+    {
+        zoom = camera.transform.localPosition.y;
         DragMouse();
         CameraZoom();
-        //CameraRotation();
         CameraMovement();
         RigthClick();
-       
+        ResetCameraPosition();
     }
 
     private void OnDestroy()
@@ -147,17 +152,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void CameraRotation()
+    private void ResetCameraPosition()
     {
-        if (Mouse.current.middleButton.isPressed)
+        if (Keyboard.current.spaceKey.wasReleasedThisFrame)
         {
-      
+            camera.transform.position = cameraStartPosition;
         }
-    }
-
-    private void ResetCameraRotationAndZoom()
-    {
-
     }
 
     private void RigthClick()
@@ -336,6 +336,7 @@ public class PlayerController : MonoBehaviour
     private void ExecuteAction(RaycastHit hit)
     {
         List<CommonActions> actions = selectedUnits.Where(unit => unit is CommonActions).Cast<CommonActions>().ToList();
+        if (actions.Count == 0 || selectedAction == null) return;
         foreach (CommonActions action in actions)
         {
             ActionInfo actionInfo = new(action, hit, actions.IndexOf(action));

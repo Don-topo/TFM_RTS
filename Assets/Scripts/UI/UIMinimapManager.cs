@@ -5,6 +5,7 @@ using static UnityEngine.UI.GridLayoutGroup;
 
 public class UIMinimapManager : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler, IPointerMoveHandler, IPointerDownHandler, IPointerUpHandler
 {
+    [Header("Minimap Camera")]
     [SerializeField] private Camera minimapCamera;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private LayerMask layerMask;
@@ -87,14 +88,14 @@ public class UIMinimapManager : MonoBehaviour, IPointerExitHandler, IPointerEnte
 
         if (RaycastFromMousePosition(mousePosition, out RaycastHit hit))
         {
-            mainCamera.transform.position = hit.point;
+            mainCamera.transform.localPosition = new Vector3(hit.point.x, mainCamera.transform.localPosition.y, hit.point.z);
         }
     }
 
 
     private void RaiseClickEvent(Vector2 mousePosition, MouseButton button)
     {
-        RaycastFromMousePosition(mousePosition, out RaycastHit hit);
+        if(RaycastFromMousePosition(mousePosition, out RaycastHit hit))
         {
             minimapClicked.Raise(new MinimapEventInfo(button, hit));            
         }
