@@ -248,6 +248,8 @@ MonoBehaviour:
   selectionDecal: {fileID: 0}
   <Actions>k__BackingField: []
   <SO_BaseUnit>k__BackingField: {fileID: 0}
+  <CurrentHealth>k__BackingField: 0
+  <MaxHealth>k__BackingField: 0
   unitSelectEvent: {fileID: 0}
   unitDeselectEvent: {fileID: 0}
 --- !u!1 &35273525
@@ -2150,7 +2152,7 @@ MonoBehaviour:
   minimapClickEvent: {fileID: 11400000, guid: e4f34659c37be144b8673132127b1b1f, type: 2}
   edgeSize: 10
   playerUnits:
-  - {fileID: 1688468635}
+  - {fileID: 1939925273}
   - {fileID: 1258791110}
 --- !u!1 &356468719
 GameObject:
@@ -6230,7 +6232,7 @@ GameObject:
   - component: {fileID: 1258791110}
   m_Layer: 6
   m_Name: Unit (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6369,6 +6371,7 @@ MonoBehaviour:
   m_BlackboardVariableOverridesList:
   - rid: 1138904140139987932
   - rid: 522942171674050823
+  - rid: 522942329850954423
   m_OriginalGraph: {fileID: 0}
   m_IsInitialised: 0
   m_IsStarted: 0
@@ -6383,6 +6386,14 @@ MonoBehaviour:
           m_Value1: 12445388921349676129
         Name: UnitActions
         m_Value: 1
+    - rid: 522942329850954423
+      type: {class: 'BlackboardVariable`1[[SO_AttackInfo, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 2883937933841159481
+          m_Value1: 691944216099911151
+        Name: SO Attack Info
+        m_Value: {fileID: 0}
     - rid: 1138904140139987932
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -6409,6 +6420,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 294ac8375577a6641918538431387b6e, type: 2}
   - {fileID: 11400000, guid: 98ec6ba2f77d5294a91b60abc3edf252, type: 2}
   <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: a0d0923a84414ee4f888633614b65eed, type: 2}
+  <CurrentHealth>k__BackingField: 100
+  <MaxHealth>k__BackingField: 100
   unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
 --- !u!1 &1331777768
@@ -6586,6 +6599,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9f5d9bb4e1dfa884ea15e7e31e92447f, type: 2}
   - {fileID: 11400000, guid: b46cddd9723ed0d428f18f5d25b294f5, type: 2}
   <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: b6e8e5618b825f8469bbbe6cc21eabf6, type: 2}
+  <CurrentHealth>k__BackingField: 0
+  <MaxHealth>k__BackingField: 0
   unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
   resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
@@ -7832,6 +7847,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8119274735452610456, guid: 860231d9b44e7c64698bff3d64a5d660, type: 3}
   m_PrefabInstance: {fileID: 2058850270805040590}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1588615608 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7722485381678423386, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
+  m_PrefabInstance: {fileID: 86555613523978461}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.DecalProjector
 --- !u!1 &1604377802
 GameObject:
   m_ObjectHideFlags: 0
@@ -8209,17 +8235,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663826798}
   m_CullTransparentMesh: 1
---- !u!114 &1688468635 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7875676953263606175, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
-  m_PrefabInstance: {fileID: 86555613523978461}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f842c575ea5ae7a46ac45294b2759ba4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BaseUnit
 --- !u!1 &1722134162
 GameObject:
   m_ObjectHideFlags: 0
@@ -9880,6 +9895,107 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 100
   m_TargetDisplay: 0
+--- !u!1 &1939925266 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3004732720037302805, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
+  m_PrefabInstance: {fileID: 86555613523978461}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1939925267 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3130371631443487386, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
+  m_PrefabInstance: {fileID: 86555613523978461}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1939925273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939925266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f58286a9d9a11c34fa115428e6e83a0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BaseAttacker
+  <IsSelected>k__BackingField: 0
+  selectionDecal: {fileID: 1588615608}
+  <Actions>k__BackingField:
+  - {fileID: 11400000, guid: 294ac8375577a6641918538431387b6e, type: 2}
+  - {fileID: 11400000, guid: 98ec6ba2f77d5294a91b60abc3edf252, type: 2}
+  - {fileID: 11400000, guid: 0dfeed0d651d9914781d989d2175f4fb, type: 2}
+  <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: a052a6ae6cd5113459276db4e40375f1, type: 2}
+  <CurrentHealth>k__BackingField: 120
+  <MaxHealth>k__BackingField: 120
+  unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
+  unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
+--- !u!1 &1967750159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1967750160}
+  - component: {fileID: 1967750162}
+  - component: {fileID: 1967750161}
+  m_Layer: 2
+  m_Name: Attack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1967750160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967750159}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1939925267}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1967750161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967750159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 901210563f1381b418436edc35029091, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttackSystem
+  unitInRangeEvent: {fileID: 11400000, guid: 21d3807d12d7dc646a6f5ad0eb6aecf9, type: 2}
+  unitDeathEvent: {fileID: 11400000, guid: 46b246a8aa2a6484aa30cca95cadc3fa, type: 2}
+--- !u!135 &1967750162
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967750159}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.03
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1979621383
 GameObject:
   m_ObjectHideFlags: 0
@@ -10617,13 +10733,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2875370697152480412, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
+      propertyPath: 'managedReferences[522942329850954424]'
+      value: 'Unity.Behavior Unity.Behavior.BlackboardVariable`1[[SO_AttackInfo,
+        Assembly-CSharp]]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875370697152480412, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
+      propertyPath: managedReferences[522942329850954424].Name
+      value: SO Attack Info
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875370697152480412, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
+      propertyPath: m_BlackboardVariableOverridesList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875370697152480412, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
+      propertyPath: managedReferences[522942329850954424].m_Value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875370697152480412, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
+      propertyPath: 'm_BlackboardVariableOverridesList.Array.data[2]'
+      value: 522942329850954424
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875370697152480412, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
+      propertyPath: managedReferences[522942329850954424].GUID.m_Value0
+      value: 2883937933841159481
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875370697152480412, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
+      propertyPath: managedReferences[522942329850954424].GUID.m_Value1
+      value: 691944216099911151
+      objectReference: {fileID: 0}
     - target: {fileID: 3004732720037302805, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
       propertyPath: m_Name
       value: Unit
       objectReference: {fileID: 0}
     - target: {fileID: 3130371631443487386, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 5.37
       objectReference: {fileID: 0}
     - target: {fileID: 3130371631443487386, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10662,13 +10807,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7875676953263606175, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7875676953263606175, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
       propertyPath: <SO_BaseUnit>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: a052a6ae6cd5113459276db4e40375f1, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7875676953263606175, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3130371631443487386, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1967750160}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3004732720037302805, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1939925273}
   m_SourcePrefab: {fileID: 100100000, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
 --- !u!1001 &2058850270805040590
 PrefabInstance:

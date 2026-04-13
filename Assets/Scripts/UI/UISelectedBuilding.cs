@@ -12,16 +12,15 @@ public class UISelectedBuilding : MonoBehaviour
         if(baseBuilding is ProductionBuilding)
         {
             uIProductionBuilding.Enable((ProductionBuilding)baseBuilding);
-            buildingNameText.enabled = true;
-            buildingNameText.SetText(baseBuilding.SO_BaseUnit.name);
         }
-        else
+        else if(baseBuilding is RecruitBuilding)
         {
             // Recruiting building
             uIRecruitUnitBuilding.Enable((RecruitBuilding)baseBuilding);
-            buildingNameText.enabled = true;
-            buildingNameText.SetText(baseBuilding.SO_BaseUnit.name);
         }
+
+        buildingNameText.enabled = true;
+        buildingNameText.SetText(baseBuilding.SO_BaseUnit.name);
     }
 
     public void Disable()

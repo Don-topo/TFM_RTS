@@ -19,13 +19,17 @@ public class AttackAction : BaseAction
         if (attacker == null) return;
         IAttackable attackable = actionInfo.Hit.collider.GetComponent<IAttackable>();
         if (attackable == null) return;
-        if(moveAction != null)
+        if(attackable != null)
         {
-            //attacker.Attack(moveAction);
+            attacker.Attack(attackable);
+        }
+        else if(moveAction != null)
+        {
+            attacker.Attack(moveAction.CalculateMovePosition(actionInfo));
         }
         else
         {
-            attacker.Attack(attackable);
+            attacker.Attack(actionInfo.Hit.point);
         }        
     }
 }

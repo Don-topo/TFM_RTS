@@ -336,10 +336,14 @@ public class PlayerController : MonoBehaviour
     private void ExecuteAction(RaycastHit hit)
     {
         List<CommonActions> actions = selectedUnits.Where(unit => unit is CommonActions).Cast<CommonActions>().ToList();
-        if (actions.Count == 0 || selectedAction == null) return;
+        if (actions.Count == 0) return;
         foreach (CommonActions action in actions)
         {
             ActionInfo actionInfo = new(action, hit, actions.IndexOf(action));
+            if(selectedAction == null)
+            {
+                selectedAction = action.Actions.Where(act => act.Name == "Move").First();
+            }
             if (selectedAction.CanExecute(actionInfo))
             {
                 selectedAction.Execute(actionInfo);

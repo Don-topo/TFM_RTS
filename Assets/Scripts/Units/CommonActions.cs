@@ -2,13 +2,18 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using static UnityEngine.UI.GridLayoutGroup;
 
-public abstract class CommonActions : MonoBehaviour, ISelectable
+public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
 {
     [field: SerializeField] public bool IsSelected { get; protected set; }
 
     [field: SerializeField] protected DecalProjector selectionDecal;
     [field: SerializeField] public BaseAction[] Actions { get; private set; }
     [field: SerializeField] public SO_BaseUnit SO_BaseUnit { get; protected set; }
+    [field: SerializeField] public int CurrentHealth { get; protected set; }
+    [field: SerializeField] public int MaxHealth {  get; protected set; }
+
+    public Transform TargetPosition => transform;
+
     // Base Unit Events
     public UnitSelectedEvent unitSelectEvent;
     public UnitDeselectEvent unitDeselectEvent;
@@ -74,5 +79,19 @@ public abstract class CommonActions : MonoBehaviour, ISelectable
         {
             unitSelectEvent.Raise(this);
         }
+    }
+
+    public void ApplyDamage(int damageAmount)
+    {
+        CurrentHealth = Mathf.Clamp(CurrentHealth - damageAmount, 0, CurrentHealth);
+        if(CurrentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        Destroy(gameObject);
     }
 }

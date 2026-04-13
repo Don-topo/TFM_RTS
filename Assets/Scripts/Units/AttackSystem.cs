@@ -5,14 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(SphereCollider))]
 public class AttackSystem : MonoBehaviour
 {
+    [Header("Events")]
     [SerializeField] private UnitInRangeEvent unitInRangeEvent;
     [SerializeField] private UnitDeathEvent unitDeathEvent;
-    public List<IAttackable> GetAttackableEnemies() => enemiesVisible;
-    public List<IAttackable> GetNearEnemies() => enemiesInRange;
     
-    private List<IAttackable> enemiesInRange = new List<IAttackable>();
-    private List<IAttackable> enemiesVisible = new List<IAttackable>();
+    private List<IAttackable> enemiesInRange { get; } = new List<IAttackable>();
+    private List<IAttackable> enemiesVisible { get; } = new List<IAttackable>();
     private SphereCollider sphereCollider;
+
+    public void SetAttackRange(float range) => sphereCollider.radius = range;
 
     private void Awake()
     {
@@ -42,12 +43,23 @@ public class AttackSystem : MonoBehaviour
         {
             enemiesVisible.Remove(enemy);
             enemiesInRange.Remove(enemy);
+            
+        }
 
+        // Check if the unitDeath event trigger this method and the list is empty
+        if(enemiesInRange.Count == 0)
+        {
+            unitDeathEvent.Unregister(UnitDeath);
         }
     }
 
     private void UnitDeath(BaseUnit unitDeathEvent)
     {
-
+        // Check if the death unit is on attack range
+        if (enemiesInRange.Contains((IAttackable)unitDeathEvent))
+        {
+            // Trigger Manually TriggerExit
+            OnTriggerExit(unitDeathEvent.GetComponent<Collider>());
+        }
     }
 }

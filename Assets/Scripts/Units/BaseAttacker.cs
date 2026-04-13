@@ -7,12 +7,13 @@ public class BaseAttacker : BaseUnit, IAttacker
     protected override void Awake()
     {
         base.Awake();
+        behaviorGraphAgent.SetVariableValue("SO Attack Info", SO_BaseUnit.AttackInfo);
     }
 
    
     public void Attack(IAttackable attackable)
     {
-        behaviorGraphAgent.SetVariableValue("TargetGameObject", attackable.TargetPosition.position);
+        behaviorGraphAgent.SetVariableValue<GameObject>("TargetGameObject", attackable.TargetPosition.gameObject);
         behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Attack);
     }
 

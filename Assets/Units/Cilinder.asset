@@ -18,3 +18,4 @@ MonoBehaviour:
   <Health>k__BackingField: 120
   <GenerationTime>k__BackingField: 8
   <Cost>k__BackingField: {fileID: 11400000, guid: e6726fdc38db1c445a5df0bddb72a13b, type: 2}
+  <AttackInfo>k__BackingField: {fileID: 11400000, guid: 15bc29bef385c3d40af55480b043a682, type: 2}
