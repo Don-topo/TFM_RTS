@@ -18,7 +18,7 @@ public class AttackAction : BaseAction
         IAttacker attacker = actionInfo.Action as IAttacker;
         if (attacker == null) return;
         IAttackable attackable = actionInfo.Hit.collider.GetComponent<IAttackable>();
-        if (attackable == null) return;
+        //if (attackable == null) return;
         if(attackable != null)
         {
             attacker.Attack(attackable);

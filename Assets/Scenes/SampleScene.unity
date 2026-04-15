@@ -6230,6 +6230,7 @@ GameObject:
   - component: {fileID: 1258791104}
   - component: {fileID: 1258791109}
   - component: {fileID: 1258791110}
+  - component: {fileID: 1258791111}
   m_Layer: 6
   m_Name: Unit (1)
   m_TagString: Enemy
@@ -6424,6 +6425,33 @@ MonoBehaviour:
   <MaxHealth>k__BackingField: 100
   unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
+--- !u!54 &1258791111
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258791102}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1331777768
 GameObject:
   m_ObjectHideFlags: 0
@@ -9928,6 +9956,9 @@ MonoBehaviour:
   <MaxHealth>k__BackingField: 120
   unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
+  attackSystem: {fileID: 1967750161}
+  unitEnterRange: {fileID: 11400000, guid: 21d3807d12d7dc646a6f5ad0eb6aecf9, type: 2}
+  unitOutOfRange: {fileID: 11400000, guid: 21d3807d12d7dc646a6f5ad0eb6aecf9, type: 2}
 --- !u!1 &1967750159
 GameObject:
   m_ObjectHideFlags: 0
@@ -9939,7 +9970,7 @@ GameObject:
   - component: {fileID: 1967750160}
   - component: {fileID: 1967750162}
   - component: {fileID: 1967750161}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9990,7 +10021,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

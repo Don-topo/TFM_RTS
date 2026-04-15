@@ -9,11 +9,13 @@ public class AttackSystem : MonoBehaviour
     [SerializeField] private UnitInRangeEvent unitInRangeEvent;
     [SerializeField] private UnitDeathEvent unitDeathEvent;
     
-    private List<IAttackable> enemiesInRange { get; } = new List<IAttackable>();
-    private List<IAttackable> enemiesVisible { get; } = new List<IAttackable>();
+    private List<IAttackable> enemiesInRange = new List<IAttackable>();
+    private List<IAttackable> enemiesVisible = new List<IAttackable>();
     private SphereCollider sphereCollider;
 
     public void SetAttackRange(float range) => sphereCollider.radius = range;
+    public List<IAttackable> GetEnemiesInRange() => enemiesInRange;
+    public List<IAttackable> GetVisibleEnemies() => enemiesVisible;
 
     private void Awake()
     {
