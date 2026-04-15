@@ -1,3 +1,7 @@
+v.0.11 => 15/04/2026:
+  - Finished first implementation of Attack Action.
+  - Start working on Patrol Action.
+
 v.0.10 => 13/04/2026:
   - Finished minimap.
   - TODO Attack Action not finished.
