@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent (typeof(NavMeshAgent), typeof(BehaviorGraphAgent))]
-public class BaseUnit : CommonActions, IMoveable
+public class BaseUnit : CommonActions, IMoveable, IHealable
 {   
     public float GetNavMeshAgentRadius => navMeshAgent.radius;
     protected BehaviorGraphAgent behaviorGraphAgent;
@@ -43,5 +43,10 @@ public class BaseUnit : CommonActions, IMoveable
     public void StopMove()
     {
         behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Stop);
+    }
+
+    public void Heal(int amount)
+    {
+        throw new System.NotImplementedException();
     }
 }

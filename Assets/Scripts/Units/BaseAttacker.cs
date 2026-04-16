@@ -8,11 +8,12 @@ public class BaseAttacker : BaseUnit, IAttacker
     [SerializeField] private AttackSystem attackSystem;
     [SerializeField] private UnitInRangeEvent unitEnterRange;
     [SerializeField] private UnitInRangeEvent unitOutOfRange;
+    [field: SerializeField] public SO_AttackInfo AttackInfo { get; private set; }
 
     protected override void Awake()
     {
         base.Awake();
-        behaviorGraphAgent.SetVariableValue("SO Attack Info", SO_BaseUnit.AttackInfo);
+        behaviorGraphAgent.SetVariableValue("SO Attack Info", AttackInfo);
         unitEnterRange.Register(UnitInRange);
         unitOutOfRange.Register(UnitOutOfRange);
     }

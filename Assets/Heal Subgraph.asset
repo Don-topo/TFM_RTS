@@ -47,7 +47,8 @@ MonoBehaviour:
   m_Description: 
   m_Nodes:
   - rid: 1138904500653523036
-  m_VersionTimestamp: 639103994887749632
+  - rid: 522942401339982052
+  m_VersionTimestamp: 639119607082911201
   m_SerializedVersion: 2
   m_DebugInfo: {fileID: 1587199840378438041}
   m_RuntimeGraph: {fileID: 2209809189825117840}
@@ -69,6 +70,31 @@ MonoBehaviour:
     Variables: []
     NamedChildren: []
     IsPlaceholder: 0
+  - Name: HealTarget
+    Story: '[Self] Heal some [Amount] to [TagetGameObject]'
+    RuntimeTypeString: HealTargetBehaviourAction, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    RuntimeTypeID:
+      m_Value0: 751737943050683
+      m_Value1: 10822275995846178170
+    Variables:
+    - Name: Self
+      Type:
+        m_SerializableType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      Tooltip: 
+    - Name: Amount
+      Type:
+        m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+      Tooltip: 
+    - Name: TagetGameObject
+      Type:
+        m_SerializableType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      Tooltip: 
+    NamedChildren: []
+    IsPlaceholder: 0
   m_Blackboards: []
   m_MainBlackboardAuthoringAsset: {fileID: 2889162418047781071}
   m_CommandBuffer:
@@ -80,6 +106,114 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 522942401339982052
+      type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: -54, y: 143}
+        ID:
+          m_Value0: 6167650121817528390
+          m_Value1: 5284158608480610374
+        Parents: []
+        PortModels:
+        - rid: 522942401339982053
+        - rid: 522942401339982054
+        NodeType:
+          m_SerializableType: HealTargetBehaviourAction, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 751737943050683
+          m_Value1: 10822275995846178170
+        m_FieldValues:
+        - rid: 522942401339982055
+        - rid: 522942401339982056
+        - rid: 522942401339982057
+    - rid: 522942401339982053
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 522942401339982052
+        m_Connections: []
+    - rid: 522942401339982054
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 522942401339982052
+        m_Connections: []
+    - rid: 522942401339982055
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Self
+        Type:
+          m_SerializableType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        LocalValue:
+          rid: 522942401339982058
+        LinkedVariable:
+          rid: 522942401339982059
+    - rid: 522942401339982056
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Amount
+        Type:
+          m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        LocalValue:
+          rid: 522942401339982060
+        LinkedVariable:
+          rid: -2
+    - rid: 522942401339982057
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: TagetGameObject
+        Type:
+          m_SerializableType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        LocalValue:
+          rid: 522942401339982061
+        LinkedVariable:
+          rid: -2
+    - rid: 522942401339982058
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: {fileID: 0}
+    - rid: 522942401339982059
+      type: {class: 'TypedVariableModel`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: {fileID: 0}
+    - rid: 522942401339982060
+      type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 0
+    - rid: 522942401339982061
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: {fileID: 0}
     - rid: 1138904500653523036
       type: {class: StartNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
@@ -142,26 +276,7 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 1138904500653523038
-      type: {class: BehaviorGraphModule, ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        AuthoringAssetID:
-          m_Value0: 7227685157389816808
-          m_Value1: 7584650113166797274
-        m_DebugInfo: {fileID: 1587199840378438041}
-        BlackboardReference:
-          rid: 1138904500653523039
-        BlackboardGroupReferences: []
-        Root:
-          rid: 1138904500653523040
-        m_VersionTimestamp: 639103994887749632
-    - rid: 1138904500653523039
-      type: {class: BlackboardReference, ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        m_Blackboard:
-          rid: 1138904500653523041
-        m_Source: {fileID: -2380749153619748508}
-    - rid: 1138904500653523040
+    - rid: 522942401339982062
       type: {class: Start, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -175,12 +290,7 @@ MonoBehaviour:
           rid: -2
         Repeat: 1
         AllowMultipleRepeatsPerTick: 0
-    - rid: 1138904500653523041
-      type: {class: Blackboard, ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        m_Variables:
-        - rid: 1138904500653523042
-    - rid: 1138904500653523042
+    - rid: 522942401339982063
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -188,6 +298,30 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 0}
+    - rid: 1138904500653523038
+      type: {class: BehaviorGraphModule, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        AuthoringAssetID:
+          m_Value0: 7227685157389816808
+          m_Value1: 7584650113166797274
+        m_DebugInfo: {fileID: 1587199840378438041}
+        BlackboardReference:
+          rid: 1138904500653523039
+        BlackboardGroupReferences: []
+        Root:
+          rid: 522942401339982062
+        m_VersionTimestamp: 639119607082911201
+    - rid: 1138904500653523039
+      type: {class: BlackboardReference, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        m_Blackboard:
+          rid: 1138904500653523041
+        m_Source: {fileID: -2380749153619748508}
+    - rid: 1138904500653523041
+      type: {class: Blackboard, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        m_Variables:
+        - rid: 522942401339982063
 --- !u!114 &2889162418047781071
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -201,8 +335,8 @@ MonoBehaviour:
   m_Name: Heal Subgraph Blackboard
   m_EditorClassIdentifier: Unity.Behavior.Authoring::Unity.Behavior.BehaviorBlackboardAuthoringAsset
   AssetID:
-    m_Value0: 0
-    m_Value1: 0
+    m_Value0: 7227685157389816808
+    m_Value1: 7584650113166797274
   m_Variables:
   - rid: 1138904500653523043
   m_VersionTimestamp: 639103994887629344
