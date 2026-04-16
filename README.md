@@ -1,3 +1,7 @@
+v.0.12 => 16/04/2026:
+  - Working on Patrol Action.
+  - Start working on Heal Action.
+
 v.0.11 => 15/04/2026:
   - Finished first implementation of Attack Action.
   - Start working on Patrol Action.
