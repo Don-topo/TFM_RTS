@@ -15,7 +15,7 @@ public class PatrolAction : BaseAction
         BaseAttacker attacker = (BaseAttacker)actionInfo.Action;
         if(attacker != null)
         {
-            
+            attacker.Patrol(actionInfo.Hit.point);
         }
     }
 }

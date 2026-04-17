@@ -39,6 +39,22 @@ public class BaseAttacker : BaseUnit, IAttacker
         behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Attack);
     }
 
+    public void Patrol(Vector3 targetPosition)
+    {
+        if (targetPosition == null) return;
+
+        Vector3 currenPosition = gameObject.transform.position;
+        List<Vector3> patrolPositions = new List<Vector3>
+        {
+            currenPosition,
+            targetPosition
+        };
+
+        behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Patrol);
+        behaviorGraphAgent.SetVariableValue("PatrolPositions", patrolPositions);
+
+    }
+
     private void UnitInRange(IAttackable enemyInRange)
     {
         List<GameObject> targets = SetNearbyEnemiesOnBlackboard();
