@@ -3,6 +3,8 @@ using UnityEngine;
 public class BaseHealer : BaseUnit, IHealer
 {
 
+    [field: SerializeField] public SO_HealInfo HealInfo { get; private set; }
+
     protected override void Start()
     {
 
@@ -13,14 +15,14 @@ public class BaseHealer : BaseUnit, IHealer
 
     }
 
-    public Transform Transform => throw new System.NotImplementedException();
+    public Transform Transform => transform;
 
     public void Heal(BaseUnit unit)
     {
-        throw new System.NotImplementedException();
+        //behaviorGraphAgent.SetVariableValue()
     }
 
-    public void Heal(Vector3 attackPosition)
+    public void Heal(Vector3 healPosition)
     {
         throw new System.NotImplementedException();
     }

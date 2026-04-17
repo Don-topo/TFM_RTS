@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BaseAttacker : BaseUnit, IAttacker
 {
-    public Transform Transform => throw new System.NotImplementedException();
+    public Transform Transform => transform;
     [SerializeField] private AttackSystem attackSystem;
     [SerializeField] private UnitInRangeEvent unitEnterRange;
     [SerializeField] private UnitInRangeEvent unitOutOfRange;
