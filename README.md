@@ -1,6 +1,8 @@
+Patches relases:
+
 v.0.13 => 17/04/2026:
   - Finished Patrol Action.
-  - Finished Heal Action.
+  - Keep working on Heal Action.
     
 v.0.12 => 16/04/2026:
   - Working on Patrol Action.
