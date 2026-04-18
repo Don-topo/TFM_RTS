@@ -1,5 +1,8 @@
 Patches relases:
 
+v.0.14 => 18/04/2026:
+  - Start Working on main menu and options.
+  - TODO Finish Heal Action.
 v.0.13 => 17/04/2026:
   - Finished Patrol Action.
   - Keep working on Heal Action.
