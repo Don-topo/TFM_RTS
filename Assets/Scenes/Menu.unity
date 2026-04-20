@@ -8118,6 +8118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1279722953}
+  - component: {fileID: 1279722954}
   m_Layer: 5
   m_Name: DificultySelector
   m_TagString: Untagged
@@ -8154,6 +8155,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1279722954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279722952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cfc4643eb32db045a5ebdc3929b0da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DifficultySelector
+  mainMenu: {fileID: 437441504}
+  easyButton: {fileID: 2075229072}
+  mediumButton: {fileID: 843466781}
+  hardButton: {fileID: 1725547329}
+  infiniteButton: {fileID: 1531485681}
+  backButton: {fileID: 53029120}
 --- !u!1 &1288014085
 GameObject:
   m_ObjectHideFlags: 0

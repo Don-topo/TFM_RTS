@@ -4,11 +4,15 @@ using UnityEngine.UI;
 
 public class DifficultySelector : MonoBehaviour
 {
+    [Header("MainMenu")]
+    [SerializeField] private MainMenu mainMenu;
+
     [Header("Buttons")]
     [SerializeField] private Button easyButton;
     [SerializeField] private Button mediumButton;
     [SerializeField] private Button hardButton;
     [SerializeField] private Button infiniteButton;
+    [SerializeField] private Button backButton;
 
     private void Start()
     {
@@ -26,6 +30,7 @@ public class DifficultySelector : MonoBehaviour
         mediumButton.onClick.AddListener(() => StartGame(DificultyMode.Medium));
         hardButton.onClick.AddListener(() => StartGame(DificultyMode.Hard));
         infiniteButton.onClick.AddListener(() => StartGame(DificultyMode.Infinite));
+        backButton.onClick.AddListener(() => BackToMainMenu());
     }
 
     private void ClearButtons()
@@ -34,12 +39,18 @@ public class DifficultySelector : MonoBehaviour
         mediumButton.onClick.RemoveAllListeners();
         hardButton.onClick.RemoveAllListeners();
         infiniteButton.onClick.RemoveAllListeners();
+        backButton.onClick.RemoveAllListeners();
     }
 
     private void StartGame(DificultyMode dificulty)
     {
         PlayerPrefs.SetInt("dificultyMode", (int)dificulty);
         PlayerPrefs.Save();
-        SceneManager.LoadScene(SceneManager.GetSceneByName("SampleScene").buildIndex);
+        SceneManager.LoadScene("SampleScene");
+    }
+
+    private void BackToMainMenu()
+    {
+        mainMenu.SetMainMenu();
     }
 }
