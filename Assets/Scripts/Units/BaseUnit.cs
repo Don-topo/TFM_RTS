@@ -47,6 +47,6 @@ public class BaseUnit : CommonActions, IMoveable, IHealable
 
     public void Heal(int amount)
     {
-        throw new System.NotImplementedException();
+        Debug.LogError("Healed!!");
     }
 }

@@ -24,6 +24,7 @@ public partial class HealTargetBehaviourAction : Action
 
     protected override void OnEnd()
     {
+
     }
 }
 

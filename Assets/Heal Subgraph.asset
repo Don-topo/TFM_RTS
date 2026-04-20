@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c02bb70996b49eba31d0c206e28da24, type: 3}
   m_Name: Heal Subgraph Blackboard
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.RuntimeBlackboardAsset
-  VersionTimestamp: 639120473733781208
+  VersionTimestamp: 639123140381910935
   AssetID:
     m_Value0: 7227685157389816808
     m_Value1: 7584650113166797274
@@ -49,7 +49,7 @@ MonoBehaviour:
         GUID:
           m_Value0: 18149707641580998162
           m_Value1: 2643487620256771419
-        Name: AlliesInRange
+        Name: Allies
         m_Value: []
     - rid: 522942423839802265
       type: {class: 'BlackboardVariable`1[[UnityEngine.Vector3, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
@@ -89,7 +89,7 @@ MonoBehaviour:
   - rid: 522942424523997356
   - rid: 522942424523997357
   - rid: 522942424523997474
-  m_VersionTimestamp: 639120479517551170
+  m_VersionTimestamp: 639123140383169320
   m_SerializedVersion: 2
   m_DebugInfo: {fileID: 1587199840378438041}
   m_RuntimeGraph: {fileID: 2209809189825117840}
@@ -763,47 +763,7 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 522942423839802300
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 1
-          m_Value1: 0
-        Name: Self
-        m_Value: {fileID: 0}
-    - rid: 522942423839802301
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 339343658069873458
-          m_Value1: 9843881342754917296
-        Name: TargetGameObject
-        m_Value: {fileID: 0}
-    - rid: 522942423839802302
-      type: {class: 'BlackboardVariable`1[[SO_HealInfo, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 10908567985201719572
-          m_Value1: 17698536011000104003
-        Name: SO Heal Info
-        m_Value: {fileID: 0}
-    - rid: 522942423839802303
-      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 18149707641580998162
-          m_Value1: 2643487620256771419
-        Name: AlliesInRange
-        m_Value: []
-    - rid: 522942423839802304
-      type: {class: 'BlackboardVariable`1[[UnityEngine.Vector3, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 13968288907978396090
-          m_Value1: 5693965256059672927
-        Name: TargetPosition
-        m_Value: {x: 0, y: 0, z: 0}
-    - rid: 522942424523997772
+    - rid: 522942491164934243
       type: {class: Start, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -814,10 +774,10 @@ MonoBehaviour:
         m_Parent:
           rid: -2
         m_Child:
-          rid: 522942424523997773
+          rid: 522942491164934244
         Repeat: 1
         AllowMultipleRepeatsPerTick: 0
-    - rid: 522942424523997773
+    - rid: 522942491164934244
       type: {class: AbortModifier, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -826,15 +786,55 @@ MonoBehaviour:
         Graph:
           rid: 1138904500653523038
         m_Parent:
-          rid: 522942424523997772
+          rid: 522942491164934243
         m_Child:
-          rid: 522942424523997774
+          rid: 522942491164934250
         m_Conditions:
-        - rid: 522942424523997775
-        - rid: 522942424523997776
+        - rid: 522942491164934251
+        - rid: 522942491164934252
         m_RequiresAllConditions: 0
         m_ObserverType: 0
-    - rid: 522942424523997774
+    - rid: 522942491164934245
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        m_Value: {fileID: 0}
+    - rid: 522942491164934246
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 339343658069873458
+          m_Value1: 9843881342754917296
+        Name: TargetGameObject
+        m_Value: {fileID: 0}
+    - rid: 522942491164934247
+      type: {class: 'BlackboardVariable`1[[SO_HealInfo, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 10908567985201719572
+          m_Value1: 17698536011000104003
+        Name: SO Heal Info
+        m_Value: {fileID: 0}
+    - rid: 522942491164934248
+      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 18149707641580998162
+          m_Value1: 2643487620256771419
+        Name: Allies
+        m_Value: []
+    - rid: 522942491164934249
+      type: {class: 'BlackboardVariable`1[[UnityEngine.Vector3, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 13968288907978396090
+          m_Value1: 5693965256059672927
+        Name: TargetPosition
+        m_Value: {x: 0, y: 0, z: 0}
+    - rid: 522942491164934250
       type: {class: BranchingConditionComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -843,36 +843,36 @@ MonoBehaviour:
         Graph:
           rid: 1138904500653523038
         m_Parent:
-          rid: 522942424523997773
+          rid: 522942491164934244
         m_Children:
-        - rid: 522942424523997777
-        - rid: 522942424523997778
+        - rid: 522942491164934253
+        - rid: 522942491164934254
         m_RegisteredObservers: []
         m_Conditions:
-        - rid: 522942424523997779
+        - rid: 522942491164934255
         m_RequiresAllConditions: 0
         True:
-          rid: 522942424523997777
+          rid: 522942491164934253
         False:
-          rid: 522942424523997778
+          rid: 522942491164934254
         m_CurrentChild:
           rid: -2
         m_ObserverType: 0
-    - rid: 522942424523997775
+    - rid: 522942491164934251
       type: {class: VariableValueChangedCondition, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         Graph:
           rid: 1138904500653523038
         Variable:
-          rid: 522942423839802301
-    - rid: 522942424523997776
+          rid: 522942491164934246
+    - rid: 522942491164934252
       type: {class: VariableValueChangedCondition, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         Graph:
           rid: 1138904500653523038
         Variable:
-          rid: 522942423839802304
-    - rid: 522942424523997777
+          rid: 522942491164934249
+    - rid: 522942491164934253
       type: {class: HealTargetBehaviourAction, ns: , asm: Assembly-CSharp}
       data:
         ID:
@@ -881,14 +881,14 @@ MonoBehaviour:
         Graph:
           rid: 1138904500653523038
         m_Parent:
-          rid: 522942424523997774
+          rid: 522942491164934250
         Self:
-          rid: 522942423839802300
+          rid: 522942491164934245
         HealInfo:
-          rid: 522942423839802302
+          rid: 522942491164934247
         TagetGameObject:
-          rid: 522942423839802301
-    - rid: 522942424523997778
+          rid: 522942491164934246
+    - rid: 522942491164934254
       type: {class: MoveToTargetPositionBehaviourAction, ns: , asm: Assembly-CSharp}
       data:
         ID:
@@ -897,18 +897,18 @@ MonoBehaviour:
         Graph:
           rid: 1138904500653523038
         m_Parent:
-          rid: 522942424523997774
+          rid: 522942491164934250
         Agent:
-          rid: 522942423839802300
+          rid: 522942491164934245
         TargetPosition:
-          rid: 522942423839802304
-    - rid: 522942424523997779
+          rid: 522942491164934249
+    - rid: 522942491164934255
       type: {class: IsGameObjectNullCondition, ns: , asm: Assembly-CSharp}
       data:
         Graph:
           rid: 1138904500653523038
         GameObject:
-          rid: 522942423839802301
+          rid: 522942491164934246
     - rid: 1138904500653523038
       type: {class: BehaviorGraphModule, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -920,8 +920,8 @@ MonoBehaviour:
           rid: 1138904500653523039
         BlackboardGroupReferences: []
         Root:
-          rid: 522942424523997772
-        m_VersionTimestamp: 639120479517551170
+          rid: 522942491164934243
+        m_VersionTimestamp: 639123140383169320
     - rid: 1138904500653523039
       type: {class: BlackboardReference, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -932,11 +932,11 @@ MonoBehaviour:
       type: {class: Blackboard, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         m_Variables:
-        - rid: 522942423839802300
-        - rid: 522942423839802301
-        - rid: 522942423839802302
-        - rid: 522942423839802303
-        - rid: 522942423839802304
+        - rid: 522942491164934245
+        - rid: 522942491164934246
+        - rid: 522942491164934247
+        - rid: 522942491164934248
+        - rid: 522942491164934249
 --- !u!114 &2889162418047781071
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -958,7 +958,7 @@ MonoBehaviour:
   - rid: 522942423839802082
   - rid: 522942423839802142
   - rid: 522942423839802237
-  m_VersionTimestamp: 639120473733781208
+  m_VersionTimestamp: 639123140381910935
   m_CommandBuffer:
     m_Commands: []
   m_RuntimeBlackboardAsset: {fileID: -2380749153619748508}
@@ -991,7 +991,7 @@ MonoBehaviour:
         ID:
           m_Value0: 18149707641580998162
           m_Value1: 2643487620256771419
-        Name: AlliesInRange
+        Name: Allies
         IsExposed: 1
         m_IsShared: 0
         m_Value: []

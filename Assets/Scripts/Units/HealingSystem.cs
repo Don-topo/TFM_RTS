@@ -12,15 +12,13 @@ public class HealingSystem : MonoBehaviour
 
     private List<IHealable> alliesInRange = new List<IHealable>();
     private SphereCollider sphereCollider;
-    private float range;
 
-    public void SetRange(float range) => this.range = range;
+    public void SetRange(float range) => sphereCollider.radius = range;
     public List<IHealable> AlliesInRange() => alliesInRange;
 
     private void Awake()
     {
         sphereCollider = GetComponent<SphereCollider>();
-        sphereCollider.radius = range;
     }
 
     private void OnDestroy()

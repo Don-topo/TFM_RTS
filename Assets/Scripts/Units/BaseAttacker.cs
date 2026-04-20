@@ -6,8 +6,8 @@ public class BaseAttacker : BaseUnit, IAttacker
 {
     public Transform Transform => transform;
     [SerializeField] private AttackSystem attackSystem;
-    [SerializeField] private UnitInRangeEvent unitEnterRange;
-    [SerializeField] private UnitInRangeEvent unitOutOfRange;
+    [SerializeField] private EnemyInRangeEvent unitEnterRange;
+    [SerializeField] private EnemyInRangeEvent unitOutOfRange;
     [field: SerializeField] public SO_AttackInfo AttackInfo { get; private set; }
 
     protected override void Awake()

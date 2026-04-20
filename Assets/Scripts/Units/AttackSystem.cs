@@ -6,7 +6,7 @@ using UnityEngine;
 public class AttackSystem : MonoBehaviour
 {
     [Header("Events")]
-    [SerializeField] private UnitInRangeEvent unitInRangeEvent;
+    [SerializeField] private EnemyInRangeEvent unitInRangeEvent;
     [SerializeField] private UnitDeathEvent unitDeathEvent;
     
     private List<IAttackable> enemiesInRange = new List<IAttackable>();

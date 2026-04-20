@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97da464c4ec13014b9d52c804aeaf8d0, type: 3}
-  m_Name: UnitInRangeEvent
-  m_EditorClassIdentifier: Assembly-CSharp::UnitInRangeEvent
+  m_Name: EnemyInRangeEvent
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyInRangeEvent
