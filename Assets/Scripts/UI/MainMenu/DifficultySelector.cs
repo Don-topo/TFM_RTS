@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DifficultySelector : MonoBehaviour
@@ -39,5 +40,6 @@ public class DifficultySelector : MonoBehaviour
     {
         PlayerPrefs.SetInt("dificultyMode", (int)dificulty);
         PlayerPrefs.Save();
+        SceneManager.LoadScene(SceneManager.GetSceneByName("SampleScene").buildIndex);
     }
 }
