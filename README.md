@@ -1,5 +1,10 @@
 Patches relases:
 
+v.0.16 => 21/04/2026:
+  - Finished Heal Action.
+  - Start working on snow effect.
+  - Start working on Building System.
+    
 v.0.15 => 20/04/2026:
   - Finished main menu and options system.
   - TODO Finish Heal Action.
