@@ -5885,6 +5885,10 @@ PrefabInstance:
       value: 'Unity.Behavior Unity.Behavior.BlackboardVariable`1[[SO_HealInfo, Assembly-CSharp]]'
       objectReference: {fileID: 0}
     - target: {fileID: 2875370697152480412, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
+      propertyPath: 'managedReferences[522942494761549889]'
+      value: 'Unity.Behavior Unity.Behavior.BlackboardVariable`1[[UnitActions, Assembly-CSharp]]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875370697152480412, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
       propertyPath: managedReferences[522942329850954424].Name
       value: SO Attack Info
       objectReference: {fileID: 0}
@@ -5893,8 +5897,12 @@ PrefabInstance:
       value: SO Heal Info
       objectReference: {fileID: 0}
     - target: {fileID: 2875370697152480412, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
+      propertyPath: managedReferences[522942494761549889].Name
+      value: UnitActions
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875370697152480412, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
       propertyPath: m_BlackboardVariableOverridesList.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2875370697152480412, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
       propertyPath: managedReferences[522942329850954424].m_Value
@@ -5903,14 +5911,18 @@ PrefabInstance:
     - target: {fileID: 2875370697152480412, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
       propertyPath: managedReferences[522942491164934292].m_Value
       value: 
-      objectReference: {fileID: 11400000, guid: 18443ba6f1b015f4aa46f51ba2039867, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875370697152480412, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
+      propertyPath: managedReferences[522942494761549889].m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2875370697152480412, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
       propertyPath: 'm_BlackboardVariableOverridesList.Array.data[1]'
       value: 522942491164934292
       objectReference: {fileID: 0}
     - target: {fileID: 2875370697152480412, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
       propertyPath: 'm_BlackboardVariableOverridesList.Array.data[2]'
-      value: 522942329850954424
+      value: 522942494761549889
       objectReference: {fileID: 0}
     - target: {fileID: 2875370697152480412, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
       propertyPath: managedReferences[522942329850954424].GUID.m_Value0
@@ -5928,13 +5940,21 @@ PrefabInstance:
       propertyPath: managedReferences[522942491164934292].GUID.m_Value1
       value: 8580356504882453978
       objectReference: {fileID: 0}
+    - target: {fileID: 2875370697152480412, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
+      propertyPath: managedReferences[522942494761549889].GUID.m_Value0
+      value: 16414897942897352517
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875370697152480412, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
+      propertyPath: managedReferences[522942494761549889].GUID.m_Value1
+      value: 7328017686184985539
+      objectReference: {fileID: 0}
     - target: {fileID: 3004732720037302805, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
       propertyPath: m_Name
       value: Healer
       objectReference: {fileID: 0}
     - target: {fileID: 3130371631443487386, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.75
+      value: 15.5
       objectReference: {fileID: 0}
     - target: {fileID: 3130371631443487386, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10199,7 +10219,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0dfeed0d651d9914781d989d2175f4fb, type: 2}
   - {fileID: 11400000, guid: 7a9fd5af16d0aec459dc19e3a86b8e68, type: 2}
   <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: a052a6ae6cd5113459276db4e40375f1, type: 2}
-  <CurrentHealth>k__BackingField: 120
+  <CurrentHealth>k__BackingField: 20
   <MaxHealth>k__BackingField: 120
   unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
@@ -10207,6 +10227,33 @@ MonoBehaviour:
   unitEnterRange: {fileID: 11400000, guid: a9267367e362866478e1cc864c850a3d, type: 2}
   unitOutOfRange: {fileID: 11400000, guid: a9267367e362866478e1cc864c850a3d, type: 2}
   <AttackInfo>k__BackingField: {fileID: 11400000, guid: 15bc29bef385c3d40af55480b043a682, type: 2}
+--- !u!54 &1939925279
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939925266}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1967750159
 GameObject:
   m_ObjectHideFlags: 0
@@ -10252,7 +10299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901210563f1381b418436edc35029091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackSystem
-  unitInRangeEvent: {fileID: 11400000, guid: 21d3807d12d7dc646a6f5ad0eb6aecf9, type: 2}
+  unitInRangeEvent: {fileID: 11400000, guid: a9267367e362866478e1cc864c850a3d, type: 2}
   unitDeathEvent: {fileID: 11400000, guid: 46b246a8aa2a6484aa30cca95cadc3fa, type: 2}
 --- !u!135 &1967750162
 SphereCollider:
@@ -11104,6 +11151,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3004732720037302805, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1939925273}
+    - targetCorrespondingSourceObject: {fileID: 3004732720037302805, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1939925279}
   m_SourcePrefab: {fileID: 100100000, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
 --- !u!1001 &2058850270805040590
 PrefabInstance:

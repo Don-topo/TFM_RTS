@@ -47,6 +47,6 @@ public class BaseUnit : CommonActions, IMoveable, IHealable
 
     public void Heal(int amount)
     {
-        Debug.LogError("Healed!!");
+        CurrentHealth = Mathf.Clamp(CurrentHealth + amount, 0, MaxHealth);
     }
 }
