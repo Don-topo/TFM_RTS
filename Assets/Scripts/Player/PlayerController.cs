@@ -342,7 +342,14 @@ public class PlayerController : MonoBehaviour
             ActionInfo actionInfo = new(action, hit, actions.IndexOf(action));
             if(selectedAction == null)
             {
-                selectedAction = action.Actions.Where(act => act.Name == "Move").First();
+                if(action.Actions.Where(act => act.Name == "Move").Count() != 0)
+                {
+                    selectedAction = action.Actions.Where(act => act.Name == "Move").First();
+                }
+                else
+                {
+                    break;
+                }                
             }
             if (selectedAction.CanExecute(actionInfo))
             {

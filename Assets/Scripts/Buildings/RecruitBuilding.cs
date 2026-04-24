@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RecruitBuilding : BaseBuilding
 {
-    [SerializeField] private ResourceEvent resourceEvent;
     [field: SerializeField] public UpdateRecruitQueueEvent queueEvent;
     [SerializeField] private RefreshUIEvent refreshEvent;
     [SerializeField] private GameObject recruitDestination;

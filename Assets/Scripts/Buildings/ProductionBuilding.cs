@@ -4,8 +4,6 @@ public class ProductionBuilding : BaseBuilding
 {
     // Resource to produce
     [field: SerializeField] public SO_Resource resource { get; private set; }
-    // Events to trigger
-    [SerializeField] private ResourceEvent resourceEvent;
 
     // Variables to hold and count the time past
     public float StartTime { get; private set; }
@@ -40,5 +38,10 @@ public class ProductionBuilding : BaseBuilding
     {
         ResourceOP resourceOP = new ResourceOP(resource, resource.ObtainedAmount, resource.MaxAmount);       
         resourceEvent.Raise(resourceOP);
+    }
+
+    public override void DestroyBuilding()
+    {
+        base.DestroyBuilding();
     }
 }
