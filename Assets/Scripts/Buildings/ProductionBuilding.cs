@@ -10,6 +10,8 @@ public class ProductionBuilding : BaseBuilding
 
     protected override void Start()
     {
+        CurrentHealth = SO_BaseUnit.Health;
+        MaxHealth = SO_BaseUnit.Health;
         base.Start();
         StartTime = Time.time;
         if(resource != null && resource.ProducesOnlyOneTime)
