@@ -3,6 +3,13 @@ Patches relases:
 v.0.17 => 26/04/2026:
   - Added Hunter model and animations.
   - Added Electric Generator model.
+  - Added Sawmill model.
+  - Added Quarry model.
+  - Added Hunting Lodge model.
+  - Added Farm model.
+  - Added Greem House model.
+  - Added Military Barracks model.
+  - Start making Sawmill fancy.
   - TODO Working on Building System.
     
 v.0.16 => 21/04/2026:
