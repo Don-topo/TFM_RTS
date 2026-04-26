@@ -253,6 +253,8 @@ MonoBehaviour:
   unitSelectEvent: {fileID: 0}
   unitDeselectEvent: {fileID: 0}
   <PlaceMaterial>k__BackingField: {fileID: 0}
+  resourceEvent: {fileID: 0}
+  so_building: {fileID: 0}
 --- !u!1 &35273525
 GameObject:
   m_ObjectHideFlags: 0
@@ -6868,6 +6870,7 @@ MonoBehaviour:
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
   <PlaceMaterial>k__BackingField: {fileID: 0}
   resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
+  so_building: {fileID: 0}
   queueEvent: {fileID: 11400000, guid: 1dd8e8867b7a3644e9d24fe108f29d73, type: 2}
   refreshEvent: {fileID: 11400000, guid: 2d6eed5983d3d1c42836ee74b2c39f02, type: 2}
   recruitDestination: {fileID: 6434967215031062788, guid: e2a5db46af34bb84097aa238fdbd9aea, type: 3}
