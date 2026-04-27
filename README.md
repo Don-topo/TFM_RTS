@@ -1,5 +1,9 @@
 Patches relases:
 
+v.0.18 => 27/04/2026:
+  - Added all building models and fixed.
+  - TODO Working on Building System.
+    
 v.0.17 => 26/04/2026:
   - Added Hunter model and animations.
   - Added Electric Generator model.
