@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34632c87c82091e40b0f3bf6beb4df67, type: 3}
+  m_Name: SO_House
+  m_EditorClassIdentifier: Assembly-CSharp::SO_Building
+  <Name>k__BackingField: House
+  <CurrentHealth>k__BackingField: 800
+  <MaxHealth>k__BackingField: 800
+  <Cost>k__BackingField: {fileID: 11400000, guid: 38bc8ee6bf7e90f488f0a2c0b1c30721, type: 2}
+  <Icon>k__BackingField: {fileID: 21300000, guid: dbae1447d1946b44dbc1072427f1073b, type: 3}
