@@ -1,5 +1,11 @@
 Patches relases:
 
+v.0.19 => 28/04/2026:
+  - Added Enemies models.
+  - Added Soldier and doctor models.
+  - Start working on final buildings (House).
+  - TODO Working on Building System.
+    
 v.0.18 => 27/04/2026:
   - Added all building models and fixed.
   - TODO Working on Building System.
