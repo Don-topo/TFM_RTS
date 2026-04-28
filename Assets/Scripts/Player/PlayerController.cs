@@ -323,11 +323,7 @@ public class PlayerController : MonoBehaviour
 
     private void MinimapClicked(MinimapEventInfo info)
     {
-        if (info.MouseButton == MouseButton.Right)
-        {
-            ExecuteAction(info.RaycastHit);
-        }
-        else if (info.MouseButton == MouseButton.Left)
+        if (info.MouseButton == MouseButton.Left || info.MouseButton == MouseButton.Right)
         {
             ExecuteAction(info.RaycastHit);
         }
@@ -360,7 +356,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-        Debug.Log("Execute action");
+        
         actionExecuted.Raise(selectedAction);
 
         selectedAction = null;
