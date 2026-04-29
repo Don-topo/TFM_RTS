@@ -15,7 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: Heal
   <Icon>k__BackingField: {fileID: 21300000, guid: 06d3cc87f3a67314f8e3b3d766e75879, type: 3}
   <HotKey>k__BackingField: 22
-  <UIPosition>k__BackingField: 1
+  <UIPosition>k__BackingField: 3
   <IsSingleUnitCommand>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 1
   moveAction: {fileID: 11400000, guid: 294ac8375577a6641918538431387b6e, type: 2}

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b946203f57b67204db1aaad5f7897041, type: 3}
+  m_Name: SO_ClinicCost
+  m_EditorClassIdentifier: Assembly-CSharp::SO_ResourceCost
+  <Food>k__BackingField: 5
+  <SO_Food>k__BackingField: {fileID: 0}
+  <Wood>k__BackingField: 0
+  <SO_Wood>k__BackingField: {fileID: 0}
+  <Stone>k__BackingField: 0
+  <SO_Stone>k__BackingField: {fileID: 0}
+  <Iron>k__BackingField: 0
+  <SO_Iron>k__BackingField: {fileID: 0}
+  <Electricity>k__BackingField: 0
+  <SO_Electricity>k__BackingField: {fileID: 0}
+  <Population>k__BackingField: 0
+  <SO_Population>k__BackingField: {fileID: 0}

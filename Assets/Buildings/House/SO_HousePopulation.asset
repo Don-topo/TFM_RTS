@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 264d44e3179a1494da63b7589bf08126, type: 3}
-  m_Name: SO_Population
+  m_Name: SO_HousePopulation
   m_EditorClassIdentifier: Assembly-CSharp::SO_Resource
   <ObtainingTime>k__BackingField: 8
   <ObtainedAmount>k__BackingField: 15
