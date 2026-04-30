@@ -1,5 +1,8 @@
 Patches relases:
 
+v.0.20 => 30/04/2026:
+  - Added Doxygen.
+    
 v.0.19 => 28/04/2026:
   - Added Enemies models.
   - Added Soldier and doctor models.
