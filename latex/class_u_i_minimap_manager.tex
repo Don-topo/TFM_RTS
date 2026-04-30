@@ -1,0 +1,214 @@
+\doxysection{UIMinimap\+Manager Class Reference}
+\hypertarget{class_u_i_minimap_manager}{}\label{class_u_i_minimap_manager}\index{UIMinimapManager@{UIMinimapManager}}
+
+
+Inheritance diagram for UIMinimap\+Manager:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_minimap_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UIMinimap\+Manager:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_minimap_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_u_i_minimap_manager_a765ea15ce13bc10601b2a58b63290b86}{On\+Pointer\+Exit}} (Pointer\+Event\+Data event\+Data)
+\item 
+void \doxymbox{\hyperlink{class_u_i_minimap_manager_abe0f2691faa1bb12b2ad671d6fc0070b}{On\+Pointer\+Enter}} (Pointer\+Event\+Data event\+Data)
+\item 
+void \doxymbox{\hyperlink{class_u_i_minimap_manager_ab3b56b5bbed3ec5022108b3fb4ecf356}{On\+Pointer\+Move}} (Pointer\+Event\+Data event\+Data)
+\item 
+void \doxymbox{\hyperlink{class_u_i_minimap_manager_ae6d64c4e521201795e88ddee70d7b66d}{On\+Pointer\+Down}} (Pointer\+Event\+Data event\+Data)
+\item 
+void \doxymbox{\hyperlink{class_u_i_minimap_manager_a6ac2a7b0b6bd6f39804f061f6d843ed7}{On\+Pointer\+Up}} (Pointer\+Event\+Data event\+Data)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_u_i_minimap_manager_a91725662a56e1a17117f0c68fa8a5bfb}{Awake}} ()
+\item 
+void \doxymbox{\hyperlink{class_u_i_minimap_manager_afe0ab7e2912e4ce4bf8e0daf7c3c1c6d}{On\+Destroy}} ()
+\item 
+void \doxymbox{\hyperlink{class_u_i_minimap_manager_a0eb2fa79aa1f9ecb48ae773129636c1a}{Map\+Click}} (\doxymbox{\hyperlink{class_base_action}{Base\+Action}} base\+Action)
+\item 
+void \doxymbox{\hyperlink{class_u_i_minimap_manager_a1c4b27d4a0c9dbbab9d5b0a06d2cb14e}{Action\+Map\+Executed}} (\doxymbox{\hyperlink{class_base_action}{Base\+Action}} base\+Action)
+\item 
+void \doxymbox{\hyperlink{class_u_i_minimap_manager_acf88d3ca5be7dec7b28e5d0924cd1de8}{Move\+Virtual\+Camera\+Target}} (Vector3 mouse\+Position)
+\item 
+void \doxymbox{\hyperlink{class_u_i_minimap_manager_a9677f3faa1ef5b0f79ecacb23ee950f3}{Raise\+Click\+Event}} (Vector2 mouse\+Position, Mouse\+Button button)
+\item 
+bool \doxymbox{\hyperlink{class_u_i_minimap_manager_a87a0a3b3a4483c10dbb4367b56f1228b}{Raycast\+From\+Mouse\+Position}} (Vector2 mouse\+Position, out Raycast\+Hit hit)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Camera \doxymbox{\hyperlink{class_u_i_minimap_manager_a8f9a5819cbd8dfe1c05152248ca2c88a}{minimap\+Camera}}
+\item 
+Camera \doxymbox{\hyperlink{class_u_i_minimap_manager_a6c98e9ce88af81534e70f81513f88da0}{main\+Camera}}
+\item 
+Layer\+Mask \doxymbox{\hyperlink{class_u_i_minimap_manager_aa6ce68963cfc7bf2fdd78d1d03429742}{layer\+Mask}}
+\item 
+\doxymbox{\hyperlink{class_action_clicked}{Action\+Clicked}} \doxymbox{\hyperlink{class_u_i_minimap_manager_aab4c06fb03fcbf946664bbc8b61efe8e}{action\+Clicked}}
+\item 
+\doxymbox{\hyperlink{class_action_executed}{Action\+Executed}} \doxymbox{\hyperlink{class_u_i_minimap_manager_a6342545da696cffd11980e80f5d3144b}{action\+Executed}}
+\item 
+\doxymbox{\hyperlink{class_minimap_click_event}{Minimap\+Click\+Event}} \doxymbox{\hyperlink{class_u_i_minimap_manager_a491d40b819f112108c8823ca014046d9}{minimap\+Clicked}}
+\item 
+\doxymbox{\hyperlink{class_base_action}{Base\+Action}} \doxymbox{\hyperlink{class_u_i_minimap_manager_aa1e5b91dbdee7781649103bb7e6c7164}{selected\+Action}}
+\item 
+bool \doxymbox{\hyperlink{class_u_i_minimap_manager_a81db2cb37b9ad4a496b255eac4ecb24b}{mouse\+On\+Minimap}}
+\item 
+Rect\+Transform \doxymbox{\hyperlink{class_u_i_minimap_manager_a2635d542eb9cf5158580cc87efaaae44}{rect\+Transform}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_i_minimap_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_i_minimap_manager_a1c4b27d4a0c9dbbab9d5b0a06d2cb14e}\index{UIMinimapManager@{UIMinimapManager}!ActionMapExecuted@{ActionMapExecuted}}
+\index{ActionMapExecuted@{ActionMapExecuted}!UIMinimapManager@{UIMinimapManager}}
+\doxysubsubsection{\texorpdfstring{ActionMapExecuted()}{ActionMapExecuted()}}
+{\footnotesize\ttfamily \label{class_u_i_minimap_manager_a1c4b27d4a0c9dbbab9d5b0a06d2cb14e} 
+void UIMinimap\+Manager.\+Action\+Map\+Executed (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_base_action}{Base\+Action}}}]{base\+Action}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_u_i_minimap_manager_a91725662a56e1a17117f0c68fa8a5bfb}\index{UIMinimapManager@{UIMinimapManager}!Awake@{Awake}}
+\index{Awake@{Awake}!UIMinimapManager@{UIMinimapManager}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_u_i_minimap_manager_a91725662a56e1a17117f0c68fa8a5bfb} 
+void UIMinimap\+Manager.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_u_i_minimap_manager_a0eb2fa79aa1f9ecb48ae773129636c1a}\index{UIMinimapManager@{UIMinimapManager}!MapClick@{MapClick}}
+\index{MapClick@{MapClick}!UIMinimapManager@{UIMinimapManager}}
+\doxysubsubsection{\texorpdfstring{MapClick()}{MapClick()}}
+{\footnotesize\ttfamily \label{class_u_i_minimap_manager_a0eb2fa79aa1f9ecb48ae773129636c1a} 
+void UIMinimap\+Manager.\+Map\+Click (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_base_action}{Base\+Action}}}]{base\+Action}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_u_i_minimap_manager_acf88d3ca5be7dec7b28e5d0924cd1de8}\index{UIMinimapManager@{UIMinimapManager}!MoveVirtualCameraTarget@{MoveVirtualCameraTarget}}
+\index{MoveVirtualCameraTarget@{MoveVirtualCameraTarget}!UIMinimapManager@{UIMinimapManager}}
+\doxysubsubsection{\texorpdfstring{MoveVirtualCameraTarget()}{MoveVirtualCameraTarget()}}
+{\footnotesize\ttfamily \label{class_u_i_minimap_manager_acf88d3ca5be7dec7b28e5d0924cd1de8} 
+void UIMinimap\+Manager.\+Move\+Virtual\+Camera\+Target (\begin{DoxyParamCaption}\item[{Vector3}]{mouse\+Position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_u_i_minimap_manager_afe0ab7e2912e4ce4bf8e0daf7c3c1c6d}\index{UIMinimapManager@{UIMinimapManager}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!UIMinimapManager@{UIMinimapManager}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily \label{class_u_i_minimap_manager_afe0ab7e2912e4ce4bf8e0daf7c3c1c6d} 
+void UIMinimap\+Manager.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_u_i_minimap_manager_ae6d64c4e521201795e88ddee70d7b66d}\index{UIMinimapManager@{UIMinimapManager}!OnPointerDown@{OnPointerDown}}
+\index{OnPointerDown@{OnPointerDown}!UIMinimapManager@{UIMinimapManager}}
+\doxysubsubsection{\texorpdfstring{OnPointerDown()}{OnPointerDown()}}
+{\footnotesize\ttfamily \label{class_u_i_minimap_manager_ae6d64c4e521201795e88ddee70d7b66d} 
+void UIMinimap\+Manager.\+On\+Pointer\+Down (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_u_i_minimap_manager_abe0f2691faa1bb12b2ad671d6fc0070b}\index{UIMinimapManager@{UIMinimapManager}!OnPointerEnter@{OnPointerEnter}}
+\index{OnPointerEnter@{OnPointerEnter}!UIMinimapManager@{UIMinimapManager}}
+\doxysubsubsection{\texorpdfstring{OnPointerEnter()}{OnPointerEnter()}}
+{\footnotesize\ttfamily \label{class_u_i_minimap_manager_abe0f2691faa1bb12b2ad671d6fc0070b} 
+void UIMinimap\+Manager.\+On\+Pointer\+Enter (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_u_i_minimap_manager_a765ea15ce13bc10601b2a58b63290b86}\index{UIMinimapManager@{UIMinimapManager}!OnPointerExit@{OnPointerExit}}
+\index{OnPointerExit@{OnPointerExit}!UIMinimapManager@{UIMinimapManager}}
+\doxysubsubsection{\texorpdfstring{OnPointerExit()}{OnPointerExit()}}
+{\footnotesize\ttfamily \label{class_u_i_minimap_manager_a765ea15ce13bc10601b2a58b63290b86} 
+void UIMinimap\+Manager.\+On\+Pointer\+Exit (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_u_i_minimap_manager_ab3b56b5bbed3ec5022108b3fb4ecf356}\index{UIMinimapManager@{UIMinimapManager}!OnPointerMove@{OnPointerMove}}
+\index{OnPointerMove@{OnPointerMove}!UIMinimapManager@{UIMinimapManager}}
+\doxysubsubsection{\texorpdfstring{OnPointerMove()}{OnPointerMove()}}
+{\footnotesize\ttfamily \label{class_u_i_minimap_manager_ab3b56b5bbed3ec5022108b3fb4ecf356} 
+void UIMinimap\+Manager.\+On\+Pointer\+Move (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_u_i_minimap_manager_a6ac2a7b0b6bd6f39804f061f6d843ed7}\index{UIMinimapManager@{UIMinimapManager}!OnPointerUp@{OnPointerUp}}
+\index{OnPointerUp@{OnPointerUp}!UIMinimapManager@{UIMinimapManager}}
+\doxysubsubsection{\texorpdfstring{OnPointerUp()}{OnPointerUp()}}
+{\footnotesize\ttfamily \label{class_u_i_minimap_manager_a6ac2a7b0b6bd6f39804f061f6d843ed7} 
+void UIMinimap\+Manager.\+On\+Pointer\+Up (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_u_i_minimap_manager_a9677f3faa1ef5b0f79ecacb23ee950f3}\index{UIMinimapManager@{UIMinimapManager}!RaiseClickEvent@{RaiseClickEvent}}
+\index{RaiseClickEvent@{RaiseClickEvent}!UIMinimapManager@{UIMinimapManager}}
+\doxysubsubsection{\texorpdfstring{RaiseClickEvent()}{RaiseClickEvent()}}
+{\footnotesize\ttfamily \label{class_u_i_minimap_manager_a9677f3faa1ef5b0f79ecacb23ee950f3} 
+void UIMinimap\+Manager.\+Raise\+Click\+Event (\begin{DoxyParamCaption}\item[{Vector2}]{mouse\+Position}{, }\item[{Mouse\+Button}]{button}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_u_i_minimap_manager_a87a0a3b3a4483c10dbb4367b56f1228b}\index{UIMinimapManager@{UIMinimapManager}!RaycastFromMousePosition@{RaycastFromMousePosition}}
+\index{RaycastFromMousePosition@{RaycastFromMousePosition}!UIMinimapManager@{UIMinimapManager}}
+\doxysubsubsection{\texorpdfstring{RaycastFromMousePosition()}{RaycastFromMousePosition()}}
+{\footnotesize\ttfamily \label{class_u_i_minimap_manager_a87a0a3b3a4483c10dbb4367b56f1228b} 
+bool UIMinimap\+Manager.\+Raycast\+From\+Mouse\+Position (\begin{DoxyParamCaption}\item[{Vector2}]{mouse\+Position}{, }\item[{out Raycast\+Hit}]{hit}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_u_i_minimap_manager_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_u_i_minimap_manager_aab4c06fb03fcbf946664bbc8b61efe8e}\index{UIMinimapManager@{UIMinimapManager}!actionClicked@{actionClicked}}
+\index{actionClicked@{actionClicked}!UIMinimapManager@{UIMinimapManager}}
+\doxysubsubsection{\texorpdfstring{actionClicked}{actionClicked}}
+{\footnotesize\ttfamily \label{class_u_i_minimap_manager_aab4c06fb03fcbf946664bbc8b61efe8e} 
+\doxymbox{\hyperlink{class_action_clicked}{Action\+Clicked}} UIMinimap\+Manager.\+action\+Clicked\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_u_i_minimap_manager_a6342545da696cffd11980e80f5d3144b}\index{UIMinimapManager@{UIMinimapManager}!actionExecuted@{actionExecuted}}
+\index{actionExecuted@{actionExecuted}!UIMinimapManager@{UIMinimapManager}}
+\doxysubsubsection{\texorpdfstring{actionExecuted}{actionExecuted}}
+{\footnotesize\ttfamily \label{class_u_i_minimap_manager_a6342545da696cffd11980e80f5d3144b} 
+\doxymbox{\hyperlink{class_action_executed}{Action\+Executed}} UIMinimap\+Manager.\+action\+Executed\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_u_i_minimap_manager_aa6ce68963cfc7bf2fdd78d1d03429742}\index{UIMinimapManager@{UIMinimapManager}!layerMask@{layerMask}}
+\index{layerMask@{layerMask}!UIMinimapManager@{UIMinimapManager}}
+\doxysubsubsection{\texorpdfstring{layerMask}{layerMask}}
+{\footnotesize\ttfamily \label{class_u_i_minimap_manager_aa6ce68963cfc7bf2fdd78d1d03429742} 
+Layer\+Mask UIMinimap\+Manager.\+layer\+Mask\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_u_i_minimap_manager_a6c98e9ce88af81534e70f81513f88da0}\index{UIMinimapManager@{UIMinimapManager}!mainCamera@{mainCamera}}
+\index{mainCamera@{mainCamera}!UIMinimapManager@{UIMinimapManager}}
+\doxysubsubsection{\texorpdfstring{mainCamera}{mainCamera}}
+{\footnotesize\ttfamily \label{class_u_i_minimap_manager_a6c98e9ce88af81534e70f81513f88da0} 
+Camera UIMinimap\+Manager.\+main\+Camera\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_u_i_minimap_manager_a8f9a5819cbd8dfe1c05152248ca2c88a}\index{UIMinimapManager@{UIMinimapManager}!minimapCamera@{minimapCamera}}
+\index{minimapCamera@{minimapCamera}!UIMinimapManager@{UIMinimapManager}}
+\doxysubsubsection{\texorpdfstring{minimapCamera}{minimapCamera}}
+{\footnotesize\ttfamily \label{class_u_i_minimap_manager_a8f9a5819cbd8dfe1c05152248ca2c88a} 
+Camera UIMinimap\+Manager.\+minimap\+Camera\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_u_i_minimap_manager_a491d40b819f112108c8823ca014046d9}\index{UIMinimapManager@{UIMinimapManager}!minimapClicked@{minimapClicked}}
+\index{minimapClicked@{minimapClicked}!UIMinimapManager@{UIMinimapManager}}
+\doxysubsubsection{\texorpdfstring{minimapClicked}{minimapClicked}}
+{\footnotesize\ttfamily \label{class_u_i_minimap_manager_a491d40b819f112108c8823ca014046d9} 
+\doxymbox{\hyperlink{class_minimap_click_event}{Minimap\+Click\+Event}} UIMinimap\+Manager.\+minimap\+Clicked\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_u_i_minimap_manager_a81db2cb37b9ad4a496b255eac4ecb24b}\index{UIMinimapManager@{UIMinimapManager}!mouseOnMinimap@{mouseOnMinimap}}
+\index{mouseOnMinimap@{mouseOnMinimap}!UIMinimapManager@{UIMinimapManager}}
+\doxysubsubsection{\texorpdfstring{mouseOnMinimap}{mouseOnMinimap}}
+{\footnotesize\ttfamily \label{class_u_i_minimap_manager_a81db2cb37b9ad4a496b255eac4ecb24b} 
+bool UIMinimap\+Manager.\+mouse\+On\+Minimap\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_u_i_minimap_manager_a2635d542eb9cf5158580cc87efaaae44}\index{UIMinimapManager@{UIMinimapManager}!rectTransform@{rectTransform}}
+\index{rectTransform@{rectTransform}!UIMinimapManager@{UIMinimapManager}}
+\doxysubsubsection{\texorpdfstring{rectTransform}{rectTransform}}
+{\footnotesize\ttfamily \label{class_u_i_minimap_manager_a2635d542eb9cf5158580cc87efaaae44} 
+Rect\+Transform UIMinimap\+Manager.\+rect\+Transform\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_u_i_minimap_manager_aa1e5b91dbdee7781649103bb7e6c7164}\index{UIMinimapManager@{UIMinimapManager}!selectedAction@{selectedAction}}
+\index{selectedAction@{selectedAction}!UIMinimapManager@{UIMinimapManager}}
+\doxysubsubsection{\texorpdfstring{selectedAction}{selectedAction}}
+{\footnotesize\ttfamily \label{class_u_i_minimap_manager_aa1e5b91dbdee7781649103bb7e6c7164} 
+\doxymbox{\hyperlink{class_base_action}{Base\+Action}} UIMinimap\+Manager.\+selected\+Action\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Scripts/\+\+UI/\+\doxymbox{\hyperlink{_u_i_minimap_manager_8cs}{UIMinimap\+Manager.\+cs}}\end{DoxyCompactItemize}

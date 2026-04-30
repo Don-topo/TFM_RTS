@@ -1,0 +1,16 @@
+<map id="UIResources" name="UIResources">
+<area shape="rect" id="Node000001" title=" " alt="" coords="43,785,266,1297"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,613,106,683"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,695,93,785,87,786,68,700"/>
+<area shape="rect" id="Node000003" href="$class_s_o___resource.html" title=" " alt="" coords="61,383,248,559"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,556,157,768,152,768,154,561"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="117,5,224,75"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="169,87,160,383,155,383,168,92"/>
+<area shape="rect" id="Node000006" href="$class_game_event-1-g.html" title=" " alt="" coords="191,124,344,359"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="193,86,214,124,208,125,194,91"/>
+<area shape="rect" id="Node000005" href="$class_resource_event.html" title=" " alt="" coords="271,613,371,683"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="308,680,272,771,267,769,306,685"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="286,371,319,614,314,614,284,376"/>
+<area shape="rect" id="Node000007" href="$struct_resource_o_p.html" title=" " alt="" coords="368,169,560,313"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="440,311,341,598,336,596,438,315"/>
+</map>

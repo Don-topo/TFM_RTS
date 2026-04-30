@@ -1,0 +1,14 @@
+<map id="AttackSystem" name="AttackSystem">
+<area shape="rect" id="Node000001" title=" " alt="" coords="99,549,295,939"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,408,106,477"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,488,108,549,103,550,78,494"/>
+<area shape="rect" id="Node000003" href="$class_enemy_in_range_event.html" title=" " alt="" coords="130,408,264,477"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,475,200,533,194,532,196,480"/>
+<area shape="rect" id="Node000004" href="$class_game_event-1-g.html" title=" " alt="" coords="199,124,352,359"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="223,375,213,409,208,407,225,370"/>
+<area shape="rect" id="Node000006" href="$class_unit_death_event.html" title=" " alt="" coords="288,408,426,477"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="329,370,346,408,341,408,328,375"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="222,5,329,75"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="276,87,278,125,273,124,275,92"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="343,475,321,527,305,556,301,553,316,524,340,479"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="AttackTargetBehaviourAction" name="AttackTargetBehaviourAction">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,123,238,571"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="98,5,146,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,87,124,123,119,123,121,92"/>
+</map>

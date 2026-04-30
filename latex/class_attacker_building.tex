@@ -1,0 +1,153 @@
+\doxysection{Attacker\+Building Class Reference}
+\hypertarget{class_attacker_building}{}\label{class_attacker_building}\index{AttackerBuilding@{AttackerBuilding}}
+
+
+Inheritance diagram for Attacker\+Building:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_attacker_building__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Attacker\+Building:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_attacker_building__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_attacker_building_a6a78e65247d410558fb4ff59d78769af}{Attack}} (\doxymbox{\hyperlink{interface_i_attackable}{IAttackable}} attackable)
+\item 
+void \doxymbox{\hyperlink{class_attacker_building_a5f41f49aee4b2dfcac38b22d19efca15}{Attack}} (Vector3 attack\+Position)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_base_building}{Base\+Building}}}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_base_building_aa6b81f186d3b4f5705de9c8da2a35cf2}{Build\+Building}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_base_building_a4bbaf42b6e0d8fd4cdb933f05dbc3ed1}{Destroy\+Building}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_ab819292d2b539af3fd654934925c3d43}{Deselect}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_a20fe334501ba458268ea75a5e9cbd9aa}{Select}} ()
+\item 
+void \doxymbox{\hyperlink{class_common_actions_a31efbfded7bac0694367df1e807b5f26}{Set\+Commands\+Overrides}} (\doxymbox{\hyperlink{class_base_action}{Base\+Action}}\+[$\,$]\+ actions)
+\item 
+void \doxymbox{\hyperlink{class_common_actions_a9aeadc1e41e81f959cebe4b3f83f55f4}{Apply\+Damage}} (int damage\+Amount)
+\item 
+void \doxymbox{\hyperlink{class_common_actions_a4679ef5476cba71a56901c3909c2e921}{Die}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Transform \doxymbox{\hyperlink{class_attacker_building_a4eb291862969f200d7b460b8df6ef65b}{Transform}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_base_building}{Base\+Building}}}
+\begin{DoxyCompactItemize}
+\item 
+Material \doxymbox{\hyperlink{class_base_building_a3be5a979246ab2dc4dc2569f18f711c9}{Place\+Material}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_common_actions_a3a0d3db8c141d0c160f63a1d673bd04e}{Is\+Selected}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+\doxymbox{\hyperlink{class_base_action}{Base\+Action}}\+[$\,$]\+ \doxymbox{\hyperlink{class_common_actions_a75764b7c55f8ddfaf1dfbe346257491c}{Actions}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+\doxymbox{\hyperlink{class_s_o___base_unit}{SO\+\_\+\+Base\+Unit}} \doxymbox{\hyperlink{class_common_actions_ab8bbed6a15c8b971481b14f01310fdb7}{SO\+\_\+\+Base\+Unit}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+int \doxymbox{\hyperlink{class_common_actions_a7ce50eea9d7904e4c745b8af489531f2}{Current\+Health}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+int \doxymbox{\hyperlink{class_common_actions_a603564a07381db22a5f3e9d5ac51403a}{Max\+Health}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+Transform \doxymbox{\hyperlink{class_common_actions_a75b141d8781f3ff94932ac9d10bb2060}{Target\+Position}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_unit_selected_event}{Unit\+Selected\+Event}} \doxymbox{\hyperlink{class_common_actions_aad887a416c9c496cdad14969a759b02f}{unit\+Select\+Event}}
+\item 
+\doxymbox{\hyperlink{class_unit_deselect_event}{Unit\+Deselect\+Event}} \doxymbox{\hyperlink{class_common_actions_ae602ba5252ed6e84255eea302c63a274}{unit\+Deselect\+Event}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_base_building}{Base\+Building}}}
+\begin{DoxyCompactItemize}
+\item 
+override void \doxymbox{\hyperlink{class_base_building_a2e27c33fc066b75e7b5e7f5764a55211}{Start}} ()
+\item 
+override void \doxymbox{\hyperlink{class_base_building_a3f1a908922f4a450466da213dd45bb2b}{On\+Destroy}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_aace304ed9479d52725fe618c746667d9}{Awake}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_ae605f8ae1a8915928869b81dae283577}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_base_building}{Base\+Building}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_resource_event}{Resource\+Event}} \doxymbox{\hyperlink{class_base_building_ab6355df41dc1aa5119a5f896bfdd234e}{resource\+Event}}
+\item 
+\doxymbox{\hyperlink{class_s_o___building}{SO\+\_\+\+Building}} \doxymbox{\hyperlink{class_base_building_aab5454d1d52c28c91d6e579d9424b6a4}{so\+\_\+building}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+Decal\+Projector \doxymbox{\hyperlink{class_common_actions_a0551ee27e1d92c4cab5583499081a0d3}{selection\+Decal}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_attacker_building_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_attacker_building_a6a78e65247d410558fb4ff59d78769af}\index{AttackerBuilding@{AttackerBuilding}!Attack@{Attack}}
+\index{Attack@{Attack}!AttackerBuilding@{AttackerBuilding}}
+\doxysubsubsection{\texorpdfstring{Attack()}{Attack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_attacker_building_a6a78e65247d410558fb4ff59d78769af} 
+void Attacker\+Building.\+Attack (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interface_i_attackable}{IAttackable}}}]{attackable}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \doxymbox{\hyperlink{interface_i_attacker_a1e1eb11871872e75f08671eb83563db0}{IAttacker}}.
+
+\Hypertarget{class_attacker_building_a5f41f49aee4b2dfcac38b22d19efca15}\index{AttackerBuilding@{AttackerBuilding}!Attack@{Attack}}
+\index{Attack@{Attack}!AttackerBuilding@{AttackerBuilding}}
+\doxysubsubsection{\texorpdfstring{Attack()}{Attack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_attacker_building_a5f41f49aee4b2dfcac38b22d19efca15} 
+void Attacker\+Building.\+Attack (\begin{DoxyParamCaption}\item[{Vector3}]{attack\+Position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \doxymbox{\hyperlink{interface_i_attacker_aa753ee05501893ffcac72bb6adbe1067}{IAttacker}}.
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_attacker_building_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_attacker_building_a4eb291862969f200d7b460b8df6ef65b}\index{AttackerBuilding@{AttackerBuilding}!Transform@{Transform}}
+\index{Transform@{Transform}!AttackerBuilding@{AttackerBuilding}}
+\doxysubsubsection{\texorpdfstring{Transform}{Transform}}
+{\footnotesize\ttfamily \label{class_attacker_building_a4eb291862969f200d7b460b8df6ef65b} 
+Transform Attacker\+Building.\+Transform\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \doxymbox{\hyperlink{interface_i_attacker_ac638113078d3d67338f77da9f5046124}{IAttacker}}.
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Scripts/\+\+Buildings/\+\doxymbox{\hyperlink{_attacker_building_8cs}{Attacker\+Building.\+cs}}\end{DoxyCompactItemize}

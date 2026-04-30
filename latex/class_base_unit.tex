@@ -1,0 +1,207 @@
+\doxysection{Base\+Unit Class Reference}
+\hypertarget{class_base_unit}{}\label{class_base_unit}\index{BaseUnit@{BaseUnit}}
+
+
+Inheritance diagram for Base\+Unit:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_base_unit__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Base\+Unit:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_base_unit__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_base_unit_ab5d81eb87981f27162ef262c27503f16}{Move}} (Transform transform)
+\item 
+void \doxymbox{\hyperlink{class_base_unit_a83f3e7544cfd61b4f1a7fc0b2129a79a}{Move}} (Vector3 position)
+\item 
+void \doxymbox{\hyperlink{class_base_unit_ac4c809c7ca8c11b964c0dfcb3a0f3c1b}{Stop\+Move}} ()
+\item 
+void \doxymbox{\hyperlink{class_base_unit_af855b91ba492443c755482dc5f41f622}{Heal}} (int amount)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_ab819292d2b539af3fd654934925c3d43}{Deselect}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_a20fe334501ba458268ea75a5e9cbd9aa}{Select}} ()
+\item 
+void \doxymbox{\hyperlink{class_common_actions_a31efbfded7bac0694367df1e807b5f26}{Set\+Commands\+Overrides}} (\doxymbox{\hyperlink{class_base_action}{Base\+Action}}\+[$\,$]\+ actions)
+\item 
+void \doxymbox{\hyperlink{class_common_actions_a9aeadc1e41e81f959cebe4b3f83f55f4}{Apply\+Damage}} (int damage\+Amount)
+\item 
+void \doxymbox{\hyperlink{class_common_actions_a4679ef5476cba71a56901c3909c2e921}{Die}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \doxymbox{\hyperlink{class_base_unit_a1b5d82dfb2d7c344e241e7f882665604}{Awake}} ()
+\item 
+override void \doxymbox{\hyperlink{class_base_unit_a292f18709a110307d563f485539a1087}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_aeae7ae6e7935fe45dfbf97700170c334}{Start}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_afa3327aad40e00b114f4af1eb32fec58}{On\+Destroy}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Behavior\+Graph\+Agent \doxymbox{\hyperlink{class_base_unit_a7f7deeabec2f78becadbfc914580754f}{behavior\+Graph\+Agent}}
+\item 
+Nav\+Mesh\+Agent \doxymbox{\hyperlink{class_base_unit_afe76c53d054177ca3a6f15aef9337a27}{nav\+Mesh\+Agent}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+Decal\+Projector \doxymbox{\hyperlink{class_common_actions_a0551ee27e1d92c4cab5583499081a0d3}{selection\+Decal}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{class_base_unit_af7ad9d99459a688e2a47141d72ea7a14}{Get\+Nav\+Mesh\+Agent\+Radius}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_common_actions_a3a0d3db8c141d0c160f63a1d673bd04e}{Is\+Selected}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+\doxymbox{\hyperlink{class_base_action}{Base\+Action}}\+[$\,$]\+ \doxymbox{\hyperlink{class_common_actions_a75764b7c55f8ddfaf1dfbe346257491c}{Actions}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+\doxymbox{\hyperlink{class_s_o___base_unit}{SO\+\_\+\+Base\+Unit}} \doxymbox{\hyperlink{class_common_actions_ab8bbed6a15c8b971481b14f01310fdb7}{SO\+\_\+\+Base\+Unit}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+int \doxymbox{\hyperlink{class_common_actions_a7ce50eea9d7904e4c745b8af489531f2}{Current\+Health}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+int \doxymbox{\hyperlink{class_common_actions_a603564a07381db22a5f3e9d5ac51403a}{Max\+Health}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+Transform \doxymbox{\hyperlink{class_common_actions_a75b141d8781f3ff94932ac9d10bb2060}{Target\+Position}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{interface_i_healable}{IHealable}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{interface_i_healable_aa79b1f7ce4592ba82c78690271e8c6b3}{Current\+Health}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+int \doxymbox{\hyperlink{interface_i_healable_a259a0ecc362aa9e09f4ae7b229c0af52}{Max\+Health}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+Transform \doxymbox{\hyperlink{interface_i_healable_a7a0795b7c8985b586247a430179185ed}{Target\+Position}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_unit_selected_event}{Unit\+Selected\+Event}} \doxymbox{\hyperlink{class_common_actions_aad887a416c9c496cdad14969a759b02f}{unit\+Select\+Event}}
+\item 
+\doxymbox{\hyperlink{class_unit_deselect_event}{Unit\+Deselect\+Event}} \doxymbox{\hyperlink{class_common_actions_ae602ba5252ed6e84255eea302c63a274}{unit\+Deselect\+Event}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_base_unit_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_base_unit_a1b5d82dfb2d7c344e241e7f882665604}\index{BaseUnit@{BaseUnit}!Awake@{Awake}}
+\index{Awake@{Awake}!BaseUnit@{BaseUnit}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_base_unit_a1b5d82dfb2d7c344e241e7f882665604} 
+override void Base\+Unit.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_common_actions_aace304ed9479d52725fe618c746667d9}{Common\+Actions}}.
+
+\Hypertarget{class_base_unit_af855b91ba492443c755482dc5f41f622}\index{BaseUnit@{BaseUnit}!Heal@{Heal}}
+\index{Heal@{Heal}!BaseUnit@{BaseUnit}}
+\doxysubsubsection{\texorpdfstring{Heal()}{Heal()}}
+{\footnotesize\ttfamily \label{class_base_unit_af855b91ba492443c755482dc5f41f622} 
+void Base\+Unit.\+Heal (\begin{DoxyParamCaption}\item[{int}]{amount}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \doxymbox{\hyperlink{interface_i_healable_a300cf4edd2c5b4bdc107bcf1a9ef0630}{IHealable}}.
+
+\Hypertarget{class_base_unit_ab5d81eb87981f27162ef262c27503f16}\index{BaseUnit@{BaseUnit}!Move@{Move}}
+\index{Move@{Move}!BaseUnit@{BaseUnit}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_base_unit_ab5d81eb87981f27162ef262c27503f16} 
+void Base\+Unit.\+Move (\begin{DoxyParamCaption}\item[{Transform}]{transform}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \doxymbox{\hyperlink{interface_i_moveable_ae309144f7046465b07e5d85decb4d32a}{IMoveable}}.
+
+\Hypertarget{class_base_unit_a83f3e7544cfd61b4f1a7fc0b2129a79a}\index{BaseUnit@{BaseUnit}!Move@{Move}}
+\index{Move@{Move}!BaseUnit@{BaseUnit}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_base_unit_a83f3e7544cfd61b4f1a7fc0b2129a79a} 
+void Base\+Unit.\+Move (\begin{DoxyParamCaption}\item[{Vector3}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \doxymbox{\hyperlink{interface_i_moveable_aba871c5bcaee79e8b2994d339d0dd379}{IMoveable}}.
+
+\Hypertarget{class_base_unit_ac4c809c7ca8c11b964c0dfcb3a0f3c1b}\index{BaseUnit@{BaseUnit}!StopMove@{StopMove}}
+\index{StopMove@{StopMove}!BaseUnit@{BaseUnit}}
+\doxysubsubsection{\texorpdfstring{StopMove()}{StopMove()}}
+{\footnotesize\ttfamily \label{class_base_unit_ac4c809c7ca8c11b964c0dfcb3a0f3c1b} 
+void Base\+Unit.\+Stop\+Move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \doxymbox{\hyperlink{interface_i_moveable_a75d844ac7ffa55f30c300a93400aa5eb}{IMoveable}}.
+
+\Hypertarget{class_base_unit_a292f18709a110307d563f485539a1087}\index{BaseUnit@{BaseUnit}!Update@{Update}}
+\index{Update@{Update}!BaseUnit@{BaseUnit}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_base_unit_a292f18709a110307d563f485539a1087} 
+override void Base\+Unit.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_common_actions_ae605f8ae1a8915928869b81dae283577}{Common\+Actions}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_base_unit_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_base_unit_a7f7deeabec2f78becadbfc914580754f}\index{BaseUnit@{BaseUnit}!behaviorGraphAgent@{behaviorGraphAgent}}
+\index{behaviorGraphAgent@{behaviorGraphAgent}!BaseUnit@{BaseUnit}}
+\doxysubsubsection{\texorpdfstring{behaviorGraphAgent}{behaviorGraphAgent}}
+{\footnotesize\ttfamily \label{class_base_unit_a7f7deeabec2f78becadbfc914580754f} 
+Behavior\+Graph\+Agent Base\+Unit.\+behavior\+Graph\+Agent\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_base_unit_afe76c53d054177ca3a6f15aef9337a27}\index{BaseUnit@{BaseUnit}!navMeshAgent@{navMeshAgent}}
+\index{navMeshAgent@{navMeshAgent}!BaseUnit@{BaseUnit}}
+\doxysubsubsection{\texorpdfstring{navMeshAgent}{navMeshAgent}}
+{\footnotesize\ttfamily \label{class_base_unit_afe76c53d054177ca3a6f15aef9337a27} 
+Nav\+Mesh\+Agent Base\+Unit.\+nav\+Mesh\+Agent\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_base_unit_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_base_unit_af7ad9d99459a688e2a47141d72ea7a14}\index{BaseUnit@{BaseUnit}!GetNavMeshAgentRadius@{GetNavMeshAgentRadius}}
+\index{GetNavMeshAgentRadius@{GetNavMeshAgentRadius}!BaseUnit@{BaseUnit}}
+\doxysubsubsection{\texorpdfstring{GetNavMeshAgentRadius}{GetNavMeshAgentRadius}}
+{\footnotesize\ttfamily \label{class_base_unit_af7ad9d99459a688e2a47141d72ea7a14} 
+float Base\+Unit.\+Get\+Nav\+Mesh\+Agent\+Radius\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Scripts/\+\+Units/\+\doxymbox{\hyperlink{_base_unit_8cs}{Base\+Unit.\+cs}}\end{DoxyCompactItemize}

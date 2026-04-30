@@ -1,0 +1,19 @@
+<map id="BaseHealer" name="BaseHealer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="400,1061,631,1440"/>
+<area shape="rect" id="Node000002" href="$class_base_unit.html" title=" " alt="" coords="308,763,513,1013"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="452,1025,463,1062,458,1061,450,1030"/>
+<area shape="rect" id="Node000003" href="$class_common_actions.html" title=" " alt="" coords="82,203,293,715"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="300,700,309,713,336,763,331,763,304,716,300,706"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,45,106,115"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="72,125,101,202,96,203,72,131"/>
+<area shape="rect" id="Node000005" href="$interface_i_selectable.html" title=" " alt="" coords="131,35,245,125"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="188,138,190,203,185,203,187,143"/>
+<area shape="rect" id="Node000006" href="$interface_i_attackable.html" title=" " alt="" coords="268,5,438,155"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="314,171,296,218,291,217,316,166"/>
+<area shape="rect" id="Node000007" href="$interface_i_moveable.html" title=" " alt="" coords="318,395,503,523"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="411,535,413,763,408,762,409,540"/>
+<area shape="rect" id="Node000008" href="$interface_i_healable.html" title=" " alt="" coords="527,403,696,515"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="590,526,559,619,517,716,491,764,487,761,512,714,554,617,588,531"/>
+<area shape="rect" id="Node000009" href="$interface_i_healer.html" title=" " alt="" coords="538,827,704,949"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="601,962,573,1063,568,1060,598,966"/>
+</map>

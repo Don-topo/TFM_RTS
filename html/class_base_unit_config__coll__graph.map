@@ -1,0 +1,5 @@
+<map id="BaseUnitConfig" name="BaseUnitConfig">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,123,108,192"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="6,5,107,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="58,87,59,123,54,122,55,92"/>
+</map>

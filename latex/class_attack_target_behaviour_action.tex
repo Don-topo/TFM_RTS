@@ -1,0 +1,177 @@
+\doxysection{Attack\+Target\+Behaviour\+Action Class Reference}
+\hypertarget{class_attack_target_behaviour_action}{}\label{class_attack_target_behaviour_action}\index{AttackTargetBehaviourAction@{AttackTargetBehaviourAction}}
+
+
+Inheritance diagram for Attack\+Target\+Behaviour\+Action:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{class_attack_target_behaviour_action__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Attack\+Target\+Behaviour\+Action:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_attack_target_behaviour_action__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Blackboard\+Variable$<$ Game\+Object $>$ \doxymbox{\hyperlink{class_attack_target_behaviour_action_aaea8ef487d3146b0e16770705cd608a2}{Self}}
+\item 
+Blackboard\+Variable$<$ Game\+Object $>$ \doxymbox{\hyperlink{class_attack_target_behaviour_action_abf03315fbdba52059aa17a25ff7aed95}{Target\+Game\+Object}}
+\item 
+Blackboard\+Variable$<$ \doxymbox{\hyperlink{class_s_o___attack_info}{SO\+\_\+\+Attack\+Info}} $>$ \doxymbox{\hyperlink{class_attack_target_behaviour_action_aba932e0f4f044c2ea9e4c44231d5b668}{Attack\+Info}}
+\item 
+Blackboard\+Variable$<$ List$<$ Game\+Object $>$ $>$ \doxymbox{\hyperlink{class_attack_target_behaviour_action_ab8c2ba948709b54f37c3bc366cf3a4a8}{Enemies}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override Status \doxymbox{\hyperlink{class_attack_target_behaviour_action_a85cae927f0197843f24cdac1e3efa642}{On\+Start}} ()
+\item 
+override Status \doxymbox{\hyperlink{class_attack_target_behaviour_action_ae1629ebed50ca578fc9a9c8cbc45cebf}{On\+Update}} ()
+\item 
+override void \doxymbox{\hyperlink{class_attack_target_behaviour_action_a5044774056e36e191bc23d0b7fd53f65}{On\+End}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_attack_target_behaviour_action_a788a1b641126614dab36f0b4962be7f5}{Look\+At\+Target}} ()
+\item 
+void \doxymbox{\hyperlink{class_attack_target_behaviour_action_abaae83c8229375b1d5465868024d74c3}{Attack}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Nav\+Mesh\+Agent \doxymbox{\hyperlink{class_attack_target_behaviour_action_acb70ffdf49c1fae0866c53b2638843de}{nav\+Mesh\+Agent}}
+\item 
+\doxymbox{\hyperlink{class_base_unit}{Base\+Unit}} \doxymbox{\hyperlink{class_attack_target_behaviour_action_a61d415cd8820af7335a846d1309f6fc1}{base\+Unit}}
+\item 
+Transform \doxymbox{\hyperlink{class_attack_target_behaviour_action_abd3e384dd584759f774200766d5038d7}{self\+Transform}}
+\item 
+Transform \doxymbox{\hyperlink{class_attack_target_behaviour_action_ad74990be544aee41b4411e898ed257cc}{target\+Transform}}
+\item 
+List$<$ Collider $>$ \doxymbox{\hyperlink{class_attack_target_behaviour_action_ad405413e7a146d08bc274b10ffe44cd3}{target\+Colliders}}
+\item 
+float \doxymbox{\hyperlink{class_attack_target_behaviour_action_a4b875c971e7ee3710955afbf8249a716}{last\+Attack}}
+\item 
+\doxymbox{\hyperlink{interface_i_attackable}{IAttackable}} \doxymbox{\hyperlink{class_attack_target_behaviour_action_a46ef772397d800c31d29e7474a749b59}{target\+Attackable}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_attack_target_behaviour_action_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_attack_target_behaviour_action_abaae83c8229375b1d5465868024d74c3}\index{AttackTargetBehaviourAction@{AttackTargetBehaviourAction}!Attack@{Attack}}
+\index{Attack@{Attack}!AttackTargetBehaviourAction@{AttackTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{Attack()}{Attack()}}
+{\footnotesize\ttfamily \label{class_attack_target_behaviour_action_abaae83c8229375b1d5465868024d74c3} 
+void Attack\+Target\+Behaviour\+Action.\+Attack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_attack_target_behaviour_action_a788a1b641126614dab36f0b4962be7f5}\index{AttackTargetBehaviourAction@{AttackTargetBehaviourAction}!LookAtTarget@{LookAtTarget}}
+\index{LookAtTarget@{LookAtTarget}!AttackTargetBehaviourAction@{AttackTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{LookAtTarget()}{LookAtTarget()}}
+{\footnotesize\ttfamily \label{class_attack_target_behaviour_action_a788a1b641126614dab36f0b4962be7f5} 
+void Attack\+Target\+Behaviour\+Action.\+Look\+At\+Target (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_attack_target_behaviour_action_a5044774056e36e191bc23d0b7fd53f65}\index{AttackTargetBehaviourAction@{AttackTargetBehaviourAction}!OnEnd@{OnEnd}}
+\index{OnEnd@{OnEnd}!AttackTargetBehaviourAction@{AttackTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{OnEnd()}{OnEnd()}}
+{\footnotesize\ttfamily \label{class_attack_target_behaviour_action_a5044774056e36e191bc23d0b7fd53f65} 
+override void Attack\+Target\+Behaviour\+Action.\+On\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_attack_target_behaviour_action_a85cae927f0197843f24cdac1e3efa642}\index{AttackTargetBehaviourAction@{AttackTargetBehaviourAction}!OnStart@{OnStart}}
+\index{OnStart@{OnStart}!AttackTargetBehaviourAction@{AttackTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{OnStart()}{OnStart()}}
+{\footnotesize\ttfamily \label{class_attack_target_behaviour_action_a85cae927f0197843f24cdac1e3efa642} 
+override Status Attack\+Target\+Behaviour\+Action.\+On\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_attack_target_behaviour_action_ae1629ebed50ca578fc9a9c8cbc45cebf}\index{AttackTargetBehaviourAction@{AttackTargetBehaviourAction}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!AttackTargetBehaviourAction@{AttackTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily \label{class_attack_target_behaviour_action_ae1629ebed50ca578fc9a9c8cbc45cebf} 
+override Status Attack\+Target\+Behaviour\+Action.\+On\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_attack_target_behaviour_action_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_attack_target_behaviour_action_aba932e0f4f044c2ea9e4c44231d5b668}\index{AttackTargetBehaviourAction@{AttackTargetBehaviourAction}!AttackInfo@{AttackInfo}}
+\index{AttackInfo@{AttackInfo}!AttackTargetBehaviourAction@{AttackTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{AttackInfo}{AttackInfo}}
+{\footnotesize\ttfamily \label{class_attack_target_behaviour_action_aba932e0f4f044c2ea9e4c44231d5b668} 
+Blackboard\+Variable$<$\doxymbox{\hyperlink{class_s_o___attack_info}{SO\+\_\+\+Attack\+Info}}$>$ Attack\+Target\+Behaviour\+Action.\+Attack\+Info}
+
+\Hypertarget{class_attack_target_behaviour_action_a61d415cd8820af7335a846d1309f6fc1}\index{AttackTargetBehaviourAction@{AttackTargetBehaviourAction}!baseUnit@{baseUnit}}
+\index{baseUnit@{baseUnit}!AttackTargetBehaviourAction@{AttackTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{baseUnit}{baseUnit}}
+{\footnotesize\ttfamily \label{class_attack_target_behaviour_action_a61d415cd8820af7335a846d1309f6fc1} 
+\doxymbox{\hyperlink{class_base_unit}{Base\+Unit}} Attack\+Target\+Behaviour\+Action.\+base\+Unit\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_attack_target_behaviour_action_ab8c2ba948709b54f37c3bc366cf3a4a8}\index{AttackTargetBehaviourAction@{AttackTargetBehaviourAction}!Enemies@{Enemies}}
+\index{Enemies@{Enemies}!AttackTargetBehaviourAction@{AttackTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{Enemies}{Enemies}}
+{\footnotesize\ttfamily \label{class_attack_target_behaviour_action_ab8c2ba948709b54f37c3bc366cf3a4a8} 
+Blackboard\+Variable$<$List$<$Game\+Object$>$ $>$ Attack\+Target\+Behaviour\+Action.\+Enemies}
+
+\Hypertarget{class_attack_target_behaviour_action_a4b875c971e7ee3710955afbf8249a716}\index{AttackTargetBehaviourAction@{AttackTargetBehaviourAction}!lastAttack@{lastAttack}}
+\index{lastAttack@{lastAttack}!AttackTargetBehaviourAction@{AttackTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{lastAttack}{lastAttack}}
+{\footnotesize\ttfamily \label{class_attack_target_behaviour_action_a4b875c971e7ee3710955afbf8249a716} 
+float Attack\+Target\+Behaviour\+Action.\+last\+Attack\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_attack_target_behaviour_action_acb70ffdf49c1fae0866c53b2638843de}\index{AttackTargetBehaviourAction@{AttackTargetBehaviourAction}!navMeshAgent@{navMeshAgent}}
+\index{navMeshAgent@{navMeshAgent}!AttackTargetBehaviourAction@{AttackTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{navMeshAgent}{navMeshAgent}}
+{\footnotesize\ttfamily \label{class_attack_target_behaviour_action_acb70ffdf49c1fae0866c53b2638843de} 
+Nav\+Mesh\+Agent Attack\+Target\+Behaviour\+Action.\+nav\+Mesh\+Agent\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_attack_target_behaviour_action_aaea8ef487d3146b0e16770705cd608a2}\index{AttackTargetBehaviourAction@{AttackTargetBehaviourAction}!Self@{Self}}
+\index{Self@{Self}!AttackTargetBehaviourAction@{AttackTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{Self}{Self}}
+{\footnotesize\ttfamily \label{class_attack_target_behaviour_action_aaea8ef487d3146b0e16770705cd608a2} 
+Blackboard\+Variable$<$Game\+Object$>$ Attack\+Target\+Behaviour\+Action.\+Self}
+
+\Hypertarget{class_attack_target_behaviour_action_abd3e384dd584759f774200766d5038d7}\index{AttackTargetBehaviourAction@{AttackTargetBehaviourAction}!selfTransform@{selfTransform}}
+\index{selfTransform@{selfTransform}!AttackTargetBehaviourAction@{AttackTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{selfTransform}{selfTransform}}
+{\footnotesize\ttfamily \label{class_attack_target_behaviour_action_abd3e384dd584759f774200766d5038d7} 
+Transform Attack\+Target\+Behaviour\+Action.\+self\+Transform\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_attack_target_behaviour_action_a46ef772397d800c31d29e7474a749b59}\index{AttackTargetBehaviourAction@{AttackTargetBehaviourAction}!targetAttackable@{targetAttackable}}
+\index{targetAttackable@{targetAttackable}!AttackTargetBehaviourAction@{AttackTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{targetAttackable}{targetAttackable}}
+{\footnotesize\ttfamily \label{class_attack_target_behaviour_action_a46ef772397d800c31d29e7474a749b59} 
+\doxymbox{\hyperlink{interface_i_attackable}{IAttackable}} Attack\+Target\+Behaviour\+Action.\+target\+Attackable\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_attack_target_behaviour_action_ad405413e7a146d08bc274b10ffe44cd3}\index{AttackTargetBehaviourAction@{AttackTargetBehaviourAction}!targetColliders@{targetColliders}}
+\index{targetColliders@{targetColliders}!AttackTargetBehaviourAction@{AttackTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{targetColliders}{targetColliders}}
+{\footnotesize\ttfamily \label{class_attack_target_behaviour_action_ad405413e7a146d08bc274b10ffe44cd3} 
+List$<$Collider$>$ Attack\+Target\+Behaviour\+Action.\+target\+Colliders\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_attack_target_behaviour_action_abf03315fbdba52059aa17a25ff7aed95}\index{AttackTargetBehaviourAction@{AttackTargetBehaviourAction}!TargetGameObject@{TargetGameObject}}
+\index{TargetGameObject@{TargetGameObject}!AttackTargetBehaviourAction@{AttackTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{TargetGameObject}{TargetGameObject}}
+{\footnotesize\ttfamily \label{class_attack_target_behaviour_action_abf03315fbdba52059aa17a25ff7aed95} 
+Blackboard\+Variable$<$Game\+Object$>$ Attack\+Target\+Behaviour\+Action.\+Target\+Game\+Object}
+
+\Hypertarget{class_attack_target_behaviour_action_ad74990be544aee41b4411e898ed257cc}\index{AttackTargetBehaviourAction@{AttackTargetBehaviourAction}!targetTransform@{targetTransform}}
+\index{targetTransform@{targetTransform}!AttackTargetBehaviourAction@{AttackTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{targetTransform}{targetTransform}}
+{\footnotesize\ttfamily \label{class_attack_target_behaviour_action_ad74990be544aee41b4411e898ed257cc} 
+Transform Attack\+Target\+Behaviour\+Action.\+target\+Transform\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Scripts/\+\+Behaviour\+Trees/\+\doxymbox{\hyperlink{_attack_target_behaviour_action_8cs}{Attack\+Target\+Behaviour\+Action.\+cs}}\end{DoxyCompactItemize}

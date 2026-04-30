@@ -1,0 +1,258 @@
+\doxysection{Base\+Healer Class Reference}
+\hypertarget{class_base_healer}{}\label{class_base_healer}\index{BaseHealer@{BaseHealer}}
+
+
+Inheritance diagram for Base\+Healer:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_base_healer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Base\+Healer:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_base_healer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_base_healer_a16970698bb63c368032735f00e2a949a}{Heal}} (\doxymbox{\hyperlink{interface_i_healable}{IHealable}} unit)
+\item 
+void \doxymbox{\hyperlink{class_base_healer_a26d14ce9597c5dd022318f438a5b87c0}{Heal}} (Vector3 heal\+Position)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_base_unit}{Base\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_base_unit_ab5d81eb87981f27162ef262c27503f16}{Move}} (Transform transform)
+\item 
+void \doxymbox{\hyperlink{class_base_unit_a83f3e7544cfd61b4f1a7fc0b2129a79a}{Move}} (Vector3 position)
+\item 
+void \doxymbox{\hyperlink{class_base_unit_ac4c809c7ca8c11b964c0dfcb3a0f3c1b}{Stop\+Move}} ()
+\item 
+void \doxymbox{\hyperlink{class_base_unit_af855b91ba492443c755482dc5f41f622}{Heal}} (int amount)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_ab819292d2b539af3fd654934925c3d43}{Deselect}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_a20fe334501ba458268ea75a5e9cbd9aa}{Select}} ()
+\item 
+void \doxymbox{\hyperlink{class_common_actions_a31efbfded7bac0694367df1e807b5f26}{Set\+Commands\+Overrides}} (\doxymbox{\hyperlink{class_base_action}{Base\+Action}}\+[$\,$]\+ actions)
+\item 
+void \doxymbox{\hyperlink{class_common_actions_a9aeadc1e41e81f959cebe4b3f83f55f4}{Apply\+Damage}} (int damage\+Amount)
+\item 
+void \doxymbox{\hyperlink{class_common_actions_a4679ef5476cba71a56901c3909c2e921}{Die}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \doxymbox{\hyperlink{class_base_healer_a634fe8f55eefde9837e0b58e68f5dbea}{Awake}} ()
+\item 
+override void \doxymbox{\hyperlink{class_base_healer_a68d3c1e2deb76d7e883e66c304d59d2e}{On\+Destroy}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_base_unit}{Base\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+override void \doxymbox{\hyperlink{class_base_unit_a1b5d82dfb2d7c344e241e7f882665604}{Awake}} ()
+\item 
+override void \doxymbox{\hyperlink{class_base_unit_a292f18709a110307d563f485539a1087}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_aeae7ae6e7935fe45dfbf97700170c334}{Start}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_s_o___heal_info}{SO\+\_\+\+Heal\+Info}} \doxymbox{\hyperlink{class_base_healer_a3616a5742b154408228f1e2ae5bcab05}{Heal\+Info}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+Transform \doxymbox{\hyperlink{class_base_healer_aae1201edeaf9e2bd69e0db03aa60394e}{Transform}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_base_unit}{Base\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{class_base_unit_af7ad9d99459a688e2a47141d72ea7a14}{Get\+Nav\+Mesh\+Agent\+Radius}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_common_actions_a3a0d3db8c141d0c160f63a1d673bd04e}{Is\+Selected}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+\doxymbox{\hyperlink{class_base_action}{Base\+Action}}\+[$\,$]\+ \doxymbox{\hyperlink{class_common_actions_a75764b7c55f8ddfaf1dfbe346257491c}{Actions}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+\doxymbox{\hyperlink{class_s_o___base_unit}{SO\+\_\+\+Base\+Unit}} \doxymbox{\hyperlink{class_common_actions_ab8bbed6a15c8b971481b14f01310fdb7}{SO\+\_\+\+Base\+Unit}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+int \doxymbox{\hyperlink{class_common_actions_a7ce50eea9d7904e4c745b8af489531f2}{Current\+Health}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+int \doxymbox{\hyperlink{class_common_actions_a603564a07381db22a5f3e9d5ac51403a}{Max\+Health}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+Transform \doxymbox{\hyperlink{class_common_actions_a75b141d8781f3ff94932ac9d10bb2060}{Target\+Position}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{interface_i_healable}{IHealable}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{interface_i_healable_aa79b1f7ce4592ba82c78690271e8c6b3}{Current\+Health}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+int \doxymbox{\hyperlink{interface_i_healable_a259a0ecc362aa9e09f4ae7b229c0af52}{Max\+Health}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+Transform \doxymbox{\hyperlink{interface_i_healable_a7a0795b7c8985b586247a430179185ed}{Target\+Position}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_base_healer_a31bc34fc61ff9243ef7af45ac33d0e5d}{Unit\+In\+Range}} (\doxymbox{\hyperlink{interface_i_healable}{IHealable}} unit)
+\item 
+void \doxymbox{\hyperlink{class_base_healer_af4c01ce260a92a99abd910b2aaa34151}{Unit\+Out\+Of\+Range}} (\doxymbox{\hyperlink{interface_i_healable}{IHealable}} unit)
+\item 
+List$<$ Game\+Object $>$ \doxymbox{\hyperlink{class_base_healer_ad7256128973f1751cbccebc7dae41acd}{Set\+Nearby\+Enemies\+On\+Blackboard}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_healing_system}{Healing\+System}} \doxymbox{\hyperlink{class_base_healer_af0b8cce464df383685b69b315fdcb0af}{healing\+System}}
+\item 
+\doxymbox{\hyperlink{class_ally_in_range_event}{Ally\+In\+Range\+Event}} \doxymbox{\hyperlink{class_base_healer_a7c4350b40cebc1696b5a58909b395553}{unit\+Enter\+Range}}
+\item 
+\doxymbox{\hyperlink{class_ally_in_range_event}{Ally\+In\+Range\+Event}} \doxymbox{\hyperlink{class_base_healer_aebea6553520b7f4f5ae7cf360a506659}{unit\+Out\+Of\+Range}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_unit_selected_event}{Unit\+Selected\+Event}} \doxymbox{\hyperlink{class_common_actions_aad887a416c9c496cdad14969a759b02f}{unit\+Select\+Event}}
+\item 
+\doxymbox{\hyperlink{class_unit_deselect_event}{Unit\+Deselect\+Event}} \doxymbox{\hyperlink{class_common_actions_ae602ba5252ed6e84255eea302c63a274}{unit\+Deselect\+Event}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_base_unit}{Base\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+Behavior\+Graph\+Agent \doxymbox{\hyperlink{class_base_unit_a7f7deeabec2f78becadbfc914580754f}{behavior\+Graph\+Agent}}
+\item 
+Nav\+Mesh\+Agent \doxymbox{\hyperlink{class_base_unit_afe76c53d054177ca3a6f15aef9337a27}{nav\+Mesh\+Agent}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+Decal\+Projector \doxymbox{\hyperlink{class_common_actions_a0551ee27e1d92c4cab5583499081a0d3}{selection\+Decal}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_base_healer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_base_healer_a634fe8f55eefde9837e0b58e68f5dbea}\index{BaseHealer@{BaseHealer}!Awake@{Awake}}
+\index{Awake@{Awake}!BaseHealer@{BaseHealer}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_base_healer_a634fe8f55eefde9837e0b58e68f5dbea} 
+override void Base\+Healer.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_common_actions_aace304ed9479d52725fe618c746667d9}{Common\+Actions}}.
+
+\Hypertarget{class_base_healer_a16970698bb63c368032735f00e2a949a}\index{BaseHealer@{BaseHealer}!Heal@{Heal}}
+\index{Heal@{Heal}!BaseHealer@{BaseHealer}}
+\doxysubsubsection{\texorpdfstring{Heal()}{Heal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_base_healer_a16970698bb63c368032735f00e2a949a} 
+void Base\+Healer.\+Heal (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interface_i_healable}{IHealable}}}]{unit}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \doxymbox{\hyperlink{interface_i_healer_acb2fe9e2b669bcd2d536680da0e4a1a5}{IHealer}}.
+
+\Hypertarget{class_base_healer_a26d14ce9597c5dd022318f438a5b87c0}\index{BaseHealer@{BaseHealer}!Heal@{Heal}}
+\index{Heal@{Heal}!BaseHealer@{BaseHealer}}
+\doxysubsubsection{\texorpdfstring{Heal()}{Heal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_base_healer_a26d14ce9597c5dd022318f438a5b87c0} 
+void Base\+Healer.\+Heal (\begin{DoxyParamCaption}\item[{Vector3}]{heal\+Position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \doxymbox{\hyperlink{interface_i_healer_a157ed3e5742b86cbf968d669298fb4cb}{IHealer}}.
+
+\Hypertarget{class_base_healer_a68d3c1e2deb76d7e883e66c304d59d2e}\index{BaseHealer@{BaseHealer}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!BaseHealer@{BaseHealer}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily \label{class_base_healer_a68d3c1e2deb76d7e883e66c304d59d2e} 
+override void Base\+Healer.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_common_actions_afa3327aad40e00b114f4af1eb32fec58}{Common\+Actions}}.
+
+\Hypertarget{class_base_healer_ad7256128973f1751cbccebc7dae41acd}\index{BaseHealer@{BaseHealer}!SetNearbyEnemiesOnBlackboard@{SetNearbyEnemiesOnBlackboard}}
+\index{SetNearbyEnemiesOnBlackboard@{SetNearbyEnemiesOnBlackboard}!BaseHealer@{BaseHealer}}
+\doxysubsubsection{\texorpdfstring{SetNearbyEnemiesOnBlackboard()}{SetNearbyEnemiesOnBlackboard()}}
+{\footnotesize\ttfamily \label{class_base_healer_ad7256128973f1751cbccebc7dae41acd} 
+List$<$ Game\+Object $>$ Base\+Healer.\+Set\+Nearby\+Enemies\+On\+Blackboard (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_base_healer_a31bc34fc61ff9243ef7af45ac33d0e5d}\index{BaseHealer@{BaseHealer}!UnitInRange@{UnitInRange}}
+\index{UnitInRange@{UnitInRange}!BaseHealer@{BaseHealer}}
+\doxysubsubsection{\texorpdfstring{UnitInRange()}{UnitInRange()}}
+{\footnotesize\ttfamily \label{class_base_healer_a31bc34fc61ff9243ef7af45ac33d0e5d} 
+void Base\+Healer.\+Unit\+In\+Range (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interface_i_healable}{IHealable}}}]{unit}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_base_healer_af4c01ce260a92a99abd910b2aaa34151}\index{BaseHealer@{BaseHealer}!UnitOutOfRange@{UnitOutOfRange}}
+\index{UnitOutOfRange@{UnitOutOfRange}!BaseHealer@{BaseHealer}}
+\doxysubsubsection{\texorpdfstring{UnitOutOfRange()}{UnitOutOfRange()}}
+{\footnotesize\ttfamily \label{class_base_healer_af4c01ce260a92a99abd910b2aaa34151} 
+void Base\+Healer.\+Unit\+Out\+Of\+Range (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interface_i_healable}{IHealable}}}]{unit}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_base_healer_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_base_healer_af0b8cce464df383685b69b315fdcb0af}\index{BaseHealer@{BaseHealer}!healingSystem@{healingSystem}}
+\index{healingSystem@{healingSystem}!BaseHealer@{BaseHealer}}
+\doxysubsubsection{\texorpdfstring{healingSystem}{healingSystem}}
+{\footnotesize\ttfamily \label{class_base_healer_af0b8cce464df383685b69b315fdcb0af} 
+\doxymbox{\hyperlink{class_healing_system}{Healing\+System}} Base\+Healer.\+healing\+System\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_base_healer_a7c4350b40cebc1696b5a58909b395553}\index{BaseHealer@{BaseHealer}!unitEnterRange@{unitEnterRange}}
+\index{unitEnterRange@{unitEnterRange}!BaseHealer@{BaseHealer}}
+\doxysubsubsection{\texorpdfstring{unitEnterRange}{unitEnterRange}}
+{\footnotesize\ttfamily \label{class_base_healer_a7c4350b40cebc1696b5a58909b395553} 
+\doxymbox{\hyperlink{class_ally_in_range_event}{Ally\+In\+Range\+Event}} Base\+Healer.\+unit\+Enter\+Range\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_base_healer_aebea6553520b7f4f5ae7cf360a506659}\index{BaseHealer@{BaseHealer}!unitOutOfRange@{unitOutOfRange}}
+\index{unitOutOfRange@{unitOutOfRange}!BaseHealer@{BaseHealer}}
+\doxysubsubsection{\texorpdfstring{unitOutOfRange}{unitOutOfRange}}
+{\footnotesize\ttfamily \label{class_base_healer_aebea6553520b7f4f5ae7cf360a506659} 
+\doxymbox{\hyperlink{class_ally_in_range_event}{Ally\+In\+Range\+Event}} Base\+Healer.\+unit\+Out\+Of\+Range\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_base_healer_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_base_healer_a3616a5742b154408228f1e2ae5bcab05}\index{BaseHealer@{BaseHealer}!HealInfo@{HealInfo}}
+\index{HealInfo@{HealInfo}!BaseHealer@{BaseHealer}}
+\doxysubsubsection{\texorpdfstring{HealInfo}{HealInfo}}
+{\footnotesize\ttfamily \label{class_base_healer_a3616a5742b154408228f1e2ae5bcab05} 
+\doxymbox{\hyperlink{class_s_o___heal_info}{SO\+\_\+\+Heal\+Info}} Base\+Healer.\+Heal\+Info\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+\Hypertarget{class_base_healer_aae1201edeaf9e2bd69e0db03aa60394e}\index{BaseHealer@{BaseHealer}!Transform@{Transform}}
+\index{Transform@{Transform}!BaseHealer@{BaseHealer}}
+\doxysubsubsection{\texorpdfstring{Transform}{Transform}}
+{\footnotesize\ttfamily \label{class_base_healer_aae1201edeaf9e2bd69e0db03aa60394e} 
+Transform Base\+Healer.\+Transform\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \doxymbox{\hyperlink{interface_i_healer_a881af75f4b18af33ff65f360d1e23712}{IHealer}}.
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Scripts/\+\+Units/\+\doxymbox{\hyperlink{_base_healer_8cs}{Base\+Healer.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,134 @@
+\doxysection{Healing\+System Class Reference}
+\hypertarget{class_healing_system}{}\label{class_healing_system}\index{HealingSystem@{HealingSystem}}
+
+
+Inheritance diagram for Healing\+System:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{class_healing_system__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Healing\+System:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_healing_system__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_healing_system_ad9e45975b3d9fbf38a21a7d1c21985a8}{Set\+Range}} (float range)
+\item 
+List$<$ \doxymbox{\hyperlink{interface_i_healable}{IHealable}} $>$ \doxymbox{\hyperlink{class_healing_system_a76ee476241cfeae9411bb0de45292ddb}{Allies\+In\+Range}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_healing_system_ab645254b7dd0b89bf968ac049276e6f0}{Awake}} ()
+\item 
+void \doxymbox{\hyperlink{class_healing_system_af1088fe3747205023081e19c1de529ad}{On\+Destroy}} ()
+\item 
+void \doxymbox{\hyperlink{class_healing_system_a9272ee9fdb5f288efd8ddba356d57a52}{On\+Trigger\+Enter}} (Collider other)
+\item 
+void \doxymbox{\hyperlink{class_healing_system_a7efb3fba68c81796c01c1067903f8191}{On\+Trigger\+Exit}} (Collider other)
+\item 
+void \doxymbox{\hyperlink{class_healing_system_aa07f91ca24199633bf89c0475b08b3ef}{Unit\+Death}} (\doxymbox{\hyperlink{class_base_unit}{Base\+Unit}} base\+Unit)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_ally_in_range_event}{Ally\+In\+Range\+Event}} \doxymbox{\hyperlink{class_healing_system_a828f0f1985e2b8c7f3424bd6c2bfa9bb}{ally\+In\+Range\+Event}}
+\item 
+\doxymbox{\hyperlink{class_unit_death_event}{Unit\+Death\+Event}} \doxymbox{\hyperlink{class_healing_system_aa522ddd7658fb98ef1b5abf18ba7ebb0}{unit\+Death\+Event}}
+\item 
+List$<$ \doxymbox{\hyperlink{interface_i_healable}{IHealable}} $>$ \doxymbox{\hyperlink{class_healing_system_aa5f58ac85c9a2fdba48e417d48f75f08}{allies\+In\+Range}} = new List$<$\doxymbox{\hyperlink{interface_i_healable}{IHealable}}$>$()
+\item 
+Sphere\+Collider \doxymbox{\hyperlink{class_healing_system_a557c6d7b7fe2207911922f59f76579f3}{sphere\+Collider}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_healing_system_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_healing_system_a76ee476241cfeae9411bb0de45292ddb}\index{HealingSystem@{HealingSystem}!AlliesInRange@{AlliesInRange}}
+\index{AlliesInRange@{AlliesInRange}!HealingSystem@{HealingSystem}}
+\doxysubsubsection{\texorpdfstring{AlliesInRange()}{AlliesInRange()}}
+{\footnotesize\ttfamily \label{class_healing_system_a76ee476241cfeae9411bb0de45292ddb} 
+List$<$ \doxymbox{\hyperlink{interface_i_healable}{IHealable}} $>$ Healing\+System.\+Allies\+In\+Range (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_healing_system_ab645254b7dd0b89bf968ac049276e6f0}\index{HealingSystem@{HealingSystem}!Awake@{Awake}}
+\index{Awake@{Awake}!HealingSystem@{HealingSystem}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_healing_system_ab645254b7dd0b89bf968ac049276e6f0} 
+void Healing\+System.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_healing_system_af1088fe3747205023081e19c1de529ad}\index{HealingSystem@{HealingSystem}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!HealingSystem@{HealingSystem}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily \label{class_healing_system_af1088fe3747205023081e19c1de529ad} 
+void Healing\+System.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_healing_system_a9272ee9fdb5f288efd8ddba356d57a52}\index{HealingSystem@{HealingSystem}!OnTriggerEnter@{OnTriggerEnter}}
+\index{OnTriggerEnter@{OnTriggerEnter}!HealingSystem@{HealingSystem}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter()}{OnTriggerEnter()}}
+{\footnotesize\ttfamily \label{class_healing_system_a9272ee9fdb5f288efd8ddba356d57a52} 
+void Healing\+System.\+On\+Trigger\+Enter (\begin{DoxyParamCaption}\item[{Collider}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_healing_system_a7efb3fba68c81796c01c1067903f8191}\index{HealingSystem@{HealingSystem}!OnTriggerExit@{OnTriggerExit}}
+\index{OnTriggerExit@{OnTriggerExit}!HealingSystem@{HealingSystem}}
+\doxysubsubsection{\texorpdfstring{OnTriggerExit()}{OnTriggerExit()}}
+{\footnotesize\ttfamily \label{class_healing_system_a7efb3fba68c81796c01c1067903f8191} 
+void Healing\+System.\+On\+Trigger\+Exit (\begin{DoxyParamCaption}\item[{Collider}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_healing_system_ad9e45975b3d9fbf38a21a7d1c21985a8}\index{HealingSystem@{HealingSystem}!SetRange@{SetRange}}
+\index{SetRange@{SetRange}!HealingSystem@{HealingSystem}}
+\doxysubsubsection{\texorpdfstring{SetRange()}{SetRange()}}
+{\footnotesize\ttfamily \label{class_healing_system_ad9e45975b3d9fbf38a21a7d1c21985a8} 
+void Healing\+System.\+Set\+Range (\begin{DoxyParamCaption}\item[{float}]{range}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_healing_system_aa07f91ca24199633bf89c0475b08b3ef}\index{HealingSystem@{HealingSystem}!UnitDeath@{UnitDeath}}
+\index{UnitDeath@{UnitDeath}!HealingSystem@{HealingSystem}}
+\doxysubsubsection{\texorpdfstring{UnitDeath()}{UnitDeath()}}
+{\footnotesize\ttfamily \label{class_healing_system_aa07f91ca24199633bf89c0475b08b3ef} 
+void Healing\+System.\+Unit\+Death (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_base_unit}{Base\+Unit}}}]{base\+Unit}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_healing_system_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_healing_system_aa5f58ac85c9a2fdba48e417d48f75f08}\index{HealingSystem@{HealingSystem}!alliesInRange@{alliesInRange}}
+\index{alliesInRange@{alliesInRange}!HealingSystem@{HealingSystem}}
+\doxysubsubsection{\texorpdfstring{alliesInRange}{alliesInRange}}
+{\footnotesize\ttfamily \label{class_healing_system_aa5f58ac85c9a2fdba48e417d48f75f08} 
+List$<$\doxymbox{\hyperlink{interface_i_healable}{IHealable}}$>$ Healing\+System.\+allies\+In\+Range = new List$<$\doxymbox{\hyperlink{interface_i_healable}{IHealable}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_healing_system_a828f0f1985e2b8c7f3424bd6c2bfa9bb}\index{HealingSystem@{HealingSystem}!allyInRangeEvent@{allyInRangeEvent}}
+\index{allyInRangeEvent@{allyInRangeEvent}!HealingSystem@{HealingSystem}}
+\doxysubsubsection{\texorpdfstring{allyInRangeEvent}{allyInRangeEvent}}
+{\footnotesize\ttfamily \label{class_healing_system_a828f0f1985e2b8c7f3424bd6c2bfa9bb} 
+\doxymbox{\hyperlink{class_ally_in_range_event}{Ally\+In\+Range\+Event}} Healing\+System.\+ally\+In\+Range\+Event\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_healing_system_a557c6d7b7fe2207911922f59f76579f3}\index{HealingSystem@{HealingSystem}!sphereCollider@{sphereCollider}}
+\index{sphereCollider@{sphereCollider}!HealingSystem@{HealingSystem}}
+\doxysubsubsection{\texorpdfstring{sphereCollider}{sphereCollider}}
+{\footnotesize\ttfamily \label{class_healing_system_a557c6d7b7fe2207911922f59f76579f3} 
+Sphere\+Collider Healing\+System.\+sphere\+Collider\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_healing_system_aa522ddd7658fb98ef1b5abf18ba7ebb0}\index{HealingSystem@{HealingSystem}!unitDeathEvent@{unitDeathEvent}}
+\index{unitDeathEvent@{unitDeathEvent}!HealingSystem@{HealingSystem}}
+\doxysubsubsection{\texorpdfstring{unitDeathEvent}{unitDeathEvent}}
+{\footnotesize\ttfamily \label{class_healing_system_aa522ddd7658fb98ef1b5abf18ba7ebb0} 
+\doxymbox{\hyperlink{class_unit_death_event}{Unit\+Death\+Event}} Healing\+System.\+unit\+Death\+Event\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Scripts/\+\+Units/\+\doxymbox{\hyperlink{_healing_system_8cs}{Healing\+System.\+cs}}\end{DoxyCompactItemize}

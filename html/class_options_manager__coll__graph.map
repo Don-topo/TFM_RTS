@@ -1,0 +1,8 @@
+<map id="OptionsManager" name="OptionsManager">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,537,231,1113"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="63,5,163,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,87,119,538,114,537,112,92"/>
+<area shape="rect" id="Node000003" href="$class_main_menu.html" title=" " alt="" coords="135,124,369,465"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="138,85,161,124,156,125,139,90"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="210,463,197,521,192,520,208,468"/>
+</map>

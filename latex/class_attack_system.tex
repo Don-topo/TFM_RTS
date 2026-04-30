@@ -1,0 +1,150 @@
+\doxysection{Attack\+System Class Reference}
+\hypertarget{class_attack_system}{}\label{class_attack_system}\index{AttackSystem@{AttackSystem}}
+
+
+Inheritance diagram for Attack\+System:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{class_attack_system__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Attack\+System:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_attack_system__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_attack_system_a958c61cac4046504646706bcc910ad3d}{Set\+Attack\+Range}} (float range)
+\item 
+List$<$ \doxymbox{\hyperlink{interface_i_attackable}{IAttackable}} $>$ \doxymbox{\hyperlink{class_attack_system_a12adbeba59768957f6c66c00b602f2c1}{Get\+Enemies\+In\+Range}} ()
+\item 
+List$<$ \doxymbox{\hyperlink{interface_i_attackable}{IAttackable}} $>$ \doxymbox{\hyperlink{class_attack_system_af505df309c907d5ea6f944503c3bcfea}{Get\+Visible\+Enemies}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_attack_system_a30f39782ae6d42b627fbfe4e16b5f7ce}{Awake}} ()
+\item 
+void \doxymbox{\hyperlink{class_attack_system_aaa5a645912f57556e16dd6ee8703279a}{On\+Destroy}} ()
+\item 
+void \doxymbox{\hyperlink{class_attack_system_ac9f516c0e0d8d9cea11db4bbf4d99d49}{On\+Trigger\+Enter}} (Collider other)
+\item 
+void \doxymbox{\hyperlink{class_attack_system_a00db477bde6e8683ce5741eea5cbc5c0}{On\+Trigger\+Exit}} (Collider other)
+\item 
+void \doxymbox{\hyperlink{class_attack_system_a058d565bddf4bf0af505b6f4476e55ce}{Unit\+Death}} (\doxymbox{\hyperlink{class_base_unit}{Base\+Unit}} \doxymbox{\hyperlink{class_attack_system_a83778d37924af55cb51300b7c83339e9}{unit\+Death\+Event}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_enemy_in_range_event}{Enemy\+In\+Range\+Event}} \doxymbox{\hyperlink{class_attack_system_a092140eb9ca279da8f2943afac9adf79}{unit\+In\+Range\+Event}}
+\item 
+\doxymbox{\hyperlink{class_unit_death_event}{Unit\+Death\+Event}} \doxymbox{\hyperlink{class_attack_system_a83778d37924af55cb51300b7c83339e9}{unit\+Death\+Event}}
+\item 
+List$<$ \doxymbox{\hyperlink{interface_i_attackable}{IAttackable}} $>$ \doxymbox{\hyperlink{class_attack_system_a1e2d493b622a73c6c1f6d65adab6b908}{enemies\+In\+Range}} = new List$<$\doxymbox{\hyperlink{interface_i_attackable}{IAttackable}}$>$()
+\item 
+List$<$ \doxymbox{\hyperlink{interface_i_attackable}{IAttackable}} $>$ \doxymbox{\hyperlink{class_attack_system_a52103bfa4bce5f3c8312a1965b319174}{enemies\+Visible}} = new List$<$\doxymbox{\hyperlink{interface_i_attackable}{IAttackable}}$>$()
+\item 
+Sphere\+Collider \doxymbox{\hyperlink{class_attack_system_af93850c573370d5a666daeaccb684661}{sphere\+Collider}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_attack_system_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_attack_system_a30f39782ae6d42b627fbfe4e16b5f7ce}\index{AttackSystem@{AttackSystem}!Awake@{Awake}}
+\index{Awake@{Awake}!AttackSystem@{AttackSystem}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_attack_system_a30f39782ae6d42b627fbfe4e16b5f7ce} 
+void Attack\+System.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_attack_system_a12adbeba59768957f6c66c00b602f2c1}\index{AttackSystem@{AttackSystem}!GetEnemiesInRange@{GetEnemiesInRange}}
+\index{GetEnemiesInRange@{GetEnemiesInRange}!AttackSystem@{AttackSystem}}
+\doxysubsubsection{\texorpdfstring{GetEnemiesInRange()}{GetEnemiesInRange()}}
+{\footnotesize\ttfamily \label{class_attack_system_a12adbeba59768957f6c66c00b602f2c1} 
+List$<$ \doxymbox{\hyperlink{interface_i_attackable}{IAttackable}} $>$ Attack\+System.\+Get\+Enemies\+In\+Range (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_attack_system_af505df309c907d5ea6f944503c3bcfea}\index{AttackSystem@{AttackSystem}!GetVisibleEnemies@{GetVisibleEnemies}}
+\index{GetVisibleEnemies@{GetVisibleEnemies}!AttackSystem@{AttackSystem}}
+\doxysubsubsection{\texorpdfstring{GetVisibleEnemies()}{GetVisibleEnemies()}}
+{\footnotesize\ttfamily \label{class_attack_system_af505df309c907d5ea6f944503c3bcfea} 
+List$<$ \doxymbox{\hyperlink{interface_i_attackable}{IAttackable}} $>$ Attack\+System.\+Get\+Visible\+Enemies (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_attack_system_aaa5a645912f57556e16dd6ee8703279a}\index{AttackSystem@{AttackSystem}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!AttackSystem@{AttackSystem}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily \label{class_attack_system_aaa5a645912f57556e16dd6ee8703279a} 
+void Attack\+System.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_attack_system_ac9f516c0e0d8d9cea11db4bbf4d99d49}\index{AttackSystem@{AttackSystem}!OnTriggerEnter@{OnTriggerEnter}}
+\index{OnTriggerEnter@{OnTriggerEnter}!AttackSystem@{AttackSystem}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter()}{OnTriggerEnter()}}
+{\footnotesize\ttfamily \label{class_attack_system_ac9f516c0e0d8d9cea11db4bbf4d99d49} 
+void Attack\+System.\+On\+Trigger\+Enter (\begin{DoxyParamCaption}\item[{Collider}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_attack_system_a00db477bde6e8683ce5741eea5cbc5c0}\index{AttackSystem@{AttackSystem}!OnTriggerExit@{OnTriggerExit}}
+\index{OnTriggerExit@{OnTriggerExit}!AttackSystem@{AttackSystem}}
+\doxysubsubsection{\texorpdfstring{OnTriggerExit()}{OnTriggerExit()}}
+{\footnotesize\ttfamily \label{class_attack_system_a00db477bde6e8683ce5741eea5cbc5c0} 
+void Attack\+System.\+On\+Trigger\+Exit (\begin{DoxyParamCaption}\item[{Collider}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_attack_system_a958c61cac4046504646706bcc910ad3d}\index{AttackSystem@{AttackSystem}!SetAttackRange@{SetAttackRange}}
+\index{SetAttackRange@{SetAttackRange}!AttackSystem@{AttackSystem}}
+\doxysubsubsection{\texorpdfstring{SetAttackRange()}{SetAttackRange()}}
+{\footnotesize\ttfamily \label{class_attack_system_a958c61cac4046504646706bcc910ad3d} 
+void Attack\+System.\+Set\+Attack\+Range (\begin{DoxyParamCaption}\item[{float}]{range}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_attack_system_a058d565bddf4bf0af505b6f4476e55ce}\index{AttackSystem@{AttackSystem}!UnitDeath@{UnitDeath}}
+\index{UnitDeath@{UnitDeath}!AttackSystem@{AttackSystem}}
+\doxysubsubsection{\texorpdfstring{UnitDeath()}{UnitDeath()}}
+{\footnotesize\ttfamily \label{class_attack_system_a058d565bddf4bf0af505b6f4476e55ce} 
+void Attack\+System.\+Unit\+Death (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_base_unit}{Base\+Unit}}}]{unit\+Death\+Event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_attack_system_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_attack_system_a1e2d493b622a73c6c1f6d65adab6b908}\index{AttackSystem@{AttackSystem}!enemiesInRange@{enemiesInRange}}
+\index{enemiesInRange@{enemiesInRange}!AttackSystem@{AttackSystem}}
+\doxysubsubsection{\texorpdfstring{enemiesInRange}{enemiesInRange}}
+{\footnotesize\ttfamily \label{class_attack_system_a1e2d493b622a73c6c1f6d65adab6b908} 
+List$<$\doxymbox{\hyperlink{interface_i_attackable}{IAttackable}}$>$ Attack\+System.\+enemies\+In\+Range = new List$<$\doxymbox{\hyperlink{interface_i_attackable}{IAttackable}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_attack_system_a52103bfa4bce5f3c8312a1965b319174}\index{AttackSystem@{AttackSystem}!enemiesVisible@{enemiesVisible}}
+\index{enemiesVisible@{enemiesVisible}!AttackSystem@{AttackSystem}}
+\doxysubsubsection{\texorpdfstring{enemiesVisible}{enemiesVisible}}
+{\footnotesize\ttfamily \label{class_attack_system_a52103bfa4bce5f3c8312a1965b319174} 
+List$<$\doxymbox{\hyperlink{interface_i_attackable}{IAttackable}}$>$ Attack\+System.\+enemies\+Visible = new List$<$\doxymbox{\hyperlink{interface_i_attackable}{IAttackable}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_attack_system_af93850c573370d5a666daeaccb684661}\index{AttackSystem@{AttackSystem}!sphereCollider@{sphereCollider}}
+\index{sphereCollider@{sphereCollider}!AttackSystem@{AttackSystem}}
+\doxysubsubsection{\texorpdfstring{sphereCollider}{sphereCollider}}
+{\footnotesize\ttfamily \label{class_attack_system_af93850c573370d5a666daeaccb684661} 
+Sphere\+Collider Attack\+System.\+sphere\+Collider\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_attack_system_a83778d37924af55cb51300b7c83339e9}\index{AttackSystem@{AttackSystem}!unitDeathEvent@{unitDeathEvent}}
+\index{unitDeathEvent@{unitDeathEvent}!AttackSystem@{AttackSystem}}
+\doxysubsubsection{\texorpdfstring{unitDeathEvent}{unitDeathEvent}}
+{\footnotesize\ttfamily \label{class_attack_system_a83778d37924af55cb51300b7c83339e9} 
+\doxymbox{\hyperlink{class_unit_death_event}{Unit\+Death\+Event}} Attack\+System.\+unit\+Death\+Event\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_attack_system_a092140eb9ca279da8f2943afac9adf79}\index{AttackSystem@{AttackSystem}!unitInRangeEvent@{unitInRangeEvent}}
+\index{unitInRangeEvent@{unitInRangeEvent}!AttackSystem@{AttackSystem}}
+\doxysubsubsection{\texorpdfstring{unitInRangeEvent}{unitInRangeEvent}}
+{\footnotesize\ttfamily \label{class_attack_system_a092140eb9ca279da8f2943afac9adf79} 
+\doxymbox{\hyperlink{class_enemy_in_range_event}{Enemy\+In\+Range\+Event}} Attack\+System.\+unit\+In\+Range\+Event\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Scripts/\+\+Units/\+\doxymbox{\hyperlink{_attack_system_8cs}{Attack\+System.\+cs}}\end{DoxyCompactItemize}

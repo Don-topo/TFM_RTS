@@ -1,0 +1,161 @@
+\doxysection{Heal\+Target\+Behaviour\+Action Class Reference}
+\hypertarget{class_heal_target_behaviour_action}{}\label{class_heal_target_behaviour_action}\index{HealTargetBehaviourAction@{HealTargetBehaviourAction}}
+
+
+Inheritance diagram for Heal\+Target\+Behaviour\+Action:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{class_heal_target_behaviour_action__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Heal\+Target\+Behaviour\+Action:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{class_heal_target_behaviour_action__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Blackboard\+Variable$<$ Game\+Object $>$ \doxymbox{\hyperlink{class_heal_target_behaviour_action_ae93452bf3d4b9f18be043171708f6f22}{Self}}
+\item 
+Blackboard\+Variable$<$ \doxymbox{\hyperlink{class_s_o___heal_info}{SO\+\_\+\+Heal\+Info}} $>$ \doxymbox{\hyperlink{class_heal_target_behaviour_action_aa39c5ca9ae8bb3eb035aaedd26844797}{Heal\+Info}}
+\item 
+Blackboard\+Variable$<$ Game\+Object $>$ \doxymbox{\hyperlink{class_heal_target_behaviour_action_af9a6a9e210a1be74090a08da8220e033}{Target\+Game\+Object}}
+\item 
+Blackboard\+Variable$<$ List$<$ Game\+Object $>$ $>$ \doxymbox{\hyperlink{class_heal_target_behaviour_action_a1a8483fa3269b9f858d74448ebc662ca}{Allies}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override Status \doxymbox{\hyperlink{class_heal_target_behaviour_action_ac6a978cbd2829923f32df0106ae8126d}{On\+Start}} ()
+\item 
+override Status \doxymbox{\hyperlink{class_heal_target_behaviour_action_a86a3d524daacf18cea4ff2719d97dedc}{On\+Update}} ()
+\item 
+override void \doxymbox{\hyperlink{class_heal_target_behaviour_action_a8370c08f8bf96b11f35819e2d829eab5}{On\+End}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_heal_target_behaviour_action_ac7611ab0d7a0f900efb361f5d17654d5}{Look\+At\+Target}} ()
+\item 
+void \doxymbox{\hyperlink{class_heal_target_behaviour_action_af8b5709daf8319866d272bbe5f64d7c3}{Heal}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Nav\+Mesh\+Agent \doxymbox{\hyperlink{class_heal_target_behaviour_action_ae1af7aa2a9f0b58a3f53e6b2bd313c75}{nav\+Mesh\+Agent}}
+\item 
+Transform \doxymbox{\hyperlink{class_heal_target_behaviour_action_a2d5e0fda0d7d32402584b460f34c0564}{self\+Transform}}
+\item 
+Transform \doxymbox{\hyperlink{class_heal_target_behaviour_action_a6f7f120d51ad6357cca4e5910a13d4eb}{target\+Transform}}
+\item 
+\doxymbox{\hyperlink{interface_i_healable}{IHealable}} \doxymbox{\hyperlink{class_heal_target_behaviour_action_ac831393bc5edb4c6842c0f38ebfd3bff}{target\+To\+Heal}}
+\item 
+float \doxymbox{\hyperlink{class_heal_target_behaviour_action_a576802f8b432603fc21a3a72cad8a8e1}{last\+Healing}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_heal_target_behaviour_action_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_heal_target_behaviour_action_af8b5709daf8319866d272bbe5f64d7c3}\index{HealTargetBehaviourAction@{HealTargetBehaviourAction}!Heal@{Heal}}
+\index{Heal@{Heal}!HealTargetBehaviourAction@{HealTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{Heal()}{Heal()}}
+{\footnotesize\ttfamily \label{class_heal_target_behaviour_action_af8b5709daf8319866d272bbe5f64d7c3} 
+void Heal\+Target\+Behaviour\+Action.\+Heal (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_heal_target_behaviour_action_ac7611ab0d7a0f900efb361f5d17654d5}\index{HealTargetBehaviourAction@{HealTargetBehaviourAction}!LookAtTarget@{LookAtTarget}}
+\index{LookAtTarget@{LookAtTarget}!HealTargetBehaviourAction@{HealTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{LookAtTarget()}{LookAtTarget()}}
+{\footnotesize\ttfamily \label{class_heal_target_behaviour_action_ac7611ab0d7a0f900efb361f5d17654d5} 
+void Heal\+Target\+Behaviour\+Action.\+Look\+At\+Target (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_heal_target_behaviour_action_a8370c08f8bf96b11f35819e2d829eab5}\index{HealTargetBehaviourAction@{HealTargetBehaviourAction}!OnEnd@{OnEnd}}
+\index{OnEnd@{OnEnd}!HealTargetBehaviourAction@{HealTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{OnEnd()}{OnEnd()}}
+{\footnotesize\ttfamily \label{class_heal_target_behaviour_action_a8370c08f8bf96b11f35819e2d829eab5} 
+override void Heal\+Target\+Behaviour\+Action.\+On\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_heal_target_behaviour_action_ac6a978cbd2829923f32df0106ae8126d}\index{HealTargetBehaviourAction@{HealTargetBehaviourAction}!OnStart@{OnStart}}
+\index{OnStart@{OnStart}!HealTargetBehaviourAction@{HealTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{OnStart()}{OnStart()}}
+{\footnotesize\ttfamily \label{class_heal_target_behaviour_action_ac6a978cbd2829923f32df0106ae8126d} 
+override Status Heal\+Target\+Behaviour\+Action.\+On\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_heal_target_behaviour_action_a86a3d524daacf18cea4ff2719d97dedc}\index{HealTargetBehaviourAction@{HealTargetBehaviourAction}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!HealTargetBehaviourAction@{HealTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily \label{class_heal_target_behaviour_action_a86a3d524daacf18cea4ff2719d97dedc} 
+override Status Heal\+Target\+Behaviour\+Action.\+On\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_heal_target_behaviour_action_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_heal_target_behaviour_action_a1a8483fa3269b9f858d74448ebc662ca}\index{HealTargetBehaviourAction@{HealTargetBehaviourAction}!Allies@{Allies}}
+\index{Allies@{Allies}!HealTargetBehaviourAction@{HealTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{Allies}{Allies}}
+{\footnotesize\ttfamily \label{class_heal_target_behaviour_action_a1a8483fa3269b9f858d74448ebc662ca} 
+Blackboard\+Variable$<$List$<$Game\+Object$>$ $>$ Heal\+Target\+Behaviour\+Action.\+Allies}
+
+\Hypertarget{class_heal_target_behaviour_action_aa39c5ca9ae8bb3eb035aaedd26844797}\index{HealTargetBehaviourAction@{HealTargetBehaviourAction}!HealInfo@{HealInfo}}
+\index{HealInfo@{HealInfo}!HealTargetBehaviourAction@{HealTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{HealInfo}{HealInfo}}
+{\footnotesize\ttfamily \label{class_heal_target_behaviour_action_aa39c5ca9ae8bb3eb035aaedd26844797} 
+Blackboard\+Variable$<$\doxymbox{\hyperlink{class_s_o___heal_info}{SO\+\_\+\+Heal\+Info}}$>$ Heal\+Target\+Behaviour\+Action.\+Heal\+Info}
+
+\Hypertarget{class_heal_target_behaviour_action_a576802f8b432603fc21a3a72cad8a8e1}\index{HealTargetBehaviourAction@{HealTargetBehaviourAction}!lastHealing@{lastHealing}}
+\index{lastHealing@{lastHealing}!HealTargetBehaviourAction@{HealTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{lastHealing}{lastHealing}}
+{\footnotesize\ttfamily \label{class_heal_target_behaviour_action_a576802f8b432603fc21a3a72cad8a8e1} 
+float Heal\+Target\+Behaviour\+Action.\+last\+Healing\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_heal_target_behaviour_action_ae1af7aa2a9f0b58a3f53e6b2bd313c75}\index{HealTargetBehaviourAction@{HealTargetBehaviourAction}!navMeshAgent@{navMeshAgent}}
+\index{navMeshAgent@{navMeshAgent}!HealTargetBehaviourAction@{HealTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{navMeshAgent}{navMeshAgent}}
+{\footnotesize\ttfamily \label{class_heal_target_behaviour_action_ae1af7aa2a9f0b58a3f53e6b2bd313c75} 
+Nav\+Mesh\+Agent Heal\+Target\+Behaviour\+Action.\+nav\+Mesh\+Agent\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_heal_target_behaviour_action_ae93452bf3d4b9f18be043171708f6f22}\index{HealTargetBehaviourAction@{HealTargetBehaviourAction}!Self@{Self}}
+\index{Self@{Self}!HealTargetBehaviourAction@{HealTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{Self}{Self}}
+{\footnotesize\ttfamily \label{class_heal_target_behaviour_action_ae93452bf3d4b9f18be043171708f6f22} 
+Blackboard\+Variable$<$Game\+Object$>$ Heal\+Target\+Behaviour\+Action.\+Self}
+
+\Hypertarget{class_heal_target_behaviour_action_a2d5e0fda0d7d32402584b460f34c0564}\index{HealTargetBehaviourAction@{HealTargetBehaviourAction}!selfTransform@{selfTransform}}
+\index{selfTransform@{selfTransform}!HealTargetBehaviourAction@{HealTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{selfTransform}{selfTransform}}
+{\footnotesize\ttfamily \label{class_heal_target_behaviour_action_a2d5e0fda0d7d32402584b460f34c0564} 
+Transform Heal\+Target\+Behaviour\+Action.\+self\+Transform\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_heal_target_behaviour_action_af9a6a9e210a1be74090a08da8220e033}\index{HealTargetBehaviourAction@{HealTargetBehaviourAction}!TargetGameObject@{TargetGameObject}}
+\index{TargetGameObject@{TargetGameObject}!HealTargetBehaviourAction@{HealTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{TargetGameObject}{TargetGameObject}}
+{\footnotesize\ttfamily \label{class_heal_target_behaviour_action_af9a6a9e210a1be74090a08da8220e033} 
+Blackboard\+Variable$<$Game\+Object$>$ Heal\+Target\+Behaviour\+Action.\+Target\+Game\+Object}
+
+\Hypertarget{class_heal_target_behaviour_action_ac831393bc5edb4c6842c0f38ebfd3bff}\index{HealTargetBehaviourAction@{HealTargetBehaviourAction}!targetToHeal@{targetToHeal}}
+\index{targetToHeal@{targetToHeal}!HealTargetBehaviourAction@{HealTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{targetToHeal}{targetToHeal}}
+{\footnotesize\ttfamily \label{class_heal_target_behaviour_action_ac831393bc5edb4c6842c0f38ebfd3bff} 
+\doxymbox{\hyperlink{interface_i_healable}{IHealable}} Heal\+Target\+Behaviour\+Action.\+target\+To\+Heal\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_heal_target_behaviour_action_a6f7f120d51ad6357cca4e5910a13d4eb}\index{HealTargetBehaviourAction@{HealTargetBehaviourAction}!targetTransform@{targetTransform}}
+\index{targetTransform@{targetTransform}!HealTargetBehaviourAction@{HealTargetBehaviourAction}}
+\doxysubsubsection{\texorpdfstring{targetTransform}{targetTransform}}
+{\footnotesize\ttfamily \label{class_heal_target_behaviour_action_a6f7f120d51ad6357cca4e5910a13d4eb} 
+Transform Heal\+Target\+Behaviour\+Action.\+target\+Transform\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Scripts/\+\+Behaviour\+Trees/\+\doxymbox{\hyperlink{_heal_target_behaviour_action_8cs}{Heal\+Target\+Behaviour\+Action.\+cs}}\end{DoxyCompactItemize}

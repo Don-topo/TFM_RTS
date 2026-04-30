@@ -1,0 +1,7 @@
+<map id="UpdateRecruitQueueEvent" name="UpdateRecruitQueueEvent">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,405,172,491"/>
+<area shape="rect" id="Node000002" href="$class_game_event-1-g.html" title=" " alt="" coords="12,123,165,357"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,370,91,406,86,405,87,375"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="35,5,142,75"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="89,87,91,123,86,123,88,92"/>
+</map>

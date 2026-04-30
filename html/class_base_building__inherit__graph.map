@@ -1,0 +1,17 @@
+<map id="BaseBuilding" name="BaseBuilding">
+<area shape="rect" id="Node000001" title=" " alt="" coords="188,763,390,981"/>
+<area shape="rect" id="Node000006" href="$class_attacker_building.html" title=" " alt="" coords="5,1237,164,1360"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="195,996,178,1031,153,1084,132,1139,102,1239,97,1237,127,1137,148,1082,173,1028,197,991"/>
+<area shape="rect" id="Node000007" href="$class_production_building.html" title=" " alt="" coords="188,1211,390,1387"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="290,994,291,1211,286,1210,287,998"/>
+<area shape="rect" id="Node000008" href="$class_recruit_building.html" title=" " alt="" coords="413,1029,644,1568"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="380,991,404,1028,416,1049,411,1049,400,1031,379,996"/>
+<area shape="rect" id="Node000002" href="$class_common_actions.html" title=" " alt="" coords="183,203,394,715"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="289,727,291,763,286,763,288,732"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="106,45,207,115"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="173,125,202,203,197,203,173,131"/>
+<area shape="rect" id="Node000004" href="$interface_i_selectable.html" title=" " alt="" coords="232,35,346,125"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="289,138,291,203,286,203,289,143"/>
+<area shape="rect" id="Node000005" href="$interface_i_attackable.html" title=" " alt="" coords="370,5,539,155"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="415,171,397,218,392,217,417,166"/>
+</map>

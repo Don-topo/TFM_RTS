@@ -1,0 +1,19 @@
+<map id="IAttackable" name="IAttackable">
+<area shape="rect" id="Node000001" title=" " alt="" coords="451,5,620,155"/>
+<area shape="rect" id="Node000002" href="$class_common_actions.html" title=" " alt="" coords="430,203,641,715"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="536,167,538,203,533,202,535,172"/>
+<area shape="rect" id="Node000003" href="$class_base_building.html" title=" " alt="" coords="308,779,510,997"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="457,727,443,780,438,778,455,731"/>
+<area shape="rect" id="Node000007" href="$class_base_unit.html" title=" " alt="" coords="681,763,886,1013"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="649,651,714,763,709,763,648,657"/>
+<area shape="rect" id="Node000004" href="$class_attacker_building.html" title=" " alt="" coords="5,1269,164,1392"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="294,955,233,1003,204,1032,178,1063,147,1113,124,1168,108,1222,97,1270,92,1269,103,1221,119,1167,143,1111,173,1060,200,1028,230,999,297,950"/>
+<area shape="rect" id="Node000005" href="$class_production_building.html" title=" " alt="" coords="188,1243,390,1419"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="377,1009,315,1244,310,1242,374,1013"/>
+<area shape="rect" id="Node000006" href="$class_recruit_building.html" title=" " alt="" coords="413,1061,644,1600"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="443,1009,458,1062,453,1061,441,1014"/>
+<area shape="rect" id="Node000008" href="$class_base_attacker.html" title=" " alt="" coords="668,1115,899,1547"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="785,1026,786,1116,781,1114,782,1030"/>
+<area shape="rect" id="Node000009" href="$class_base_healer.html" title=" " alt="" coords="923,1141,1154,1520"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="889,1023,914,1060,958,1142,953,1141,909,1063,888,1028"/>
+</map>
