@@ -1,9 +1,0 @@
-<map id="ResourceEvent" name="ResourceEvent">
-<area shape="rect" id="Node000001" title=" " alt="" coords="178,431,279,500"/>
-<area shape="rect" id="Node000002" href="$class_game_event-1-g.html" title=" " alt="" coords="5,124,158,359"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,368,209,431,204,431,165,373"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="28,5,135,75"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="82,87,84,125,79,124,82,92"/>
-<area shape="rect" id="Node000004" href="$struct_resource_o_p.html" title=" " alt="" coords="182,169,374,313"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="264,312,242,415,237,413,260,315"/>
-</map>

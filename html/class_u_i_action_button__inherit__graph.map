@@ -1,9 +1,0 @@
-<map id="UIActionButton" name="UIActionButton">
-<area shape="rect" id="Node000001" title=" " alt="" coords="91,123,301,581"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,106,75"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,86,95,123,90,123,77,91"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="130,5,262,75"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,87,198,123,193,123,195,92"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="286,5,410,75"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="326,86,303,139,298,136,323,90"/>
-</map>

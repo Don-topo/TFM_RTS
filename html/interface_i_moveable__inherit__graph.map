@@ -1,9 +1,0 @@
-<map id="IMoveable" name="IMoveable">
-<area shape="rect" id="Node000001" title=" " alt="" coords="155,5,340,133"/>
-<area shape="rect" id="Node000002" href="$class_base_unit.html" title=" " alt="" coords="145,181,350,432"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="248,146,250,182,245,181,247,151"/>
-<area shape="rect" id="Node000003" href="$class_base_attacker.html" title=" " alt="" coords="5,480,236,912"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="203,444,194,481,189,479,201,449"/>
-<area shape="rect" id="Node000004" href="$class_base_healer.html" title=" " alt="" coords="260,507,491,885"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="294,444,316,507,311,507,293,449"/>
-</map>

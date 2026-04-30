@@ -1,8 +1,0 @@
-<map id="UIMultipleUnits" name="UIMultipleUnits">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,345,229,644"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="62,5,162,75"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,87,118,346,113,345,111,92"/>
-<area shape="rect" id="Node000003" href="$class_u_i_unit_selected_button.html" title=" " alt="" coords="133,124,331,273"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="146,84,179,124,173,125,147,89"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="205,271,184,331,179,329,202,276"/>
-</map>

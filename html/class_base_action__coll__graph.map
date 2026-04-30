@@ -1,7 +1,0 @@
-<map id="BaseAction" name="BaseAction">
-<area shape="rect" id="Node000001" title=" " alt="" coords="50,176,238,443"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,32,112,101"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,112,100,176,95,177,75,118"/>
-<area shape="rect" id="Node000003" href="$interface_i_action.html" title=" " alt="" coords="136,5,323,128"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="204,140,193,177,188,175,202,145"/>
-</map>

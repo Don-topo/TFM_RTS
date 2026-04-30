@@ -1,7 +1,0 @@
-<map id="MinimapClickEvent" name="MinimapClickEvent">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,405,183,491"/>
-<area shape="rect" id="Node000002" href="$class_game_event-1-g.html" title=" " alt="" coords="18,123,171,357"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,370,97,406,92,405,93,375"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="41,5,148,75"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,87,97,123,92,123,94,92"/>
-</map>
