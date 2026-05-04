@@ -3,7 +3,17 @@ guid: 4a154d2a152a4b34498e41f7be29528c
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_1
+    second: {fileID: 2100000, guid: 64c9708646a11cb469ebf3320521905c, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: texture_0
+    second: {fileID: 2800000, guid: 28cf5b052c8fd034dbef9456d8011f7e, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -30,6 +40,35 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations:
+    - serializedVersion: 16
+      name: Idle_3
+      takeName: Idle_3
+      internalID: -3548273549459496330
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Running
       takeName: Running
@@ -64,7 +103,7 @@ ModelImporter:
       takeName: Shot_and_Fall_Forward
       internalID: 4550440394938290989
       firstFrame: 0
-      lastFrame: 19
+      lastFrame: 299
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -93,15 +132,15 @@ ModelImporter:
       takeName: Walking
       internalID: -1610863427237328480
       firstFrame: 0
-      lastFrame: 66
+      lastFrame: 19
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -122,7 +161,7 @@ ModelImporter:
       takeName: mage_soell_cast_3
       internalID: 3794138398560460308
       firstFrame: 0
-      lastFrame: 31
+      lastFrame: 66
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -151,7 +190,7 @@ ModelImporter:
       takeName: Character_output.fbx
       internalID: -2498671889216865470
       firstFrame: 0
-      lastFrame: 100
+      lastFrame: 31
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public interface IAction
 {
-    public bool IsSingleUnitCommand { get; }
+    public bool IsSingleUnitAction { get; }
     bool CanExecute(ActionInfo actionInfo);
     void Execute(ActionInfo actionInfo);
 }

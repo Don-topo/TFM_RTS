@@ -13,6 +13,6 @@ public class StopAction : BaseAction
     public override void Execute(ActionInfo actionInfo)
     {
         BaseUnit unit = (BaseUnit)actionInfo.Action;
-        unit.StopMove();
+        unit.Stop();
     }
 }

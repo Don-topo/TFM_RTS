@@ -14,7 +14,4 @@ public class MinimapEventInfo
 }
 
 [CreateAssetMenu(fileName = "MinimapClickEvent", menuName = "Events/Minimap click", order = 106)]
-public class MinimapClickEvent : GameEvent<MinimapEventInfo>
-{
-    MinimapEventInfo minimapEventInfo;
-}
+public class MinimapClickEvent : GameEvent<MinimapEventInfo>{}

@@ -62,7 +62,7 @@ public partial class AttackTargetBehaviourAction : Action
 
     protected override void OnEnd()
     {
-        if(navMeshAgent != null && navMeshAgent.isOnNavMesh && navMeshAgent.enabled)
+        if(navMeshAgent != null && navMeshAgent.isOnNavMesh && navMeshAgent.enabled && navMeshAgent.isOnNavMesh)
         {
             navMeshAgent.isStopped = false;
         }
@@ -70,22 +70,32 @@ public partial class AttackTargetBehaviourAction : Action
 
     private void LookAtTarget()
     {
-        Quaternion lookRotation = Quaternion.LookRotation(
-                    (targetTransform.position - selfTransform.position).normalized,
-                    Vector3.up
-                );
+        /*Quaternion lookRotation = Quaternion.LookRotation(
+            (targetTransform.position - selfTransform.position).normalized,Vector3.up);
         selfTransform.rotation = Quaternion.Euler(
             selfTransform.root.eulerAngles.x,
             lookRotation.eulerAngles.y,
             selfTransform.rotation.eulerAngles.z
-        );
+        );*/
+
+        Vector3 dir = targetTransform.position - selfTransform.position;
+        dir.y = 0f;
+
+        if (dir != Vector3.zero)
+        {
+            Quaternion targetRot = Quaternion.LookRotation(dir);
+            selfTransform.rotation = Quaternion.Slerp(
+                selfTransform.rotation,
+                targetRot,
+                1.5f * Time.deltaTime
+            );
+        }
     }
 
     private void Attack()
     {
         lastAttack = Time.time;
-        targetAttackable.ApplyDamage(AttackInfo.Value.AttackDamage);
-
+        targetAttackable.ApplyDamage(AttackInfo.Value.AttackDamage);       
     }
 }
 

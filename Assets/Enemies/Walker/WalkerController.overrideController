@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WalkerController
+  m_Controller: {fileID: 9100000, guid: 5e1acf38cfe0e2c44b585c512d28c49f, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: -812538887323492230, guid: 6980411fb9a98c640a44451c07970364, type: 3}
+    m_OverrideClip: {fileID: 2052686777651669518, guid: 830700c9546bec542950bb8dc99ad06d, type: 3}
+  - m_OriginalClip: {fileID: -6011506422762375754, guid: 6980411fb9a98c640a44451c07970364, type: 3}
+    m_OverrideClip: {fileID: -9121621101649706817, guid: 830700c9546bec542950bb8dc99ad06d, type: 3}
+  - m_OriginalClip: {fileID: -3100369314251171874, guid: 6980411fb9a98c640a44451c07970364, type: 3}
+    m_OverrideClip: {fileID: -4916357255857388960, guid: 830700c9546bec542950bb8dc99ad06d, type: 3}

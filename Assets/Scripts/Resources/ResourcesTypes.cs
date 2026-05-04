@@ -6,5 +6,6 @@ public enum ResourcesType
     Wood,
     Stone,
     Iron,
-    Electricity
+    Electricity,
+    Population
 }

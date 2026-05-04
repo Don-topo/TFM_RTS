@@ -15,8 +15,4 @@ public struct ResourceOP
 }
 
 [CreateAssetMenu(fileName = "ResourceEvent", menuName = "Events/Resource Event")]
-public class ResourceEvent : GameEvent<ResourceOP>
-{
-    ResourceOP resource;
-    
-}
+public class ResourceEvent : GameEvent<ResourceOP>{}

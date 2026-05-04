@@ -6,24 +6,24 @@ using Unity.Properties;
 using UnityEngine.AI;
 
 [Serializable, GeneratePropertyBag]
-[NodeDescription(name: "MoveToTargetPosition", story: "[Agent] Moves to [TargetPosition]", category: "Action/Navigation", id: "bd5c295e08aa056a66439d325d1b2b01")]
+[NodeDescription(name: "MoveToTargetPosition", story: "[Self] Moves to [TargetPosition]", category: "Action/Navigation", id: "bd5c295e08aa056a66439d325d1b2b01")]
 public partial class MoveToTargetPositionBehaviourAction : Action
 {
-    [SerializeReference] public BlackboardVariable<GameObject> Agent;
+    [SerializeReference] public BlackboardVariable<GameObject> Self;
     [SerializeReference] public BlackboardVariable<Vector3> TargetPosition;
 
     private NavMeshAgent navMeshAgent;
+    private Animator animator;
 
     protected override Status OnStart()
     {
-        // Safety check to avoid errors
-        if(!Agent.Value.TryGetComponent(out navMeshAgent) || TargetPosition.Value == null)
-        {
-            return Status.Failure;
-        }
+        navMeshAgent = Self.Value.GetComponent<NavMeshAgent>();
+        if (navMeshAgent == null) return Status.Failure;
+        animator = Self.Value.GetComponentInChildren<Animator>();
+        if (animator == null) return Status.Failure;
 
         // Check if the agent is already at that position
-        if(Vector3.Distance(navMeshAgent.transform.position, TargetPosition.Value) <= navMeshAgent.stoppingDistance)
+        if (Vector3.Distance(navMeshAgent.transform.position, TargetPosition.Value) <= navMeshAgent.stoppingDistance)
         {
             return Status.Success;
         }
@@ -37,8 +37,9 @@ public partial class MoveToTargetPositionBehaviourAction : Action
 
     protected override Status OnUpdate()
     {
+        animator.SetFloat("MoveSpeed", navMeshAgent.velocity.magnitude);
         // Finish if unity is calculating the path
-        if(navMeshAgent.pathPending) return Status.Running;
+        if (navMeshAgent.pathPending) return Status.Running;
 
         if(navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
         {
@@ -50,7 +51,7 @@ public partial class MoveToTargetPositionBehaviourAction : Action
 
     protected override void OnEnd()
     {
-        // Nothing to do here?
+        animator.SetFloat("MoveSpeed", 0);
     }
 }
 

@@ -190,7 +190,7 @@ public class PlayerController : MonoBehaviour
                     if (action.CanExecute(actionInfo))
                     {
                         action.Execute(actionInfo);
-                        if (action.IsSingleUnitCommand) return;
+                        if (action.IsSingleUnitAction) return;
                         break;
                     }
                 }
@@ -350,7 +350,7 @@ public class PlayerController : MonoBehaviour
             if (selectedAction.CanExecute(actionInfo))
             {
                 selectedAction.Execute(actionInfo);
-                if (selectedAction.IsSingleUnitCommand)
+                if (selectedAction.IsSingleUnitAction)
                 {
                     break;
                 }

@@ -5,21 +5,17 @@ using UnityEngine;
 public class UIResources : MonoBehaviour
 {
     // UI resource texts
+    [Header("Icons")]
     [SerializeField] private TextMeshProUGUI foodText;
     [SerializeField] private TextMeshProUGUI woodText;
     [SerializeField] private TextMeshProUGUI stoneText;
     [SerializeField] private TextMeshProUGUI ironText;
     [SerializeField] private TextMeshProUGUI electricityText;
     [SerializeField] private TextMeshProUGUI populationText;
-    // Resources types
-    [SerializeField] private SO_Resource so_food;
-    [SerializeField] private SO_Resource so_wood;
-    [SerializeField] private SO_Resource so_stone;
-    [SerializeField] private SO_Resource so_iron;
-    [SerializeField] private SO_Resource so_electricity;
-    [SerializeField] private SO_Resource so_population;
     // Events
+    [Header("Events")]
     [SerializeField] private ResourceEvent resourceEvent;
+
     // Resources values
     public static int Food { get; private set; } = 0;
     public static int MaxFood { get; private set; } = 15;
@@ -48,31 +44,34 @@ public class UIResources : MonoBehaviour
 
     private void UpdateResource(ResourceOP resource)
     {
-        if(resource.SO_Resource == so_food)
+        switch (resource.SO_Resource.ResourceTypes)
         {
-            Food += resource.Amount;
-            MaxFood += resource.MaxAmount;
-            
-        }
-        else if(resource.SO_Resource == so_wood)
-        {
-            Wood += resource.Amount;
-            MaxWood = resource.MaxAmount;            
-        }
-        else if(resource.SO_Resource == so_iron)
-        {
-            Iron += resource.Amount;
-            MaxIron += resource.MaxAmount;            
-        }
-        else if(resource.SO_Resource == so_electricity)
-        {
-            Electricity += resource.Amount;
-            MaxElectricity += resource.MaxAmount;            
-        }
-        else if(resource.SO_Resource == so_population)
-        {
-            Population += resource.Amount;
-            MaxPopulation += resource.MaxAmount;            
+            case ResourcesType.Food:
+                Food = Mathf.Clamp(Food + resource.Amount, 0, MaxFood);
+                MaxFood += resource.MaxAmount;
+                break;
+            case ResourcesType.Wood:
+                Wood = Mathf.Clamp(Wood + resource.Amount, 0, MaxWood);
+                MaxWood = resource.MaxAmount;
+                break;
+            case ResourcesType.Stone:
+                Stone = Mathf.Clamp(Stone + resource.Amount, 0, MaxStone);
+                MaxStone += resource.MaxAmount;
+                break;
+            case ResourcesType.Iron:
+                Iron = Mathf.Clamp(Iron + resource.Amount, 0, MaxIron);
+                MaxIron += resource.MaxAmount;
+                break;
+            case ResourcesType.Electricity:
+                Electricity = Mathf.Clamp(Electricity + resource.Amount, 0, MaxElectricity);
+                MaxElectricity += resource.MaxAmount;
+                break;
+            case ResourcesType.Population:
+                Population = Mathf.Clamp(Population + resource.Amount, 0, MaxPopulation);
+                MaxPopulation += resource.MaxAmount;
+                break;
+            default:
+                break;
         }
 
         UpdateUI();

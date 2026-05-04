@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34632c87c82091e40b0f3bf6beb4df67, type: 3}
+  m_Name: StoreHouse
+  m_EditorClassIdentifier: Assembly-CSharp::SO_Building
+  <Name>k__BackingField: Store House
+  <Icon>k__BackingField: {fileID: 21300000, guid: 6f2515f13e5637c4daada8abc8c3c30c, type: 3}
+  <UnitPrefab>k__BackingField: {fileID: 3468724911762144041, guid: 3bebfa0d0019f20419569b26f7a283e6, type: 3}
+  <Health>k__BackingField: 100
+  <GenerationTime>k__BackingField: 8
+  <Cost>k__BackingField: {fileID: 11400000, guid: 0659f3a553f28dd41ad841fd8adeda43, type: 2}

@@ -11,6 +11,8 @@ public class BaseBuilding : CommonActions
     protected override void Start()
     {
         base.Start();
+        CurrentHealth = so_building.Health;
+        MaxHealth = CurrentHealth;
     }
 
     protected override void OnDestroy()

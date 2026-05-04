@@ -57,9 +57,5 @@ public partial class PatrolBehaviourAction : Action
 
         return Status.Running;
     }
-
-    protected override void OnEnd()
-    {
-    }
 }
 

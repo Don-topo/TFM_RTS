@@ -24,14 +24,5 @@ public partial class SetNextPatrolPositionBehaviourAction : Action
         TargetPosition.Value = PatrolPositions.Value[(PatrolPositions.Value.IndexOf(TargetPosition.Value) + 1) % PatrolPositions.Value.Count];
         return Status.Success;
     }
-
-    /*protected override Status OnUpdate()
-    {
-        return Status.Success;
-    }
-
-    protected override void OnEnd()
-    {
-    }*/
 }
 

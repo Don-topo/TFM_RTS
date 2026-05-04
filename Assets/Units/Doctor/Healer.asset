@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e766ad877836f414490017ef6206d145, type: 3}
   m_Name: Healer
   m_EditorClassIdentifier: Assembly-CSharp::SO_BaseUnit
-  <Name>k__BackingField: Cilinder
-  <Icon>k__BackingField: {fileID: 21300000, guid: 0636fb0df19bfb64bbe93d36c6ee2562, type: 3}
-  <UnitPrefab>k__BackingField: {fileID: 3004732720037302805, guid: b2e013b2e0cc18c4fbbc5906a52e264f, type: 3}
-  <Health>k__BackingField: 120
+  <Name>k__BackingField: Doctor
+  <Icon>k__BackingField: {fileID: 21300000, guid: 06d3cc87f3a67314f8e3b3d766e75879, type: 3}
+  <UnitPrefab>k__BackingField: {fileID: 1000108534355725562, guid: 8ddc280836e6068448b1ea4fcc69b3ad, type: 3}
+  <Health>k__BackingField: 240
   <GenerationTime>k__BackingField: 8
   <Cost>k__BackingField: {fileID: 11400000, guid: e6726fdc38db1c445a5df0bddb72a13b, type: 2}
-  <AttackInfo>k__BackingField: {fileID: 11400000, guid: 15bc29bef385c3d40af55480b043a682, type: 2}

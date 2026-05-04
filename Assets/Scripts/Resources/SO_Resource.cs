@@ -9,4 +9,5 @@ public class SO_Resource : ScriptableObject
     [field: SerializeField] public int IncreaseMaxAmount { get; private set; } = 5;
     [field: SerializeField] public Sprite Icon { get; private set; }
     [field: SerializeField] public bool ProducesOnlyOneTime { get; private set; } = false;
+    [field: SerializeField] public ResourcesType ResourceTypes;
 }

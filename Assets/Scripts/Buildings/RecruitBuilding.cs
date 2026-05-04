@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class RecruitBuilding : BaseBuilding
 {
-    [field: SerializeField] public UpdateRecruitQueueEvent queueEvent;
+    [Header("Events")]
+    [field: SerializeField] public UpdateRecruitQueueEvent queueEvent;    
     [SerializeField] private RefreshUIEvent refreshEvent;
+    [HideInInspector] public float RecruitStartTime { get; private set; }
+    [Header("Destiantion point")]
     [SerializeField] private GameObject recruitDestination;
     private List<SO_BaseUnit> RecruitUnitsQueue = new List<SO_BaseUnit>(RECRUIT_QUEUE_SIZE);
     private const int RECRUIT_QUEUE_SIZE = 5;
     private bool isRecruitDestinationSet = false;
     private GameObject recruitDestinationInstance;
-    public float RecruitStartTime;
+ 
 
     public List<SO_BaseUnit> GetRecruitQueue() => RecruitUnitsQueue;
     public int GetMaxQueueSize() => RECRUIT_QUEUE_SIZE;

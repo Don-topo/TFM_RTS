@@ -11,7 +11,7 @@ public class AttackerBuilding : BaseBuilding, IAttacker
 
     public void Attack(Vector3 attackPosition)
     {
-        throw new System.NotImplementedException();
+        // Nothing to do here?
     }
 
 }

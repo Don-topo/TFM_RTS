@@ -11,10 +11,14 @@ public class GameEvent<T> : ScriptableObject
     {
         if (listeners == null) return;
 
-        for (int i = listeners.Count - 1; i >= 0; i--)
+        foreach(Action<T> listener in listeners)
+        {
+            listener?.Invoke(value);
+        }
+        /*for (int i = listeners.Count - 1; i >= 0; i--)
         {
             listeners[i]?.Invoke(value);
-        }            
+        }*/            
     }
 
     public void Register(Action<T> listener)
@@ -22,24 +26,9 @@ public class GameEvent<T> : ScriptableObject
         listeners.Add(listener);
     }
 
-    public void Register(Action<T>[] newListeners)
-    {
-        foreach(Action<T> listener in newListeners)
-        {
-            listeners.Add(listener);
-        }        
-    }
-
     public void Unregister(Action<T> listener)
     {
         listeners?.Remove(listener);
     }
 
-    public void Unregister(Action<T>[] newListeners)
-    {
-        foreach(Action<T> listener in newListeners)
-        {
-            listeners?.Remove(listener);
-        }        
-    }
 }

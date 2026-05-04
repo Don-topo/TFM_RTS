@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3847648728331036915}
   - component: {fileID: 7474311564124686675}
   - component: {fileID: 4720395718838709782}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: StoreHouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 4501953201942201978}
-  - screenRelativeHeight: 0.1
+  - screenRelativeHeight: 0.05679659
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 4288889721389993550}
@@ -118,15 +118,15 @@ MonoBehaviour:
   <IsSelected>k__BackingField: 0
   selectionDecal: {fileID: 6609207368077572516}
   <Actions>k__BackingField: []
-  <SO_BaseUnit>k__BackingField: {fileID: 0}
+  <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: d8abeb303627f5440a8667cf20d0610a, type: 2}
   <CurrentHealth>k__BackingField: 0
   <MaxHealth>k__BackingField: 0
-  unitSelectEvent: {fileID: 0}
-  unitDeselectEvent: {fileID: 0}
+  unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
+  unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
   <PlaceMaterial>k__BackingField: {fileID: 0}
-  resourceEvent: {fileID: 0}
-  so_building: {fileID: 0}
-  <resource>k__BackingField: {fileID: 0}
+  resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
+  so_building: {fileID: 11400000, guid: d8abeb303627f5440a8667cf20d0610a, type: 2}
+  <resource>k__BackingField: {fileID: 11400000, guid: c322eadb0ee20e84297844fdf650ec4a, type: 2}
 --- !u!1 &8123070077522793469
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b0fbc7bc57b42634da3432f68375006c, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -336,7 +336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: be450b4708f4c314d90fd10489f3ce6b, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -419,7 +419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1552ab1173b36274fb4c2400f39f0e50, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
