@@ -29,7 +29,7 @@ public class RecruitUnitAction : BaseAction
 
     private bool CheckIfThereIsAvailableResources(ActionInfo actionInfo)
     {
-        return UnitToBuild.Cost.Food + UIResources.Food <= UIResources.MaxFood
+        return UnitToBuild.Cost.Food <= UIResources.Food
             && UnitToBuild.Cost.Wood <= UIResources.Wood
             && UnitToBuild.Cost.Stone <= UIResources.Stone
             && UnitToBuild.Cost.Iron <= UIResources.Iron

@@ -43,7 +43,7 @@ public class RecruitBuilding : BaseBuilding
         if (RecruitUnitsQueue.Count == RECRUIT_QUEUE_SIZE) return;
 
         // Spend resources
-        ResourceOP resourceOP = new ResourceOP(unitToRecruit.Cost.SO_Food, unitToRecruit.Cost.Food, 0);
+        ResourceOP resourceOP = new ResourceOP(unitToRecruit.Cost.SO_Food, -unitToRecruit.Cost.Food, 0);
         resourceEvent.Raise(resourceOP);
         resourceOP = new ResourceOP(unitToRecruit.Cost.SO_Wood, -unitToRecruit.Cost.Wood, 0);
         resourceEvent.Raise(resourceOP);

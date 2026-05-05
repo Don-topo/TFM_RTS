@@ -18,4 +18,4 @@ MonoBehaviour:
   <IncreaseMaxAmount>k__BackingField: 5
   <Icon>k__BackingField: {fileID: 0}
   <ProducesOnlyOneTime>k__BackingField: 0
-  <ResourceTypes>k__BackingField: 3
+  ResourceTypes: 3

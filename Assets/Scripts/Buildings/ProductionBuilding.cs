@@ -38,7 +38,7 @@ public class ProductionBuilding : BaseBuilding
 
     private void ProduceResource()
     {
-        if (applyForEveryResource)
+        /*if (applyForEveryResource)
         {
             foreach(ResourcesType resourceType in System.Enum.GetValues(typeof(ResourcesType)))
             {                
@@ -46,7 +46,12 @@ public class ProductionBuilding : BaseBuilding
                 ResourceOP resourceOP = new ResourceOP(resource, resource.ObtainedAmount, resource.MaxAmount);
                 resourceEvent.Raise(resourceOP);
             }
-        }        
+        }
+        else
+        {*/
+            ResourceOP resourceOP = new ResourceOP(resource, resource.ObtainedAmount, resource.MaxAmount);
+            resourceEvent.Raise(resourceOP);
+       // }        
     }
 
     public override void DestroyBuilding()
