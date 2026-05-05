@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: StopAction
   m_EditorClassIdentifier: Assembly-CSharp::StopAction
   <Name>k__BackingField: Stop
-  <Icon>k__BackingField: {fileID: 21300000, guid: 64c1da799adccdd4b80afd40f0e7a72e, type: 3}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 6550088df83260445809f34873f05581, type: 3}
   <HotKey>k__BackingField: 33
   <UIPosition>k__BackingField: 1
-  <IsSingleUnitCommand>k__BackingField: 0
+  <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 0

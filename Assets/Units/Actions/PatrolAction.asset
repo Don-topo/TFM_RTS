@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: PatrolAction
   m_EditorClassIdentifier: Assembly-CSharp::PatrolAction
   <Name>k__BackingField: Patrol
-  <Icon>k__BackingField: {fileID: 21300000, guid: 89c7d290c2144f7448ba2efd6cf1efc9, type: 3}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 93552174d785f344ca9a4a9d82c863b9, type: 3}
   <HotKey>k__BackingField: 30
   <UIPosition>k__BackingField: 2
-  <IsSingleUnitCommand>k__BackingField: 0
+  <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 1

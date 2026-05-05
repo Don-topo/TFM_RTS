@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: AllResources
   m_EditorClassIdentifier: Assembly-CSharp::SO_Resource
   <ObtainingTime>k__BackingField: 8
-  <ObtainedAmount>k__BackingField: 15
-  <MaxAmount>k__BackingField: 1000
+  <ObtainedAmount>k__BackingField: 0
+  <MaxAmount>k__BackingField: 20
   <IncreaseMaxAmount>k__BackingField: 5
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 5d2c5123bb6f0c547a150c9231bd4b9e, type: 3}
   <ProducesOnlyOneTime>k__BackingField: 0
-  <ResourceTypes>k__BackingField: 0
+  ResourceTypes: 0

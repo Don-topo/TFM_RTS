@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: MoveAction
   m_EditorClassIdentifier: Assembly-CSharp::MoveAction
   <Name>k__BackingField: Move
-  <Icon>k__BackingField: {fileID: 21300000, guid: d2c72d76ba867bc438c5cd1e2635e5c5, type: 3}
+  <Icon>k__BackingField: {fileID: 21300000, guid: d514377f14158e440822e7f12a12cf26, type: 3}
   <HotKey>k__BackingField: 27
   <UIPosition>k__BackingField: 0
-  <IsSingleUnitCommand>k__BackingField: 0
+  <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 1
+  radiusMultiplier: 3.5

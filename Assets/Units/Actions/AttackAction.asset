@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: AttackAction
   m_EditorClassIdentifier: Assembly-CSharp::AttackAction
   <Name>k__BackingField: Attack
-  <Icon>k__BackingField: {fileID: 21300000, guid: 9daa38c4423cfc746bcca4ca3b8ce2c6, type: 3}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 34a85285e6cec45478511fb956718684, type: 3}
   <HotKey>k__BackingField: 15
   <UIPosition>k__BackingField: 3
-  <IsSingleUnitCommand>k__BackingField: 0
+  <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 1
   moveAction: {fileID: 11400000, guid: 294ac8375577a6641918538431387b6e, type: 2}
