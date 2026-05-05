@@ -1,7 +1,12 @@
 Patches relases:
 
+v.0.22 => 05/05/2026:
+  - Work on final UI.
+  - TODO Working on Building System.
+  - TODO Production buildings prefabs.
+    
 v.0.21 => 04/05/2026:
-  - Work on production buildings prefabs.
+  - Work on production buildings prefabs (Not Finished).
   - TODO Working on Building System.
 
 v.0.20 => 30/04/2026:
