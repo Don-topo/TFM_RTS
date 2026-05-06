@@ -1,5 +1,12 @@
 Patches relases:
 
+v.0.23 => 06/05/2026:
+  - Polishing UI.
+  - Added AudioManager.
+  - Added music background clips.
+  - TODO Working on Building System.
+  - TODO Production buildings prefabs.
+
 v.0.22 => 05/05/2026:
   - Work on final UI.
   - TODO Working on Building System.
