@@ -6,12 +6,12 @@ public class BaseBuilding : CommonActions
     [field: SerializeField] public Material PlaceMaterial { get; private set; }
     [SerializeField] protected ResourceEvent resourceEvent;
     [SerializeField] private BuildingState state;
-    [SerializeField] protected SO_Building so_building;
+    [field: SerializeField] public SO_Building SO_building { get; private set; }
     
     protected override void Start()
     {
         base.Start();
-        CurrentHealth = so_building.Health;
+        CurrentHealth = SO_building.Health;
         MaxHealth = CurrentHealth;
     }
 
@@ -32,17 +32,17 @@ public class BaseBuilding : CommonActions
         // Refund spend resources based on building state and health
         float refund = CalculateRefund();
         // Return build resources
-        ResourceOP resourceOP = new ResourceOP(so_building.Cost.SO_Food, -so_building.Cost.Food, 0);
+        ResourceOP resourceOP = new ResourceOP(SO_building.Cost.SO_Food, -SO_building.Cost.Food, 0);
         resourceEvent.Raise(resourceOP);
-        resourceOP = new ResourceOP(so_building.Cost.SO_Wood, so_building.Cost.Wood, 0);
+        resourceOP = new ResourceOP(SO_building.Cost.SO_Wood, SO_building.Cost.Wood, 0);
         resourceEvent.Raise(resourceOP);
-        resourceOP = new ResourceOP(so_building.Cost.SO_Stone, so_building.Cost.Stone, 0);
+        resourceOP = new ResourceOP(SO_building.Cost.SO_Stone, SO_building.Cost.Stone, 0);
         resourceEvent.Raise(resourceOP);
-        resourceOP = new ResourceOP(so_building.Cost.SO_Iron, so_building.Cost.Iron, 0);
+        resourceOP = new ResourceOP(SO_building.Cost.SO_Iron, SO_building.Cost.Iron, 0);
         resourceEvent.Raise(resourceOP);
-        resourceOP = new ResourceOP(so_building.Cost.SO_Electricity, -so_building.Cost.Electricity, 0);
+        resourceOP = new ResourceOP(SO_building.Cost.SO_Electricity, -SO_building.Cost.Electricity, 0);
         resourceEvent.Raise(resourceOP);
-        resourceOP = new ResourceOP(so_building.Cost.SO_Population, -so_building.Cost.Population, 0);
+        resourceOP = new ResourceOP(SO_building.Cost.SO_Population, -SO_building.Cost.Population, 0);
         resourceEvent.Raise(resourceOP);
     }
 

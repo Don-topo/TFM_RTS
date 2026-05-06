@@ -11,11 +11,20 @@ public class GameManager : MonoBehaviour
     [Range(0, 1)][SerializeField] private float dificultyModifier;
     [SerializeField] private int totalDays = 25;
 
+    [Header("Events")]
+    [SerializeField] private BuildingDestroyedEvent buildDestroyedEvent;
+
     private int currentDay = 0;
 
     private void Awake()
     {
         StartCoroutine(Spawn());
+        buildDestroyedEvent.Register(ManageBuildingDestroyed);
+    }
+
+    private void OnDestroy()
+    {
+        buildDestroyedEvent?.Unregister(ManageBuildingDestroyed);
     }
 
     private IEnumerator Spawn()
@@ -24,6 +33,14 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(10);
             enemySpawner.GenerateWave(0, DificultyMode.Easy, Vector3.zero);
+        }
+    }
+
+    private void ManageBuildingDestroyed(BaseBuilding building)
+    {
+        if (building.gameObject.CompareTag("CommandPost"))
+        {
+            // Game Over
         }
     }
 
