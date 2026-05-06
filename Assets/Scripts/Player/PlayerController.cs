@@ -323,7 +323,7 @@ public class PlayerController : MonoBehaviour
 
     private void MinimapClicked(MinimapEventInfo info)
     {
-        if (info.MouseButton == MouseButton.Left || info.MouseButton == MouseButton.Right)
+        if ((info.MouseButton == MouseButton.Left || info.MouseButton == MouseButton.Right) && selectedAction != null)
         {
             ExecuteAction(info.RaycastHit);
         }
@@ -356,9 +356,18 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-        
+        PlayActionSound(selectedAction);
         actionExecuted.Raise(selectedAction);
 
         selectedAction = null;
+    }
+
+    private void PlayActionSound(BaseAction baseAction)
+    {
+        if(baseAction.ExecuteAudio.Count > 0)
+        {
+            AudioManager.SetAudioClips(baseAction.ExecuteAudio);
+            AudioManager.PlayAudio();
+        }       
     }
 }

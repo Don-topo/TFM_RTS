@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +10,7 @@ public abstract class BaseAction : ScriptableObject, IAction
     [field: Range(-1, 8)][field: SerializeField] public int UIPosition { get; private set; }
     [field: SerializeField] public bool IsSingleUnitAction { get; private set; }
     [field: SerializeField] public bool UseClickToExecute { get; private set; }
+    [field: SerializeField] public List<AudioClip> ExecuteAudio {  get; private set; }
 
     public abstract bool CanExecute(ActionInfo actionInfo);
     public abstract bool Blocked(ActionInfo actionInfo);

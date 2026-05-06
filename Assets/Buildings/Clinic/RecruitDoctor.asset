@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: RecruitDoctor
   m_EditorClassIdentifier: Assembly-CSharp::RecruitUnitAction
   <Name>k__BackingField: Recluit Doctor
-  <Icon>k__BackingField: {fileID: 21300000, guid: 06d3cc87f3a67314f8e3b3d766e75879, type: 3}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 20ec333e35bcaa84194ad428ce893ee5, type: 3}
   <HotKey>k__BackingField: 18
   <UIPosition>k__BackingField: 0
   <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 0
+  <ExecuteAudio>k__BackingField: []
   <UnitToBuild>k__BackingField: {fileID: 11400000, guid: 8c67e00e500024043bfcbea9a218df4b, type: 2}

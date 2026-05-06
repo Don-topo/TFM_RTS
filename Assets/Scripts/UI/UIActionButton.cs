@@ -42,7 +42,7 @@ public class UIActionButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         SetIcon(action.Icon);
         hotkey = action.HotKey;
         button.onClick.AddListener(unityAction);
-        button.enabled = commonActions
+        button.interactable = commonActions
             .Any(unit => unit.Actions.Any(action => !action.Blocked(new ActionInfo(unit, new RaycastHit(), action.UIPosition))));
         assignedThisFrame = true;
         if(tooltip != null)

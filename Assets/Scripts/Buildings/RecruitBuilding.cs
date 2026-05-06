@@ -78,7 +78,7 @@ public class RecruitBuilding : BaseBuilding
         // Get the unit from the queue
         SO_BaseUnit unitToRemove = RecruitUnitsQueue[queueIndex];
         // Return Recruiting resources
-        ResourceOP resourceOP = new ResourceOP(unitToRemove.Cost.SO_Food, -unitToRemove.Cost.Food, 0);
+        ResourceOP resourceOP = new ResourceOP(unitToRemove.Cost.SO_Food, unitToRemove.Cost.Food, 0);
         resourceEvent.Raise(resourceOP);
         resourceOP = new ResourceOP(unitToRemove.Cost.SO_Wood, unitToRemove.Cost.Wood, 0);
         resourceEvent.Raise(resourceOP);

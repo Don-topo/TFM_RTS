@@ -18,8 +18,6 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
     public UnitSelectedEvent unitSelectEvent;
     public UnitDeselectEvent unitDeselectEvent;
 
-    private BaseAction[] initialActions;
-
     protected virtual void Start()
     {
 
@@ -60,6 +58,7 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
             selectionDecal.gameObject.SetActive(true);
         }
         IsSelected = true;
+        PlaySelectionAudio();
         // Send notification
         unitSelectEvent.Raise(this);
     }
@@ -93,5 +92,14 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
     public void Die()
     {
         Destroy(gameObject);
+    }
+
+    private void PlaySelectionAudio()
+    {
+        if(SO_BaseUnit.SelectionAudioClips.Count > 0)
+        {
+            AudioManager.SetAudioClips(SO_BaseUnit.SelectionAudioClips);
+            AudioManager.PlayAudio();
+        }
     }
 }

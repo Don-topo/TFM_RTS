@@ -79,10 +79,15 @@ public class UIResources : MonoBehaviour
 
     private void UpdateUI()
     {
+        foodText.color = Food >= MaxFood ? Color.red : Color.white;
         foodText.SetText(Food.ToString() + " / " + MaxFood.ToString());
-        woodText.SetText(Wood.ToString() + " / " + MaxIron.ToString());
+        woodText.color = Wood >= MaxWood ? Color.red : Color.white;
+        woodText.SetText(Wood.ToString() + " / " + MaxWood.ToString());
+        ironText.color = Iron >= MaxIron ? Color.red : Color.white;
         ironText.SetText(Iron.ToString() + " / " + MaxIron.ToString());
+        electricityText.color = Electricity >= MaxElectricity ? Color.red : Color.white;
         electricityText.SetText(Electricity.ToString() + " / " + MaxElectricity.ToString());
+        populationText.color = Population >= MaxPopulation ? Color.red : Color.white;
         populationText.SetText(Population.ToString() + " / " + MaxPopulation.ToString());
     }
 }
