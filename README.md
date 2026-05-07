@@ -1,5 +1,10 @@
 Patches relases:
 
+v.0.24 => 07/05/2026:
+  - Fix Update actions interactables.
+  - TODO Working on Building System.
+  - TODO Production buildings prefabs.
+    
 v.0.23 => 06/05/2026:
   - Polishing UI.
   - Added AudioManager.
