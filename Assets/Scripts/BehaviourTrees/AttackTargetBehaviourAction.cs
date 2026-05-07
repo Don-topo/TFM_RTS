@@ -16,6 +16,7 @@ public partial class AttackTargetBehaviourAction : Action
     [SerializeReference] public BlackboardVariable<List<GameObject>> Enemies;
 
     private NavMeshAgent navMeshAgent;
+    private Animator animator;
     private BaseUnit baseUnit;
     private Transform selfTransform;
     private Transform targetTransform;
@@ -28,6 +29,7 @@ public partial class AttackTargetBehaviourAction : Action
         selfTransform = Self.Value.transform;
         navMeshAgent = selfTransform.GetComponent<NavMeshAgent>();
         baseUnit = selfTransform.GetComponent<BaseUnit>();
+        animator = selfTransform.GetComponent<Animator>();
         targetTransform = TargetGameObject.Value.transform;
         targetAttackable = TargetGameObject.Value.GetComponent<IAttackable>();
         lastAttack = Time.time;
@@ -36,6 +38,10 @@ public partial class AttackTargetBehaviourAction : Action
         {
             navMeshAgent.SetDestination(targetTransform.position);
             navMeshAgent.isStopped = false;
+            if(animator != null)
+            {
+                animator.SetFloat("MoveSpeed", navMeshAgent.speed);
+            }            
         }
 
         return Status.Running;
@@ -50,6 +56,11 @@ public partial class AttackTargetBehaviourAction : Action
             return Status.Running;
         }
         navMeshAgent.isStopped = true;
+        if(animator != null)
+        {
+            animator.SetFloat("MoveSpeed", navMeshAgent.speed);
+        }
+        
         LookAtTarget();
 
         if(Time.time > lastAttack + AttackInfo.Value.AttackSpeed)
@@ -94,6 +105,10 @@ public partial class AttackTargetBehaviourAction : Action
 
     private void Attack()
     {
+        if(animator != null)
+        {
+            animator.SetTrigger("Attack");
+        }
         lastAttack = Time.time;
         targetAttackable.ApplyDamage(AttackInfo.Value.AttackDamage);       
     }

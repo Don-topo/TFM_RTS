@@ -11,6 +11,8 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
     [field: SerializeField] public SO_BaseUnit SO_BaseUnit { get; protected set; }
     [field: SerializeField] public int CurrentHealth { get; protected set; }
     [field: SerializeField] public int MaxHealth {  get; protected set; }
+    [Header("Events")]
+    [SerializeField] protected UpdateHealthEvent updateHealthEvent;
 
     public Transform TargetPosition => transform;
 
@@ -83,6 +85,7 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
     public void ApplyDamage(int damageAmount)
     {
         CurrentHealth = Mathf.Clamp(CurrentHealth - damageAmount, 0, CurrentHealth);
+        updateHealthEvent.Raise(this);
         if(CurrentHealth <= 0)
         {
             Die();

@@ -85,6 +85,8 @@ public class UIResources : MonoBehaviour
         woodText.SetText(Wood.ToString() + " / " + MaxWood.ToString());
         ironText.color = Iron >= MaxIron ? Color.red : Color.white;
         ironText.SetText(Iron.ToString() + " / " + MaxIron.ToString());
+        stoneText.color = Stone >= MaxStone ? Color.red : Color.white;
+        stoneText.SetText(Stone.ToString() + " / " + MaxStone.ToString());
         electricityText.color = Electricity >= MaxElectricity ? Color.red : Color.white;
         electricityText.SetText(Electricity.ToString() + " / " + MaxElectricity.ToString());
         populationText.color = Population >= MaxPopulation ? Color.red : Color.white;

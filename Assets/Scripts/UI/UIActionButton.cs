@@ -13,17 +13,22 @@ public class UIActionButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 {
     [SerializeField] private Image actionIcon;
     [SerializeField] private Tooltip tooltip;
+    [SerializeField] private ResourceEvent resourceEvent;
 
     private Button button;
     private Key hotkey;
     private RectTransform rectTransform;
     private bool assignedThisFrame;
 
+    // Update
+    BaseAction action;
+    List<CommonActions> commonActions = new List<CommonActions>();
+
     private void Awake()
     {
         button = GetComponent<Button>();
         rectTransform = GetComponent<RectTransform>();
-        Disable();
+        Disable();      
     }
 
     private void Update()
@@ -37,13 +42,15 @@ public class UIActionButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     public void Enable(BaseAction action, List<CommonActions> commonActions, UnityAction unityAction)
     {
+        resourceEvent.Register(HandleResourceEvent);
+        this.action = action;
+        this.commonActions = commonActions;
         // Safety action to update if previous actions are displayed
         button.onClick.RemoveAllListeners();
         SetIcon(action.Icon);
         hotkey = action.HotKey;
         button.onClick.AddListener(unityAction);
-        button.interactable = commonActions
-            .Any(unit => unit.Actions.Any(action => !action.Blocked(new ActionInfo(unit, new RaycastHit(), action.UIPosition))));
+        UpdateInteractable();
         assignedThisFrame = true;
         if(tooltip != null)
         {
@@ -53,6 +60,7 @@ public class UIActionButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     public void Disable()
     {
+        resourceEvent.Unregister(HandleResourceEvent);
         // Empty sprite
         SetIcon(null);
         // Button not interactable
@@ -107,5 +115,19 @@ public class UIActionButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         tooltipText += action.HotKey.ToString();
 
         return tooltipText;
+    }
+
+    private void UpdateInteractable()
+    {
+        button.interactable = this.commonActions
+            .Any(commandable => !this.action.Blocked(new ActionInfo(commandable, new RaycastHit(), this.action.UIPosition)));
+    }
+
+    private void HandleResourceEvent(ResourceOP resource)
+    {
+        if(this.commonActions.Count != 0 && action != null)
+        {
+            UpdateInteractable();
+        }        
     }
 }

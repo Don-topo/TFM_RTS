@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class BaseAttacker : BaseUnit, IAttacker
 {
+    [Header("Basic Info")]
     public Transform Transform => transform;
     [SerializeField] private AttackSystem attackSystem;
+    [SerializeField] private Animator animator;
+    [Header("Events")]
     [SerializeField] private EnemyInRangeEvent unitEnterRange;
     [SerializeField] private EnemyInRangeEvent unitOutOfRange;
+    [Header("Attack Info")]
     [field: SerializeField] public SO_AttackInfo AttackInfo { get; private set; }
 
     protected override void Awake()

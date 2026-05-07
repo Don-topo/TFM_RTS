@@ -8,7 +8,8 @@ public class RecruitUnitAction : BaseAction
 
     public override bool Blocked(ActionInfo actionInfo)
     {
-        return !CheckIfThereIsAvailableResources(actionInfo);
+        var a = actionInfo.Action;
+        return !CheckIfThereIsAvailableResources(actionInfo) && actionInfo.Action is BaseBuilding;
     }
 
     public override bool CanExecute(ActionInfo actionInfo)
