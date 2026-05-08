@@ -4,7 +4,7 @@ v.0.25 => 08/05/2026:
   - Fix UI bug and wharehouse bug.
   - Working on units.
   - TODO Working on Building System.
-  - TODO Production buildings prefabs.
+  - Finished Production buildings prefabs.
     
 v.0.24 => 07/05/2026:
   - Fix Update actions interactables.
