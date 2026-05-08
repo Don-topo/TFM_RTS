@@ -181,12 +181,14 @@ MonoBehaviour:
   <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: f1947b07e750ce64db9c3f99c365a36c, type: 2}
   <CurrentHealth>k__BackingField: 0
   <MaxHealth>k__BackingField: 0
+  updateHealthEvent: {fileID: 0}
   unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
   <PlaceMaterial>k__BackingField: {fileID: 0}
   resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
-  so_building: {fileID: 11400000, guid: f1947b07e750ce64db9c3f99c365a36c, type: 2}
+  <SO_building>k__BackingField: {fileID: 11400000, guid: f1947b07e750ce64db9c3f99c365a36c, type: 2}
   <resource>k__BackingField: {fileID: 11400000, guid: a73094a7ac48dac4ab9d36dad3e0d5e4, type: 2}
+  applyForEveryResource: 0
 --- !u!1001 &1886069702337885641
 PrefabInstance:
   m_ObjectHideFlags: 0

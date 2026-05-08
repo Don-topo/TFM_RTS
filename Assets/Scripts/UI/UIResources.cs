@@ -52,7 +52,7 @@ public class UIResources : MonoBehaviour
                 break;
             case ResourcesType.Wood:
                 Wood = Mathf.Clamp(Wood + resource.Amount, 0, MaxWood);
-                MaxWood = resource.MaxAmount;
+                MaxWood += resource.MaxAmount;
                 break;
             case ResourcesType.Stone:
                 Stone = Mathf.Clamp(Stone + resource.Amount, 0, MaxStone);

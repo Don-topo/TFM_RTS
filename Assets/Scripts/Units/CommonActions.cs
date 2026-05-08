@@ -85,7 +85,10 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
     public void ApplyDamage(int damageAmount)
     {
         CurrentHealth = Mathf.Clamp(CurrentHealth - damageAmount, 0, CurrentHealth);
-        updateHealthEvent.Raise(this);
+        if (IsSelected)
+        {
+            updateHealthEvent.Raise(this);
+        }        
         if(CurrentHealth <= 0)
         {
             Die();

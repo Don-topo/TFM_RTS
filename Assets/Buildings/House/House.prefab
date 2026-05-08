@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6357425239213477992}
   - component: {fileID: 4896374894885088785}
   - component: {fileID: 5769805014859039277}
+  - component: {fileID: 3318406387878078089}
   m_Layer: 7
   m_Name: House
   m_TagString: Untagged
@@ -83,12 +84,14 @@ MonoBehaviour:
   <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: aa8cedb842dc921429484bce8060cc25, type: 2}
   <CurrentHealth>k__BackingField: 0
   <MaxHealth>k__BackingField: 0
+  updateHealthEvent: {fileID: 11400000, guid: 13cf27522de45664fb20e006b4905224, type: 2}
   unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
   <PlaceMaterial>k__BackingField: {fileID: 0}
   resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
-  so_building: {fileID: 11400000, guid: 8b85e3f3837049d4d9c1a4ecc4074312, type: 2}
+  <SO_building>k__BackingField: {fileID: 11400000, guid: 8b85e3f3837049d4d9c1a4ecc4074312, type: 2}
   <resource>k__BackingField: {fileID: 11400000, guid: 1a8259d76527fdb4891cd10f2fd9f7c0, type: 2}
+  applyForEveryResource: 0
 --- !u!65 &5769805014859039277
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -108,8 +111,24 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.48, y: 3.09, z: 2.34}
-  m_Center: {x: 0, y: 0.7, z: 0}
+  m_Size: {x: 2.5, y: 2.5, z: 2.34}
+  m_Center: {x: 0, y: 1.25, z: 0}
+--- !u!208 &3318406387878078089
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201542786292628489}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.25, y: 1.25, z: 1.17}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.25, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &350149885951199870
 GameObject:
   m_ObjectHideFlags: 0

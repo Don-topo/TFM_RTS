@@ -118,14 +118,15 @@ MonoBehaviour:
   <IsSelected>k__BackingField: 0
   selectionDecal: {fileID: 2913305870475563145}
   <Actions>k__BackingField: []
-  <SO_BaseUnit>k__BackingField: {fileID: 0}
+  <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: 506f4a45fb5bff74abbbea559fa4b6b2, type: 2}
   <CurrentHealth>k__BackingField: 0
   <MaxHealth>k__BackingField: 0
-  unitSelectEvent: {fileID: 0}
-  unitDeselectEvent: {fileID: 0}
+  updateHealthEvent: {fileID: 11400000, guid: 13cf27522de45664fb20e006b4905224, type: 2}
+  unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
+  unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
   <PlaceMaterial>k__BackingField: {fileID: 0}
-  resourceEvent: {fileID: 0}
-  so_building: {fileID: 0}
+  resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
+  <SO_building>k__BackingField: {fileID: 11400000, guid: 506f4a45fb5bff74abbbea559fa4b6b2, type: 2}
 --- !u!1 &7065631248744744201
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,7 +137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3708164381559897673}
   - component: {fileID: 2913305870475563145}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Selection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +183,7 @@ MonoBehaviour:
     m_Bits: 1
   m_ScaleMode: 0
   m_Offset: {x: 0, y: 0, z: 1}
-  m_Size: {x: 8.5, y: 3, z: 2}
+  m_Size: {x: 8.5, y: 4, z: 2}
   m_FadeFactor: 1
   version: 1
   m_DecalLayerMask: 1

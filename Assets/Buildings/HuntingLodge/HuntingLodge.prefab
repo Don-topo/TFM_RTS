@@ -121,12 +121,14 @@ MonoBehaviour:
   <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: 5f1451107830feb46acb7c0097967fd8, type: 2}
   <CurrentHealth>k__BackingField: 0
   <MaxHealth>k__BackingField: 0
+  updateHealthEvent: {fileID: 11400000, guid: 13cf27522de45664fb20e006b4905224, type: 2}
   unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
   <PlaceMaterial>k__BackingField: {fileID: 0}
   resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
-  so_building: {fileID: 11400000, guid: 5f1451107830feb46acb7c0097967fd8, type: 2}
+  <SO_building>k__BackingField: {fileID: 11400000, guid: 5f1451107830feb46acb7c0097967fd8, type: 2}
   <resource>k__BackingField: {fileID: 11400000, guid: 9b96dff8c395d5c4d8269a0dcd83bd26, type: 2}
+  applyForEveryResource: 0
 --- !u!1 &9133366316067546226
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,7 +20,7 @@ public class UISelectedBuilding : MonoBehaviour
         }
 
         buildingNameText.enabled = true;
-        buildingNameText.SetText(baseBuilding.SO_BaseUnit.name);
+        buildingNameText.SetText(baseBuilding.SO_building.Name);
     }
 
     public void Disable()
