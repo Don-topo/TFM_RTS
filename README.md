@@ -1,5 +1,11 @@
 Patches relases:
 
+v.0.26 => 09/05/2026:
+  - Fix multiple units UI bug.
+  - Add sounds to actions.
+  - Added new unit models.
+  - TODO Working on Building System.
+    
 v.0.25 => 08/05/2026:
   - Fix UI bug and wharehouse bug.
   - Working on units.
