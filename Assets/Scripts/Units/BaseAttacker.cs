@@ -32,12 +32,14 @@ public class BaseAttacker : BaseUnit, IAttacker
    
     public void Attack(IAttackable attackable)
     {
+        PlayAttackAudio();
         behaviorGraphAgent.SetVariableValue<GameObject>("TargetGameObject", attackable.TargetPosition.gameObject);
         behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Attack);
     }
 
     public void Attack(Vector3 attackPosition)
     {
+        PlayAttackAudio();
         behaviorGraphAgent.SetVariableValue<GameObject>("TargetGameObject", null);
         behaviorGraphAgent.SetVariableValue("TargetPosition", attackPosition);
         behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Attack);
@@ -46,6 +48,7 @@ public class BaseAttacker : BaseUnit, IAttacker
     public void Patrol(Vector3 targetPosition)
     {
         if (targetPosition == null) return;
+        PlayPatrolAutdio();
 
         Vector3 currenPosition = gameObject.transform.position;
         List<Vector3> patrolPositions = new List<Vector3>
@@ -97,5 +100,23 @@ public class BaseAttacker : BaseUnit, IAttacker
         behaviorGraphAgent.SetVariableValue("Enemies", nearbyEnemies);
 
         return nearbyEnemies;
+    }
+
+    private void PlayAttackAudio()
+    {
+        if(AttackInfo.AttackAudioClips.Count > 0)
+        {
+            AudioManager.SetAudioClips(AttackInfo.AttackAudioClips);
+            AudioManager.PlayAudio();
+        }        
+    }
+
+    private void PlayPatrolAutdio()
+    {
+        if(AttackInfo.PatrolAudioClips.Count > 0)
+        {
+            AudioManager.SetAudioClips(AttackInfo.PatrolAudioClips);
+            AudioManager.PlayAudio();
+        }        
     }
 }

@@ -1,11 +1,16 @@
+using System.Collections.Generic;
 using Unity.Behavior;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UIElements;
 
 [RequireComponent (typeof(NavMeshAgent), typeof(BehaviorGraphAgent))]
 public class BaseUnit : CommonActions, IMoveable, IHealable
-{   
+{
+    [Header("Audio")]
+    [SerializeField] protected List<AudioClip> moveAudioClips;
+
     public float GetNavMeshAgentRadius => navMeshAgent.radius;
     protected BehaviorGraphAgent behaviorGraphAgent;
     protected NavMeshAgent navMeshAgent;
@@ -31,12 +36,14 @@ public class BaseUnit : CommonActions, IMoveable, IHealable
 
     public void Move(Transform transform)
     {
+        PlayMoveAudio();
         behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Move);
         behaviorGraphAgent.SetVariableValue("TargetGameObject", transform.gameObject);        
     }
 
     public void Move(Vector3 position)
     {
+        PlayMoveAudio();
         behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Move);
         behaviorGraphAgent.SetVariableValue("TargetPosition", position);
         behaviorGraphAgent.SetVariableValue<GameObject>("TargetGameObject", null);
@@ -52,5 +59,14 @@ public class BaseUnit : CommonActions, IMoveable, IHealable
     {
         CurrentHealth = Mathf.Clamp(CurrentHealth + amount, 0, MaxHealth);
         updateHealthEvent.Raise(this);
+    }
+
+    private void PlayMoveAudio()
+    {
+        if(moveAudioClips.Count > 0)
+        {
+            AudioManager.SetAudioClips(moveAudioClips);
+            AudioManager.PlayAudio();
+        }        
     }
 }

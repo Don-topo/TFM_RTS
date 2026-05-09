@@ -5,14 +5,14 @@ using UnityEngine.UI;
 public class UIUnitSelectedButton : MonoBehaviour
 {
     [SerializeField] private Image unitImage;
-
-    private Button button;
+    [SerializeField] private Button button;    
 
     private void Awake()
     {
-        button = GetComponent<Button>();
+        button = GetComponentInChildren<Button>();
         Disable();
     }
+
 
     public void Enable(CommonActions unit, UnityAction unityAction)
     {
