@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e766ad877836f414490017ef6206d145, type: 3}
+  m_Name: Grenadier
+  m_EditorClassIdentifier: Assembly-CSharp::SO_BaseUnit
+  <Name>k__BackingField: Grenadier
+  <Icon>k__BackingField: {fileID: 21300000, guid: d9f2903c8be08894cadeae054aecfaf3, type: 3}
+  <UnitPrefab>k__BackingField: {fileID: 1807731591835451174, guid: 8cfe84f2bbfca854381b01d9395b27ac, type: 3}
+  <Health>k__BackingField: 100
+  <GenerationTime>k__BackingField: 8
+  <Cost>k__BackingField: {fileID: 11400000, guid: d0bd9b3944259264cab043aaa17ac601, type: 2}
+  <SelectionAudioClips>k__BackingField: []

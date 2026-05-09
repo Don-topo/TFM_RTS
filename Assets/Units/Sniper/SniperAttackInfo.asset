@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c26b45c28439f641bcfddeafad45703, type: 3}
+  m_Name: SniperAttackInfo
+  m_EditorClassIdentifier: Assembly-CSharp::SO_AttackInfo
+  <AttackDamage>k__BackingField: 20
+  <AttackRange>k__BackingField: 2
+  <AttackSpeed>k__BackingField: 1
+  AttackAudioClips:
+  - {fileID: 8300000, guid: c7dbbf3f15f803240b6e8600619215f7, type: 3}
+  - {fileID: 8300000, guid: 35121d89e511a524b93f3a6d834d0467, type: 3}
+  - {fileID: 8300000, guid: f1f6815c27ab7474a98a3f50363da697, type: 3}
+  - {fileID: 8300000, guid: 9d093d10d9cc36e4cb01ae9d94746215, type: 3}
+  PatrolAudioClips:
+  - {fileID: 8300000, guid: 6da8c9f75d5283e48be3cc8ea83c0691, type: 3}
+  - {fileID: 8300000, guid: c3ea3a21225d0fb478d211e41739d44a, type: 3}
+  - {fileID: 8300000, guid: 6de89cb03b3cfb34ca647e2a76b5ab86, type: 3}
+  - {fileID: 8300000, guid: b042c677df9a25a4d87a40e71158b957, type: 3}

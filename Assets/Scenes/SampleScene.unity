@@ -2554,7 +2554,6 @@ MonoBehaviour:
   edgeSize: 10
   playerUnits:
   - {fileID: 1473671262}
-  - {fileID: 934405774}
 --- !u!114 &330585550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6239,17 +6238,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919164024}
   m_CullTransparentMesh: 1
---- !u!114 &934405774 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5786621897842818193, guid: 35c9814a8c14614429bec0438f0fb2b2, type: 3}
-  m_PrefabInstance: {fileID: 1492138760}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f58286a9d9a11c34fa115428e6e83a0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BaseAttacker
 --- !u!1 &998163475
 GameObject:
   m_ObjectHideFlags: 0
@@ -8276,63 +8264,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487689479}
   m_CullTransparentMesh: 1
---- !u!1001 &1492138760
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5757913540112596994, guid: 35c9814a8c14614429bec0438f0fb2b2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.0957928
-      objectReference: {fileID: 0}
-    - target: {fileID: 5757913540112596994, guid: 35c9814a8c14614429bec0438f0fb2b2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.00000012033155
-      objectReference: {fileID: 0}
-    - target: {fileID: 5757913540112596994, guid: 35c9814a8c14614429bec0438f0fb2b2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.36966908
-      objectReference: {fileID: 0}
-    - target: {fileID: 5757913540112596994, guid: 35c9814a8c14614429bec0438f0fb2b2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5757913540112596994, guid: 35c9814a8c14614429bec0438f0fb2b2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5757913540112596994, guid: 35c9814a8c14614429bec0438f0fb2b2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5757913540112596994, guid: 35c9814a8c14614429bec0438f0fb2b2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5757913540112596994, guid: 35c9814a8c14614429bec0438f0fb2b2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5757913540112596994, guid: 35c9814a8c14614429bec0438f0fb2b2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5757913540112596994, guid: 35c9814a8c14614429bec0438f0fb2b2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618063681360896177, guid: 35c9814a8c14614429bec0438f0fb2b2, type: 3}
-      propertyPath: m_Name
-      value: Soldier
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 35c9814a8c14614429bec0438f0fb2b2, type: 3}
 --- !u!1 &1513847937
 GameObject:
   m_ObjectHideFlags: 0
@@ -17583,6 +17514,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 743388719890161455, guid: 334f7898c4d12f14e9807239fc335061, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 45cd701fe5279a247b977d42332bf183, type: 2}
+    - target: {fileID: 743388719890161455, guid: 334f7898c4d12f14e9807239fc335061, type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tFrom animation clip 'Walking'"
+      objectReference: {fileID: 0}
     - target: {fileID: 1458390933140999639, guid: 334f7898c4d12f14e9807239fc335061, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -17623,6 +17564,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2297778734636298884, guid: 334f7898c4d12f14e9807239fc335061, type: 3}
+      propertyPath: m_Speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2297778734636298884, guid: 334f7898c4d12f14e9807239fc335061, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 840
+      objectReference: {fileID: 0}
     - target: {fileID: 3366363749105579758, guid: 334f7898c4d12f14e9807239fc335061, type: 3}
       propertyPath: m_Avatar
       value: 
@@ -17630,6 +17579,10 @@ PrefabInstance:
     - target: {fileID: 5377168089311033226, guid: 334f7898c4d12f14e9807239fc335061, type: 3}
       propertyPath: m_Name
       value: Flamethrower
+      objectReference: {fileID: 0}
+    - target: {fileID: 5377168089311033226, guid: 334f7898c4d12f14e9807239fc335061, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8454993967885224158, guid: 334f7898c4d12f14e9807239fc335061, type: 3}
       propertyPath: animator
@@ -17665,4 +17618,3 @@ SceneRoots:
   - {fileID: 35649574}
   - {fileID: 6260249601276943399}
   - {fileID: 1551560383}
-  - {fileID: 1492138760}
