@@ -26,13 +26,11 @@ public class BaseBuilding : CommonActions
     }
 
     public virtual void DestroyBuilding()
-    {
-        // Destroy game object
-        Destroy(gameObject);
+    {        
         // Refund spend resources based on building state and health
         float refund = CalculateRefund();
         // Return build resources
-        ResourceOP resourceOP = new ResourceOP(SO_building.Cost.SO_Food, -SO_building.Cost.Food, 0);
+        ResourceOP resourceOP = new ResourceOP(SO_building.Cost.SO_Food, SO_building.Cost.Food, 0);
         resourceEvent.Raise(resourceOP);
         resourceOP = new ResourceOP(SO_building.Cost.SO_Wood, SO_building.Cost.Wood, 0);
         resourceEvent.Raise(resourceOP);
@@ -44,6 +42,10 @@ public class BaseBuilding : CommonActions
         resourceEvent.Raise(resourceOP);
         resourceOP = new ResourceOP(SO_building.Cost.SO_Population, -SO_building.Cost.Population, 0);
         resourceEvent.Raise(resourceOP);
+
+        // TODO Play explotion
+        // Destroy game object
+        Destroy(gameObject);
     }
 
     private float CalculateRefund()
@@ -53,4 +55,5 @@ public class BaseBuilding : CommonActions
 
         return 0f;
     }
+
 }

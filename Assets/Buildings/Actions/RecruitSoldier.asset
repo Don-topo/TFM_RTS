@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 322dd8a8f35b7c34b81612d167e68f43, type: 3}
   m_Name: RecruitSoldier
   m_EditorClassIdentifier: Assembly-CSharp::RecruitUnitAction
-  <Name>k__BackingField: Hunter
-  <Icon>k__BackingField: {fileID: 21300000, guid: 0636fb0df19bfb64bbe93d36c6ee2562, type: 3}
-  <HotKey>k__BackingField: 22
+  <Name>k__BackingField: Recruit Soldier
+  <Icon>k__BackingField: {fileID: 21300000, guid: 891d35ecc1448f04d9acfa9be5c2a612, type: 3}
+  <HotKey>k__BackingField: 33
   <UIPosition>k__BackingField: 0
-  <IsSingleUnitCommand>k__BackingField: 0
+  <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 0
-  <UnitToBuild>k__BackingField: {fileID: 11400000, guid: a0d0923a84414ee4f888633614b65eed, type: 2}
+  <ExecuteAudio>k__BackingField: []
+  <UnitToBuild>k__BackingField: {fileID: 11400000, guid: 776a3ffbdef940347a794c8cc24f876b, type: 2}

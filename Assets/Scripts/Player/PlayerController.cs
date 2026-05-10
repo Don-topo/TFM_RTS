@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Burst.CompilerServices;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -42,6 +43,9 @@ public class PlayerController : MonoBehaviour
     // Actions
     private BaseAction selectedAction;
 
+    // Building
+    private GameObject placeBuildingInstance;
+
     private void Awake()
     {
         selectUnitEvent.Register(SelectedUnit);
@@ -58,6 +62,7 @@ public class PlayerController : MonoBehaviour
         zoom = camera.transform.localPosition.y;
         DragMouse();
         CameraZoom();
+        BuildingPlacement();
         CameraMovement();
         RigthClick();
         ResetCameraPosition();
@@ -319,6 +324,10 @@ public class PlayerController : MonoBehaviour
         {
             ExecuteAction(new RaycastHit());
         }
+        else if(actionClicked is BuildBuildingAction)
+        {
+            placeBuildingInstance = Instantiate(((BuildBuildingAction)actionClicked).PlaceBuilding);
+        }
     }
 
     private void MinimapClicked(MinimapEventInfo info)
@@ -331,6 +340,12 @@ public class PlayerController : MonoBehaviour
 
     private void ExecuteAction(RaycastHit hit)
     {
+        if(placeBuildingInstance != null)
+        {
+            Destroy(placeBuildingInstance);
+            placeBuildingInstance = null;
+        }
+
         List<CommonActions> actions = selectedUnits.Where(unit => unit is CommonActions).Cast<CommonActions>().ToList();
         if (actions.Count == 0) return;
         foreach (CommonActions action in actions)
@@ -369,5 +384,27 @@ public class PlayerController : MonoBehaviour
             AudioManager.SetAudioClips(baseAction.ExecuteAudio);
             AudioManager.PlayAudio();
         }       
+    }
+
+    private void BuildingPlacement()
+    {
+        if (placeBuildingInstance == null) return;
+
+        if (Keyboard.current.escapeKey.wasReleasedThisFrame)
+        {
+            Destroy(placeBuildingInstance);
+            placeBuildingInstance = null;
+            selectedAction = null;
+            return;
+        }
+
+        Ray cameraRay = camera.ScreenPointToRay(Mouse.current.position.ReadValue());
+        if (Physics.Raycast(cameraRay, out RaycastHit hit, float.MaxValue, floorLayers))
+        {
+            placeBuildingInstance.transform.position = hit.point;
+            //bool allRestrictionPass = activeCommand.AllRestrictionsPass(hit.point);
+            //ghostRenderer.material.SetColor(TINT, allRestrictionPass ? availableToPlaceTintColor : errorTintColor);
+            //ghostRenderer.material.SetColor(FRESNEL, allRestrictionPass ? availableToPlaceFresnelColor : errorFresnelColor);
+        }
     }
 }

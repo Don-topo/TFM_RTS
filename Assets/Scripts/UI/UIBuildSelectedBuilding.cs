@@ -1,22 +1,30 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class UIBuildSelectedBuilding : MonoBehaviour
 {
     [SerializeField] private UIProgressbar progressBar;
+    [SerializeField] private TextMeshProUGUI buildName;
     public void Disable()
     {
         gameObject.SetActive(false);
     }
 
-    public void Enable()
+    public void Enable(BaseBuilding baseBuilding)
     {
         gameObject.SetActive(true);
+        StopAllCoroutines();
+        buildName.SetText(baseBuilding.SO_building.Name);
+        StartCoroutine(UpdateProgressBar(baseBuilding));
     }
 
     private IEnumerator UpdateProgressBar(BaseBuilding baseBuilding)
-    {
-        //progressBar.UpdateProgress();
+    {        
+        float startTime = 12;//baseBuilding.Progress.StartTime;
+        float endTime = 16;// startTime + baseBuilding.BuildingSO.BuildTime;
+        progressBar.UpdateProgress(Mathf.Clamp01((Time.time - startTime) / (endTime - startTime)));
         yield return null;
     }
 }
