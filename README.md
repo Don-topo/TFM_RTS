@@ -1,5 +1,10 @@
 Patches relases:
 
+v.0.27 => 11/05/2026:
+  - First Building implementation.
+  - TODO Add Restrictions
+  - TODO Fix UI Build Actions menu.
+    
 v.0.26 => 09/05/2026:
   - Fix multiple units UI bug.
   - Add sounds to actions.
