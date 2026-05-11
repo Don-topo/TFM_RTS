@@ -28,9 +28,7 @@ public class BaseBuilding : CommonActions, IHealable
             SaveMaterials();
         }
         CurrentHealth = IsConstructed ? SO_BaseUnit.Health : 1;          
-        MaxHealth = SO_building.Health;
-        GraphAgent.SetVariableValue<SO_Building>("SO Building", SO_building);
-        GraphAgent.SetVariableValue<BaseBuilding>("Base Building", this);
+        MaxHealth = SO_building.Health;        
     }
 
     protected override void OnDestroy()
@@ -40,6 +38,8 @@ public class BaseBuilding : CommonActions, IHealable
 
     public void BuildBuilding(SO_Building buildingToConstruct, Vector3 targetPosition)
     {
+        GraphAgent.SetVariableValue<SO_Building>("SO Building", SO_building);
+        GraphAgent.SetVariableValue<BaseBuilding>("Base Building", this);
         // Spend Resources
         ResourceOP resourceOP = new ResourceOP(SO_building.Cost.SO_Food, -SO_building.Cost.Food, 0);
         resourceEvent.Raise(resourceOP);

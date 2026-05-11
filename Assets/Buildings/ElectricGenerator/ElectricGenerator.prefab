@@ -73,7 +73,6 @@ GameObject:
   - component: {fileID: 8127637902883543112}
   - component: {fileID: 6490454938235995344}
   - component: {fileID: 5260983372635818096}
-  - component: {fileID: 8474941488250876842}
   m_Layer: 7
   m_Name: ElectricGenerator
   m_TagString: Untagged
@@ -188,50 +187,12 @@ MonoBehaviour:
   <PlaceMaterial>k__BackingField: {fileID: 2100000, guid: d83ecade081c9e84b8d9c103e26560ae, type: 2}
   resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
   <SO_building>k__BackingField: {fileID: 11400000, guid: 69899bfd131079f47966a3856ea12005, type: 2}
-  <GraphAgent>k__BackingField: {fileID: 8474941488250876842}
+  <GraphAgent>k__BackingField: {fileID: 0}
   <IsConstructed>k__BackingField: 0
   refreshEvent: {fileID: 11400000, guid: 2d6eed5983d3d1c42836ee74b2c39f02, type: 2}
   StartTime: 0
   <resource>k__BackingField: {fileID: 11400000, guid: 25f1e1ae7f5421045b6978bf8e6189c8, type: 2}
   applyForEveryResource: 0
---- !u!114 &8474941488250876842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4269700698457629418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
-  m_Graph: {fileID: -6203296999972314145, guid: d720728815fe4bd45a314b1e788e0775, type: 2}
-  m_BlackboardVariableOverridesList:
-  - rid: 7721842931619594785
-  - rid: 7721842931619594816
-  m_OriginalGraph: {fileID: 0}
-  m_IsInitialised: 0
-  m_IsStarted: 0
-  references:
-    version: 2
-    RefIds:
-    - rid: 7721842931619594785
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 1
-          m_Value1: 0
-        Name: Self
-        m_Value: {fileID: 4269700698457629418}
-    - rid: 7721842931619594816
-      type: {class: 'BlackboardVariable`1[[BuildingActions, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 10638356103869450573
-          m_Value1: 5209077369174025454
-        Name: BuildingActions
-        m_Value: 2
 --- !u!1001 &1088163888011499420
 PrefabInstance:
   m_ObjectHideFlags: 0

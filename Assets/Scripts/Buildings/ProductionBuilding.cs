@@ -10,13 +10,13 @@ public class ProductionBuilding : BaseBuilding
     protected override void Start()
     {        
         base.Start();
-        StartTime = Time.time;
+        
     }
 
     protected override void Update()
     {
         // Check if the generation of the resource is completed
-        if(!resource.ProducesOnlyOneTime && resource.ObtainingTime + StartTime <= Time.time)
+        if(IsConstructed && !resource.ProducesOnlyOneTime && resource.ObtainingTime + StartTime <= Time.time)
         {
             // Generation complete, reset start value and raise resource event
             StartTime = Time.time;
@@ -55,6 +55,10 @@ public class ProductionBuilding : BaseBuilding
     public override void BuildConstructed()
     {
         base.BuildConstructed();
-        ProduceResource();
+        StartTime = Time.time;
+        if (resource.ProducesOnlyOneTime)
+        {
+            ProduceResource();
+        }        
     }
 }
