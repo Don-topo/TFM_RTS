@@ -2551,6 +2551,8 @@ MonoBehaviour:
   actionExecuted: {fileID: 11400000, guid: f98a5a8f68cee2b45a2fee830d105d81, type: 2}
   actionClicked: {fileID: 11400000, guid: 561980767b1b6a34fbfa9badc3b931e4, type: 2}
   minimapClickEvent: {fileID: 11400000, guid: e4f34659c37be144b8673132127b1b1f, type: 2}
+  <OkPlaceMaterial>k__BackingField: {fileID: 2100000, guid: c9a82397c89109f48b0720745728b270, type: 2}
+  <KoPlaceMaterial>k__BackingField: {fileID: 2100000, guid: 8ef1b8ea055164640a6723f241caed57, type: 2}
   edgeSize: 10
   playerUnits:
   - {fileID: 1473671262}
@@ -9773,6 +9775,10 @@ PrefabInstance:
       propertyPath: '<Actions>k__BackingField.Array.data[2]'
       value: 
       objectReference: {fileID: 11400000, guid: 2d548b148b58f6e4993cff41c095ca8b, type: 2}
+    - target: {fileID: 8127637902883543112, guid: ef47ef361161b24499ca87961e989bee, type: 3}
+      propertyPath: m_Carve
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -114,12 +114,18 @@ public class BaseBuilding : CommonActions, IHealable
 
     public void RestoreMaterials()
     {
-        if(initialMaterials  != null && baseRenderers != null && initialMaterials.Length == baseRenderers.Length)
+        if(gameObject != null)
         {
-            for(int i = 0; i < baseRenderers.Length; i++)
+            if (initialMaterials != null && baseRenderers != null && initialMaterials.Length == baseRenderers.Length)
             {
-                baseRenderers[i].material = initialMaterials[i];
+                for (int i = 0; i < baseRenderers.Length; i++)
+                {
+                    if (baseRenderers[i].material != null)
+                    {
+                        baseRenderers[i].material = initialMaterials[i];
+                    }
+                }
             }
-        }
+        }        
     }
 }

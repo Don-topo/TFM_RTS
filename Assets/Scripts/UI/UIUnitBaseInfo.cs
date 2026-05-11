@@ -24,7 +24,11 @@ public class UIUnitBaseInfo : MonoBehaviour
 
     public void Disable()
     {
-       gameObject.SetActive(false);
+        // Fix to not found error when game stops
+        if(gameObject != null)
+        {
+            gameObject.SetActive(false);
+        }       
     }
 
     public void Enable(CommonActions newAction)

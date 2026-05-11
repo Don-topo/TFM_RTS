@@ -19,5 +19,7 @@ MonoBehaviour:
   <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 1
   <ExecuteAudio>k__BackingField: []
+  <Restrictions>k__BackingField:
+  - {fileID: 11400000, guid: dc438a7f4d52faa4b9fbbb227c9e42b4, type: 2}
   <BuildingToBuild>k__BackingField: {fileID: 11400000, guid: 69899bfd131079f47966a3856ea12005, type: 2}
   <PlaceBuilding>k__BackingField: {fileID: 1816513942773748321, guid: 521f9d79daa4594478921cd775762967, type: 3}
