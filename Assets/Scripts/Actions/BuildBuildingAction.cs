@@ -19,7 +19,7 @@ public class BuildBuildingAction : BaseAction
 
         // Check if the player has enought resources
         // Check if the build placement requirements are fullfiled
-        return !CheckIfThereIsAvailableResources(actionInfo);
+        return CheckIfThereIsAvailableResources(actionInfo);
     }
 
     public override void Execute(ActionInfo actionInfo)
@@ -27,7 +27,7 @@ public class BuildBuildingAction : BaseAction
         BaseBuilding baseBuilding = actionInfo.Action as BaseBuilding;
         if (CheckIfThereIsAvailableResources(actionInfo))
         {
-            baseBuilding.BuildBuilding();
+            baseBuilding.BuildBuilding(actionInfo.Hit.point);
         }        
     }
 

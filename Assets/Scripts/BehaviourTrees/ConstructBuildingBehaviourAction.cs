@@ -15,19 +15,27 @@ public partial class ConstructBuildingBehaviourAction : Action
 
     private float startBuildTime;
     private BaseBuilding completedBuilding;
-    private Renderer buildingRenderer;
-    private Vector3 startPosition;
-    private Vector3 endPosition;
+    private Renderer[] buildingRenderers;
+    private Vector3[] startPosition;
+    private Vector3[] endPosition;
     private float targetHealth;
 
     protected override Status OnStart()
     {
         GameObject building = GameObject.Instantiate(SO_Building.Value.UnitPrefab, TargetPosition.Value, Quaternion.identity);
+        completedBuilding = building.GetComponent<BaseBuilding>();
         startBuildTime = Time.time;
-        startPosition = TargetPosition.Value - Vector3.up * buildingRenderer.bounds.size.y;
-        endPosition = TargetPosition.Value;
-        //buildingRenderer = completedBuilding.MainRenderer;
-        buildingRenderer.transform.position = startPosition;
+        completedBuilding.StartTime = startBuildTime;
+        buildingRenderers = completedBuilding.GetComponentsInChildren<Renderer>();
+        startPosition = new Vector3[buildingRenderers.Length];
+        endPosition = new Vector3[buildingRenderers.Length];
+        for(int i = 0; i < buildingRenderers.Length; i++)
+        {
+            startPosition[i] = TargetPosition.Value - (Vector3.up * buildingRenderers[i].bounds.size.y);
+            endPosition[i] = TargetPosition.Value;
+            buildingRenderers[i].transform.position = startPosition[i];
+        }
+       
         return OnUpdate();
     }
 
@@ -39,17 +47,22 @@ public partial class ConstructBuildingBehaviourAction : Action
         if (targetHealth >= 1)
         {
             int healAmount = Mathf.FloorToInt(targetHealth);
-            //completedBuilding.Heal(healAmount);
+            completedBuilding.Heal(healAmount);
             targetHealth -= healAmount;
         }
 
-        buildingRenderer.transform.position = Vector3.Lerp(startPosition, endPosition, normalizedTime);
+        for(int i = 0; i < buildingRenderers.Length; i++)
+        {
+            buildingRenderers[i].transform.position = Vector3.Lerp(startPosition[i], endPosition[i], normalizedTime);
+        }       
 
         return normalizedTime >= 1 ? Status.Success : Status.Running;
     }
 
     protected override void OnEnd()
     {
+        completedBuilding.IsConstructed = true;
+        completedBuilding.RefreshUI();
     }
 }
 

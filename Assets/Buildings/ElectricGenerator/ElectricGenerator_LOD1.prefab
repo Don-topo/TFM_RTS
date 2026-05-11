@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3247875891436901248}
   - component: {fileID: 8811429319300593845}
   - component: {fileID: 6330105324851883753}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: ElectricGenerator_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

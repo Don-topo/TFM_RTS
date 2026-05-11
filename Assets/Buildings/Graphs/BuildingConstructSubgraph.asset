@@ -12,16 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c02bb70996b49eba31d0c206e28da24, type: 3}
   m_Name: BuildingConstructSubgraph Blackboard
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.RuntimeBlackboardAsset
-  VersionTimestamp: 639140391869705347
+  VersionTimestamp: 639141066530231818
   AssetID:
-    m_Value0: 0
-    m_Value1: 0
+    m_Value0: 3794609145887846946
+    m_Value1: 600269883828273594
   m_Blackboard:
     m_Variables:
     - rid: 7721842910711251051
     - rid: 7721842910711251062
     - rid: 7721842910711251070
     - rid: 7721842910711251080
+    - rid: 7721842934962716770
   m_SharedBlackboardVariableGuids: []
   references:
     version: 2
@@ -58,6 +59,14 @@ MonoBehaviour:
           m_Value1: 4098247894815717978
         Name: BuildingToConstruct
         m_Value: {fileID: 0}
+    - rid: 7721842934962716770
+      type: {class: 'BlackboardVariable`1[[BuildingActions, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1785682255526521418
+          m_Value1: 12547328537426175621
+        Name: BuildingActions
+        m_Value: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,7 +84,9 @@ MonoBehaviour:
   m_Nodes:
   - rid: 7721842910711251052
   - rid: 7721842910711251093
-  m_VersionTimestamp: 639140391907104084
+  - rid: 7721842931619594242
+  - rid: 7721842934962716812
+  m_VersionTimestamp: 639141066591901313
   m_SerializedVersion: 2
   m_DebugInfo: {fileID: 1955416046104769962}
   m_RuntimeGraph: {fileID: 5363456180686547002}
@@ -120,6 +131,41 @@ MonoBehaviour:
         m_SerializableType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
       Tooltip: 
+    - Name: BuildingUnderConstruction
+      Type:
+        m_SerializableType: BaseBuilding, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+      Tooltip: 
+    NamedChildren: []
+    IsPlaceholder: 0
+  - Name: Sequence
+    Story: 
+    RuntimeTypeString: Unity.Behavior.SequenceComposite, Unity.Behavior, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    RuntimeTypeID:
+      m_Value0: 10181448252506100447
+      m_Value1: 8737116843063128493
+    Variables: []
+    NamedChildren: []
+    IsPlaceholder: 0
+  - Name: Set Variable Value
+    Story: 'Set [Variable] value to [Value]'
+    RuntimeTypeString: Unity.Behavior.SetVariableValueAction, Unity.Behavior, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    RuntimeTypeID:
+      m_Value0: 5494721648866555964
+      m_Value1: 18024545711220129068
+    Variables:
+    - Name: Variable
+      Type:
+        m_SerializableType: Unity.Behavior.BlackboardVariable, Unity.Behavior, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      Tooltip: 
+    - Name: Value
+      Type:
+        m_SerializableType: Unity.Behavior.BlackboardVariable, Unity.Behavior, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      Tooltip: 
     NamedChildren: []
     IsPlaceholder: 0
   m_Blackboards: []
@@ -133,10 +179,12 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 7721842910711251052
       type: {class: StartNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
-        Position: {x: 0, y: 0}
+        Position: {x: -6.000002, y: 0}
         ID:
           m_Value0: 214497484030163172
           m_Value1: 1283937032400738445
@@ -161,11 +209,11 @@ MonoBehaviour:
         m_NodeModel:
           rid: 7721842910711251052
         m_Connections:
-        - rid: 7721842910711251094
+        - rid: 7721842931619594243
     - rid: 7721842910711251093
       type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
-        Position: {x: -0.15736294, y: 124.015396}
+        Position: {x: -5, y: 193}
         ID:
           m_Value0: 16827577669269926908
           m_Value1: 11801263840812532027
@@ -183,6 +231,7 @@ MonoBehaviour:
         - rid: 7721842910711251096
         - rid: 7721842910711251097
         - rid: 7721842910711251098
+        - rid: 7721842931619594240
     - rid: 7721842910711251094
       type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
       data:
@@ -192,7 +241,7 @@ MonoBehaviour:
         m_NodeModel:
           rid: 7721842910711251093
         m_Connections:
-        - rid: 7721842910711251053
+        - rid: 7721842931619594244
     - rid: 7721842910711251095
       type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
       data:
@@ -201,7 +250,8 @@ MonoBehaviour:
         m_IsFloating: 0
         m_NodeModel:
           rid: 7721842910711251093
-        m_Connections: []
+        m_Connections:
+        - rid: 7721842934962716813
     - rid: 7721842910711251096
       type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
@@ -289,6 +339,160 @@ MonoBehaviour:
         IsExposed: 1
         m_IsShared: 0
         m_Value: {fileID: 0}
+    - rid: 7721842931619594240
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: BuildingUnderConstruction
+        Type:
+          m_SerializableType: BaseBuilding, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        LocalValue:
+          rid: 7721842931619594241
+        LinkedVariable:
+          rid: 7721842934962716975
+    - rid: 7721842931619594241
+      type: {class: 'BlackboardVariable`1[[BaseBuilding, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: {fileID: 0}
+    - rid: 7721842931619594242
+      type: {class: CompositeNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: -6, y: 105}
+        ID:
+          m_Value0: 313226053550268119
+          m_Value1: 12206251767378008614
+        Parents: []
+        PortModels:
+        - rid: 7721842931619594243
+        - rid: 7721842931619594244
+        NodeType:
+          m_SerializableType: Unity.Behavior.SequenceComposite, Unity.Behavior, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 10181448252506100447
+          m_Value1: 8737116843063128493
+        m_FieldValues: []
+    - rid: 7721842931619594243
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 7721842931619594242
+        m_Connections:
+        - rid: 7721842910711251053
+    - rid: 7721842931619594244
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 7721842931619594242
+        m_Connections:
+        - rid: 7721842910711251094
+    - rid: 7721842934962716812
+      type: {class: SetValueNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: -6, y: 281}
+        ID:
+          m_Value0: 10797153711672911516
+          m_Value1: 5238231707208583313
+        Parents: []
+        PortModels:
+        - rid: 7721842934962716813
+        - rid: 7721842934962716814
+        NodeType:
+          m_SerializableType: Unity.Behavior.SetVariableValueAction, Unity.Behavior,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 5494721648866555964
+          m_Value1: 18024545711220129068
+        m_FieldValues:
+        - rid: 7721842934962716851
+        - rid: 7721842934962716852
+    - rid: 7721842934962716813
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 7721842934962716812
+        m_Connections:
+        - rid: 7721842910711251095
+    - rid: 7721842934962716814
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 7721842934962716812
+        m_Connections: []
+    - rid: 7721842934962716850
+      type: {class: 'TypedVariableModel`1[[BuildingActions, Assembly-CSharp]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 1785682255526521418
+          m_Value1: 12547328537426175621
+        Name: BuildingActions
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 0
+    - rid: 7721842934962716851
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Variable
+        Type:
+          m_SerializableType: BuildingActions, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        LocalValue:
+          rid: 7721842934962716853
+        LinkedVariable:
+          rid: 7721842934962716850
+    - rid: 7721842934962716852
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Value
+        Type:
+          m_SerializableType: BuildingActions, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        LocalValue:
+          rid: 7721842934962716854
+        LinkedVariable:
+          rid: -2
+    - rid: 7721842934962716853
+      type: {class: 'BlackboardVariable`1[[BuildingActions, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 0
+    - rid: 7721842934962716854
+      type: {class: 'BlackboardVariable`1[[BuildingActions, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 2
+    - rid: 7721842934962716975
+      type: {class: 'TypedVariableModel`1[[BaseBuilding, Assembly-CSharp]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 15303405521632123902
+          m_Value1: 4098247894815717978
+        Name: BuildingToConstruct
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: {fileID: 0}
 --- !u!114 &1955416046104769962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,8 +538,8 @@ MonoBehaviour:
           rid: 7721842910711251055
         BlackboardGroupReferences: []
         Root:
-          rid: 7721842910711251111
-        m_VersionTimestamp: 639140391907104084
+          rid: 7721842934962716997
+        m_VersionTimestamp: 639141066591901313
     - rid: 7721842910711251055
       type: {class: BlackboardReference, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -346,11 +550,12 @@ MonoBehaviour:
       type: {class: Blackboard, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         m_Variables:
-        - rid: 7721842910711251113
-        - rid: 7721842910711251114
-        - rid: 7721842910711251115
-        - rid: 7721842910711251116
-    - rid: 7721842910711251111
+        - rid: 7721842934962716999
+        - rid: 7721842934962717000
+        - rid: 7721842934962717001
+        - rid: 7721842934962717002
+        - rid: 7721842934962717003
+    - rid: 7721842934962716997
       type: {class: Start, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -361,10 +566,77 @@ MonoBehaviour:
         m_Parent:
           rid: -2
         m_Child:
-          rid: 7721842910711251112
+          rid: 7721842934962716998
         Repeat: 0
         AllowMultipleRepeatsPerTick: 0
-    - rid: 7721842910711251112
+    - rid: 7721842934962716998
+      type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 313226053550268119
+          m_Value1: 12206251767378008614
+        Graph:
+          rid: 7721842910711251054
+        m_Parent:
+          rid: 7721842934962716997
+        m_Children:
+        - rid: 7721842934962717004
+        m_RegisteredObservers: []
+    - rid: 7721842934962716999
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        m_Value: {fileID: 0}
+    - rid: 7721842934962717000
+      type: {class: 'BlackboardVariable`1[[UnityEngine.Vector3, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 527476417900432736
+          m_Value1: 3087265083879072261
+        Name: TargetPosition
+        m_Value: {x: 0, y: 0, z: 0}
+    - rid: 7721842934962717001
+      type: {class: 'BlackboardVariable`1[[SO_Building, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 12684049489808775411
+          m_Value1: 16852865737708174287
+        Name: SO Building
+        m_Value: {fileID: 0}
+    - rid: 7721842934962717002
+      type: {class: 'BlackboardVariable`1[[BaseBuilding, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 15303405521632123902
+          m_Value1: 4098247894815717978
+        Name: BuildingToConstruct
+        m_Value: {fileID: 0}
+    - rid: 7721842934962717003
+      type: {class: 'BlackboardVariable`1[[BuildingActions, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1785682255526521418
+          m_Value1: 12547328537426175621
+        Name: BuildingActions
+        m_Value: 0
+    - rid: 7721842934962717004
+      type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 16827577669269926908
+          m_Value1: 11801263840812532027
+        Graph:
+          rid: 7721842910711251054
+        m_Parent:
+          rid: 7721842934962716998
+        m_Children:
+        - rid: 7721842934962717005
+        - rid: 7721842934962717006
+        m_RegisteredObservers: []
+    - rid: 7721842934962717005
       type: {class: ConstructBuildingBehaviourAction, ns: , asm: Assembly-CSharp}
       data:
         ID:
@@ -373,45 +645,37 @@ MonoBehaviour:
         Graph:
           rid: 7721842910711251054
         m_Parent:
-          rid: 7721842910711251111
+          rid: 7721842934962717004
         Self:
-          rid: 7721842910711251113
+          rid: 7721842934962716999
         SO_Building:
-          rid: 7721842910711251115
+          rid: 7721842934962717001
         TargetPosition:
-          rid: 7721842910711251114
-    - rid: 7721842910711251113
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+          rid: 7721842934962717000
+        BuildingUnderConstruction:
+          rid: 7721842934962717002
+    - rid: 7721842934962717006
+      type: {class: SetVariableValueAction, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 10797153711672911516
+          m_Value1: 5238231707208583313
+        Graph:
+          rid: 7721842910711251054
+        m_Parent:
+          rid: 7721842934962717004
+        Variable:
+          rid: 7721842934962717003
+        Value:
+          rid: 7721842934962717007
+    - rid: 7721842934962717007
+      type: {class: 'BlackboardVariable`1[[BuildingActions, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 1
+          m_Value0: 0
           m_Value1: 0
-        Name: Self
-        m_Value: {fileID: 0}
-    - rid: 7721842910711251114
-      type: {class: 'BlackboardVariable`1[[UnityEngine.Vector3, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 527476417900432736
-          m_Value1: 3087265083879072261
-        Name: TargetPosition
-        m_Value: {x: 0, y: 0, z: 0}
-    - rid: 7721842910711251115
-      type: {class: 'BlackboardVariable`1[[SO_Building, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 12684049489808775411
-          m_Value1: 16852865737708174287
-        Name: SO Building
-        m_Value: {fileID: 0}
-    - rid: 7721842910711251116
-      type: {class: 'BlackboardVariable`1[[BaseBuilding, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 15303405521632123902
-          m_Value1: 4098247894815717978
-        Name: BuildingToConstruct
-        m_Value: {fileID: 0}
+        Name: 
+        m_Value: 2
 --- !u!114 &5447504594335917805
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -425,14 +689,15 @@ MonoBehaviour:
   m_Name: BuildingConstructSubgraph Blackboard
   m_EditorClassIdentifier: Unity.Behavior.Authoring::Unity.Behavior.BehaviorBlackboardAuthoringAsset
   AssetID:
-    m_Value0: 0
-    m_Value1: 0
+    m_Value0: 3794609145887846946
+    m_Value1: 600269883828273594
   m_Variables:
   - rid: 7721842910711251059
   - rid: 7721842910711251061
   - rid: 7721842910711251069
   - rid: 7721842910711251079
-  m_VersionTimestamp: 639140391869705347
+  - rid: 7721842934962716744
+  m_VersionTimestamp: 639141066530231818
   m_CommandBuffer:
     m_Commands: []
   m_RuntimeBlackboardAsset: {fileID: -8256592046981845476}
@@ -479,3 +744,13 @@ MonoBehaviour:
         IsExposed: 1
         m_IsShared: 0
         m_Value: {fileID: 0}
+    - rid: 7721842934962716744
+      type: {class: 'TypedVariableModel`1[[BuildingActions, Assembly-CSharp]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 1785682255526521418
+          m_Value1: 12547328537426175621
+        Name: BuildingActions
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 0

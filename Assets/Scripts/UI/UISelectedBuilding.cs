@@ -5,19 +5,29 @@ public class UISelectedBuilding : MonoBehaviour
 {
     [SerializeField] private UIProductionBuildingSelected uIProductionBuilding;
     [SerializeField] private UIRecruitUnitBuilding uIRecruitUnitBuilding;
+    [SerializeField] private UIBuildSelectedBuilding uIBuildSelectedBuilding;
     [SerializeField] private TextMeshProUGUI buildingNameText;
 
     public void Enable(BaseBuilding baseBuilding)
     {
-        if(baseBuilding is ProductionBuilding)
+        Disable();
+        if (baseBuilding.IsConstructed)
         {
-            uIProductionBuilding.Enable((ProductionBuilding)baseBuilding);
+            if (baseBuilding is ProductionBuilding)
+            {                
+                uIProductionBuilding.Enable((ProductionBuilding)baseBuilding);
+            }
+            else if (baseBuilding is RecruitBuilding)
+            {
+                // Recruiting building
+                uIRecruitUnitBuilding.Enable((RecruitBuilding)baseBuilding);
+            }
         }
-        else if(baseBuilding is RecruitBuilding)
+        else
         {
-            // Recruiting building
-            uIRecruitUnitBuilding.Enable((RecruitBuilding)baseBuilding);
+            uIBuildSelectedBuilding.Enable(baseBuilding);
         }
+        
 
         buildingNameText.enabled = true;
         buildingNameText.SetText(baseBuilding.SO_building.Name);
@@ -28,5 +38,6 @@ public class UISelectedBuilding : MonoBehaviour
         buildingNameText.enabled = false;
         uIProductionBuilding.Disable();
         uIRecruitUnitBuilding.Disable();
+        uIBuildSelectedBuilding.Disable();
     }
 }

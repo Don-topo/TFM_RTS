@@ -22,8 +22,8 @@ public class UIBuildSelectedBuilding : MonoBehaviour
 
     private IEnumerator UpdateProgressBar(BaseBuilding baseBuilding)
     {        
-        float startTime = 12;//baseBuilding.Progress.StartTime;
-        float endTime = 16;// startTime + baseBuilding.BuildingSO.BuildTime;
+        float startTime = baseBuilding.StartTime;
+        float endTime =  startTime + baseBuilding.SO_building.GenerationTime;
         progressBar.UpdateProgress(Mathf.Clamp01((Time.time - startTime) / (endTime - startTime)));
         yield return null;
     }
