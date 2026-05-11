@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask interactableLayers;
     [SerializeField] private RectTransform selectionBox;
     [SerializeField] private Transform cameraMovementTransform;
-
     // Events
     [Header("Events")]
     public UnitSelectedEvent selectUnitEvent;
@@ -27,6 +26,9 @@ public class PlayerController : MonoBehaviour
     public ActionExecuted actionExecuted;
     public ActionClicked actionClicked;
     public MinimapClickEvent minimapClickEvent;
+    [Header("Construction Materials")]
+    [field: SerializeField] public Material OkPlaceMaterial { get; private set; }
+    [field: SerializeField] public Material KoPlaceMaterial { get; private set; }
 
     public float edgeSize = 50f;
 
@@ -45,6 +47,7 @@ public class PlayerController : MonoBehaviour
 
     // Building
     private GameObject placeBuildingInstance;
+    private Renderer renderers;
 
     private void Awake()
     {
@@ -402,6 +405,7 @@ public class PlayerController : MonoBehaviour
         if (Physics.Raycast(cameraRay, out RaycastHit hit, float.MaxValue, floorLayers))
         {
             placeBuildingInstance.transform.position = hit.point;
+            placeBuildingInstance.GetComponentsInChildren<Renderer>().All(rend => rend.material = OkPlaceMaterial);
             //bool allRestrictionPass = activeCommand.AllRestrictionsPass(hit.point);
             //ghostRenderer.material.SetColor(TINT, allRestrictionPass ? availableToPlaceTintColor : errorTintColor);
             //ghostRenderer.material.SetColor(FRESNEL, allRestrictionPass ? availableToPlaceFresnelColor : errorFresnelColor);

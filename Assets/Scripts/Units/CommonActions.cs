@@ -19,10 +19,11 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
     // Base Unit Events
     public UnitSelectedEvent unitSelectEvent;
     public UnitDeselectEvent unitDeselectEvent;
+    private BaseAction[] startingActions;
 
     protected virtual void Start()
     {
-
+        startingActions = SO_BaseUnit.UnitPrefab.GetComponent<CommonActions>().Actions;
     }
 
     protected virtual void Awake()
@@ -69,7 +70,7 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
     {
         if (actions == null || actions.Length == 0)
         {
-            Actions = actions;
+            Actions = startingActions;
         }
         else
         {

@@ -62,6 +62,7 @@ public partial class ConstructBuildingBehaviourAction : Action
     protected override void OnEnd()
     {
         completedBuilding.IsConstructed = true;
+        completedBuilding.RestoreMaterials();
         completedBuilding.RefreshUI();
     }
 }

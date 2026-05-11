@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e27fa5a4311739747a78af1f484e1b77, type: 3}
+  m_Name: ShowRecruitBuildings
+  m_EditorClassIdentifier: Assembly-CSharp::OverrideCommandsCommand
+  <Name>k__BackingField: Command Name
+  <Icon>k__BackingField: {fileID: 21300000, guid: fa152695fa2810b419deca55dbc0dc9f, type: 3}
+  <HotKey>k__BackingField: 20
+  <UIPosition>k__BackingField: 0
+  <IsSingleUnitAction>k__BackingField: 0
+  <UseClickToExecute>k__BackingField: 0
+  <ExecuteAudio>k__BackingField: []
+  <Commands>k__BackingField: []

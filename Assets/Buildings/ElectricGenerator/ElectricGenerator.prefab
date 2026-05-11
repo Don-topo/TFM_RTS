@@ -187,6 +187,8 @@ MonoBehaviour:
   unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
   <PlaceMaterial>k__BackingField: {fileID: 2100000, guid: d83ecade081c9e84b8d9c103e26560ae, type: 2}
+  <OkPlaceMaterial>k__BackingField: {fileID: 2100000, guid: c9a82397c89109f48b0720745728b270, type: 2}
+  <KoPlaceMaterial>k__BackingField: {fileID: 2100000, guid: 8ef1b8ea055164640a6723f241caed57, type: 2}
   resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
   <SO_building>k__BackingField: {fileID: 11400000, guid: 69899bfd131079f47966a3856ea12005, type: 2}
   <GraphAgent>k__BackingField: {fileID: 8474941488250876842}

@@ -9761,6 +9761,18 @@ PrefabInstance:
       propertyPath: <IsConstructed>k__BackingField
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5260983372635818096, guid: ef47ef361161b24499ca87961e989bee, type: 3}
+      propertyPath: <Actions>k__BackingField.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260983372635818096, guid: ef47ef361161b24499ca87961e989bee, type: 3}
+      propertyPath: '<Actions>k__BackingField.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: dfca6df8a2147a74abbfc29b6c91166d, type: 2}
+    - target: {fileID: 5260983372635818096, guid: ef47ef361161b24499ca87961e989bee, type: 3}
+      propertyPath: '<Actions>k__BackingField.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 2d548b148b58f6e4993cff41c095ca8b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -5,18 +5,28 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Building", menuName = "Buildings/Building")]
 public class BaseBuilding : CommonActions, IHealable
 {
+    [Header("Placement Materials")]
     [field: SerializeField] public Material PlaceMaterial { get; private set; }
+    [Header("Events")]
     [SerializeField] protected ResourceEvent resourceEvent;
+    [Header("Info")]
     [field: SerializeField] public SO_Building SO_building { get; private set; }
     [field: SerializeField] public BehaviorGraphAgent GraphAgent { get; private set; }
     [field: SerializeField] public bool IsConstructed { get; set; } = false;
     [SerializeField] private RefreshUIEvent refreshEvent;
 
     public float StartTime;
+
+    private Renderer[] baseRenderers;
+    private Material[] initialMaterials;
     
     protected override void Start()
     {
         base.Start();
+        if (!IsConstructed)
+        {
+            SaveMaterials();
+        }
         CurrentHealth = IsConstructed ? SO_BaseUnit.Health : 1;          
         MaxHealth = SO_building.Health;
         GraphAgent.SetVariableValue<SO_Building>("SO Building", SO_building);
@@ -89,5 +99,27 @@ public class BaseBuilding : CommonActions, IHealable
     public void RefreshUI()
     {
         refreshEvent.Raise(true);
+    }
+
+    private void SaveMaterials()
+    {
+        baseRenderers = GetComponentsInChildren<Renderer>();
+        initialMaterials = new Material[baseRenderers.Length];
+        for (int i = 0; i < baseRenderers.Length; i++)
+        {
+            initialMaterials[i] = baseRenderers[i].material;
+            baseRenderers[i].material = PlaceMaterial;
+        }
+    }
+
+    public void RestoreMaterials()
+    {
+        if(initialMaterials  != null && baseRenderers != null && initialMaterials.Length == baseRenderers.Length)
+        {
+            for(int i = 0; i < baseRenderers.Length; i++)
+            {
+                baseRenderers[i].material = initialMaterials[i];
+            }
+        }
     }
 }
