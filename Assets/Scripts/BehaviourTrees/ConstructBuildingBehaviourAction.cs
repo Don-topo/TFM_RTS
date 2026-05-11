@@ -11,7 +11,7 @@ public partial class ConstructBuildingBehaviourAction : Action
     [SerializeReference] public BlackboardVariable<GameObject> Self;
     [SerializeReference] public BlackboardVariable<SO_Building> SO_Building;
     [SerializeReference] public BlackboardVariable<Vector3> TargetPosition;
-    [SerializeReference] public BlackboardVariable<BaseBuilding> BuildingUnderConstruction;
+    [SerializeReference] public BlackboardVariable<SO_Building> BuildingUnderConstruction;
 
     private float startBuildTime;
     private BaseBuilding completedBuilding;
@@ -21,8 +21,8 @@ public partial class ConstructBuildingBehaviourAction : Action
     private float targetHealth;
 
     protected override Status OnStart()
-    {
-        GameObject building = GameObject.Instantiate(SO_Building.Value.UnitPrefab, TargetPosition.Value, Quaternion.identity);
+    {        
+        GameObject building = GameObject.Instantiate(BuildingUnderConstruction.Value.UnitPrefab, TargetPosition.Value, Quaternion.identity);
         completedBuilding = building.GetComponent<BaseBuilding>();
         startBuildTime = Time.time;
         completedBuilding.StartTime = startBuildTime;

@@ -3,9 +3,8 @@ using UnityEngine;
 
 public class BuilderBuilding : BaseBuilding, IConstructBuilding
 {
-    private BehaviorGraphAgent behaviorGraphAgent;
-
     public bool IsUnderConstruction => throw new System.NotImplementedException();
+    [SerializeField] private BaseAction CancelBuildingCommand;
 
     public void CancelConstruct()
     {
@@ -17,5 +16,4 @@ public class BuilderBuilding : BaseBuilding, IConstructBuilding
         GameObject instance = Instantiate(building.UnitPrefab, targetPosition, Quaternion.identity);
         throw new System.NotImplementedException();
     }
-
 }

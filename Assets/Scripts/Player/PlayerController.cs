@@ -405,10 +405,8 @@ public class PlayerController : MonoBehaviour
         if (Physics.Raycast(cameraRay, out RaycastHit hit, float.MaxValue, floorLayers))
         {
             placeBuildingInstance.transform.position = hit.point;
-            placeBuildingInstance.GetComponentsInChildren<Renderer>().All(rend => rend.material = selectedAction.AllRestrictionsPass(hit.point) ? OkPlaceMaterial : KoPlaceMaterial);
-            //bool allRestrictionPass = activeCommand.AllRestrictionsPass(hit.point);
-            //ghostRenderer.material.SetColor(TINT, allRestrictionPass ? availableToPlaceTintColor : errorTintColor);
-            //ghostRenderer.material.SetColor(FRESNEL, allRestrictionPass ? availableToPlaceFresnelColor : errorFresnelColor);
+            placeBuildingInstance.GetComponentsInChildren<Renderer>().All(rend => 
+                rend.material = selectedAction.AllRestrictionsPass(hit.point) ? OkPlaceMaterial : KoPlaceMaterial);            
         }
     }
 }

@@ -72,6 +72,7 @@ GameObject:
   - component: {fileID: 8003731575348380364}
   - component: {fileID: 8202902717694862459}
   - component: {fileID: 8041204223084693054}
+  - component: {fileID: 600207547328411486}
   m_Layer: 7
   m_Name: CommandPost
   m_TagString: Untagged
@@ -106,11 +107,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 7.5, y: 5, z: 7.5}
   m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 5, z: 0}
   m_TimeToStationary: 0.5
 --- !u!65 &8202902717694862459
 BoxCollider:
@@ -131,8 +132,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 15, y: 10, z: 15}
+  m_Center: {x: 0, y: 5, z: 0}
 --- !u!114 &8041204223084693054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,9 +155,51 @@ MonoBehaviour:
   updateHealthEvent: {fileID: 11400000, guid: 13cf27522de45664fb20e006b4905224, type: 2}
   unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
-  <PlaceMaterial>k__BackingField: {fileID: 0}
+  <PlaceMaterial>k__BackingField: {fileID: 2100000, guid: d83ecade081c9e84b8d9c103e26560ae, type: 2}
   resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
   <SO_building>k__BackingField: {fileID: 11400000, guid: f30f812a07655994780d7d99d7a012d7, type: 2}
+  <GraphAgent>k__BackingField: {fileID: 600207547328411486}
+  <IsConstructed>k__BackingField: 1
+  refreshEvent: {fileID: 11400000, guid: 2d6eed5983d3d1c42836ee74b2c39f02, type: 2}
+  StartTime: 0
+--- !u!114 &600207547328411486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334650966590091496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
+  m_Graph: {fileID: -6203296999972314145, guid: d720728815fe4bd45a314b1e788e0775, type: 2}
+  m_BlackboardVariableOverridesList:
+  - rid: 7721842934962717141
+  - rid: 7721842934962717142
+  m_OriginalGraph: {fileID: 0}
+  m_IsInitialised: 0
+  m_IsStarted: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 7721842934962717141
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        m_Value: {fileID: 2334650966590091496}
+    - rid: 7721842934962717142
+      type: {class: 'BlackboardVariable`1[[BuildingActions, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 10638356103869450573
+          m_Value1: 5209077369174025454
+        Name: BuildingActions
+        m_Value: 2
 --- !u!1001 &7284433649857382587
 PrefabInstance:
   m_ObjectHideFlags: 0

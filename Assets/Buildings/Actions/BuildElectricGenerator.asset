@@ -15,7 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: Build Electric Generator
   <Icon>k__BackingField: {fileID: 21300000, guid: fed295ec3f08ebf49bccf644d0a413f8, type: 3}
   <HotKey>k__BackingField: 19
-  <UIPosition>k__BackingField: 0
+  <UIPosition>k__BackingField: 2
   <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 1
   <ExecuteAudio>k__BackingField: []

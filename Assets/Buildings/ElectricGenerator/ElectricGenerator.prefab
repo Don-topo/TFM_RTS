@@ -178,8 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ProductionBuilding
   <IsSelected>k__BackingField: 0
   selectionDecal: {fileID: 1188394337163740258}
-  <Actions>k__BackingField:
-  - {fileID: 11400000, guid: c7939afd66dfcc8498403fa7a1e3a2cc, type: 2}
+  <Actions>k__BackingField: []
   <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: 69899bfd131079f47966a3856ea12005, type: 2}
   <CurrentHealth>k__BackingField: 0
   <MaxHealth>k__BackingField: 0

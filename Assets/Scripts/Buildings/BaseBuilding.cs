@@ -38,7 +38,7 @@ public class BaseBuilding : CommonActions, IHealable
         base.OnDestroy();
     }
 
-    public void BuildBuilding(Vector3 targetPosition)
+    public void BuildBuilding(SO_Building buildingToConstruct, Vector3 targetPosition)
     {
         // Spend Resources
         ResourceOP resourceOP = new ResourceOP(SO_building.Cost.SO_Food, -SO_building.Cost.Food, 0);
@@ -55,6 +55,7 @@ public class BaseBuilding : CommonActions, IHealable
         resourceEvent.Raise(resourceOP);
         GraphAgent.SetVariableValue("BuildingActions", BuildingActions.Build);
         GraphAgent.SetVariableValue<Vector3>("TargetPosition", targetPosition);
+        GraphAgent.SetVariableValue<SO_Building>("BuildToConstruct", buildingToConstruct);
     }
 
     public virtual void DestroyBuilding()

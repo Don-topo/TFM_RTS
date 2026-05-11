@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c02bb70996b49eba31d0c206e28da24, type: 3}
   m_Name: BuildingConstructSubgraph Blackboard
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.RuntimeBlackboardAsset
-  VersionTimestamp: 639141066530231818
+  VersionTimestamp: 639141290490875600
   AssetID:
     m_Value0: 3794609145887846946
     m_Value1: 600269883828273594
@@ -21,8 +21,8 @@ MonoBehaviour:
     - rid: 7721842910711251051
     - rid: 7721842910711251062
     - rid: 7721842910711251070
-    - rid: 7721842910711251080
     - rid: 7721842934962716770
+    - rid: 7721842940897919000
   m_SharedBlackboardVariableGuids: []
   references:
     version: 2
@@ -51,14 +51,6 @@ MonoBehaviour:
           m_Value1: 16852865737708174287
         Name: SO Building
         m_Value: {fileID: 0}
-    - rid: 7721842910711251080
-      type: {class: 'BlackboardVariable`1[[BaseBuilding, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 15303405521632123902
-          m_Value1: 4098247894815717978
-        Name: BuildingToConstruct
-        m_Value: {fileID: 0}
     - rid: 7721842934962716770
       type: {class: 'BlackboardVariable`1[[BuildingActions, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -67,6 +59,14 @@ MonoBehaviour:
           m_Value1: 12547328537426175621
         Name: BuildingActions
         m_Value: 0
+    - rid: 7721842940897919000
+      type: {class: 'BlackboardVariable`1[[SO_Building, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 12438024022159144366
+          m_Value1: 8469424350739033600
+        Name: BuildingToConstruct
+        m_Value: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   - rid: 7721842910711251093
   - rid: 7721842931619594242
   - rid: 7721842934962716812
-  m_VersionTimestamp: 639141066591901313
+  m_VersionTimestamp: 639141290537798869
   m_SerializedVersion: 2
   m_DebugInfo: {fileID: 1955416046104769962}
   m_RuntimeGraph: {fileID: 5363456180686547002}
@@ -133,7 +133,7 @@ MonoBehaviour:
       Tooltip: 
     - Name: BuildingUnderConstruction
       Type:
-        m_SerializableType: BaseBuilding, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        m_SerializableType: SO_Building, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
           PublicKeyToken=null
       Tooltip: 
     NamedChildren: []
@@ -231,7 +231,7 @@ MonoBehaviour:
         - rid: 7721842910711251096
         - rid: 7721842910711251097
         - rid: 7721842910711251098
-        - rid: 7721842931619594240
+        - rid: 7721842934962717664
     - rid: 7721842910711251094
       type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
       data:
@@ -338,25 +338,6 @@ MonoBehaviour:
         Name: SO Building
         IsExposed: 1
         m_IsShared: 0
-        m_Value: {fileID: 0}
-    - rid: 7721842931619594240
-      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
-      data:
-        FieldName: BuildingUnderConstruction
-        Type:
-          m_SerializableType: BaseBuilding, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-        LocalValue:
-          rid: 7721842931619594241
-        LinkedVariable:
-          rid: 7721842934962716975
-    - rid: 7721842931619594241
-      type: {class: 'BlackboardVariable`1[[BaseBuilding, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
         m_Value: {fileID: 0}
     - rid: 7721842931619594242
       type: {class: CompositeNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
@@ -483,12 +464,31 @@ MonoBehaviour:
           m_Value1: 0
         Name: 
         m_Value: 2
-    - rid: 7721842934962716975
-      type: {class: 'TypedVariableModel`1[[BaseBuilding, Assembly-CSharp]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+    - rid: 7721842934962717664
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: BuildingUnderConstruction
+        Type:
+          m_SerializableType: SO_Building, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        LocalValue:
+          rid: 7721842934962717665
+        LinkedVariable:
+          rid: 7721842940897919041
+    - rid: 7721842934962717665
+      type: {class: 'BlackboardVariable`1[[SO_Building, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: {fileID: 0}
+    - rid: 7721842940897919041
+      type: {class: 'TypedVariableModel`1[[SO_Building, Assembly-CSharp]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
       data:
         ID:
-          m_Value0: 15303405521632123902
-          m_Value1: 4098247894815717978
+          m_Value0: 12438024022159144366
+          m_Value1: 8469424350739033600
         Name: BuildingToConstruct
         IsExposed: 1
         m_IsShared: 0
@@ -538,8 +538,8 @@ MonoBehaviour:
           rid: 7721842910711251055
         BlackboardGroupReferences: []
         Root:
-          rid: 7721842934962716997
-        m_VersionTimestamp: 639141066591901313
+          rid: 7721842940897919062
+        m_VersionTimestamp: 639141290537798869
     - rid: 7721842910711251055
       type: {class: BlackboardReference, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -550,12 +550,60 @@ MonoBehaviour:
       type: {class: Blackboard, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         m_Variables:
-        - rid: 7721842934962716999
-        - rid: 7721842934962717000
-        - rid: 7721842934962717001
-        - rid: 7721842934962717002
-        - rid: 7721842934962717003
-    - rid: 7721842934962716997
+        - rid: 7721842940897919033
+        - rid: 7721842940897919034
+        - rid: 7721842940897919035
+        - rid: 7721842940897919036
+        - rid: 7721842940897919037
+    - rid: 7721842940897918978
+      type: {class: 'BlackboardVariable`1[[BuildingActions, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 2
+    - rid: 7721842940897919033
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        m_Value: {fileID: 0}
+    - rid: 7721842940897919034
+      type: {class: 'BlackboardVariable`1[[UnityEngine.Vector3, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 527476417900432736
+          m_Value1: 3087265083879072261
+        Name: TargetPosition
+        m_Value: {x: 0, y: 0, z: 0}
+    - rid: 7721842940897919035
+      type: {class: 'BlackboardVariable`1[[SO_Building, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 12684049489808775411
+          m_Value1: 16852865737708174287
+        Name: SO Building
+        m_Value: {fileID: 0}
+    - rid: 7721842940897919036
+      type: {class: 'BlackboardVariable`1[[BuildingActions, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1785682255526521418
+          m_Value1: 12547328537426175621
+        Name: BuildingActions
+        m_Value: 0
+    - rid: 7721842940897919037
+      type: {class: 'BlackboardVariable`1[[SO_Building, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 12438024022159144366
+          m_Value1: 8469424350739033600
+        Name: BuildingToConstruct
+        m_Value: {fileID: 0}
+    - rid: 7721842940897919062
       type: {class: Start, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -566,10 +614,10 @@ MonoBehaviour:
         m_Parent:
           rid: -2
         m_Child:
-          rid: 7721842934962716998
+          rid: 7721842940897919063
         Repeat: 0
         AllowMultipleRepeatsPerTick: 0
-    - rid: 7721842934962716998
+    - rid: 7721842940897919063
       type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -578,51 +626,11 @@ MonoBehaviour:
         Graph:
           rid: 7721842910711251054
         m_Parent:
-          rid: 7721842934962716997
+          rid: 7721842940897919062
         m_Children:
-        - rid: 7721842934962717004
+        - rid: 7721842940897919064
         m_RegisteredObservers: []
-    - rid: 7721842934962716999
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 1
-          m_Value1: 0
-        Name: Self
-        m_Value: {fileID: 0}
-    - rid: 7721842934962717000
-      type: {class: 'BlackboardVariable`1[[UnityEngine.Vector3, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 527476417900432736
-          m_Value1: 3087265083879072261
-        Name: TargetPosition
-        m_Value: {x: 0, y: 0, z: 0}
-    - rid: 7721842934962717001
-      type: {class: 'BlackboardVariable`1[[SO_Building, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 12684049489808775411
-          m_Value1: 16852865737708174287
-        Name: SO Building
-        m_Value: {fileID: 0}
-    - rid: 7721842934962717002
-      type: {class: 'BlackboardVariable`1[[BaseBuilding, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 15303405521632123902
-          m_Value1: 4098247894815717978
-        Name: BuildingToConstruct
-        m_Value: {fileID: 0}
-    - rid: 7721842934962717003
-      type: {class: 'BlackboardVariable`1[[BuildingActions, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 1785682255526521418
-          m_Value1: 12547328537426175621
-        Name: BuildingActions
-        m_Value: 0
-    - rid: 7721842934962717004
+    - rid: 7721842940897919064
       type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -631,12 +639,12 @@ MonoBehaviour:
         Graph:
           rid: 7721842910711251054
         m_Parent:
-          rid: 7721842934962716998
+          rid: 7721842940897919063
         m_Children:
-        - rid: 7721842934962717005
-        - rid: 7721842934962717006
+        - rid: 7721842940897919065
+        - rid: 7721842940897919066
         m_RegisteredObservers: []
-    - rid: 7721842934962717005
+    - rid: 7721842940897919065
       type: {class: ConstructBuildingBehaviourAction, ns: , asm: Assembly-CSharp}
       data:
         ID:
@@ -645,16 +653,16 @@ MonoBehaviour:
         Graph:
           rid: 7721842910711251054
         m_Parent:
-          rid: 7721842934962717004
+          rid: 7721842940897919064
         Self:
-          rid: 7721842934962716999
+          rid: 7721842940897919033
         SO_Building:
-          rid: 7721842934962717001
+          rid: 7721842940897919035
         TargetPosition:
-          rid: 7721842934962717000
+          rid: 7721842940897919034
         BuildingUnderConstruction:
-          rid: 7721842934962717002
-    - rid: 7721842934962717006
+          rid: 7721842940897919037
+    - rid: 7721842940897919066
       type: {class: SetVariableValueAction, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -663,19 +671,11 @@ MonoBehaviour:
         Graph:
           rid: 7721842910711251054
         m_Parent:
-          rid: 7721842934962717004
+          rid: 7721842940897919064
         Variable:
-          rid: 7721842934962717003
+          rid: 7721842940897919036
         Value:
-          rid: 7721842934962717007
-    - rid: 7721842934962717007
-      type: {class: 'BlackboardVariable`1[[BuildingActions, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: 2
+          rid: 7721842940897918978
 --- !u!114 &5447504594335917805
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -695,9 +695,9 @@ MonoBehaviour:
   - rid: 7721842910711251059
   - rid: 7721842910711251061
   - rid: 7721842910711251069
-  - rid: 7721842910711251079
   - rid: 7721842934962716744
-  m_VersionTimestamp: 639141066530231818
+  - rid: 7721842940897918979
+  m_VersionTimestamp: 639141290490875600
   m_CommandBuffer:
     m_Commands: []
   m_RuntimeBlackboardAsset: {fileID: -8256592046981845476}
@@ -734,16 +734,6 @@ MonoBehaviour:
         IsExposed: 1
         m_IsShared: 0
         m_Value: {fileID: 0}
-    - rid: 7721842910711251079
-      type: {class: 'TypedVariableModel`1[[BaseBuilding, Assembly-CSharp]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
-      data:
-        ID:
-          m_Value0: 15303405521632123902
-          m_Value1: 4098247894815717978
-        Name: BuildingToConstruct
-        IsExposed: 1
-        m_IsShared: 0
-        m_Value: {fileID: 0}
     - rid: 7721842934962716744
       type: {class: 'TypedVariableModel`1[[BuildingActions, Assembly-CSharp]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
       data:
@@ -754,3 +744,13 @@ MonoBehaviour:
         IsExposed: 1
         m_IsShared: 0
         m_Value: 0
+    - rid: 7721842940897918979
+      type: {class: 'TypedVariableModel`1[[SO_Building, Assembly-CSharp]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 12438024022159144366
+          m_Value1: 8469424350739033600
+        Name: BuildingToConstruct
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: {fileID: 0}
