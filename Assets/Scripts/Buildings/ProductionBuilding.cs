@@ -7,17 +7,10 @@ public class ProductionBuilding : BaseBuilding
     [field: SerializeField] public SO_Resource resource { get; private set; }
     [field: SerializeField] private bool applyForEveryResource;
 
-    // Variables to hold and count the time past
-    public float StartTime { get; private set; }
-
     protected override void Start()
     {        
         base.Start();
         StartTime = Time.time;
-        if(resource != null && resource.ProducesOnlyOneTime)
-        {
-            ProduceResource();
-        }
     }
 
     protected override void Update()
@@ -57,5 +50,11 @@ public class ProductionBuilding : BaseBuilding
     public override void DestroyBuilding()
     {
         base.DestroyBuilding();
+    }
+
+    public override void BuildConstructed()
+    {
+        base.BuildConstructed();
+        ProduceResource();
     }
 }

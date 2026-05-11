@@ -129,4 +129,6 @@ public class BaseBuilding : CommonActions, IHealable
             }
         }        
     }
+
+    public virtual void BuildConstructed() { }
 }

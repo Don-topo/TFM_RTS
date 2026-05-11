@@ -63,6 +63,10 @@ public partial class ConstructBuildingBehaviourAction : Action
     {
         completedBuilding.IsConstructed = true;
         completedBuilding.RestoreMaterials();
+        if(completedBuilding is ProductionBuilding a)
+        {
+            a.BuildConstructed();
+        }
         completedBuilding.RefreshUI();
     }
 }
