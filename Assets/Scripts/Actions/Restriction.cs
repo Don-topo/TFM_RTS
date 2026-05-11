@@ -61,7 +61,8 @@ public class Restriction : ScriptableObject
     {
         if (ResourceLayer == 0) return true;
 
-        if (Physics.OverlapSphere(position, Radius, ResourceLayer).Length > 0)
+        Collider[] res = Physics.OverlapSphere(position, Radius, ResourceLayer);
+        if (res.Length > 0 && res[0].GetComponent<test>().resource.ResourceTypes == ResourcePlaceToCheck)
         {
             return true;
         }
