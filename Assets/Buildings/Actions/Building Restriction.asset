@@ -21,3 +21,7 @@ MonoBehaviour:
   <NavMeshAgentTypeId>k__BackingField: 0
   <NavMeshTolerance>k__BackingField: 0.1
   <Extents>k__BackingField: {x: 1, y: 1, z: 1}
+  <ResourcePlaceToCheck>k__BackingField: 0
+  <ResourceLayer>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 16

@@ -11,6 +11,8 @@ public class Restriction : ScriptableObject
     [field: SerializeField] public int NavMeshAgentTypeId { get; private set; }
     [field: SerializeField] public float NavMeshTolerance { get; private set; } = 0.1f;
     [field: SerializeField] public Vector3 Extents { get; private set; } = Vector3.one;
+    [field: SerializeField] public ResourcesType ResourcePlaceToCheck { get; private set; }
+    [field: SerializeField] public LayerMask ResourceLayer { get; private set; }
 
     private Collider[] hitColliders = new Collider[1];
 
@@ -32,7 +34,7 @@ public class Restriction : ScriptableObject
             };
             bool isOnNavMesh = IsFullyOnNavMesh(position, queryFilter);
 
-            return isOnNavMesh && hits == 0;
+            return isOnNavMesh && hits == 0 && IsOnSupportedResource(position);
         }
 
         return hits == 0;
@@ -54,6 +56,22 @@ public class Restriction : ScriptableObject
                         out NavMeshHit _, NavMeshTolerance, queryFilter);
         return isOnNavMesh;
     }
+
+    private bool IsOnSupportedResource(Vector3 position)
+    {
+        if (ResourceLayer == 0) return true;
+
+        if (Physics.OverlapSphere(position, Radius, ResourceLayer).Length > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    
 
     public enum OverlapStyle
     {
