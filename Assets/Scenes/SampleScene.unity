@@ -16461,8 +16461,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8041204223084693054, guid: 0591fa0a357a2cf44915e4715d653115, type: 3}
+      propertyPath: <GraphAgent>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041204223084693054, guid: 0591fa0a357a2cf44915e4715d653115, type: 3}
       propertyPath: <Actions>k__BackingField.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8041204223084693054, guid: 0591fa0a357a2cf44915e4715d653115, type: 3}
       propertyPath: '<Actions>k__BackingField.Array.data[0]'
@@ -16472,7 +16476,12 @@ PrefabInstance:
       propertyPath: '<Actions>k__BackingField.Array.data[1]'
       value: 
       objectReference: {fileID: 11400000, guid: 80dfe8cf0fb17a74a9ce2f918cb1200b, type: 2}
-    m_RemovedComponents: []
+    - target: {fileID: 8041204223084693054, guid: 0591fa0a357a2cf44915e4715d653115, type: 3}
+      propertyPath: '<Actions>k__BackingField.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: fb484ff4fb41b8d48be3d33a636721e8, type: 2}
+    m_RemovedComponents:
+    - {fileID: 600207547328411486, guid: 0591fa0a357a2cf44915e4715d653115, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

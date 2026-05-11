@@ -27,7 +27,8 @@ public class BuildBuildingAction : BaseAction
         BaseBuilding baseBuilding = actionInfo.Action as BaseBuilding;       
         if (CheckIfThereIsAvailableResources(actionInfo))
         {
-            baseBuilding.BuildBuilding(BuildingToBuild, actionInfo.Hit.point);
+            Instantiate(BuildingToBuild.UnitPrefab, actionInfo.Hit.point, Quaternion.identity);
+            //baseBuilding.BuildBuilding(BuildingToBuild, actionInfo.Hit.point);
         }        
     }
 

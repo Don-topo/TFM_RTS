@@ -26,6 +26,7 @@ public class BaseBuilding : CommonActions, IHealable
         if (!IsConstructed)
         {
             SaveMaterials();
+            BuildBuilding();
         }
         CurrentHealth = IsConstructed ? SO_BaseUnit.Health : 1;          
         MaxHealth = SO_building.Health;        
@@ -36,7 +37,7 @@ public class BaseBuilding : CommonActions, IHealable
         base.OnDestroy();
     }
 
-    public void BuildBuilding(SO_Building buildingToConstruct, Vector3 targetPosition)
+    public void BuildBuilding()
     {
         GraphAgent.SetVariableValue<SO_Building>("SO Building", SO_building);
         GraphAgent.SetVariableValue<BaseBuilding>("Base Building", this);
@@ -54,8 +55,8 @@ public class BaseBuilding : CommonActions, IHealable
         resourceOP = new ResourceOP(SO_building.Cost.SO_Population, SO_building.Cost.Population, 0);
         resourceEvent.Raise(resourceOP);
         GraphAgent.SetVariableValue("BuildingActions", BuildingActions.Build);
-        GraphAgent.SetVariableValue<Vector3>("TargetPosition", targetPosition);
-        GraphAgent.SetVariableValue<SO_Building>("BuildToConstruct", buildingToConstruct);
+        GraphAgent.SetVariableValue<Vector3>("TargetPosition", transform.position);
+        GraphAgent.SetVariableValue<SO_Building>("BuildToConstruct", SO_building);
     }
 
     public virtual void DestroyBuilding()

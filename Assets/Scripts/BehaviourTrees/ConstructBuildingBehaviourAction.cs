@@ -22,8 +22,7 @@ public partial class ConstructBuildingBehaviourAction : Action
 
     protected override Status OnStart()
     {        
-        GameObject building = GameObject.Instantiate(BuildingUnderConstruction.Value.UnitPrefab, TargetPosition.Value, Quaternion.identity);
-        completedBuilding = building.GetComponent<BaseBuilding>();
+        completedBuilding = Self.Value.GetComponent<BaseBuilding>();
         startBuildTime = Time.time;
         completedBuilding.StartTime = startBuildTime;
         buildingRenderers = completedBuilding.GetComponentsInChildren<Renderer>();
