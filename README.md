@@ -1,8 +1,14 @@
 Patches relases:
 
+v.0.28 => 12/05/2026:
+  - Added Building restrictions.
+  - Added Building resource zones Highlight.
+  - Fix Building UI Actions on recruiting Buildings.
+  - TODO Fix UI Build Actions menu.
+    
 v.0.27 => 11/05/2026:
   - First Building implementation.
-  - TODO Add Restrictions
+  - TODO Add Restrictions.
   - TODO Fix UI Build Actions menu.
     
 v.0.26 => 09/05/2026:
