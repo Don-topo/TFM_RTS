@@ -16,11 +16,11 @@ public class UIProductionBuildingSelected : MonoBehaviour
 
     private void Update()
     {
-        if(selectedBuilding != null && !selectedBuilding.resource.ProducesOnlyOneTime)
+        if(selectedBuilding != null && !selectedBuilding.Resource.ProducesOnlyOneTime)
         {
             float startTime = selectedBuilding.StartTime;
             float currentTime = Time.time;
-            float finishTime = selectedBuilding.resource.ObtainingTime;
+            float finishTime = selectedBuilding.Resource.ObtainingTime;
             uiProgressbar.UpdateProgress(Mathf.Clamp01((Time.time - startTime) / (finishTime)));
         }  
     }
@@ -29,13 +29,13 @@ public class UIProductionBuildingSelected : MonoBehaviour
     {
         gameObject.SetActive(true);        
         selectedBuilding = selectedBuild;
-        resourceImage.sprite = selectedBuilding.resource.Icon;
-        produceNumberText.SetText(selectedBuilding.resource.MaxAmount.ToString());
-        if (!selectedBuilding.resource.ProducesOnlyOneTime)
+        resourceImage.sprite = selectedBuilding.Resource.Icon;
+        produceNumberText.SetText(selectedBuilding.Resource.MaxAmount.ToString());
+        if (!selectedBuilding.Resource.ProducesOnlyOneTime)
         {
             uiProgressbar.Enable();
             progressBarBackground.SetActive(true);
-            produceNumberText.SetText(selectedBuilding.resource.ObtainedAmount.ToString());
+            produceNumberText.SetText(selectedBuilding.Resource.ObtainedAmount.ToString());
         }
         else
         {

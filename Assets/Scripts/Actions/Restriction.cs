@@ -73,8 +73,6 @@ public class Restriction : ScriptableObject
         }
     }
 
-    
-
     public enum OverlapStyle
     {
         Sphere,

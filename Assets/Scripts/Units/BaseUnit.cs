@@ -10,6 +10,8 @@ public class BaseUnit : CommonActions, IMoveable, IHealable
 {
     [Header("Audio")]
     [SerializeField] protected List<AudioClip> moveAudioClips;
+    [Header("Events")]
+    [SerializeField] private UnitRecruitedEvent recruitedEvent;
 
     public float GetNavMeshAgentRadius => navMeshAgent.radius;
     protected BehaviorGraphAgent behaviorGraphAgent;
@@ -25,7 +27,9 @@ public class BaseUnit : CommonActions, IMoveable, IHealable
         CurrentHealth = SO_BaseUnit.Health;
         MaxHealth = CurrentHealth;
         // Set behaviour agent
-        behaviorGraphAgent.SetVariableValue("Command", UnitActions.Stop);        
+        behaviorGraphAgent.SetVariableValue("Command", UnitActions.Stop);
+        // Raise recruit event
+        recruitedEvent.Raise(this);
     }
 
     // Update is called once per frame

@@ -49,13 +49,11 @@ public class ResourceArea : MonoBehaviour
     private void ShowArea(SO_Resource resource)
     {
         if(this.ResourceInArea.ResourceTypes != resource.ResourceTypes) return;
-        enabled = true;
         areaGameObject.SetActive(true);
     }
 
     private void HideArea(SO_Resource resource)
     {
-        enabled = false;
         areaGameObject.SetActive(false);
     }
 }

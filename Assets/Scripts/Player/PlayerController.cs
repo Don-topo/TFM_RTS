@@ -335,7 +335,7 @@ public class PlayerController : MonoBehaviour
             placeBuildingInstance = Instantiate(((BuildBuildingAction)actionClicked).PlaceBuilding);
             if(((BuildBuildingAction)actionClicked).BuildingToBuild.UnitPrefab.GetComponent<ProductionBuilding>() != null)
             {
-                showResourceAreaEvent.Raise(((BuildBuildingAction)actionClicked).BuildingToBuild.UnitPrefab.GetComponent<ProductionBuilding>().resource);
+                showResourceAreaEvent.Raise(((BuildBuildingAction)actionClicked).BuildingToBuild.UnitPrefab.GetComponent<ProductionBuilding>().Resource);
             }            
         }
     }
