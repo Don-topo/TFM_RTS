@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     public ActionExecuted actionExecuted;
     public ActionClicked actionClicked;
     public MinimapClickEvent minimapClickEvent;
+    public ShowResourceAreaEvent showResourceAreaEvent;
+    public ShowResourceAreaEvent hideResourceAreaEvent;
     [Header("Construction Materials")]
     [field: SerializeField] public Material OkPlaceMaterial { get; private set; }
     [field: SerializeField] public Material KoPlaceMaterial { get; private set; }
@@ -58,6 +60,7 @@ public class PlayerController : MonoBehaviour
         minimapClickEvent.Register(MinimapClicked);
         zoom = camera.transform.localPosition.y;
         cameraStartPosition = camera.transform.position;
+        hideResourceAreaEvent.Raise(null);
     }
 
     private void Update()
@@ -330,6 +333,10 @@ public class PlayerController : MonoBehaviour
         else if(actionClicked is BuildBuildingAction)
         {
             placeBuildingInstance = Instantiate(((BuildBuildingAction)actionClicked).PlaceBuilding);
+            if(((BuildBuildingAction)actionClicked).BuildingToBuild.UnitPrefab.GetComponent<ProductionBuilding>() != null)
+            {
+                showResourceAreaEvent.Raise(((BuildBuildingAction)actionClicked).BuildingToBuild.UnitPrefab.GetComponent<ProductionBuilding>().resource);
+            }            
         }
     }
 
@@ -347,6 +354,7 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(placeBuildingInstance);
             placeBuildingInstance = null;
+            hideResourceAreaEvent.Raise(null);
         }
 
         List<CommonActions> actions = selectedUnits.Where(unit => unit is CommonActions).Cast<CommonActions>().ToList();
@@ -396,6 +404,7 @@ public class PlayerController : MonoBehaviour
         if (Keyboard.current.escapeKey.wasReleasedThisFrame)
         {
             Destroy(placeBuildingInstance);
+            hideResourceAreaEvent.Raise(null);
             placeBuildingInstance = null;
             selectedAction = null;
             return;

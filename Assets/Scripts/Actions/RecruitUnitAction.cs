@@ -8,20 +8,23 @@ public class RecruitUnitAction : BaseAction
 
     public override bool Blocked(ActionInfo actionInfo)
     {
-        return !CheckIfThereIsAvailableResources(actionInfo) && actionInfo.Action is BaseBuilding;
+        BaseBuilding buildling = actionInfo.Action as BaseBuilding;
+        return !CheckIfThereIsAvailableResources(actionInfo) || (buildling != null && !buildling.IsConstructed);
     }
 
     public override bool CanExecute(ActionInfo actionInfo)
     {
-        return CheckIfThereIsAvailableResources(actionInfo) && actionInfo.Action is BaseBuilding;
+        BaseBuilding buildling = actionInfo.Action as BaseBuilding;
+        bool a = CheckIfThereIsAvailableResources(actionInfo) && buildling != null && buildling.IsConstructed;
+        return CheckIfThereIsAvailableResources(actionInfo) && buildling != null && buildling.IsConstructed;
     }
 
     public override void Execute(ActionInfo actionInfo)
     {
         RecruitBuilding building = (RecruitBuilding)actionInfo.Action;
-
+        bool t = !CheckIfThereIsAvailableResources(actionInfo) || (building != null && !building.IsConstructed);
         // Check if there is enought resources
-        if (!CheckIfThereIsAvailableResources(actionInfo)) return;
+        if (!CheckIfThereIsAvailableResources(actionInfo) && (building != null && !building.IsConstructed)) return;
 
         // Build Unit
         building.RecruitUnit(UnitToBuild);

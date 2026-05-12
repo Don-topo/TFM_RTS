@@ -12,6 +12,7 @@ public class Restriction : ScriptableObject
     [field: SerializeField] public float NavMeshTolerance { get; private set; } = 0.1f;
     [field: SerializeField] public Vector3 Extents { get; private set; } = Vector3.one;
     [field: SerializeField] public ResourcesType ResourcePlaceToCheck { get; private set; }
+    [field: SerializeField] public bool CheckForResource {  get; private set; }
     [field: SerializeField] public LayerMask ResourceLayer { get; private set; }
 
     private Collider[] hitColliders = new Collider[1];
@@ -59,10 +60,10 @@ public class Restriction : ScriptableObject
 
     private bool IsOnSupportedResource(Vector3 position)
     {
-        if (ResourceLayer == 0) return true;
+        if (ResourceLayer == 0 || !CheckForResource) return true;
 
         Collider[] res = Physics.OverlapSphere(position, Radius, ResourceLayer);
-        if (res.Length > 0 && res[0].GetComponent<test>().resource.ResourceTypes == ResourcePlaceToCheck)
+        if (res.Length > 0 && res[0].GetComponent<ResourceArea>().ResourceInArea.ResourceTypes == ResourcePlaceToCheck)
         {
             return true;
         }

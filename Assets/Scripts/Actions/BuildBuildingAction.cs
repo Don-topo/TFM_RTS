@@ -28,7 +28,6 @@ public class BuildBuildingAction : BaseAction
         if (CheckIfThereIsAvailableResources(actionInfo))
         {
             Instantiate(BuildingToBuild.UnitPrefab, actionInfo.Hit.point, Quaternion.identity);
-            //baseBuilding.BuildBuilding(BuildingToBuild, actionInfo.Hit.point);
         }        
     }
 
