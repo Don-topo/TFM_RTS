@@ -283,7 +283,15 @@ MonoBehaviour:
   updateHealthEvent: {fileID: 11400000, guid: 13cf27522de45664fb20e006b4905224, type: 2}
   unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
-  moveAudioClips: []
+  moveAudioClips:
+  - {fileID: 8300000, guid: 786e51a4fe3d065498a22cd9a020004f, type: 3}
+  - {fileID: 8300000, guid: 9fc55e9fb67858149b7f59363717489b, type: 3}
+  - {fileID: 8300000, guid: 040622b4b71753745a198d8fae32e945, type: 3}
+  - {fileID: 8300000, guid: 2224bd18b5621ce4bb2da8394f5794ce, type: 3}
+  - {fileID: 8300000, guid: b64ef3b095a66134980ac3554c4c23a9, type: 3}
+  - {fileID: 8300000, guid: fa665f15b37f8ac408ba393f51abbc09, type: 3}
+  - {fileID: 8300000, guid: 66752a056072f6543916ae4c949f8cbe, type: 3}
+  recruitedEvent: {fileID: 0}
   attackSystem: {fileID: 9001245702125913674}
   animator: {fileID: 556542173681448075}
   unitEnterRange: {fileID: 11400000, guid: a9267367e362866478e1cc864c850a3d, type: 2}

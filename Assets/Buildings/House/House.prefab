@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4896374894885088785}
   - component: {fileID: 5769805014859039277}
   - component: {fileID: 3318406387878078089}
+  - component: {fileID: 2117744338133730912}
   m_Layer: 7
   m_Name: House
   m_TagString: Untagged
@@ -81,16 +82,20 @@ MonoBehaviour:
   <IsSelected>k__BackingField: 0
   selectionDecal: {fileID: 7777867501612613234}
   <Actions>k__BackingField: []
-  <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: aa8cedb842dc921429484bce8060cc25, type: 2}
+  <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: 8b85e3f3837049d4d9c1a4ecc4074312, type: 2}
   <CurrentHealth>k__BackingField: 0
   <MaxHealth>k__BackingField: 0
   updateHealthEvent: {fileID: 11400000, guid: 13cf27522de45664fb20e006b4905224, type: 2}
   unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
-  <PlaceMaterial>k__BackingField: {fileID: 0}
+  <PlaceMaterial>k__BackingField: {fileID: 2100000, guid: d83ecade081c9e84b8d9c103e26560ae, type: 2}
   resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
   <SO_building>k__BackingField: {fileID: 11400000, guid: 8b85e3f3837049d4d9c1a4ecc4074312, type: 2}
-  <resource>k__BackingField: {fileID: 11400000, guid: 1a8259d76527fdb4891cd10f2fd9f7c0, type: 2}
+  <GraphAgent>k__BackingField: {fileID: 2117744338133730912}
+  <IsConstructed>k__BackingField: 0
+  refreshEvent: {fileID: 11400000, guid: 2d6eed5983d3d1c42836ee74b2c39f02, type: 2}
+  StartTime: 0
+  <Resource>k__BackingField: {fileID: 11400000, guid: 1a8259d76527fdb4891cd10f2fd9f7c0, type: 2}
   applyForEveryResource: 0
 --- !u!65 &5769805014859039277
 BoxCollider:
@@ -129,6 +134,44 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 1.25, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &2117744338133730912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201542786292628489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
+  m_Graph: {fileID: -6203296999972314145, guid: d720728815fe4bd45a314b1e788e0775, type: 2}
+  m_BlackboardVariableOverridesList:
+  - rid: 7721842985715630165
+  - rid: 7721842985715630166
+  m_OriginalGraph: {fileID: 0}
+  m_IsInitialised: 0
+  m_IsStarted: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 7721842985715630165
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        m_Value: {fileID: 201542786292628489}
+    - rid: 7721842985715630166
+      type: {class: 'BlackboardVariable`1[[BuildingActions, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 10638356103869450573
+          m_Value1: 5209077369174025454
+        Name: BuildingActions
+        m_Value: 2
 --- !u!1 &350149885951199870
 GameObject:
   m_ObjectHideFlags: 0

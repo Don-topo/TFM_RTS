@@ -15,3 +15,9 @@ MonoBehaviour:
   <Amount>k__BackingField: 20
   <HealSpeed>k__BackingField: 4.5
   <HealRange>k__BackingField: 2.5
+  HealAudioClips:
+  - {fileID: 8300000, guid: afcf043b1974ce4498eac0ecaa15984d, type: 3}
+  - {fileID: 8300000, guid: ac1df172bdf192d44ac4490b107c4109, type: 3}
+  - {fileID: 8300000, guid: 135b86afc452d3c45bfcddc379633996, type: 3}
+  - {fileID: 8300000, guid: 88e35dec07ecc644aa9cba940870ca70, type: 3}
+  - {fileID: 8300000, guid: 7b8f96376a5ace24385095408e41231b, type: 3}

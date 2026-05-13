@@ -18,4 +18,10 @@ MonoBehaviour:
   <Health>k__BackingField: 240
   <GenerationTime>k__BackingField: 8
   <Cost>k__BackingField: {fileID: 11400000, guid: 81017829bbc78fd4292b3e59eb0e1ae5, type: 2}
-  <SelectionAudioClips>k__BackingField: []
+  <SelectionAudioClips>k__BackingField:
+  - {fileID: 8300000, guid: 9d60803de7b33154798d106e375bff49, type: 3}
+  - {fileID: 8300000, guid: 25f4f99d62cb80f47b49ff03fdeda880, type: 3}
+  - {fileID: 8300000, guid: a344c2d570d4b064ab0c0bda67902f2a, type: 3}
+  - {fileID: 8300000, guid: 277a4fadf7731624e87ef97776460b84, type: 3}
+  - {fileID: 8300000, guid: 6b877562c228ff240bc1667bf08d611c, type: 3}
+  - {fileID: 8300000, guid: 094bc523c8641b04f85bf6788126f0db, type: 3}

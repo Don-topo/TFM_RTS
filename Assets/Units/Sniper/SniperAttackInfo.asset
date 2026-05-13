@@ -16,12 +16,14 @@ MonoBehaviour:
   <AttackRange>k__BackingField: 2
   <AttackSpeed>k__BackingField: 1
   AttackAudioClips:
-  - {fileID: 8300000, guid: c7dbbf3f15f803240b6e8600619215f7, type: 3}
-  - {fileID: 8300000, guid: 35121d89e511a524b93f3a6d834d0467, type: 3}
-  - {fileID: 8300000, guid: f1f6815c27ab7474a98a3f50363da697, type: 3}
-  - {fileID: 8300000, guid: 9d093d10d9cc36e4cb01ae9d94746215, type: 3}
+  - {fileID: 8300000, guid: e441cb0bd5365284793d2a3777d4f3cb, type: 3}
+  - {fileID: 8300000, guid: 310f65cf41e47af46beab3d5e18fc76d, type: 3}
+  - {fileID: 8300000, guid: e135ae56474aa58499d50609183bd262, type: 3}
+  - {fileID: 8300000, guid: 8a32abcf4a1ca6a4c8a6b0ffd75f5cd9, type: 3}
+  - {fileID: 8300000, guid: 92911d9df486cd14e88d9717b2344b06, type: 3}
+  - {fileID: 8300000, guid: 40734f4b08b9a894d8e6d74383cfa8e7, type: 3}
   PatrolAudioClips:
-  - {fileID: 8300000, guid: 6da8c9f75d5283e48be3cc8ea83c0691, type: 3}
-  - {fileID: 8300000, guid: c3ea3a21225d0fb478d211e41739d44a, type: 3}
-  - {fileID: 8300000, guid: 6de89cb03b3cfb34ca647e2a76b5ab86, type: 3}
-  - {fileID: 8300000, guid: b042c677df9a25a4d87a40e71158b957, type: 3}
+  - {fileID: 8300000, guid: eff25d9f7e279b34c96d4079ef037d87, type: 3}
+  - {fileID: 8300000, guid: 837562f6e9c7b3945a8409d8bebe8b28, type: 3}
+  - {fileID: 8300000, guid: c54d08aed27dfe14183f464737da2383, type: 3}
+  - {fileID: 8300000, guid: 88bc68e36e8c3fe4c9f25a1f8cc1ad0e, type: 3}

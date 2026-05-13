@@ -4616,7 +4616,7 @@ GameObject:
   - component: {fileID: 651841731}
   - component: {fileID: 651841732}
   m_Layer: 4
-  m_Name: GameObject
+  m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7691,7 +7691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1237953955}
   m_Layer: 4
-  m_Name: Food
+  m_Name: FoodArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

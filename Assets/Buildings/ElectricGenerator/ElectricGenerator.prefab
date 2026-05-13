@@ -192,7 +192,7 @@ MonoBehaviour:
   <IsConstructed>k__BackingField: 0
   refreshEvent: {fileID: 11400000, guid: 2d6eed5983d3d1c42836ee74b2c39f02, type: 2}
   StartTime: 0
-  <resource>k__BackingField: {fileID: 11400000, guid: 25f1e1ae7f5421045b6978bf8e6189c8, type: 2}
+  <Resource>k__BackingField: {fileID: 11400000, guid: 25f1e1ae7f5421045b6978bf8e6189c8, type: 2}
   applyForEveryResource: 0
 --- !u!114 &6419315375036311785
 MonoBehaviour:

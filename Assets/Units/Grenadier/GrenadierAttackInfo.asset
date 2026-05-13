@@ -15,5 +15,14 @@ MonoBehaviour:
   <AttackDamage>k__BackingField: 20
   <AttackRange>k__BackingField: 2
   <AttackSpeed>k__BackingField: 1
-  AttackAudioClips: []
-  PatrolAudioClips: []
+  AttackAudioClips:
+  - {fileID: 8300000, guid: 0754deda5282c0847bd4f8477b336552, type: 3}
+  - {fileID: 8300000, guid: 179a0ca28abfc544b827e1a18262fbb3, type: 3}
+  - {fileID: 8300000, guid: a379817361471ef4f9c6fc9102f7c5f7, type: 3}
+  - {fileID: 8300000, guid: 48fab4a5667b3ef489312b110660b1f9, type: 3}
+  - {fileID: 8300000, guid: b03180521424e9d4ba6cc44720c7cf72, type: 3}
+  PatrolAudioClips:
+  - {fileID: 8300000, guid: 3ef4c07e8a657bb419982de52c499980, type: 3}
+  - {fileID: 8300000, guid: 3db3de9fdaf434d4ea640470250f4ba8, type: 3}
+  - {fileID: 8300000, guid: 5e8baac6078b85c4cb19a11081d7a0a8, type: 3}
+  - {fileID: 8300000, guid: 0f3bbc3d8a699604e932d7d8749551b4, type: 3}

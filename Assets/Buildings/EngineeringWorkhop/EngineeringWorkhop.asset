@@ -14,8 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SO_Building
   <Name>k__BackingField: Engineering Workhop
   <Icon>k__BackingField: {fileID: 21300000, guid: 35dfef7999dc5f24dae74e36de17184e, type: 3}
-  <UnitPrefab>k__BackingField: {fileID: 0}
+  <UnitPrefab>k__BackingField: {fileID: 2714026493438205419, guid: a6ee9b407c372a849974ce2ea1a1045a, type: 3}
   <Health>k__BackingField: 100
   <GenerationTime>k__BackingField: 8
   <Cost>k__BackingField: {fileID: 11400000, guid: 9cfa8d72d5108654c9448f82f5f28a9c, type: 2}
-  <SelectionAudioClips>k__BackingField: []
+  <SelectionAudioClips>k__BackingField:
+  - {fileID: 8300000, guid: 31dc2676b1574b74a9e53814cdd7e5e1, type: 3}
+  - {fileID: 8300000, guid: df6963499b498704ba1587b2631d6d7b, type: 3}
+  - {fileID: 8300000, guid: 99c83e655c3f59446bd35c51a0bfec61, type: 3}
+  - {fileID: 8300000, guid: 564ef7fa197239141a25832ed9b134cf, type: 3}
+  <PrebuildMaterial>k__BackingField: {fileID: 2100000, guid: d83ecade081c9e84b8d9c103e26560ae, type: 2}
