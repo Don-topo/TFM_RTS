@@ -1,5 +1,14 @@
 Patches relases:
 
+v.0.29 => 13/05/2026:
+  - Added Unit actions audio.
+  - Added Building selection audio.
+  - TODO Add confirm action audio.
+  - TODO Add invalid action audio.
+  - TODO Fix UI Build Actions menu.
+  - TODO Fix Attack bug.
+  - TODO Fix Building attack bug.
+    
 v.0.28 => 12/05/2026:
   - Added Building restrictions.
   - Added Building resource zones Highlight.
