@@ -81,4 +81,13 @@ public class BaseHealer : BaseUnit, IHealer
         return nearbyEnemies;
     }
 
+    private void PlayHealingActionAudio()
+    {
+        if (HealInfo.HealAudioClips.Count > 0)
+        {
+            AudioManager.SetAudioClips(HealInfo.HealAudioClips);
+            AudioManager.PlayAudio();
+        }
+    }
+
 }

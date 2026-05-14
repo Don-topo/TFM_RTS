@@ -18,6 +18,9 @@ MonoBehaviour:
   <UIPosition>k__BackingField: 5
   <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 1
+  <ExecuteAudio>k__BackingField:
+  - {fileID: 8300000, guid: 2c35d415acb41984aa5befb916ec6651, type: 3}
+  <Restrictions>k__BackingField: []
   <IgnoreTerrain>k__BackingField:
     serializedVersion: 2
     m_Bits: 54

@@ -18,7 +18,8 @@ MonoBehaviour:
   <UIPosition>k__BackingField: 4
   <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 1
-  <ExecuteAudio>k__BackingField: []
+  <ExecuteAudio>k__BackingField:
+  - {fileID: 8300000, guid: d02e8cf5fd09384419575d2a44d84e6c, type: 3}
   <Restrictions>k__BackingField:
   - {fileID: 11400000, guid: dc438a7f4d52faa4b9fbbb227c9e42b4, type: 2}
   <BuildingToBuild>k__BackingField: {fileID: 11400000, guid: 5f1451107830feb46acb7c0097967fd8, type: 2}

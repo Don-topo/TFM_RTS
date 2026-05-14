@@ -179,7 +179,7 @@ MonoBehaviour:
   <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: 8c67e00e500024043bfcbea9a218df4b, type: 2}
   <CurrentHealth>k__BackingField: 0
   <MaxHealth>k__BackingField: 0
-  updateHealthEvent: {fileID: 0}
+  updateHealthEvent: {fileID: 11400000, guid: 13cf27522de45664fb20e006b4905224, type: 2}
   unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
   moveAudioClips:
@@ -188,7 +188,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 591dd856533e086448c75ae236e6bc62, type: 3}
   - {fileID: 8300000, guid: a4b32a94e2125d443ba6175dccbacecc, type: 3}
   - {fileID: 8300000, guid: 86a0d0b02f69f3041a20ce7d9ee58fa3, type: 3}
-  recruitedEvent: {fileID: 0}
+  recruitedEvent: {fileID: 11400000, guid: 4b9a1b36f59f39e47b8e1db68ccb4ec0, type: 2}
   <HealInfo>k__BackingField: {fileID: 11400000, guid: 18443ba6f1b015f4aa46f51ba2039867, type: 2}
   healingSystem: {fileID: 1774941374027710598}
   unitEnterRange: {fileID: 11400000, guid: ddc8a256bb97c2c43996379be0913496, type: 2}

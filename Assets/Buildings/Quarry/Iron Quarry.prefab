@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 1416171660571647950}
   - component: {fileID: 1026010116861686373}
   m_Layer: 7
-  m_Name: Quarry
+  m_Name: Iron Quarry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -189,7 +189,7 @@ MonoBehaviour:
   <IsConstructed>k__BackingField: 0
   refreshEvent: {fileID: 11400000, guid: 2d6eed5983d3d1c42836ee74b2c39f02, type: 2}
   StartTime: 0
-  <Resource>k__BackingField: {fileID: 11400000, guid: 96973a3894634004bbf9cc9ed55afe08, type: 2}
+  <Resource>k__BackingField: {fileID: 11400000, guid: f40d809013950064999a6c26e53abc43, type: 2}
   applyForEveryResource: 0
 --- !u!114 &1026010116861686373
 MonoBehaviour:

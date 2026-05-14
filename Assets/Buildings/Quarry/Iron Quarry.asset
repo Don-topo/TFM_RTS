@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34632c87c82091e40b0f3bf6beb4df67, type: 3}
-  m_Name: Quarry
+  m_Name: Iron Quarry
   m_EditorClassIdentifier: Assembly-CSharp::SO_Building
-  <Name>k__BackingField: Quarry
+  <Name>k__BackingField: Iron Quarry
   <Icon>k__BackingField: {fileID: 21300000, guid: cf2d4e087de9f9e44b1aaed1ebf6048f, type: 3}
-  <UnitPrefab>k__BackingField: {fileID: 6402155466190684576, guid: f2337431fcba3d14fa2e13da9b2357ba, type: 3}
+  <UnitPrefab>k__BackingField: {fileID: 6402155466190684576, guid: d0d1adafab714f74a937e7e2096a5fb6, type: 3}
   <Health>k__BackingField: 100
   <GenerationTime>k__BackingField: 8
   <Cost>k__BackingField: {fileID: 11400000, guid: 36b1dfc5eff1f3c479e0cdd92668de70, type: 2}

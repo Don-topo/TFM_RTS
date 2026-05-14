@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioMixer audioMixer;
 
     private static List<AudioClip> audioClips;
+    private static AudioClip lastClipPlayed;
 
     private void Awake()
     {
@@ -25,10 +26,16 @@ public class AudioManager : MonoBehaviour
 
     public static void PlayAudio()
     {
-       if(audioClips.Count > 0 && !audioSource.isPlaying)
-       {
-            audioSource.PlayOneShot(audioClips[Random.Range(0, audioClips.Count)]);
-       }
+        if(audioClips.Count > 0 && !audioSource.isPlaying)
+        {            
+            AudioClip clipToPlay = audioClips[Random.Range(0, audioClips.Count)];
+            while (lastClipPlayed != null && clipToPlay.name.Equals(lastClipPlayed.name))
+            {
+                clipToPlay = audioClips[Random.Range(0, audioClips.Count)];
+            }
+                
+            audioSource.PlayOneShot(clipToPlay);
+        }
     }
 
     public static void CleanAudio()

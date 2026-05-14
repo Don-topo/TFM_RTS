@@ -5,8 +5,7 @@ using UnityEngine;
 public class RecruitBuilding : BaseBuilding
 {
     [Header("Events")]
-    [field: SerializeField] public UpdateRecruitQueueEvent queueEvent;    
-    [SerializeField] private RefreshUIEvent refreshEvent;
+    [field: SerializeField] public UpdateRecruitQueueEvent queueEvent;        
     [HideInInspector] public float RecruitStartTime { get; private set; }
     [Header("Destiantion point")]
     [SerializeField] private GameObject recruitDestination;

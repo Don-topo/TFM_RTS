@@ -2,7 +2,6 @@ using System.Runtime.CompilerServices;
 using Unity.Behavior;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Building", menuName = "Buildings/Building")]
 public class BaseBuilding : CommonActions, IHealable
 {
     [Header("Placement Materials")]
@@ -13,7 +12,7 @@ public class BaseBuilding : CommonActions, IHealable
     [field: SerializeField] public SO_Building SO_building { get; private set; }
     [field: SerializeField] public BehaviorGraphAgent GraphAgent { get; private set; }
     [field: SerializeField] public bool IsConstructed { get; set; } = false;
-    [SerializeField] private RefreshUIEvent refreshEvent;
+    [SerializeField] protected RefreshUIEvent refreshEvent;
 
     public float StartTime;
 

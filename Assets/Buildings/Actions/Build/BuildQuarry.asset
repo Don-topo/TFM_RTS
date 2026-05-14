@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756e6652c11373f40bb61ca5bffd5513, type: 3}
   m_Name: BuildQuarry
   m_EditorClassIdentifier: Assembly-CSharp::BuildBuildingAction
-  <Name>k__BackingField: Build Quarry
+  <Name>k__BackingField: Build Iron Quarry
   <Icon>k__BackingField: {fileID: 21300000, guid: cf2d4e087de9f9e44b1aaed1ebf6048f, type: 3}
   <HotKey>k__BackingField: 31
   <UIPosition>k__BackingField: 0
   <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 1
-  <ExecuteAudio>k__BackingField: []
+  <ExecuteAudio>k__BackingField:
+  - {fileID: 8300000, guid: d02e8cf5fd09384419575d2a44d84e6c, type: 3}
   <Restrictions>k__BackingField:
   - {fileID: 11400000, guid: 708b1ee18c971164994ba75b14322c18, type: 2}
-  <BuildingToBuild>k__BackingField: {fileID: 11400000, guid: ff27bf73e833ac24285aff2ae1a682e1, type: 2}
+  <BuildingToBuild>k__BackingField: {fileID: 11400000, guid: ce69d12851cbea0449fbab786665a96a, type: 2}
   <PlaceBuilding>k__BackingField: {fileID: 8266839584037612250, guid: 3dbf5f826675f7942b27d699924eaf68, type: 3}

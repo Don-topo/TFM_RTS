@@ -14,6 +14,7 @@ public class ResourceArea : MonoBehaviour
     {
         showAreaEvent.Register(ShowArea);
         hideAreaEvent.Register(HideArea);
+        HideArea(ResourceInArea);
     }
 
     private void Update()

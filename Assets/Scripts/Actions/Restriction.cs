@@ -23,6 +23,8 @@ public class Restriction : ScriptableObject
         {
             OverlapStyle.Sphere => Physics.OverlapSphereNonAlloc(position, Radius, hitColliders, LayerMask),
             OverlapStyle.Box => Physics.OverlapBoxNonAlloc(position, Extents, hitColliders, Quaternion.identity, LayerMask),
+            OverlapStyle.Vision => throw new System.NotImplementedException(),
+            _ => throw new System.NotImplementedException(),
             //OverlapStyle.Vision => FogVisibilityManager.Instance.IsVisible(position) ? 0 : 1
         };
 

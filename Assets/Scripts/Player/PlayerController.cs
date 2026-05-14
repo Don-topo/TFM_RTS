@@ -28,9 +28,12 @@ public class PlayerController : MonoBehaviour
     public MinimapClickEvent minimapClickEvent;
     public ShowResourceAreaEvent showResourceAreaEvent;
     public ShowResourceAreaEvent hideResourceAreaEvent;
+    public UnitRecruitedEvent recruitedEvent;
     [Header("Construction Materials")]
     [field: SerializeField] public Material OkPlaceMaterial { get; private set; }
     [field: SerializeField] public Material KoPlaceMaterial { get; private set; }
+    [Header("Audio")]
+    [SerializeField] private AudioClip invalidAction;
 
     public float edgeSize = 50f;
 
@@ -58,9 +61,11 @@ public class PlayerController : MonoBehaviour
         //actionExecuted.Register(ExecuteAction);
         actionClicked.Register(ActionClicked);
         minimapClickEvent.Register(MinimapClicked);
+        recruitedEvent.Register(AddUnit);
         zoom = camera.transform.localPosition.y;
         cameraStartPosition = camera.transform.position;
         hideResourceAreaEvent.Raise(null);
+
     }
 
     private void Update()
@@ -80,6 +85,7 @@ public class PlayerController : MonoBehaviour
         deselectUnitEvent.Unregister(DeselectUnit);
         actionClicked.Unregister(ActionClicked);
         minimapClickEvent.Unregister(MinimapClicked);
+        recruitedEvent.Unregister(AddUnit);
     }
 
     private void SelectedUnit(CommonActions action)
@@ -350,6 +356,8 @@ public class PlayerController : MonoBehaviour
 
     private void ExecuteAction(RaycastHit hit)
     {
+        bool canExecuteAction = false;
+
         if(placeBuildingInstance != null)
         {
             Destroy(placeBuildingInstance);
@@ -376,23 +384,33 @@ public class PlayerController : MonoBehaviour
             if (selectedAction.CanExecute(actionInfo))
             {
                 selectedAction.Execute(actionInfo);
+                canExecuteAction = true;
                 if (selectedAction.IsSingleUnitAction)
                 {
                     break;
                 }
-            }
+            }            
         }
-        PlayActionSound(selectedAction);
+
+        if (canExecuteAction)
+        {
+            PlaySound(selectedAction.ExecuteAudio);
+        }
+        else
+        {
+            PlaySound(new List<AudioClip> { invalidAction });
+        }
+        
         actionExecuted.Raise(selectedAction);
 
         selectedAction = null;
     }
 
-    private void PlayActionSound(BaseAction baseAction)
+    private void PlaySound(List<AudioClip> audioClips)
     {
-        if(baseAction.ExecuteAudio.Count > 0)
+        if(audioClips.Count > 0)
         {
-            AudioManager.SetAudioClips(baseAction.ExecuteAudio);
+            AudioManager.SetAudioClips(audioClips);
             AudioManager.PlayAudio();
         }       
     }
@@ -417,5 +435,11 @@ public class PlayerController : MonoBehaviour
             placeBuildingInstance.GetComponentsInChildren<Renderer>().All(rend => 
                 rend.material = selectedAction.AllRestrictionsPass(hit.point) ? OkPlaceMaterial : KoPlaceMaterial);            
         }
+    }
+
+    private void AddUnit(BaseUnit unit)
+    {
+        if(playerUnits.Contains(unit)) return;
+        playerUnits.Add(unit);
     }
 }
