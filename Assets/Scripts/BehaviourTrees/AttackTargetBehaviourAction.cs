@@ -34,6 +34,12 @@ public partial class AttackTargetBehaviourAction : Action
         targetAttackable = TargetGameObject.Value.GetComponent<IAttackable>();
         lastAttack = Time.time;
 
+        if (Self.Value.GetComponent<CommonActions>().isDead && navMeshAgent != null)
+        {
+            navMeshAgent.ResetPath();
+            navMeshAgent.isStopped = true;
+            return Status.Success;
+        }
         if (!Enemies.Value.Contains(TargetGameObject.Value))
         {
             navMeshAgent.SetDestination(targetTransform.position);
@@ -50,6 +56,12 @@ public partial class AttackTargetBehaviourAction : Action
     protected override Status OnUpdate()
     {
         if(TargetGameObject == null || targetAttackable.CurrentHealth == 0) return Status.Success;
+        if (Self.Value.GetComponent<CommonActions>().isDead && navMeshAgent != null)
+        {
+            navMeshAgent.ResetPath();
+            navMeshAgent.isStopped = true;
+            return Status.Success;
+        }
 
         if (!Enemies.Value.Contains(TargetGameObject.Value))
         {
@@ -81,14 +93,6 @@ public partial class AttackTargetBehaviourAction : Action
 
     private void LookAtTarget()
     {
-        /*Quaternion lookRotation = Quaternion.LookRotation(
-            (targetTransform.position - selfTransform.position).normalized,Vector3.up);
-        selfTransform.rotation = Quaternion.Euler(
-            selfTransform.root.eulerAngles.x,
-            lookRotation.eulerAngles.y,
-            selfTransform.rotation.eulerAngles.z
-        );*/
-
         Vector3 dir = targetTransform.position - selfTransform.position;
         dir.y = 0f;
 

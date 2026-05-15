@@ -9,8 +9,6 @@ public class BaseHealer : BaseUnit, IHealer
     [SerializeField] private HealingSystem healingSystem;
     [SerializeField] private AllyInRangeEvent unitEnterRange;
     [SerializeField] private AllyInRangeEvent unitOutOfRange;
-    [SerializeField] private Animator animator;
-
     public Transform Transform => transform;
 
     protected override void Awake()

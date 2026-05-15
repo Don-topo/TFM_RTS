@@ -11,8 +11,10 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
     [field: SerializeField] public SO_BaseUnit SO_BaseUnit { get; protected set; }
     [field: SerializeField] public int CurrentHealth { get; protected set; }
     [field: SerializeField] public int MaxHealth {  get; protected set; }
+    [SerializeField] protected Animator animator;
     [Header("Events")]
     [SerializeField] protected UpdateHealthEvent updateHealthEvent;
+    [SerializeField] protected UnitDeathEvent unitDeathEvent;
 
     public Transform TargetPosition => transform;
 
@@ -20,15 +22,19 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
     public UnitSelectedEvent unitSelectEvent;
     public UnitDeselectEvent unitDeselectEvent;
     private BaseAction[] startingActions;
+    public bool isDead { get; protected set; } = false;
+    private Collider col;
+    private Rigidbody rb;
 
     protected virtual void Start()
     {
         startingActions = SO_BaseUnit.UnitPrefab.GetComponent<CommonActions>().Actions;
+        rb = GetComponent<Rigidbody>();
     }
 
     protected virtual void Awake()
     {
-
+        col = GetComponent<Collider>();
     }
 
     protected virtual void Update()
@@ -55,6 +61,8 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
 
     public virtual void Select()
     {
+        if (isDead) return;
+
         // Safety check to avoid errors
         if(selectionDecal != null)
         {
@@ -85,6 +93,8 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
 
     public void ApplyDamage(int damageAmount)
     {
+        if(isDead) return;
+
         CurrentHealth = Mathf.Clamp(CurrentHealth - damageAmount, 0, CurrentHealth);
         if (IsSelected)
         {
@@ -92,13 +102,24 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
         }        
         if(CurrentHealth <= 0)
         {
+            isDead = true;
             Die();
         }
     }
 
     public void Die()
     {
-        Destroy(gameObject);
+        if(animator != null)
+        {
+            animator.SetTrigger("Death");           
+        }
+
+        col.enabled = false;
+        rb.isKinematic = true;
+        rb.detectCollisions = false;
+        Deselect();
+        unitDeathEvent.Raise(this);
+        Destroy(gameObject, 3f);
     }
 
     private void PlaySelectionAudio()

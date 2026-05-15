@@ -7,6 +7,7 @@ public class AttackSystem : MonoBehaviour
 {
     [Header("Events")]
     [SerializeField] private EnemyInRangeEvent unitInRangeEvent;
+    [SerializeField] private EnemyInRangeEvent unitOutRangeEvent;
     [SerializeField] private UnitDeathEvent unitDeathEvent;
     
     private List<IAttackable> enemiesInRange = new List<IAttackable>();
@@ -36,16 +37,17 @@ public class AttackSystem : MonoBehaviour
             // TODO Check if the enemy is visible
             enemiesVisible.Add(enemy);
             unitInRangeEvent.Raise(enemy);
+            unitDeathEvent.Register(UnitDeath);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if(other.TryGetComponent(out IAttackable enemy))
-        {
+        {            
             enemiesVisible.Remove(enemy);
             enemiesInRange.Remove(enemy);
-            
+            unitOutRangeEvent.Raise(enemy);
         }
 
         // Check if the unitDeath event trigger this method and the list is empty
@@ -55,7 +57,7 @@ public class AttackSystem : MonoBehaviour
         }
     }
 
-    private void UnitDeath(BaseUnit unitDeathEvent)
+    private void UnitDeath(CommonActions unitDeathEvent)
     {
         // Check if the death unit is on attack range
         if (enemiesInRange.Contains((IAttackable)unitDeathEvent))

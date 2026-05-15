@@ -49,7 +49,7 @@ public class HealingSystem : MonoBehaviour
         }
     }
 
-    private void UnitDeath(BaseUnit baseUnit)
+    private void UnitDeath(CommonActions baseUnit)
     {              
         // Check if the death unit is an ally on range
         if (alliesInRange.Contains((IHealable)baseUnit))

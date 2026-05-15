@@ -7,7 +7,6 @@ public class BaseAttacker : BaseUnit, IAttacker
     [Header("Basic Info")]
     public Transform Transform => transform;
     [SerializeField] private AttackSystem attackSystem;
-    [SerializeField] private Animator animator;
     [Header("Events")]
     [SerializeField] private EnemyInRangeEvent unitEnterRange;
     [SerializeField] private EnemyInRangeEvent unitOutOfRange;
@@ -32,6 +31,7 @@ public class BaseAttacker : BaseUnit, IAttacker
    
     public void Attack(IAttackable attackable)
     {
+        if (isDead) return;
         PlayAttackAudio();
         behaviorGraphAgent.SetVariableValue<GameObject>("TargetGameObject", attackable.TargetPosition.gameObject);
         behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Attack);
@@ -39,6 +39,7 @@ public class BaseAttacker : BaseUnit, IAttacker
 
     public void Attack(Vector3 attackPosition)
     {
+        if (isDead) return;
         PlayAttackAudio();
         behaviorGraphAgent.SetVariableValue<GameObject>("TargetGameObject", null);
         behaviorGraphAgent.SetVariableValue("TargetPosition", attackPosition);
@@ -47,7 +48,7 @@ public class BaseAttacker : BaseUnit, IAttacker
 
     public void Patrol(Vector3 targetPosition)
     {
-        if (targetPosition == null) return;
+        if (targetPosition == null || isDead) return;
         PlayPatrolAutdio();
 
         Vector3 currenPosition = gameObject.transform.position;

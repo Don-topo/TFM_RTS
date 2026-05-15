@@ -5,15 +5,18 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    [Header("Components")]
     [SerializeField] private UIActions uiActions;
     [SerializeField] private UIUnitBaseInfo uiUnitBase;
     [SerializeField] private UISingleUnit uiSingleUnit;
     [SerializeField] private UIMultipleUnits uIMultipleUnits;
     [SerializeField] private UISelectedBuilding uiSelectedBuilding;
-
+    [Header("Events")]
     public UnitSelectedEvent unitSelectedEvent;
     public UnitDeselectEvent unitDeselectEvent;
     public RefreshUIEvent refreshUIEvent;
+    public UnitDeathEvent deathEvent;
+
     private List<ISelectable> selectedUnits = new List<ISelectable>(12);
     
     private void Awake()
@@ -21,6 +24,7 @@ public class UIManager : MonoBehaviour
         unitSelectedEvent.Register(UnitSelected);
         unitDeselectEvent.Register(UnitDeselected);
         refreshUIEvent.Register(HardRefreshByEvent);
+        deathEvent.Register(DeathUnit);
     }
 
     private void Start()
@@ -36,6 +40,7 @@ public class UIManager : MonoBehaviour
     {
         unitSelectedEvent.Unregister(UnitSelected);
         unitDeselectEvent.Unregister(UnitDeselected);
+        deathEvent.Unregister(DeathUnit);
     }
 
     private void UnitSelected(CommonActions unitSelected)
@@ -47,6 +52,12 @@ public class UIManager : MonoBehaviour
     private void UnitDeselected(CommonActions unitDeselect)
     {
         selectedUnits.Remove(unitDeselect);
+        UpdateUI();
+    }
+
+    private void DeathUnit(CommonActions unitDeath)
+    {
+        selectedUnits.Remove(unitDeath);
         UpdateUI();
     }
 

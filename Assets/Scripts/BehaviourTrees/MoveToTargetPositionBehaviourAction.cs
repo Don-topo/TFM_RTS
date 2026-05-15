@@ -22,6 +22,12 @@ public partial class MoveToTargetPositionBehaviourAction : Action
         animator = Self.Value.GetComponentInChildren<Animator>();
         if (animator == null) return Status.Failure;
 
+        if (Self.Value.GetComponent<CommonActions>().isDead && navMeshAgent != null)
+        {
+            navMeshAgent.ResetPath();
+            navMeshAgent.isStopped = true;
+            return Status.Success;
+        }
         // Check if the agent is already at that position
         if (Vector3.Distance(navMeshAgent.transform.position, TargetPosition.Value) <= navMeshAgent.stoppingDistance)
         {
@@ -37,6 +43,12 @@ public partial class MoveToTargetPositionBehaviourAction : Action
 
     protected override Status OnUpdate()
     {
+        if(Self.Value.GetComponent<CommonActions>().isDead && navMeshAgent != null)
+        {
+            navMeshAgent.ResetPath();
+            navMeshAgent.isStopped = true;      
+            return Status.Success;
+        }
         animator.SetFloat("MoveSpeed", navMeshAgent.velocity.magnitude);
         // Finish if unity is calculating the path
         if (navMeshAgent.pathPending) return Status.Running;

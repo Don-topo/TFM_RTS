@@ -32,14 +32,9 @@ public class BaseUnit : CommonActions, IMoveable, IHealable
         recruitedEvent.Raise(this);
     }
 
-    // Update is called once per frame
-    protected override void Update()
-    {
-        
-    }
-
     public void Move(Transform transform)
     {
+        if (isDead) Stop();
         PlayMoveAudio();
         behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Move);
         behaviorGraphAgent.SetVariableValue("TargetGameObject", transform.gameObject);        
@@ -47,6 +42,7 @@ public class BaseUnit : CommonActions, IMoveable, IHealable
 
     public void Move(Vector3 position)
     {
+        if (isDead) Stop();
         PlayMoveAudio();
         behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Move);
         behaviorGraphAgent.SetVariableValue("TargetPosition", position);
@@ -61,6 +57,7 @@ public class BaseUnit : CommonActions, IMoveable, IHealable
 
     public void Heal(int amount)
     {
+        if (isDead) return;
         CurrentHealth = Mathf.Clamp(CurrentHealth + amount, 0, MaxHealth);
         updateHealthEvent.Raise(this);
     }

@@ -7,7 +7,6 @@ public class AttackerBuilding : BaseBuilding, IAttacker
     [Header("Basic Info")]
     public Transform Transform => transform;
     [SerializeField] private AttackSystem attackSystem;
-    [SerializeField] private Animator animator;
     [Header("Events")]
     [SerializeField] private EnemyInRangeEvent unitEnterRange;
     [SerializeField] private EnemyInRangeEvent unitOutOfRange;
@@ -56,6 +55,7 @@ public class AttackerBuilding : BaseBuilding, IAttacker
             && targetVariable.Value == null && targets.Count > 0)
         {
             GraphAgent.SetVariableValue("TargetGameObject", targets[0]);
+            GraphAgent.SetVariableValue("BuildingActions", BuildingActions.Attack);
         }
     }
 
@@ -69,11 +69,12 @@ public class AttackerBuilding : BaseBuilding, IAttacker
         if (targets.Count > 0)
         {
             GraphAgent.SetVariableValue("TargetGameObject", targets[0]);
+            GraphAgent.SetVariableValue("BuildingActions", BuildingActions.Attack);
         }
         else
         {
             GraphAgent.SetVariableValue<GameObject>("TargetGameObject", null);
-            GraphAgent.SetVariableValue("TargetPosition", enemyOutOfRange.TargetPosition.position);
+            GraphAgent.SetVariableValue("BuildingActions", BuildingActions.Stop);
         }
     }
 

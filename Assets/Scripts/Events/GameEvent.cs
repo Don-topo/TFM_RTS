@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 
@@ -11,14 +12,10 @@ public class GameEvent<T> : ScriptableObject
     {
         if (listeners == null) return;
 
-        foreach(Action<T> listener in listeners)
+        foreach(Action<T> listener in listeners.ToList())
         {
-            listener?.Invoke(value);
-        }
-        /*for (int i = listeners.Count - 1; i >= 0; i--)
-        {
-            listeners[i]?.Invoke(value);
-        }*/            
+            listener.Invoke(value);
+        }          
     }
 
     public void Register(Action<T> listener)

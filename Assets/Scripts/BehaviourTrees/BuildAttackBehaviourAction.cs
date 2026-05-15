@@ -24,6 +24,8 @@ public partial class BuildAttackBehaviourAction : Action
 
     protected override Status OnStart()
     {
+        if (Self.Value == null || TargetGameObject.Value == null || Enemies.Value == null) return Status.Failure;
+            
         selfTransform = Self.Value.transform;
         baseUnit = selfTransform.GetComponent<BaseUnit>();
         targetTransform = TargetGameObject.Value.transform;
@@ -34,7 +36,7 @@ public partial class BuildAttackBehaviourAction : Action
 
     protected override Status OnUpdate()
     {
-        if (TargetGameObject == null || targetAttackable.CurrentHealth == 0) return Status.Success;
+        if (TargetGameObject.Value == null || targetAttackable.CurrentHealth == 0) return Status.Success;
 
         if (!Enemies.Value.Contains(TargetGameObject.Value))
         {

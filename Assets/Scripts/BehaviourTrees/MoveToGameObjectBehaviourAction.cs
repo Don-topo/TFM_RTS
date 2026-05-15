@@ -23,6 +23,13 @@ public partial class MoveToGameObjectBehaviourAction : Action
         animator = Self.Value.GetComponentInChildren<Animator>();
         if(animator == null) return Status.Failure;
 
+        if (Self.Value.GetComponent<CommonActions>().isDead && navMeshAgent != null)
+        {
+            navMeshAgent.ResetPath();
+            navMeshAgent.isStopped = true;
+            return Status.Success;
+        }
+
         // Get the target position
         Vector3 targetPosition = TargetGameObject.Value.gameObject.transform.position;
 
@@ -41,6 +48,12 @@ public partial class MoveToGameObjectBehaviourAction : Action
 
     protected override Status OnUpdate()
     {
+        if (Self.Value.GetComponent<CommonActions>().isDead && navMeshAgent != null)
+        {
+            navMeshAgent.ResetPath();
+            navMeshAgent.isStopped = true;
+            return Status.Success;
+        }
         animator.SetFloat("MoveSpeed", navMeshAgent.velocity.magnitude);
 
         // Sanity check to avoid errors
