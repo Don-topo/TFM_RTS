@@ -60,7 +60,7 @@ public partial class MoveToGameObjectBehaviourAction : Action
         if (navMeshAgent.pathPending) return Status.Running;
 
         // Get TargetPosition
-        Vector3 targetPosition = TargetGameObject.Value.gameObject.transform.position;
+        Vector3 targetPosition = GetTargetPosition();
 
         if (Vector3.Distance(targetPosition, startPosition) >= navMeshAgent.stoppingDistance)
         {
@@ -82,6 +82,21 @@ public partial class MoveToGameObjectBehaviourAction : Action
     protected override void OnEnd()
     {
         animator.SetFloat("MoveSpeed", 0);
+    }
+
+    private Vector3 GetTargetPosition()
+    {
+        Vector3 targetPosition;
+        if (TargetGameObject.Value.TryGetComponent(out Collider collider))
+        {
+            targetPosition = collider.ClosestPoint(navMeshAgent.transform.position);
+        }
+        else
+        {
+            targetPosition = TargetGameObject.Value.transform.position;
+        }
+
+        return targetPosition;
     }
 }
 

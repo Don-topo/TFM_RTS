@@ -23,15 +23,19 @@ public partial class AttackTargetBehaviourAction : Action
     private List<Collider> targetColliders;
     private float lastAttack;
     private IAttackable targetAttackable;
+    private AudioSource audioSource;
 
     protected override Status OnStart()
     {
+        if (Self.Value == null || TargetGameObject.Value == null || Enemies.Value == null) return Status.Failure;
+
         selfTransform = Self.Value.transform;
-        navMeshAgent = selfTransform.GetComponent<NavMeshAgent>();
-        baseUnit = selfTransform.GetComponent<BaseUnit>();
-        animator = selfTransform.GetComponent<Animator>();
+        navMeshAgent = Self.Value.GetComponent<NavMeshAgent>();
+        baseUnit = Self.Value.GetComponent<BaseUnit>();
+        animator = Self.Value.GetComponentInChildren<Animator>();
         targetTransform = TargetGameObject.Value.transform;
         targetAttackable = TargetGameObject.Value.GetComponent<IAttackable>();
+        audioSource = Self.Value.GetComponent<AudioSource>();
         lastAttack = Time.time;
 
         if (Self.Value.GetComponent<CommonActions>().isDead && navMeshAgent != null)
@@ -114,6 +118,7 @@ public partial class AttackTargetBehaviourAction : Action
             animator.SetTrigger("Attack");
         }
         lastAttack = Time.time;
+        if (audioSource != null) audioSource.Play();
         targetAttackable.ApplyDamage(AttackInfo.Value.AttackDamage);       
     }
 }

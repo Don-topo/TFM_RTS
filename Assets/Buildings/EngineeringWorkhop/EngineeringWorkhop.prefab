@@ -54,15 +54,15 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.54531384
+  - screenRelativeHeight: 0.4106557
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 1723293913140808091}
-  - screenRelativeHeight: 0.24517842
+  - screenRelativeHeight: 0.10679454
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 2240603934158027873}
-  - screenRelativeHeight: 0.058032848
+  - screenRelativeHeight: 0.020130519
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 3610236121866490291}
@@ -118,11 +118,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RecruitBuilding
   <IsSelected>k__BackingField: 0
   selectionDecal: {fileID: 6635766571665416474}
-  <Actions>k__BackingField: []
+  <Actions>k__BackingField:
+  - {fileID: 11400000, guid: 53a275cdf8ae1ba4386a4444f58e381a, type: 2}
+  - {fileID: 11400000, guid: 53a746d823dd9a84eba0192cfd665358, type: 2}
+  - {fileID: 11400000, guid: b46cddd9723ed0d428f18f5d25b294f5, type: 2}
+  - {fileID: 11400000, guid: c977ced432cc15642a4159bda7b1d431, type: 2}
+  - {fileID: 11400000, guid: dfca6df8a2147a74abbfc29b6c91166d, type: 2}
+  - {fileID: 11400000, guid: ad291f80379aef348b067cc3c7ecc363, type: 2}
   <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: d54ef6fec9f6572428c80be378d3e096, type: 2}
   <CurrentHealth>k__BackingField: 0
   <MaxHealth>k__BackingField: 0
+  animator: {fileID: 0}
   updateHealthEvent: {fileID: 11400000, guid: 13cf27522de45664fb20e006b4905224, type: 2}
+  unitDeathEvent: {fileID: 11400000, guid: 46b246a8aa2a6484aa30cca95cadc3fa, type: 2}
   unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
   <PlaceMaterial>k__BackingField: {fileID: 2100000, guid: d83ecade081c9e84b8d9c103e26560ae, type: 2}
@@ -133,7 +141,6 @@ MonoBehaviour:
   refreshEvent: {fileID: 11400000, guid: 2d6eed5983d3d1c42836ee74b2c39f02, type: 2}
   StartTime: 0
   queueEvent: {fileID: 11400000, guid: 1dd8e8867b7a3644e9d24fe108f29d73, type: 2}
-  refreshEvent: {fileID: 11400000, guid: 2d6eed5983d3d1c42836ee74b2c39f02, type: 2}
   recruitDestination: {fileID: 6434967215031062788, guid: e2a5db46af34bb84097aa238fdbd9aea, type: 3}
 --- !u!114 &8230962751551866029
 MonoBehaviour:
@@ -189,7 +196,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2295046839706232624
 Transform:
   m_ObjectHideFlags: 0
@@ -199,7 +206,7 @@ Transform:
   m_GameObject: {fileID: 5570616521513959755}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.17, z: 0}
+  m_LocalPosition: {x: -0.5, y: 0.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

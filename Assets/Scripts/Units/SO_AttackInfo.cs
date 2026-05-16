@@ -10,4 +10,5 @@ public class SO_AttackInfo : ScriptableObject
     [field: SerializeField] public float AttackSpeed { get; private set; } = 1f;
     [field: SerializeField] public List<AudioClip> AttackAudioClips;
     [field: SerializeField] public List<AudioClip> PatrolAudioClips;
+    [field: SerializeField] public ParticleSystem AttackEffect { get; private set; }
 }

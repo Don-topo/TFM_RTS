@@ -13,9 +13,12 @@ public class AttackerBuilding : BaseBuilding, IAttacker
     [Header("Attack Info")]
     [field: SerializeField] public SO_AttackInfo AttackInfo { get; private set; }
 
+    private AudioSource audioSource;
+
     protected override void Awake()
     {
         base.Awake();
+        audioSource = GetComponent<AudioSource>();
         GraphAgent.SetVariableValue("SO Attack Info", AttackInfo);
         unitEnterRange.Register(UnitInRange);
         unitOutOfRange.Register(UnitOutOfRange);

@@ -4,6 +4,7 @@ using Unity.Behavior;
 using Unity.Properties;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Audio;
 using Action = Unity.Behavior.Action;
 
 [Serializable, GeneratePropertyBag]
@@ -21,15 +22,19 @@ public partial class BuildAttackBehaviourAction : Action
     private List<Collider> targetColliders;
     private float lastAttack;
     private IAttackable targetAttackable;
+    private AudioSource audioSource;
+    private ParticleSystem particleSystem;
 
     protected override Status OnStart()
     {
         if (Self.Value == null || TargetGameObject.Value == null || Enemies.Value == null) return Status.Failure;
             
         selfTransform = Self.Value.transform;
+        particleSystem = Self.Value.GetComponent<AttackerBuilding>().AttackInfo.AttackEffect;
         baseUnit = selfTransform.GetComponent<BaseUnit>();
         targetTransform = TargetGameObject.Value.transform;
         targetAttackable = TargetGameObject.Value.GetComponent<IAttackable>();
+        audioSource = Self.Value.GetComponent<AudioSource>();
         lastAttack = Time.time;
         return Status.Running;
     }
@@ -56,8 +61,8 @@ public partial class BuildAttackBehaviourAction : Action
 
     private void Attack()
     {
-
-        lastAttack = Time.time;
+        lastAttack = Time.time;        
+        if (audioSource != null) audioSource.Play();
         targetAttackable.ApplyDamage(AttackInfo.Value.AttackDamage);
     }
 }

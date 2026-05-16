@@ -178,11 +178,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RecruitBuilding
   <IsSelected>k__BackingField: 0
   selectionDecal: {fileID: 8998515289550495997}
-  <Actions>k__BackingField: []
+  <Actions>k__BackingField:
+  - {fileID: 11400000, guid: 148d2666fcb694244b6148581e685d54, type: 2}
+  - {fileID: 11400000, guid: 2aa7223f90e7c9245b1a2fb31c3166dc, type: 2}
+  - {fileID: 11400000, guid: b46cddd9723ed0d428f18f5d25b294f5, type: 2}
+  - {fileID: 11400000, guid: d598e50a672c30449ab2dd8be4e02fb8, type: 2}
+  - {fileID: 11400000, guid: dfca6df8a2147a74abbfc29b6c91166d, type: 2}
   <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: 3c047879e6c9f9a48b087cf3ce46252f, type: 2}
   <CurrentHealth>k__BackingField: 0
   <MaxHealth>k__BackingField: 0
+  animator: {fileID: 0}
   updateHealthEvent: {fileID: 11400000, guid: 13cf27522de45664fb20e006b4905224, type: 2}
+  unitDeathEvent: {fileID: 11400000, guid: 46b246a8aa2a6484aa30cca95cadc3fa, type: 2}
   unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
   <PlaceMaterial>k__BackingField: {fileID: 2100000, guid: d83ecade081c9e84b8d9c103e26560ae, type: 2}
@@ -193,7 +200,6 @@ MonoBehaviour:
   refreshEvent: {fileID: 11400000, guid: 2d6eed5983d3d1c42836ee74b2c39f02, type: 2}
   StartTime: 0
   queueEvent: {fileID: 11400000, guid: 1dd8e8867b7a3644e9d24fe108f29d73, type: 2}
-  refreshEvent: {fileID: 11400000, guid: 2d6eed5983d3d1c42836ee74b2c39f02, type: 2}
   recruitDestination: {fileID: 6434967215031062788, guid: e2a5db46af34bb84097aa238fdbd9aea, type: 3}
 --- !u!114 &8947018648139039033
 MonoBehaviour:

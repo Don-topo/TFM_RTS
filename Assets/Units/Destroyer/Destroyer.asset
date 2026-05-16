@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e766ad877836f414490017ef6206d145, type: 3}
+  m_Name: Destroyer
+  m_EditorClassIdentifier: Assembly-CSharp::SO_BaseUnit
+  <Name>k__BackingField: Destroyer
+  <Icon>k__BackingField: {fileID: 21300000, guid: fa152695fa2810b419deca55dbc0dc9f, type: 3}
+  <UnitPrefab>k__BackingField: {fileID: 8897411332796388755, guid: cbe7bc2cebf5f2e44a331017a351c1d6, type: 3}
+  <Health>k__BackingField: 100
+  <GenerationTime>k__BackingField: 8
+  <Cost>k__BackingField: {fileID: 11400000, guid: c6b3c4674919fed4496e70f1874fb9f6, type: 2}
+  <SelectionAudioClips>k__BackingField:
+  - {fileID: 8300000, guid: 745d325e663d21b4f9301d3de39301fd, type: 3}
+  - {fileID: 8300000, guid: 47836e3852ad7bb4ab8789eec76930a0, type: 3}
+  - {fileID: 8300000, guid: 877bba7a535b3b0479aa8d2b5bece5a6, type: 3}
+  - {fileID: 8300000, guid: f479fd646e8bafc419a85f7435b024e8, type: 3}
+  - {fileID: 8300000, guid: 6f478723254de68478be60d4d59c77c9, type: 3}
+  - {fileID: 8300000, guid: 36194ed86801ca9458f2fb06768238b7, type: 3}

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c26b45c28439f641bcfddeafad45703, type: 3}
+  m_Name: TankmanAttackInfo
+  m_EditorClassIdentifier: Assembly-CSharp::SO_AttackInfo
+  <AttackDamage>k__BackingField: 20
+  <AttackRange>k__BackingField: 2
+  <AttackSpeed>k__BackingField: 1
+  AttackAudioClips:
+  - {fileID: 8300000, guid: 0f86a144cc2f40148be50ef805927d1a, type: 3}
+  - {fileID: 8300000, guid: 75832a2543e5814499198468e2853410, type: 3}
+  - {fileID: 8300000, guid: d38af1583b5100b498f7baa134091e5d, type: 3}
+  - {fileID: 8300000, guid: 173a754e18151844e82470dfcaeb6fc9, type: 3}
+  - {fileID: 8300000, guid: 2e3d6e426b9ceff40b0ecfc02a271d76, type: 3}
+  - {fileID: 8300000, guid: 80f36dffd3607f743a60d144cd43fda7, type: 3}
+  PatrolAudioClips:
+  - {fileID: 8300000, guid: 9654aace0839b904ca03d833d7786a5b, type: 3}
+  - {fileID: 8300000, guid: fab192f92636156448d0f02b1b22182a, type: 3}
+  - {fileID: 8300000, guid: bd4328d6faedfc243b9e6ef4aab24d44, type: 3}
+  - {fileID: 8300000, guid: 1fe23cc63ce4729458eb85749f9d7a8f, type: 3}
+  <AttackEffect>k__BackingField: {fileID: 0}

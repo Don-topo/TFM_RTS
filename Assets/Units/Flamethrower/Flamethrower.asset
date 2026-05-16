@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Flamethrower
   m_EditorClassIdentifier: Assembly-CSharp::SO_BaseUnit
   <Name>k__BackingField: Flamethrower
-  <Icon>k__BackingField: {fileID: 21300000, guid: 2f6ebfdf80f1ec14c966e2423dcaddae, type: 3}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 0f712e61b5866a241b9e006cbe01fee1, type: 3}
   <UnitPrefab>k__BackingField: {fileID: 5377168089311033226, guid: 334f7898c4d12f14e9807239fc335061, type: 3}
   <Health>k__BackingField: 100
   <GenerationTime>k__BackingField: 8
