@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private UISingleUnit uiSingleUnit;
     [SerializeField] private UIMultipleUnits uIMultipleUnits;
     [SerializeField] private UISelectedBuilding uiSelectedBuilding;
+    [SerializeField] private UIUnitGroups uiUnitGroups;
     [Header("Events")]
     public UnitSelectedEvent unitSelectedEvent;
     public UnitDeselectEvent unitDeselectEvent;
@@ -68,7 +69,10 @@ public class UIManager : MonoBehaviour
 
     private void UpdateUI()
     {
-        if(selectedUnits.Count > 0)
+        List<CommonActions> list1 = new();
+        list1.AddRange(selectedUnits);
+        uiUnitGroups.Enable(list1);
+        if (selectedUnits.Count > 0)
         {
             if(selectedUnits.Count == 1)
             {
