@@ -22,8 +22,8 @@ public class UIMultipleUnits : MonoBehaviour
     public void Enable(List<CommonActions> unitsSelected)
     {
         gameObject.SetActive(true);
-      
-        foreach(CommonActions unitSelected in unitsSelected)
+        ClearButtons();
+        foreach (CommonActions unitSelected in unitsSelected)
         {
             // Create a new Button for each unit selected
             UIUnitSelectedButton newButton = Instantiate(unitButtonPrefab, transform);
@@ -43,15 +43,20 @@ public class UIMultipleUnits : MonoBehaviour
 
     public void Disable()
     {
-        foreach(UIUnitSelectedButton unitSelectedButton in unitsSelectedButtons)
+        ClearButtons();
+        gameObject.SetActive(false);        
+    }
+
+    private void ClearButtons()
+    {
+        foreach (UIUnitSelectedButton unitSelectedButton in unitsSelectedButtons)
         {
             unitSelectedButton.TryGetComponent(out Button button);
             button.onClick.RemoveAllListeners();
-            Destroy(unitSelectedButton.gameObject);            
+            Destroy(unitSelectedButton.gameObject);
         }
 
         unitsSelectedButtons.Clear();
-        gameObject.SetActive(false);        
     }
 
     private void HandleClick(CommonActions selectedUnit)

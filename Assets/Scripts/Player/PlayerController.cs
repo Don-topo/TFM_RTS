@@ -2,10 +2,13 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.Burst.CompilerServices;
 using Unity.Cinemachine;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.HID;
 using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -35,6 +38,9 @@ public class PlayerController : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioClip invalidAction;
 
+    [SerializeField] private GameObject moveIndicator;
+
+
     public float edgeSize = 50f;
 
     private Vector3 cameraStartPosition;
@@ -58,12 +64,11 @@ public class PlayerController : MonoBehaviour
     {
         selectUnitEvent.Register(SelectedUnit);
         deselectUnitEvent.Register(DeselectUnit);
-        //actionExecuted.Register(ExecuteAction);
         actionClicked.Register(ActionClicked);
         minimapClickEvent.Register(MinimapClicked);
         recruitedEvent.Register(AddUnit);
         zoom = camera.transform.localPosition.y;
-        cameraStartPosition = camera.transform.position;
+        cameraStartPosition = cameraMovementTransform.transform.position;
         hideResourceAreaEvent.Raise(null);
 
     }
@@ -77,6 +82,7 @@ public class PlayerController : MonoBehaviour
         CameraMovement();
         RigthClick();
         ResetCameraPosition();
+        FocusCameraOnSelectedUnit();
     }
 
     private void OnDestroy()
@@ -171,7 +177,7 @@ public class PlayerController : MonoBehaviour
 
     private void ResetCameraPosition()
     {
-        if (Keyboard.current.spaceKey.wasReleasedThisFrame)
+        if (Keyboard.current.tabKey.wasReleasedThisFrame)
         {
             camera.transform.position = cameraStartPosition;
         }
@@ -212,6 +218,7 @@ public class PlayerController : MonoBehaviour
                     }
                 }
             }
+            ShowClickAnimation(hitInfo);
         }
     }
 
@@ -233,16 +240,18 @@ public class PlayerController : MonoBehaviour
             && Physics.Raycast(cameraRay, out hit, float.MaxValue, interactableLayers | floorLayers))
         {
             ExecuteAction(hit);
+            ShowClickAnimation(hit);
         }
     }
 
-    private void DeselectUnits()
+    private void ShowClickAnimation(RaycastHit hit)
     {
-        foreach (var unit in selectedUnits)
-        {
-            unit.Deselect();
-        }
-        selectedUnits.Clear();
+        GameObject clickResponse = Instantiate(
+                    moveIndicator,
+                    hit.point + Vector3.up * 0.02f,
+                    Quaternion.Euler(90, 0, 0)
+            );
+        clickResponse.GetComponent<MeshRenderer>().material.SetFloat("_StartTime", Time.time);
     }
 
     private void DragMouse()
@@ -297,7 +306,7 @@ public class PlayerController : MonoBehaviour
 
     private void MouseUp()
     {
-        if(!clickOnUI && selectedAction == null)
+        if(!clickOnUI && selectedAction == null && !Keyboard.current.leftShiftKey.isPressed)
         {
             // Deselect all units
             ISelectable[] test = selectedUnits.ToArray();
@@ -441,5 +450,18 @@ public class PlayerController : MonoBehaviour
     {
         if(playerUnits.Contains(unit)) return;
         playerUnits.Add(unit);
+    }
+
+    private void FocusCameraOnSelectedUnit()
+    {
+        if(Keyboard.current.spaceKey.wasReleasedThisFrame && selectedUnits.Count > 0)
+        {
+            Vector3 unitPosition = ((CommonActions)selectedUnits[0]).transform.position;
+            cameraMovementTransform.transform.position = new Vector3(
+                unitPosition.x, 
+                cameraMovementTransform.transform.position.y, 
+                unitPosition.z - 8f
+            );
+        }
     }
 }
