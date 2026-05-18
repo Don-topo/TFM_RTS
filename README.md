@@ -1,5 +1,13 @@
 Patches relases:
 
+v.0.32 => 18/05/2026:
+  - Add Main menu styles.
+  - Fix Main menu bug.
+  - Add quality settings to unity project.
+  - Add transition between scenes.
+  - Add Destroy building action + explotion effect.
+  - Set all audios with AudioMixer.
+
 v.0.31 => 17/05/2026:
   - Add group selection.
   - Add click indicator.
