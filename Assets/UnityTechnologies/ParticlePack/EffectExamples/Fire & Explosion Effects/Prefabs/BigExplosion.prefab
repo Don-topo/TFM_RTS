@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 4388947112716342}
   - component: {fileID: 198917022394846920}
   - component: {fileID: 199630755385234010}
-  m_Layer: 0
+  - component: {fileID: 7809421427875921422}
+  m_Layer: 1
   m_Name: BigExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4947,6 +4948,103 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
+--- !u!82 &7809421427875921422
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121192042590650}
+  m_Enabled: 0
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 20
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1123476242953952
 GameObject:
   m_ObjectHideFlags: 0
@@ -4958,7 +5056,7 @@ GameObject:
   - component: {fileID: 4657243524966140}
   - component: {fileID: 198805160044956896}
   - component: {fileID: 199271172029159390}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Embers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9784,7 +9882,7 @@ GameObject:
   - component: {fileID: 4285441741452706}
   - component: {fileID: 198751835582626154}
   - component: {fileID: 199877337873867354}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: SmokeTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14632,7 +14730,7 @@ GameObject:
   - component: {fileID: 4116738740604250}
   - component: {fileID: 198844874048127756}
   - component: {fileID: 199459376760036170}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Embers (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19457,7 +19555,7 @@ GameObject:
   - component: {fileID: 4564415660777050}
   - component: {fileID: 198918736123329914}
   - component: {fileID: 199729880478975070}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24363,7 +24461,7 @@ GameObject:
   - component: {fileID: 4810292286833524}
   - component: {fileID: 198003277540838118}
   - component: {fileID: 199565671101574698}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Debris
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29270,7 +29368,7 @@ GameObject:
   - component: {fileID: 4834897586904354}
   - component: {fileID: 198604367962915600}
   - component: {fileID: 199375762842987212}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: AdditonalSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34194,7 +34292,7 @@ GameObject:
   - component: {fileID: 4584238095464974}
   - component: {fileID: 198166025632870074}
   - component: {fileID: 199280120914940710}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Shockwave
   m_TagString: Untagged
   m_Icon: {fileID: 0}

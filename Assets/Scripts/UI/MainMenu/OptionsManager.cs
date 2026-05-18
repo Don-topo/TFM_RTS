@@ -47,16 +47,18 @@ public class OptionsManager : MonoBehaviour
     private void Start()
     {
         SetButtons();
+        SetSliders();
         DisableAllCanvas();
         GoToOptions();
         PrepareResolutionDropdown();
         PrepareGraphicsQualityDropdown();
-        LoadSettings();
+        LoadSettings();        
     }
 
     private void OnDestroy()
     {
         ClearButtons();
+        ClearSliders();
     }
 
     private void SetButtons()
@@ -96,6 +98,24 @@ public class OptionsManager : MonoBehaviour
         gameplayBackButton.onClick.RemoveAllListeners();
         gameplaySaveButton.onClick.RemoveAllListeners();
         gameplaySaveButton.onClick.RemoveAllListeners();
+    }
+
+    private void SetSliders()
+    {
+        effectsVolumeSlider.onValueChanged.AddListener(val => SetEffectsVolume(val));
+        generalVolumeSlider.onValueChanged.AddListener(val => SetGeneralVolume(val));
+        voicesVolumeSlider.onValueChanged.AddListener(val => SetVoicesVolume(val));
+        cameraMovementSlider.onValueChanged.AddListener(val => SetCameraSpeed(val));
+        mouseSensitivitySlider.onValueChanged.AddListener(val => SetMouseSensibility(val));
+    }
+
+    private void ClearSliders()
+    {
+        effectsVolumeSlider.onValueChanged.RemoveAllListeners();
+        generalVolumeSlider.onValueChanged.RemoveAllListeners();
+        voicesVolumeSlider.onValueChanged.RemoveAllListeners();
+        cameraMovementSlider.onValueChanged.RemoveAllListeners();
+        mouseSensitivitySlider.onValueChanged.RemoveAllListeners();
     }
 
     // Save options system using PlayerPrefs
@@ -191,7 +211,10 @@ public class OptionsManager : MonoBehaviour
 
     private void PrepareGraphicsQualityDropdown()
     {
-        
+        List<string> options = new List<string>(QualitySettings.names);
+        qualitySettingsDropdown.AddOptions(options);
+        qualitySettingsDropdown.value = QualitySettings.GetQualityLevel();
+        qualitySettingsDropdown.RefreshShownValue();
     }
 
     // Options Setters
@@ -256,6 +279,7 @@ public class OptionsManager : MonoBehaviour
 
     private void GoToOptions()
     {
+        if(audioGameObject.activeSelf || gameplayGameObject.activeSelf) LoadSettings();
         mainOptionsGameObject.SetActive(true);
         graphicsGameObject.SetActive(false);
         audioGameObject.SetActive(false);

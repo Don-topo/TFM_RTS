@@ -86,6 +86,7 @@ public class BaseBuilding : CommonActions, IHealable
         Destroy(explotionInstance, explotionInstance.GetComponent<ParticleSystem>().main.duration);
         // Destroy game object
         Destroy(gameObject);
+        unitDeathEvent.Raise(this);
     }
 
     private float CalculateRefund()

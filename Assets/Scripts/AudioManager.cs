@@ -2,25 +2,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
+[RequireComponent(typeof(AudioSource), typeof(AudioListener))]
 public class AudioManager : MonoBehaviour
 {
     [Header("Components")]
-    [SerializeField] private static AudioSource audioSource;
-    [SerializeField] private AudioListener audioListener;
     [SerializeField] private AudioMixer audioMixer;
+    [SerializeField] private AudioSource backgroundMusicSource;
+    [Header("AudioClips")]
+    [SerializeField] private AudioClip mainBackgroundAudioClip;
+    [SerializeField] private AudioClip hordeAudioClip;
+    [SerializeField] private AudioClip winAudioClip;
+    [SerializeField] private AudioClip defeatAudioClip;
 
     private static List<AudioClip> audioClips;
     private static AudioClip lastClipPlayed;
+    private static AudioSource audioSource;
+    private AudioListener audioListener;
 
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
         audioListener = GetComponent<AudioListener>();
-        audioMixer = GetComponent<AudioMixer>();
+        PlayBackgroundAudio();
     }
 
     public static void SetAudioClips(List<AudioClip> newAudioClips)
     {
+        if(audioClips == newAudioClips) return;
         audioClips = newAudioClips;
     }
 
@@ -42,6 +50,34 @@ public class AudioManager : MonoBehaviour
     {
         audioSource.Stop();
         audioClips.Clear();
+    }
+
+    public void PlayDefeatAudio()
+    {
+        backgroundMusicSource.clip = defeatAudioClip;
+        backgroundMusicSource.loop = true;
+        backgroundMusicSource.Play();
+    }
+
+    public void PlayVictoryAudio()
+    {
+        backgroundMusicSource.clip = winAudioClip;
+        backgroundMusicSource.loop = true;
+        backgroundMusicSource.Play();
+    }
+
+    public void PlayHordeAudio()
+    {
+        backgroundMusicSource.clip = hordeAudioClip;
+        backgroundMusicSource.loop = true;
+        backgroundMusicSource.Play();
+    }
+
+    public void PlayBackgroundAudio()
+    {
+        backgroundMusicSource.clip = mainBackgroundAudioClip;
+        backgroundMusicSource.loop = true;
+        backgroundMusicSource.Play();
     }
 
 }

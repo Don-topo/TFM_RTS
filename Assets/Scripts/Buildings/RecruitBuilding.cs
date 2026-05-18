@@ -36,6 +36,12 @@ public class RecruitBuilding : BaseBuilding
         Deselect();        
     }
 
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        StopAllCoroutines();
+    }
+
     public void RecruitUnit(SO_BaseUnit unitToRecruit)
     {
         // Check if the queue is full
