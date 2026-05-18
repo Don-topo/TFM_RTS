@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,6 +14,9 @@ public class DifficultySelector : MonoBehaviour
     [SerializeField] private Button hardButton;
     [SerializeField] private Button infiniteButton;
     [SerializeField] private Button backButton;
+
+    [Header("Fade Transition")]
+    [SerializeField] private GameObject fade;
 
     private void Start()
     {
@@ -46,11 +50,17 @@ public class DifficultySelector : MonoBehaviour
     {
         PlayerPrefs.SetInt("dificultyMode", (int)dificulty);
         PlayerPrefs.Save();
-        SceneManager.LoadScene("SampleScene");
+        fade.SetActive(true);
+        StartCoroutine(nameof(FadeOut));        
     }
 
     private void BackToMainMenu()
     {
         mainMenu.SetMainMenu();
+    }
+    private IEnumerator FadeOut()
+    {
+        yield return new WaitForSeconds(1.9f);
+        SceneManager.LoadScene("SampleScene");
     }
 }
