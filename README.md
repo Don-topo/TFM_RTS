@@ -1,5 +1,14 @@
 Patches relases:
 
+v.0.31 => 17/05/2026:
+  - Add group selection.
+  - Add click indicator.
+  - Add enemy animations.
+  - Add unit animations.
+  - Set all building actions.
+  - TODO Working on fix Attack bugs.
+  - TODO Fix UI Build Actions menu.
+     
 v.0.30 => 14/05/2026:
   - Add confirm action audio.
   - Add invalid action audio.
