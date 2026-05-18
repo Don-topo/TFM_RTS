@@ -17,9 +17,6 @@ public class Tooltip : MonoBehaviour
     public void SetTooltipText(string text)
     {
         tooltipText.SetText(text);
-        // Change size
-        Vector2 size = tooltipText.GetPreferredValues();
-        RectTransform.sizeDelta = new Vector2(size.x + 50, size.y +25); 
     }
 
     public void ShowTooltip()

@@ -130,10 +130,11 @@ MonoBehaviour:
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
   <PlaceMaterial>k__BackingField: {fileID: 2100000, guid: d83ecade081c9e84b8d9c103e26560ae, type: 2}
   resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
+  refreshEvent: {fileID: 11400000, guid: 2d6eed5983d3d1c42836ee74b2c39f02, type: 2}
   <SO_building>k__BackingField: {fileID: 11400000, guid: d3fc4a5e2bc6667488b9713e43ac3caf, type: 2}
   <GraphAgent>k__BackingField: {fileID: 6498943749188628963}
   <IsConstructed>k__BackingField: 0
-  refreshEvent: {fileID: 11400000, guid: 2d6eed5983d3d1c42836ee74b2c39f02, type: 2}
+  explotionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
   StartTime: 0
   <Resource>k__BackingField: {fileID: 11400000, guid: 2f760aed0d4ab2849bbd1cb30c1fc803, type: 2}
   applyForEveryResource: 0

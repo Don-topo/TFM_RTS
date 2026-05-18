@@ -8,11 +8,13 @@ public class BaseBuilding : CommonActions, IHealable
     [field: SerializeField] public Material PlaceMaterial { get; private set; }
     [Header("Events")]
     [SerializeField] protected ResourceEvent resourceEvent;
+    [SerializeField] protected RefreshUIEvent refreshEvent;
     [Header("Info")]
     [field: SerializeField] public SO_Building SO_building { get; private set; }
     [field: SerializeField] public BehaviorGraphAgent GraphAgent { get; private set; }
     [field: SerializeField] public bool IsConstructed { get; set; } = false;
-    [SerializeField] protected RefreshUIEvent refreshEvent;
+    [Header("Effects")]
+    [SerializeField] private GameObject explotionPrefab;
 
     public float StartTime;
 
@@ -63,8 +65,11 @@ public class BaseBuilding : CommonActions, IHealable
         // Refund spend resources based on building state and health
         float refund = CalculateRefund();
         // Return build resources
+        SO_Resource resourceRefund = SO_building.Cost.SO_Wood;
+        //resourceRefund.
+
         ResourceOP resourceOP = new ResourceOP(SO_building.Cost.SO_Food, SO_building.Cost.Food, 0);
-        resourceEvent.Raise(resourceOP);
+        resourceEvent.Raise(resourceOP);        
         resourceOP = new ResourceOP(SO_building.Cost.SO_Wood, SO_building.Cost.Wood, 0);
         resourceEvent.Raise(resourceOP);
         resourceOP = new ResourceOP(SO_building.Cost.SO_Stone, SO_building.Cost.Stone, 0);
@@ -76,7 +81,9 @@ public class BaseBuilding : CommonActions, IHealable
         resourceOP = new ResourceOP(SO_building.Cost.SO_Population, -SO_building.Cost.Population, 0);
         resourceEvent.Raise(resourceOP);
 
-        // TODO Play explotion
+        // Play explotion
+        GameObject explotionInstance = Instantiate(explotionPrefab, transform.position, Quaternion.identity);
+        Destroy(explotionInstance, explotionInstance.GetComponent<ParticleSystem>().main.duration);
         // Destroy game object
         Destroy(gameObject);
     }
@@ -84,7 +91,7 @@ public class BaseBuilding : CommonActions, IHealable
     private float CalculateRefund()
     {
         float refund = 1.0f;
-        if (IsConstructed) return refund;
+        if (!IsConstructed) return refund;
 
         refund = (refund * CurrentHealth) / MaxHealth;
 

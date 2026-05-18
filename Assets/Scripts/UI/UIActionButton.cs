@@ -24,6 +24,14 @@ public class UIActionButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     BaseAction action;
     List<CommonActions> commonActions = new List<CommonActions>();
 
+    private static readonly string FOOD_FORMAT = "{0} <color=#F54927>Food</color>\n";
+    private static readonly string ELECTICITY_FORMAT = "{0} <color=#E5F200>Electricity</color>\n";
+    private static readonly string WOOD_FORMAT = "{0} <color=#6E3300>Wood</color>\n";
+    private static readonly string IRON_FORMAT = "{0} <color=##242424>Iron</color>\n";
+    private static readonly string STONE_FORMAT = "{0} <color=#C7C7C7>Stone</color>\n";
+    private static readonly string POPULATION_FORMAT = "{0} <color=#B500B5>Population</color>\n";
+    private static readonly string HOTKEY_FORMAT = "(<color=#FFFF00>{0}</color>)\n";
+
     private void Awake()
     {
         button = GetComponent<Button>();
@@ -54,7 +62,7 @@ public class UIActionButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         assignedThisFrame = true;
         if(tooltip != null)
         {
-            tooltip.SetTooltipText(GetCommandTooltipText(action));
+            tooltip.SetTooltipText(GetActionTooltipText(action));
         }        
     }
 
@@ -103,16 +111,63 @@ public class UIActionButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         {
             tooltip.ShowTooltip();
             tooltip.RectTransform.position = new Vector2(
-                    rectTransform.position.x + rectTransform.rect.width / 2f,
+                    rectTransform.position.x - rectTransform.rect.width / 2f,
                     rectTransform.position.y + rectTransform.rect.height / 2f);
         }        
     }
 
-    private String GetCommandTooltipText(BaseAction action)
+    private String GetActionTooltipText(BaseAction action)
     {
         string tooltipText;
-        tooltipText = action.name;
-        tooltipText += action.HotKey.ToString();
+        SO_ResourceCost cost = null;
+        // Add Action name
+        tooltipText = action.Name;
+        // Add Action Hotkey
+        if(action.HotKey != Key.None)
+        {
+            tooltipText += string.Format(HOTKEY_FORMAT, action.HotKey);
+        }
+        else
+        {
+            tooltipText += "\n";
+        }
+        // Add cost info
+        if (action is BuildBuildingAction building)
+        {
+            cost = building.BuildingToBuild.Cost;            
+        }
+        else if(action is RecruitUnitAction unit)
+        {
+            cost = unit.UnitToBuild.Cost;
+        }
+        
+        if(cost != null)
+        {
+            if(cost.Food > 0)
+            {
+                tooltipText += string.Format(FOOD_FORMAT, cost.Food);
+            }
+            if (cost.Electricity > 0)
+            {
+                tooltipText += string.Format(ELECTICITY_FORMAT, cost.Electricity);
+            }
+            if (cost.Wood > 0)
+            {
+                tooltipText += string.Format(WOOD_FORMAT, cost.Wood);
+            }
+            if (cost.Iron > 0)
+            {
+                tooltipText += string.Format(IRON_FORMAT, cost.Iron);
+            }
+            if (cost.Stone > 0)
+            {
+                tooltipText += string.Format(STONE_FORMAT, cost.Stone);
+            }
+            if (cost.Population > 0)
+            {
+                tooltipText += string.Format(POPULATION_FORMAT, cost.Population);
+            }
+        }
 
         return tooltipText;
     }
