@@ -46,7 +46,10 @@ public class UIManager : MonoBehaviour
 
     private void UnitSelected(CommonActions unitSelected)
     {
-        selectedUnits.Add(unitSelected);
+        if (!selectedUnits.Contains(unitSelected))
+        {
+            selectedUnits.Add(unitSelected);
+        }
         UpdateUI();
     }
 

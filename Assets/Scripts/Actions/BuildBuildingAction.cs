@@ -24,7 +24,8 @@ public class BuildBuildingAction : BaseAction
 
     public override void Execute(ActionInfo actionInfo)
     {       
-        BaseBuilding baseBuilding = actionInfo.Action as BaseBuilding;       
+        BaseBuilding baseBuilding = actionInfo.Action as BaseBuilding;   
+        baseBuilding.ResetActions();
         if (CheckIfThereIsAvailableResources(actionInfo))
         {
             Instantiate(BuildingToBuild.UnitPrefab, actionInfo.Hit.point, Quaternion.identity);

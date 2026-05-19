@@ -45,9 +45,18 @@ public class UIActions : MonoBehaviour
             }
         }
 
-        for(int i = 0; i < baseActions.Count; i++)
+        for(int i = 0; i < uIActionButtons.Length; i++)
         {
-            uIActionButtons[baseActions[i].UIPosition].Enable(baseActions[i], unitsSelected, Click(baseActions[i]));            
+            BaseAction actionForSlot = baseActions.Where(action => action.UIPosition == i).FirstOrDefault();
+            if(actionForSlot != null)
+            {
+                uIActionButtons[i].Enable(actionForSlot, unitsSelected, Click(actionForSlot));
+            }
+            else
+            {
+                uIActionButtons[i].Disable();
+            }
+            
         }
     }
 }

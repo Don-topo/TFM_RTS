@@ -34,6 +34,7 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
 
     protected virtual void Awake()
     {
+        startingActions = SO_BaseUnit.UnitPrefab.GetComponent<CommonActions>().Actions;
         col = GetComponent<Collider>();
     }
 

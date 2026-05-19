@@ -1,14 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
-using Unity.Burst.CompilerServices;
-using Unity.Cinemachine;
-using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.HID;
 using UnityEngine.InputSystem.LowLevel;
-using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -208,7 +203,7 @@ public class PlayerController : MonoBehaviour
             {
                 ActionInfo actionInfo = new ActionInfo(unit, hitInfo, baseUnits.IndexOf(unit));
                 
-                foreach(IAction action in unit.Actions)
+                foreach(IAction action in GetAvailableCommands(unit))
                 {
                     if (action.CanExecute(actionInfo))
                     {
@@ -463,5 +458,27 @@ public class PlayerController : MonoBehaviour
                 unitPosition.z - 8f
             );
         }
+    }
+
+    private List<BaseAction> GetAvailableCommands(CommonActions unit)
+    {
+        OverrideCommandsCommand[] overrideCommandsCommands = unit.Actions
+            .Where(command => command is OverrideCommandsCommand)
+            .Cast<OverrideCommandsCommand>()
+            .ToArray();
+
+        List<BaseAction> allAvailableCommands = new();
+        foreach (OverrideCommandsCommand overrideCommand in overrideCommandsCommands)
+        {
+            allAvailableCommands.AddRange(overrideCommand.Commands
+                .Where(command => command is not OverrideCommandsCommand)
+            );
+        }
+
+        allAvailableCommands.AddRange(unit.Actions
+            .Where(command => command is not OverrideCommandsCommand)
+        );
+
+        return allAvailableCommands;
     }
 }

@@ -13038,56 +13038,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8041204223084693054, guid: 0591fa0a357a2cf44915e4715d653115, type: 3}
-      propertyPath: unitDeathEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: 46b246a8aa2a6484aa30cca95cadc3fa, type: 2}
-    - target: {fileID: 8041204223084693054, guid: 0591fa0a357a2cf44915e4715d653115, type: 3}
-      propertyPath: <GraphAgent>k__BackingField
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8041204223084693054, guid: 0591fa0a357a2cf44915e4715d653115, type: 3}
-      propertyPath: <Actions>k__BackingField.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8041204223084693054, guid: 0591fa0a357a2cf44915e4715d653115, type: 3}
-      propertyPath: '<Actions>k__BackingField.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: b91ee546770c2464db1a42242bcb4e92, type: 2}
-    - target: {fileID: 8041204223084693054, guid: 0591fa0a357a2cf44915e4715d653115, type: 3}
-      propertyPath: '<Actions>k__BackingField.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: f96240778372d2e46bda02cec77a6506, type: 2}
-    - target: {fileID: 8041204223084693054, guid: 0591fa0a357a2cf44915e4715d653115, type: 3}
-      propertyPath: '<Actions>k__BackingField.Array.data[2]'
-      value: 
-      objectReference: {fileID: 11400000, guid: f02203eeb481f844bb7d1b055275daf9, type: 2}
-    - target: {fileID: 8041204223084693054, guid: 0591fa0a357a2cf44915e4715d653115, type: 3}
-      propertyPath: '<Actions>k__BackingField.Array.data[3]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 393fc92b9b1234a4e895f9fec83fdf4f, type: 2}
-    - target: {fileID: 8041204223084693054, guid: 0591fa0a357a2cf44915e4715d653115, type: 3}
-      propertyPath: '<Actions>k__BackingField.Array.data[4]'
-      value: 
-      objectReference: {fileID: 11400000, guid: c7939afd66dfcc8498403fa7a1e3a2cc, type: 2}
-    - target: {fileID: 8041204223084693054, guid: 0591fa0a357a2cf44915e4715d653115, type: 3}
-      propertyPath: '<Actions>k__BackingField.Array.data[5]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 314c679c99e274e4f9bdf3f3953e4955, type: 2}
-    - target: {fileID: 8041204223084693054, guid: 0591fa0a357a2cf44915e4715d653115, type: 3}
-      propertyPath: '<Actions>k__BackingField.Array.data[6]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 90ab08634ef47d748a09fb095f04b884, type: 2}
-    - target: {fileID: 8041204223084693054, guid: 0591fa0a357a2cf44915e4715d653115, type: 3}
-      propertyPath: '<Actions>k__BackingField.Array.data[7]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 05558031cc35b5f46abebada9cbfaf61, type: 2}
-    - target: {fileID: 8041204223084693054, guid: 0591fa0a357a2cf44915e4715d653115, type: 3}
-      propertyPath: '<Actions>k__BackingField.Array.data[8]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 129485bbf7ff2c84aa4f5d31857db8d9, type: 2}
-    m_RemovedComponents:
-    - {fileID: 600207547328411486, guid: 0591fa0a357a2cf44915e4715d653115, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

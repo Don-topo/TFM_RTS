@@ -74,6 +74,10 @@ public class UIActionButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         // Button not interactable
         button.interactable = false;
         button.onClick.RemoveAllListeners();
+        if (tooltip != null)
+        {
+            tooltip.HideTooltip();
+        }
         // Stop al calls
         CancelInvoke();
     }

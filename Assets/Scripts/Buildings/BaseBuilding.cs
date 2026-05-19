@@ -40,6 +40,7 @@ public class BaseBuilding : CommonActions, IHealable
 
     public void BuildBuilding()
     {
+        SetCommandsOverrides(null);
         GraphAgent.SetVariableValue<SO_Building>("SO Building", SO_building);
         GraphAgent.SetVariableValue<BaseBuilding>("Base Building", this);
         // Spend Resources
@@ -67,7 +68,7 @@ public class BaseBuilding : CommonActions, IHealable
         // Return build resources
         SO_Resource resourceRefund = SO_building.Cost.SO_Wood;
         //resourceRefund.
-
+        SetCommandsOverrides(null);
         ResourceOP resourceOP = new ResourceOP(SO_building.Cost.SO_Food, SO_building.Cost.Food, 0);
         resourceEvent.Raise(resourceOP);        
         resourceOP = new ResourceOP(SO_building.Cost.SO_Wood, SO_building.Cost.Wood, 0);
@@ -139,4 +140,21 @@ public class BaseBuilding : CommonActions, IHealable
     }
 
     public virtual void BuildConstructed() { }
+
+    public void ResetActions()
+    {
+        SetCommandsOverrides(null);
+    }
+
+    public override void Deselect()
+    {
+        SetCommandsOverrides(null);
+        base.Deselect();
+    }
+
+    public override void Select()
+    {
+        SetCommandsOverrides(null);
+        base.Select();
+    }
 }

@@ -15,9 +15,11 @@ MonoBehaviour:
   <Name>k__BackingField: Command Name
   <Icon>k__BackingField: {fileID: 21300000, guid: bb6dd8a9a361aed45b818db863fadf91, type: 3}
   <HotKey>k__BackingField: 17
-  <UIPosition>k__BackingField: 0
+  <UIPosition>k__BackingField: 1
   <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 0
   <ExecuteAudio>k__BackingField: []
+  <Restrictions>k__BackingField: []
   <Commands>k__BackingField:
   - {fileID: 11400000, guid: c7939afd66dfcc8498403fa7a1e3a2cc, type: 2}
+  - {fileID: 11400000, guid: dfca6df8a2147a74abbfc29b6c91166d, type: 2}
