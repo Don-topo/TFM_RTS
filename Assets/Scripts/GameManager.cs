@@ -17,8 +17,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private VictoryEvent victoryEvent;
     [SerializeField] private GameOverEvent gameOverEvent;
 
-    private int currentDay = 0;
-
     private void Awake()
     {
         StartCoroutine(Spawn());
@@ -62,6 +60,6 @@ public class GameManager : MonoBehaviour
         victoryEvent.Raise(null);
     }
 
-    // TODO Win condition        
+           
     // TODO UI info (Events)
 }

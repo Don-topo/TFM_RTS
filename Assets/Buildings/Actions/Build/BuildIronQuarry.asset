@@ -22,5 +22,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d02e8cf5fd09384419575d2a44d84e6c, type: 3}
   <Restrictions>k__BackingField:
   - {fileID: 11400000, guid: 708b1ee18c971164994ba75b14322c18, type: 2}
+  - {fileID: 11400000, guid: bf7b1c4e7e5ab414092fe68d398d6241, type: 2}
   <BuildingToBuild>k__BackingField: {fileID: 11400000, guid: ce69d12851cbea0449fbab786665a96a, type: 2}
   <PlaceBuilding>k__BackingField: {fileID: 8266839584037612250, guid: 3dbf5f826675f7942b27d699924eaf68, type: 3}

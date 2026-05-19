@@ -269,7 +269,7 @@ MonoBehaviour:
   buildDestroyedEvent: {fileID: 11400000, guid: 869600177de64bf4c981cfb650144b5e, type: 2}
   <SO_building>k__BackingField: {fileID: 11400000, guid: affa536bf217db64c96acf4d6fefaf05, type: 2}
   <GraphAgent>k__BackingField: {fileID: 8478311788194055489}
-  <IsConstructed>k__BackingField: 1
+  <IsConstructed>k__BackingField: 0
   explotionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
   StartTime: 0
   attackSystem: {fileID: 8893650850957543049}

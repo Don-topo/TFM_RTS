@@ -39,6 +39,7 @@ public class AudioManager : MonoBehaviour
     public static void SetAudioClips(List<AudioClip> newAudioClips)
     {
         if(audioClips == newAudioClips) return;
+        audioSource.Stop();
         audioClips = newAudioClips;
     }
 

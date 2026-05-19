@@ -19,7 +19,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private DificultyMode dificultyMode;
     [SerializeField] private int baseEnemiesPerWave = 10;
 
-    private int currentWave;
+    public int CurrentWave { get; private set; }
     private bool activeWave = false;
     private Transform selectedSpawnPosition;
 
@@ -41,7 +41,7 @@ public class EnemySpawner : MonoBehaviour
 
     public void GenerateWave()
     {
-        currentWave++;
+        CurrentWave++;
         // Select a randomly spawn point for this wave
         selectedSpawnPosition = SelectSpawnPosition();
         // Spawn enemies
@@ -56,13 +56,13 @@ public class EnemySpawner : MonoBehaviour
     private int CalculateWaveEnemies()
     {
         // Set the base enemies to spawn based on current way
-        int enemiesToSpawn = baseEnemiesPerWave * 2 + 5;
+        int enemiesToSpawn = baseEnemiesPerWave * CurrentWave;
 
         // Add difficulty modifier
         switch (dificultyMode)
         {
             case DificultyMode.Easy: return enemiesToSpawn;
-            case DificultyMode.Medium: return ((int)(enemiesToSpawn * 1.5f));
+            case DificultyMode.Medium: return (int)(enemiesToSpawn * 1.5f);
             case DificultyMode.Hard | DificultyMode.Infinite: return enemiesToSpawn * 2;
         }
 
@@ -73,9 +73,9 @@ public class EnemySpawner : MonoBehaviour
     {
         int roll = Random.Range(0, 100);
 
-        int sp = Mathf.Clamp(currentWave * 2, 0, 30);
+        int specialRatio = Mathf.Clamp(CurrentWave * 2, 0, 25);
 
-        if(roll < sp)
+        if(roll < specialRatio)
         {
             return GetSpecialEnemyRandomly();
         }
@@ -125,7 +125,7 @@ public class EnemySpawner : MonoBehaviour
         {
             SpawnEnemy();
 
-            yield return new WaitForSeconds(Mathf.Lerp(0.5f, 0.2f, currentWave / 20f));
+            yield return new WaitForSeconds(Mathf.Lerp(0.5f, 0.2f, CurrentWave / 20f));
         }
     }
 }
