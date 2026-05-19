@@ -1,5 +1,12 @@
 Patches relases:
 
+v.0.33 => 19/05/2026:
+  - Add Win UI.
+  - Add Game Over UI.
+  - Finish refund resources on buildings and units.
+  - Add minimap icons.
+  - Finish Horde system.
+    
 v.0.32 => 18/05/2026:
   - Add Main menu styles.
   - Fix Main menu bug.
