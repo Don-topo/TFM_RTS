@@ -279,6 +279,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 61640679ad757664ca9988afdb302559, type: 3}
   - {fileID: 8300000, guid: e49c58d06685e624ba7296273bbd4b47, type: 3}
   recruitedEvent: {fileID: 11400000, guid: 4b9a1b36f59f39e47b8e1db68ccb4ec0, type: 2}
+  resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
   attackSystem: {fileID: 7168564942475561464}
   unitEnterRange: {fileID: 11400000, guid: a9267367e362866478e1cc864c850a3d, type: 2}
   unitOutOfRange: {fileID: 11400000, guid: a9267367e362866478e1cc864c850a3d, type: 2}

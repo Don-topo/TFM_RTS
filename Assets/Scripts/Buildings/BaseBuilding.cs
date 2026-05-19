@@ -68,15 +68,14 @@ public class BaseBuilding : CommonActions, IHealable
         // Refund spend resources based on building state and health
         float refund = CalculateRefund();
         // Return build resources
-        SO_Resource resourceRefund = SO_building.Cost.SO_Wood;
         SetCommandsOverrides(null);
-        ResourceOP resourceOP = new ResourceOP(SO_building.Cost.SO_Food, SO_building.Cost.Food, 0);
+        ResourceOP resourceOP = new ResourceOP(SO_building.Cost.SO_Food, (int)(SO_building.Cost.Food * refund), 0);
         resourceEvent.Raise(resourceOP);        
-        resourceOP = new ResourceOP(SO_building.Cost.SO_Wood, SO_building.Cost.Wood, 0);
+        resourceOP = new ResourceOP(SO_building.Cost.SO_Wood, (int)(SO_building.Cost.Wood * refund), 0);
         resourceEvent.Raise(resourceOP);
-        resourceOP = new ResourceOP(SO_building.Cost.SO_Stone, SO_building.Cost.Stone, 0);
+        resourceOP = new ResourceOP(SO_building.Cost.SO_Stone, (int)(SO_building.Cost.Stone * refund), 0);
         resourceEvent.Raise(resourceOP);
-        resourceOP = new ResourceOP(SO_building.Cost.SO_Iron, SO_building.Cost.Iron, 0);
+        resourceOP = new ResourceOP(SO_building.Cost.SO_Iron, (int)(SO_building.Cost.Iron * refund), 0);
         resourceEvent.Raise(resourceOP);
         resourceOP = new ResourceOP(SO_building.Cost.SO_Electricity, -SO_building.Cost.Electricity, 0);
         resourceEvent.Raise(resourceOP);

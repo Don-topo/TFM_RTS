@@ -12,6 +12,7 @@ public class BaseUnit : CommonActions, IMoveable, IHealable
     [SerializeField] protected List<AudioClip> moveAudioClips;
     [Header("Events")]
     [SerializeField] private UnitRecruitedEvent recruitedEvent;
+    [SerializeField] private ResourceEvent resourceEvent;
 
     public float GetNavMeshAgentRadius => navMeshAgent.radius;
     protected BehaviorGraphAgent behaviorGraphAgent;
@@ -30,6 +31,13 @@ public class BaseUnit : CommonActions, IMoveable, IHealable
         behaviorGraphAgent.SetVariableValue("Command", UnitActions.Stop);
         // Raise recruit event
         recruitedEvent.Raise(this);
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        ResourceOP resource = new ResourceOP(SO_BaseUnit.Cost.SO_Population, SO_BaseUnit.Cost.Population, 0);
+        resourceEvent.Raise(resource);
     }
 
     public void Move(Transform transform)

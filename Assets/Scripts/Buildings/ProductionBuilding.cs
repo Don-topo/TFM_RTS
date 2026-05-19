@@ -1,5 +1,6 @@
-using UnityEngine;
 using System.Linq;
+using Unity.VisualScripting;
+using UnityEngine;
 
 public class ProductionBuilding : BaseBuilding
 {
@@ -49,6 +50,43 @@ public class ProductionBuilding : BaseBuilding
     public override void DestroyBuilding()
     {
         base.DestroyBuilding();
+        if (applyForEveryResource)
+        {
+            ResourceOP resourceOP = new ResourceOP(SO_building.Cost.SO_Wood, 0, Resource.MaxAmount);
+            resourceEvent.Raise(resourceOP);
+            resourceOP = new ResourceOP(SO_building.Cost.SO_Food, 0, Resource.MaxAmount);
+            resourceEvent.Raise(resourceOP);
+            resourceOP = new ResourceOP(SO_building.Cost.SO_Iron, 0, Resource.MaxAmount);
+            resourceEvent.Raise(resourceOP);
+            resourceOP = new ResourceOP(SO_building.Cost.SO_Stone, 0, Resource.MaxAmount);
+            resourceEvent.Raise(resourceOP);
+        }
+        else
+        {
+            switch (Resource.ResourceTypes)
+            {
+                case ResourcesType.Food:                    
+                    resourceEvent.Raise(new ResourceOP(SO_building.Cost.SO_Food, 0, -Resource.MaxAmount));
+                    break;
+                case ResourcesType.Wood:
+                    resourceEvent.Raise(new ResourceOP(SO_building.Cost.SO_Wood, 0, -Resource.MaxAmount));
+                    break;
+                case ResourcesType.Stone:
+                    resourceEvent.Raise(new ResourceOP(SO_building.Cost.SO_Stone, 0, -Resource.MaxAmount));
+                    break;
+                case ResourcesType.Iron:
+                    resourceEvent.Raise(new ResourceOP(SO_building.Cost.SO_Iron, 0, -Resource.MaxAmount));
+                    break;
+                case ResourcesType.Electricity:
+                    resourceEvent.Raise(new ResourceOP(SO_building.Cost.SO_Electricity, 0, -Resource.MaxAmount));
+                    break;
+                case ResourcesType.Population:
+                    resourceEvent.Raise(new ResourceOP(SO_building.Cost.SO_Population, 0, -Resource.MaxAmount));
+                    break;
+                default:
+                    break;
+            }
+        }        
     }
 
     public override void BuildConstructed()
