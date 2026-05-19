@@ -9,6 +9,7 @@ public class BaseBuilding : CommonActions, IHealable
     [Header("Events")]
     [SerializeField] protected ResourceEvent resourceEvent;
     [SerializeField] protected RefreshUIEvent refreshEvent;
+    [SerializeField] protected BuildingDestroyedEvent buildDestroyedEvent;
     [Header("Info")]
     [field: SerializeField] public SO_Building SO_building { get; private set; }
     [field: SerializeField] public BehaviorGraphAgent GraphAgent { get; private set; }
@@ -36,6 +37,7 @@ public class BaseBuilding : CommonActions, IHealable
     protected override void OnDestroy()
     {
         base.OnDestroy();
+        buildDestroyedEvent.Raise(this);
     }
 
     public void BuildBuilding()
@@ -67,7 +69,6 @@ public class BaseBuilding : CommonActions, IHealable
         float refund = CalculateRefund();
         // Return build resources
         SO_Resource resourceRefund = SO_building.Cost.SO_Wood;
-        //resourceRefund.
         SetCommandsOverrides(null);
         ResourceOP resourceOP = new ResourceOP(SO_building.Cost.SO_Food, SO_building.Cost.Food, 0);
         resourceEvent.Raise(resourceOP);        

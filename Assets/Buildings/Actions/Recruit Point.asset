@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d15853b3a2d02644bb54ebaf84944f1, type: 3}
   m_Name: Recruit Point
   m_EditorClassIdentifier: Assembly-CSharp::RecruitPoint
-  <Name>k__BackingField: Command Name
+  <Name>k__BackingField: Recruit Point
   <Icon>k__BackingField: {fileID: 21300000, guid: 575c64041e3c5314d893fa189e4d3d4e, type: 3}
   <HotKey>k__BackingField: 32
   <UIPosition>k__BackingField: 5

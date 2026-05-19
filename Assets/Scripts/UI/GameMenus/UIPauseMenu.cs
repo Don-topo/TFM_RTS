@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -5,8 +6,10 @@ using UnityEngine.UI;
 
 public class UIPauseMenu : MonoBehaviour
 {
+    [Header("Components")]
     [SerializeField] private Button resumeButton;
     [SerializeField] private Button exitButton;
+    [SerializeField] private GameObject fadeGameObject;
 
     private void Awake()
     {
@@ -29,6 +32,13 @@ public class UIPauseMenu : MonoBehaviour
 
     private void GoToMainMenu()
     {
-        SceneManager.LoadScene(0);
+        fadeGameObject.SetActive(true);
+        StartCoroutine(nameof(FadeOut), "Menu");
+    }
+
+    private IEnumerator FadeOut(string scene)
+    {
+        yield return new WaitForSeconds(1.9f);
+        SceneManager.LoadScene(scene);
     }
 }

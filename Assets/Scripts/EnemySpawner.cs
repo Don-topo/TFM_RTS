@@ -39,10 +39,9 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    public void GenerateWave(int waveNumber, DificultyMode dificultyModifier, Vector3 spawnPosition)
+    public void GenerateWave()
     {
-        currentWave = waveNumber;
-        dificultyMode = dificultyModifier;
+        currentWave++;
         // Select a randomly spawn point for this wave
         selectedSpawnPosition = SelectSpawnPosition();
         // Spawn enemies

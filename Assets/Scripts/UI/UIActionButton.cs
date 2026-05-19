@@ -116,7 +116,7 @@ public class UIActionButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             tooltip.ShowTooltip();
             tooltip.RectTransform.position = new Vector2(
                     rectTransform.position.x - rectTransform.rect.width / 2f,
-                    rectTransform.position.y + rectTransform.rect.height / 2f);
+                    rectTransform.position.y + rectTransform.rect.height);
         }        
     }
 

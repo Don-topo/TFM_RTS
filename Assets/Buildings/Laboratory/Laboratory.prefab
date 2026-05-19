@@ -195,6 +195,7 @@ MonoBehaviour:
   <PlaceMaterial>k__BackingField: {fileID: 2100000, guid: d83ecade081c9e84b8d9c103e26560ae, type: 2}
   resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
   refreshEvent: {fileID: 11400000, guid: 2d6eed5983d3d1c42836ee74b2c39f02, type: 2}
+  buildDestroyedEvent: {fileID: 11400000, guid: 869600177de64bf4c981cfb650144b5e, type: 2}
   <SO_building>k__BackingField: {fileID: 11400000, guid: 3c047879e6c9f9a48b087cf3ce46252f, type: 2}
   <GraphAgent>k__BackingField: {fileID: 8947018648139039033}
   <IsConstructed>k__BackingField: 0

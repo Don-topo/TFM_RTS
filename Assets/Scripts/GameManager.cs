@@ -10,9 +10,12 @@ public class GameManager : MonoBehaviour
     [Header("Game Properties")]
     [Range(0, 1)][SerializeField] private float dificultyModifier;
     [SerializeField] private int totalDays = 25;
+    [SerializeField] private float timeBetweenWaves = 320f;
 
     [Header("Events")]
     [SerializeField] private BuildingDestroyedEvent buildDestroyedEvent;
+    [SerializeField] private VictoryEvent victoryEvent;
+    [SerializeField] private GameOverEvent gameOverEvent;
 
     private int currentDay = 0;
 
@@ -25,6 +28,12 @@ public class GameManager : MonoBehaviour
     private void OnDestroy()
     {
         buildDestroyedEvent?.Unregister(ManageBuildingDestroyed);
+        StopAllCoroutines();
+    }
+
+    private void LoadData()
+    {
+
     }
 
     private IEnumerator Spawn()
@@ -32,7 +41,7 @@ public class GameManager : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(10);
-            enemySpawner.GenerateWave(0, DificultyMode.Easy, Vector3.zero);
+            enemySpawner.GenerateWave();
         }
     }
 
@@ -40,14 +49,19 @@ public class GameManager : MonoBehaviour
     {
         if (building.gameObject.CompareTag("CommandPost"))
         {
+            StopAllCoroutines();
             // Game Over
+            gameOverEvent.Raise(null);
+            
         }
     }
 
-    // TODO get Building destroyed event and check if is a comandPost
+    private void Win()
+    {
+        StopAllCoroutines();
+        victoryEvent.Raise(null);
+    }
 
-    // TODO Win condition
-    // TODO Lose condition
-    // TODO Generate enemy waves
+    // TODO Win condition        
     // TODO UI info (Events)
 }

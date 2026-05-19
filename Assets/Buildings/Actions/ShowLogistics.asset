@@ -15,7 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: Build logistics
   <Icon>k__BackingField: {fileID: 21300000, guid: 7ae8e2b39ab0edc429f0a5d95f8caf05, type: 3}
   <HotKey>k__BackingField: 26
-  <UIPosition>k__BackingField: 3
+  <UIPosition>k__BackingField: 2
   <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 0
   <ExecuteAudio>k__BackingField: []

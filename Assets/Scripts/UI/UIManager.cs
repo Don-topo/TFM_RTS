@@ -12,11 +12,15 @@ public class UIManager : MonoBehaviour
     [SerializeField] private UIMultipleUnits uIMultipleUnits;
     [SerializeField] private UISelectedBuilding uiSelectedBuilding;
     [SerializeField] private UIUnitGroups uiUnitGroups;
+    [SerializeField] private GameObject winMenu;
+    [SerializeField] private GameObject defeatMenu;
     [Header("Events")]
-    public UnitSelectedEvent unitSelectedEvent;
-    public UnitDeselectEvent unitDeselectEvent;
-    public RefreshUIEvent refreshUIEvent;
-    public UnitDeathEvent deathEvent;
+    [SerializeField] private UnitSelectedEvent unitSelectedEvent;
+    [SerializeField] private UnitDeselectEvent unitDeselectEvent;
+    [SerializeField] private RefreshUIEvent refreshUIEvent;
+    [SerializeField] private UnitDeathEvent deathEvent;
+    [SerializeField] private GameOverEvent gameOverEvent;
+    [SerializeField] private VictoryEvent victoryEvent;
 
     private List<ISelectable> selectedUnits = new List<ISelectable>(12);
     
@@ -26,6 +30,8 @@ public class UIManager : MonoBehaviour
         unitDeselectEvent.Register(UnitDeselected);
         refreshUIEvent.Register(HardRefreshByEvent);
         deathEvent.Register(DeathUnit);
+        victoryEvent.Register(ShowVictory);
+        gameOverEvent.Register(ShowDefeat);
     }
 
     private void Start()
@@ -42,6 +48,8 @@ public class UIManager : MonoBehaviour
         unitSelectedEvent.Unregister(UnitSelected);
         unitDeselectEvent.Unregister(UnitDeselected);
         deathEvent.Unregister(DeathUnit);
+        victoryEvent.Unregister(ShowVictory);
+        gameOverEvent.Unregister(ShowDefeat);
     }
 
     private void UnitSelected(CommonActions unitSelected)
@@ -68,6 +76,16 @@ public class UIManager : MonoBehaviour
     private void HardRefreshByEvent(bool refresh)
     {
         UpdateUI();
+    }
+
+    private void ShowVictory(Null @null)
+    {
+        winMenu.SetActive(true);
+    }
+
+    private void ShowDefeat(Null @null)
+    {
+        defeatMenu.SetActive(true);
     }
 
     private void UpdateUI()
