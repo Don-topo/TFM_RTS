@@ -150,8 +150,8 @@ MonoBehaviour:
   selectionDecal: {fileID: 8316354477749543250}
   <Actions>k__BackingField:
   - {fileID: 11400000, guid: 80dfe8cf0fb17a74a9ce2f918cb1200b, type: 2}
-  - {fileID: 11400000, guid: 80dfe8cf0fb17a74a9ce2f918cb1200b, type: 2}
   - {fileID: 11400000, guid: 3107001a93c61b7429e3c01e58ed5c81, type: 2}
+  - {fileID: 11400000, guid: a314284df906a09479e10d66c0d93eef, type: 2}
   <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: f30f812a07655994780d7d99d7a012d7, type: 2}
   <CurrentHealth>k__BackingField: 0
   <MaxHealth>k__BackingField: 0

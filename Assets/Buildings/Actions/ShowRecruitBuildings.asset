@@ -12,11 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27fa5a4311739747a78af1f484e1b77, type: 3}
   m_Name: ShowRecruitBuildings
   m_EditorClassIdentifier: Assembly-CSharp::OverrideCommandsCommand
-  <Name>k__BackingField: Command Name
-  <Icon>k__BackingField: {fileID: 21300000, guid: fa152695fa2810b419deca55dbc0dc9f, type: 3}
-  <HotKey>k__BackingField: 20
+  <Name>k__BackingField: Recruit Buildings
+  <Icon>k__BackingField: {fileID: 21300000, guid: d7fdd73f686c61e4386b7fd8597a1a18, type: 3}
+  <HotKey>k__BackingField: 32
   <UIPosition>k__BackingField: 0
   <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 0
   <ExecuteAudio>k__BackingField: []
-  <Commands>k__BackingField: []
+  <Restrictions>k__BackingField: []
+  <Commands>k__BackingField:
+  - {fileID: 11400000, guid: 1e6506ec9f4a0b34298989a876209ca1, type: 2}
+  - {fileID: 11400000, guid: 314c679c99e274e4f9bdf3f3953e4955, type: 2}
+  - {fileID: 11400000, guid: 129485bbf7ff2c84aa4f5d31857db8d9, type: 2}
+  - {fileID: 11400000, guid: f9023baf0a6e61f47abcebc309fa29ba, type: 2}
+  - {fileID: 11400000, guid: a7a6b925b774df04185eb97de5c95798, type: 2}

@@ -15,7 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: Build Stone Quarry
   <Icon>k__BackingField: {fileID: 21300000, guid: cf2d4e087de9f9e44b1aaed1ebf6048f, type: 3}
   <HotKey>k__BackingField: 31
-  <UIPosition>k__BackingField: 0
+  <UIPosition>k__BackingField: 4
   <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 1
   <ExecuteAudio>k__BackingField:

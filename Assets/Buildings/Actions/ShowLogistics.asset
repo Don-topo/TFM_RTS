@@ -10,15 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e27fa5a4311739747a78af1f484e1b77, type: 3}
-  m_Name: ShowConstructions
+  m_Name: ShowLogistics
   m_EditorClassIdentifier: Assembly-CSharp::OverrideCommandsCommand
-  <Name>k__BackingField: Command Name
-  <Icon>k__BackingField: {fileID: 21300000, guid: 34a85285e6cec45478511fb956718684, type: 3}
-  <HotKey>k__BackingField: 18
+  <Name>k__BackingField: Build logistics
+  <Icon>k__BackingField: {fileID: 21300000, guid: 7ae8e2b39ab0edc429f0a5d95f8caf05, type: 3}
+  <HotKey>k__BackingField: 26
   <UIPosition>k__BackingField: 3
   <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 0
   <ExecuteAudio>k__BackingField: []
+  <Restrictions>k__BackingField: []
   <Commands>k__BackingField:
-  - {fileID: 11400000, guid: 3107001a93c61b7429e3c01e58ed5c81, type: 2}
-  - {fileID: 11400000, guid: 80dfe8cf0fb17a74a9ce2f918cb1200b, type: 2}
+  - {fileID: 11400000, guid: b91ee546770c2464db1a42242bcb4e92, type: 2}
+  - {fileID: 11400000, guid: 393fc92b9b1234a4e895f9fec83fdf4f, type: 2}
+  - {fileID: 11400000, guid: c7939afd66dfcc8498403fa7a1e3a2cc, type: 2}
+  - {fileID: 11400000, guid: 30650188b01adef4fa52820db154dc49, type: 2}
+  - {fileID: 11400000, guid: a7a6b925b774df04185eb97de5c95798, type: 2}

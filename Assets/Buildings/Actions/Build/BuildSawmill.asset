@@ -15,7 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: Build Sawmill
   <Icon>k__BackingField: {fileID: 21300000, guid: 06c9be87d9edd66418610a9b5cddc026, type: 3}
   <HotKey>k__BackingField: 33
-  <UIPosition>k__BackingField: 0
+  <UIPosition>k__BackingField: 1
   <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 1
   <ExecuteAudio>k__BackingField:

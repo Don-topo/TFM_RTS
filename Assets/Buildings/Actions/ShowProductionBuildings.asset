@@ -12,14 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27fa5a4311739747a78af1f484e1b77, type: 3}
   m_Name: ShowProductionBuildings
   m_EditorClassIdentifier: Assembly-CSharp::OverrideCommandsCommand
-  <Name>k__BackingField: Command Name
-  <Icon>k__BackingField: {fileID: 21300000, guid: bb6dd8a9a361aed45b818db863fadf91, type: 3}
-  <HotKey>k__BackingField: 17
+  <Name>k__BackingField: Production Buildings
+  <Icon>k__BackingField: {fileID: 21300000, guid: dab16e988b7193847aa04316bf22657d, type: 3}
+  <HotKey>k__BackingField: 30
   <UIPosition>k__BackingField: 1
   <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 0
   <ExecuteAudio>k__BackingField: []
   <Restrictions>k__BackingField: []
   <Commands>k__BackingField:
-  - {fileID: 11400000, guid: c7939afd66dfcc8498403fa7a1e3a2cc, type: 2}
-  - {fileID: 11400000, guid: dfca6df8a2147a74abbfc29b6c91166d, type: 2}
+  - {fileID: 11400000, guid: fb484ff4fb41b8d48be3d33a636721e8, type: 2}
+  - {fileID: 11400000, guid: f96240778372d2e46bda02cec77a6506, type: 2}
+  - {fileID: 11400000, guid: 90ab08634ef47d748a09fb095f04b884, type: 2}
+  - {fileID: 11400000, guid: 05558031cc35b5f46abebada9cbfaf61, type: 2}
+  - {fileID: 11400000, guid: f02203eeb481f844bb7d1b055275daf9, type: 2}
+  - {fileID: 11400000, guid: 8aa5d140b0b52d94f85dfb95e7588de4, type: 2}
+  - {fileID: 11400000, guid: a7a6b925b774df04185eb97de5c95798, type: 2}
