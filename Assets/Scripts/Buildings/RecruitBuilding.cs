@@ -32,7 +32,8 @@ public class RecruitBuilding : BaseBuilding
     {
         base.Awake();
         recruitDestinationInstance = Instantiate(recruitDestination);
-        recruitDestinationInstance.SetActive(false);
+        recruitDestinationInstance.transform.SetParent(transform);
+        recruitDestinationInstance.SetActive(false);        
         Deselect();        
     }
 
