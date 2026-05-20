@@ -34,7 +34,7 @@ void \doxymbox{\hyperlink{class_base_unit_ab5d81eb87981f27162ef262c27503f16}{Mov
 \item 
 void \doxymbox{\hyperlink{class_base_unit_a83f3e7544cfd61b4f1a7fc0b2129a79a}{Move}} (Vector3 position)
 \item 
-void \doxymbox{\hyperlink{class_base_unit_ac4c809c7ca8c11b964c0dfcb3a0f3c1b}{Stop\+Move}} ()
+void \doxymbox{\hyperlink{class_base_unit_a257f72b36551efe5ca4587d64e071bc1}{Stop}} ()
 \item 
 void \doxymbox{\hyperlink{class_base_unit_af855b91ba492443c755482dc5f41f622}{Heal}} (int amount)
 \end{DoxyCompactItemize}
@@ -63,12 +63,14 @@ override void \doxymbox{\hyperlink{class_base_healer_a68d3c1e2deb76d7e883e66c304
 \item 
 override void \doxymbox{\hyperlink{class_base_unit_a1b5d82dfb2d7c344e241e7f882665604}{Awake}} ()
 \item 
-override void \doxymbox{\hyperlink{class_base_unit_a292f18709a110307d563f485539a1087}{Update}} ()
+override void \doxymbox{\hyperlink{class_base_unit_a709115831365face9e32f39501113684}{On\+Destroy}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
 \begin{DoxyCompactItemize}
 \item 
 virtual void \doxymbox{\hyperlink{class_common_actions_aeae7ae6e7935fe45dfbf97700170c334}{Start}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_ae605f8ae1a8915928869b81dae283577}{Update}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
@@ -96,6 +98,8 @@ int \doxymbox{\hyperlink{class_common_actions_a7ce50eea9d7904e4c745b8af489531f2}
 int \doxymbox{\hyperlink{class_common_actions_a603564a07381db22a5f3e9d5ac51403a}{Max\+Health}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
 \item 
 Transform \doxymbox{\hyperlink{class_common_actions_a75b141d8781f3ff94932ac9d10bb2060}{Target\+Position}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+bool \doxymbox{\hyperlink{class_common_actions_a058d0dd3c4c061940a903ffafa026001}{is\+Dead}} = false\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
 \end{DoxyCompactItemize}
 \doxysubsection*{Properties inherited from \doxymbox{\hyperlink{interface_i_healable}{IHealable}}}
 \begin{DoxyCompactItemize}
@@ -114,6 +118,8 @@ void \doxymbox{\hyperlink{class_base_healer_a31bc34fc61ff9243ef7af45ac33d0e5d}{U
 void \doxymbox{\hyperlink{class_base_healer_af4c01ce260a92a99abd910b2aaa34151}{Unit\+Out\+Of\+Range}} (\doxymbox{\hyperlink{interface_i_healable}{IHealable}} unit)
 \item 
 List$<$ Game\+Object $>$ \doxymbox{\hyperlink{class_base_healer_ad7256128973f1751cbccebc7dae41acd}{Set\+Nearby\+Enemies\+On\+Blackboard}} ()
+\item 
+void \doxymbox{\hyperlink{class_base_healer_a350d963faf77488a88325d8f0ef44a41}{Play\+Healing\+Action\+Audio}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -135,6 +141,8 @@ List$<$ Game\+Object $>$ \doxymbox{\hyperlink{class_base_healer_ad7256128973f175
 \doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_base_unit}{Base\+Unit}}}
 \begin{DoxyCompactItemize}
 \item 
+List$<$ Audio\+Clip $>$ \doxymbox{\hyperlink{class_base_unit_a82a32db994d4a69b8db8212d8273ac40}{move\+Audio\+Clips}}
+\item 
 Behavior\+Graph\+Agent \doxymbox{\hyperlink{class_base_unit_a7f7deeabec2f78becadbfc914580754f}{behavior\+Graph\+Agent}}
 \item 
 Nav\+Mesh\+Agent \doxymbox{\hyperlink{class_base_unit_afe76c53d054177ca3a6f15aef9337a27}{nav\+Mesh\+Agent}}
@@ -143,6 +151,12 @@ Nav\+Mesh\+Agent \doxymbox{\hyperlink{class_base_unit_afe76c53d054177ca3a6f15aef
 \begin{DoxyCompactItemize}
 \item 
 Decal\+Projector \doxymbox{\hyperlink{class_common_actions_a0551ee27e1d92c4cab5583499081a0d3}{selection\+Decal}}
+\item 
+Animator \doxymbox{\hyperlink{class_common_actions_a8596da371da49e83b31076f91b89e707}{animator}}
+\item 
+\doxymbox{\hyperlink{class_update_health_event}{Update\+Health\+Event}} \doxymbox{\hyperlink{class_common_actions_a4a0946e2ad67e943e6364d7066ef8931}{update\+Health\+Event}}
+\item 
+\doxymbox{\hyperlink{class_unit_death_event}{Unit\+Death\+Event}} \doxymbox{\hyperlink{class_common_actions_a7bacbe25f3f281191a76a8477347caed}{unit\+Death\+Event}}
 \end{DoxyCompactItemize}
 
 
@@ -188,6 +202,12 @@ override void Base\+Healer.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyP
 
 
 Reimplemented from \doxymbox{\hyperlink{class_common_actions_afa3327aad40e00b114f4af1eb32fec58}{Common\+Actions}}.
+
+\Hypertarget{class_base_healer_a350d963faf77488a88325d8f0ef44a41}\index{BaseHealer@{BaseHealer}!PlayHealingActionAudio@{PlayHealingActionAudio}}
+\index{PlayHealingActionAudio@{PlayHealingActionAudio}!BaseHealer@{BaseHealer}}
+\doxysubsubsection{\texorpdfstring{PlayHealingActionAudio()}{PlayHealingActionAudio()}}
+{\footnotesize\ttfamily \label{class_base_healer_a350d963faf77488a88325d8f0ef44a41} 
+void Base\+Healer.\+Play\+Healing\+Action\+Audio (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
 \Hypertarget{class_base_healer_ad7256128973f1751cbccebc7dae41acd}\index{BaseHealer@{BaseHealer}!SetNearbyEnemiesOnBlackboard@{SetNearbyEnemiesOnBlackboard}}
 \index{SetNearbyEnemiesOnBlackboard@{SetNearbyEnemiesOnBlackboard}!BaseHealer@{BaseHealer}}

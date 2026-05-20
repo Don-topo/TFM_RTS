@@ -15086,7 +15086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3740959457348118318, guid: 424d36d30a2973946a22106e5225f597, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.17
+      value: 5.35
       objectReference: {fileID: 0}
     - target: {fileID: 3740959457348118318, guid: 424d36d30a2973946a22106e5225f597, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15123,6 +15123,10 @@ PrefabInstance:
     - target: {fileID: 3781212917411057242, guid: 424d36d30a2973946a22106e5225f597, type: 3}
       propertyPath: m_Name
       value: IronArea
+      objectReference: {fileID: 0}
+    - target: {fileID: 6421313554203090929, guid: 424d36d30a2973946a22106e5225f597, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15503,7 +15507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3092358133201143351, guid: 31d962b7c14123a45b45e79e2355bd7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.17
+      value: 5.06
       objectReference: {fileID: 0}
     - target: {fileID: 3092358133201143351, guid: 31d962b7c14123a45b45e79e2355bd7f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15540,6 +15544,14 @@ PrefabInstance:
     - target: {fileID: 3276751932395777859, guid: 31d962b7c14123a45b45e79e2355bd7f, type: 3}
       propertyPath: m_Name
       value: StoneArea
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620089857258880744, guid: 31d962b7c14123a45b45e79e2355bd7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620089857258880744, guid: 31d962b7c14123a45b45e79e2355bd7f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

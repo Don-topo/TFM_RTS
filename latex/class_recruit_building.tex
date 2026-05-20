@@ -43,6 +43,16 @@ override void \doxymbox{\hyperlink{class_recruit_building_a68b6467f90f127322722c
 void \doxymbox{\hyperlink{class_base_building_aa6b81f186d3b4f5705de9c8da2a35cf2}{Build\+Building}} ()
 \item 
 virtual void \doxymbox{\hyperlink{class_base_building_a4bbaf42b6e0d8fd4cdb933f05dbc3ed1}{Destroy\+Building}} ()
+\item 
+void \doxymbox{\hyperlink{class_base_building_a9033febb086dfc89a4dc125bc71a341b}{Heal}} (int amount)
+\item 
+void \doxymbox{\hyperlink{class_base_building_ac50b496e6babaffeb977fa73dcf1dd25}{Refresh\+UI}} ()
+\item 
+void \doxymbox{\hyperlink{class_base_building_a3be49a6ba09aa9939e99dbbd68fb6a5f}{Restore\+Materials}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_base_building_af2c6e3189f4d62b191f406899446204f}{Build\+Constructed}} ()
+\item 
+void \doxymbox{\hyperlink{class_base_building_aedc0efa53e793fc854b4f0cf8d5b548e}{Reset\+Actions}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
 \begin{DoxyCompactItemize}
@@ -57,8 +67,11 @@ void \doxymbox{\hyperlink{class_common_actions_a4679ef5476cba71a56901c3909c2e921
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_update_recruit_queue_event}{Update\+Recruit\+Queue\+Event}} \doxymbox{\hyperlink{class_recruit_building_abf7979587df6b0a0cea3c552fdd4087d}{queue\+Event}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \doxymbox{\hyperlink{class_base_building}{Base\+Building}}}
+\begin{DoxyCompactItemize}
 \item 
-float \doxymbox{\hyperlink{class_recruit_building_a1e5677a84182f52b5dffa2091d988b06}{Recruit\+Start\+Time}}
+float \doxymbox{\hyperlink{class_base_building_af717a451ffec46b300852c1f0ac35636}{Start\+Time}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
 \begin{DoxyCompactItemize}
@@ -71,18 +84,60 @@ float \doxymbox{\hyperlink{class_recruit_building_a1e5677a84182f52b5dffa2091d988
 \begin{DoxyCompactItemize}
 \item 
 override void \doxymbox{\hyperlink{class_recruit_building_a33f0340d86520e975d9697aaaaa1a723}{Awake}} ()
+\item 
+override void \doxymbox{\hyperlink{class_recruit_building_a406e4508d43e7420d37b80c40f49d44f}{On\+Destroy}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_base_building}{Base\+Building}}}
 \begin{DoxyCompactItemize}
 \item 
 override void \doxymbox{\hyperlink{class_base_building_a2e27c33fc066b75e7b5e7f5764a55211}{Start}} ()
-\item 
-override void \doxymbox{\hyperlink{class_base_building_a3f1a908922f4a450466da213dd45bb2b}{On\+Destroy}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
 \begin{DoxyCompactItemize}
 \item 
 virtual void \doxymbox{\hyperlink{class_common_actions_ae605f8ae1a8915928869b81dae283577}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{class_recruit_building_a1e5677a84182f52b5dffa2091d988b06}{Recruit\+Start\+Time}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_base_building}{Base\+Building}}}
+\begin{DoxyCompactItemize}
+\item 
+Material \doxymbox{\hyperlink{class_base_building_a3be5a979246ab2dc4dc2569f18f711c9}{Place\+Material}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+\doxymbox{\hyperlink{class_s_o___building}{SO\+\_\+\+Building}} \doxymbox{\hyperlink{class_base_building_a99a2a8072153b85c81fe201070cbfdd6}{SO\+\_\+building}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+Behavior\+Graph\+Agent \doxymbox{\hyperlink{class_base_building_a1ea800ad146506789e1ec1081dcfe4ab}{Graph\+Agent}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+bool \doxymbox{\hyperlink{class_base_building_a9e0a09e7fcff563b701d1c248d2b7939}{Is\+Constructed}} = false\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_common_actions_a3a0d3db8c141d0c160f63a1d673bd04e}{Is\+Selected}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+\doxymbox{\hyperlink{class_base_action}{Base\+Action}}\+[$\,$]\+ \doxymbox{\hyperlink{class_common_actions_a75764b7c55f8ddfaf1dfbe346257491c}{Actions}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+\doxymbox{\hyperlink{class_s_o___base_unit}{SO\+\_\+\+Base\+Unit}} \doxymbox{\hyperlink{class_common_actions_ab8bbed6a15c8b971481b14f01310fdb7}{SO\+\_\+\+Base\+Unit}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+int \doxymbox{\hyperlink{class_common_actions_a7ce50eea9d7904e4c745b8af489531f2}{Current\+Health}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+int \doxymbox{\hyperlink{class_common_actions_a603564a07381db22a5f3e9d5ac51403a}{Max\+Health}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+Transform \doxymbox{\hyperlink{class_common_actions_a75b141d8781f3ff94932ac9d10bb2060}{Target\+Position}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+bool \doxymbox{\hyperlink{class_common_actions_a058d0dd3c4c061940a903ffafa026001}{is\+Dead}} = false\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{interface_i_healable}{IHealable}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{interface_i_healable_aa79b1f7ce4592ba82c78690271e8c6b3}{Current\+Health}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+int \doxymbox{\hyperlink{interface_i_healable_a259a0ecc362aa9e09f4ae7b229c0af52}{Max\+Health}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+Transform \doxymbox{\hyperlink{interface_i_healable_a7a0795b7c8985b586247a430179185ed}{Target\+Position}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -93,8 +148,6 @@ IEnumerator \doxymbox{\hyperlink{class_recruit_building_a507d387dec0fe6a10c4c5b8
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
-\item 
-\doxymbox{\hyperlink{class_refresh_u_i_event}{Refresh\+UIEvent}} \doxymbox{\hyperlink{class_recruit_building_a620c904bd9cfef2b877449c2659a0a05}{refresh\+Event}}
 \item 
 Game\+Object \doxymbox{\hyperlink{class_recruit_building_a061193cf00d932ea6bf6ce7eeb43dbf3}{recruit\+Destination}}
 \item 
@@ -115,32 +168,20 @@ const int \doxymbox{\hyperlink{class_recruit_building_afacaaecbdc3e93215dd5ed083
 \item 
 \doxymbox{\hyperlink{class_resource_event}{Resource\+Event}} \doxymbox{\hyperlink{class_base_building_ab6355df41dc1aa5119a5f896bfdd234e}{resource\+Event}}
 \item 
-\doxymbox{\hyperlink{class_s_o___building}{SO\+\_\+\+Building}} \doxymbox{\hyperlink{class_base_building_aab5454d1d52c28c91d6e579d9424b6a4}{so\+\_\+building}}
+\doxymbox{\hyperlink{class_refresh_u_i_event}{Refresh\+UIEvent}} \doxymbox{\hyperlink{class_base_building_af0786c1953ac18913c6fdcb6adbd7719}{refresh\+Event}}
+\item 
+\doxymbox{\hyperlink{class_building_destroyed_event}{Building\+Destroyed\+Event}} \doxymbox{\hyperlink{class_base_building_a087de66c1dc2a0fbbdfcea68e3ea336a}{build\+Destroyed\+Event}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
 \begin{DoxyCompactItemize}
 \item 
 Decal\+Projector \doxymbox{\hyperlink{class_common_actions_a0551ee27e1d92c4cab5583499081a0d3}{selection\+Decal}}
-\end{DoxyCompactItemize}
-\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_base_building}{Base\+Building}}}
-\begin{DoxyCompactItemize}
 \item 
-Material \doxymbox{\hyperlink{class_base_building_a3be5a979246ab2dc4dc2569f18f711c9}{Place\+Material}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
-\end{DoxyCompactItemize}
-\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
-\begin{DoxyCompactItemize}
+Animator \doxymbox{\hyperlink{class_common_actions_a8596da371da49e83b31076f91b89e707}{animator}}
 \item 
-bool \doxymbox{\hyperlink{class_common_actions_a3a0d3db8c141d0c160f63a1d673bd04e}{Is\+Selected}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\doxymbox{\hyperlink{class_update_health_event}{Update\+Health\+Event}} \doxymbox{\hyperlink{class_common_actions_a4a0946e2ad67e943e6364d7066ef8931}{update\+Health\+Event}}
 \item 
-\doxymbox{\hyperlink{class_base_action}{Base\+Action}}\+[$\,$]\+ \doxymbox{\hyperlink{class_common_actions_a75764b7c55f8ddfaf1dfbe346257491c}{Actions}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
-\item 
-\doxymbox{\hyperlink{class_s_o___base_unit}{SO\+\_\+\+Base\+Unit}} \doxymbox{\hyperlink{class_common_actions_ab8bbed6a15c8b971481b14f01310fdb7}{SO\+\_\+\+Base\+Unit}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
-\item 
-int \doxymbox{\hyperlink{class_common_actions_a7ce50eea9d7904e4c745b8af489531f2}{Current\+Health}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
-\item 
-int \doxymbox{\hyperlink{class_common_actions_a603564a07381db22a5f3e9d5ac51403a}{Max\+Health}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
-\item 
-Transform \doxymbox{\hyperlink{class_common_actions_a75b141d8781f3ff94932ac9d10bb2060}{Target\+Position}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\doxymbox{\hyperlink{class_unit_death_event}{Unit\+Death\+Event}} \doxymbox{\hyperlink{class_common_actions_a7bacbe25f3f281191a76a8477347caed}{unit\+Death\+Event}}
 \end{DoxyCompactItemize}
 
 
@@ -171,7 +212,7 @@ override void Recruit\+Building.\+Deselect (\begin{DoxyParamCaption}{}{}\end{Dox
 
 
 
-Reimplemented from \doxymbox{\hyperlink{class_common_actions_ab819292d2b539af3fd654934925c3d43}{Common\+Actions}}.
+Reimplemented from \doxymbox{\hyperlink{class_base_building_ab6152887e801c62b2e10370fb9287e6c}{Base\+Building}}.
 
 \Hypertarget{class_recruit_building_ab147642b7e53619c2dedbca1bf186559}\index{RecruitBuilding@{RecruitBuilding}!GetMaxQueueSize@{GetMaxQueueSize}}
 \index{GetMaxQueueSize@{GetMaxQueueSize}!RecruitBuilding@{RecruitBuilding}}
@@ -184,6 +225,16 @@ int Recruit\+Building.\+Get\+Max\+Queue\+Size (\begin{DoxyParamCaption}{}{}\end{
 \doxysubsubsection{\texorpdfstring{GetRecruitQueue()}{GetRecruitQueue()}}
 {\footnotesize\ttfamily \label{class_recruit_building_afaf6d2635259f5729dc4dc2f788a4568} 
 List$<$ \doxymbox{\hyperlink{class_s_o___base_unit}{SO\+\_\+\+Base\+Unit}} $>$ Recruit\+Building.\+Get\+Recruit\+Queue (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_recruit_building_a406e4508d43e7420d37b80c40f49d44f}\index{RecruitBuilding@{RecruitBuilding}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!RecruitBuilding@{RecruitBuilding}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily \label{class_recruit_building_a406e4508d43e7420d37b80c40f49d44f} 
+override void Recruit\+Building.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_base_building_a3f1a908922f4a450466da213dd45bb2b}{Base\+Building}}.
 
 \Hypertarget{class_recruit_building_a8fb8f1745a1d5e9fe7edd4985d0154fb}\index{RecruitBuilding@{RecruitBuilding}!RecruitUnit@{RecruitUnit}}
 \index{RecruitUnit@{RecruitUnit}!RecruitBuilding@{RecruitBuilding}}
@@ -205,7 +256,7 @@ override void Recruit\+Building.\+Select (\begin{DoxyParamCaption}{}{}\end{DoxyP
 
 
 
-Reimplemented from \doxymbox{\hyperlink{class_common_actions_a20fe334501ba458268ea75a5e9cbd9aa}{Common\+Actions}}.
+Reimplemented from \doxymbox{\hyperlink{class_base_building_adc2e3a3694cf9295b94715203f5db8d8}{Base\+Building}}.
 
 \Hypertarget{class_recruit_building_aac00026a19ac94e0cf0ef25748c4243c}\index{RecruitBuilding@{RecruitBuilding}!SetRecruitDestination@{SetRecruitDestination}}
 \index{SetRecruitDestination@{SetRecruitDestination}!RecruitBuilding@{RecruitBuilding}}
@@ -254,23 +305,22 @@ Game\+Object Recruit\+Building.\+recruit\+Destination\hspace{0.3cm}{\ttfamily [p
 {\footnotesize\ttfamily \label{class_recruit_building_a1d46f3c4e9c1985deec66f14cb1b0d00} 
 Game\+Object Recruit\+Building.\+recruit\+Destination\+Instance\hspace{0.3cm}{\ttfamily [private]}}
 
-\Hypertarget{class_recruit_building_a1e5677a84182f52b5dffa2091d988b06}\index{RecruitBuilding@{RecruitBuilding}!RecruitStartTime@{RecruitStartTime}}
-\index{RecruitStartTime@{RecruitStartTime}!RecruitBuilding@{RecruitBuilding}}
-\doxysubsubsection{\texorpdfstring{RecruitStartTime}{RecruitStartTime}}
-{\footnotesize\ttfamily \label{class_recruit_building_a1e5677a84182f52b5dffa2091d988b06} 
-float Recruit\+Building.\+Recruit\+Start\+Time}
-
 \Hypertarget{class_recruit_building_a98ddeb0d99101aa25a4d2f4fd56d2992}\index{RecruitBuilding@{RecruitBuilding}!RecruitUnitsQueue@{RecruitUnitsQueue}}
 \index{RecruitUnitsQueue@{RecruitUnitsQueue}!RecruitBuilding@{RecruitBuilding}}
 \doxysubsubsection{\texorpdfstring{RecruitUnitsQueue}{RecruitUnitsQueue}}
 {\footnotesize\ttfamily \label{class_recruit_building_a98ddeb0d99101aa25a4d2f4fd56d2992} 
 List$<$\doxymbox{\hyperlink{class_s_o___base_unit}{SO\+\_\+\+Base\+Unit}}$>$ Recruit\+Building.\+Recruit\+Units\+Queue = new List$<$\doxymbox{\hyperlink{class_s_o___base_unit}{SO\+\_\+\+Base\+Unit}}$>$(\doxymbox{\hyperlink{class_recruit_building_afacaaecbdc3e93215dd5ed0839c9a3fe}{RECRUIT\+\_\+\+QUEUE\+\_\+\+SIZE}})\hspace{0.3cm}{\ttfamily [private]}}
 
-\Hypertarget{class_recruit_building_a620c904bd9cfef2b877449c2659a0a05}\index{RecruitBuilding@{RecruitBuilding}!refreshEvent@{refreshEvent}}
-\index{refreshEvent@{refreshEvent}!RecruitBuilding@{RecruitBuilding}}
-\doxysubsubsection{\texorpdfstring{refreshEvent}{refreshEvent}}
-{\footnotesize\ttfamily \label{class_recruit_building_a620c904bd9cfef2b877449c2659a0a05} 
-\doxymbox{\hyperlink{class_refresh_u_i_event}{Refresh\+UIEvent}} Recruit\+Building.\+refresh\+Event\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\label{doc-property-members}
+\Hypertarget{class_recruit_building_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_recruit_building_a1e5677a84182f52b5dffa2091d988b06}\index{RecruitBuilding@{RecruitBuilding}!RecruitStartTime@{RecruitStartTime}}
+\index{RecruitStartTime@{RecruitStartTime}!RecruitBuilding@{RecruitBuilding}}
+\doxysubsubsection{\texorpdfstring{RecruitStartTime}{RecruitStartTime}}
+{\footnotesize\ttfamily \label{class_recruit_building_a1e5677a84182f52b5dffa2091d988b06} 
+float Recruit\+Building.\+Recruit\+Start\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
 
 
 

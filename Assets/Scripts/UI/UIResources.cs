@@ -47,27 +47,45 @@ public class UIResources : MonoBehaviour
         switch (resource.SO_Resource.ResourceTypes)
         {
             case ResourcesType.Food:
-                Food = Mathf.Clamp(Food + resource.Amount, 0, MaxFood);
+                if(Food < MaxFood)
+                {
+                    Food = Mathf.Clamp(Food + resource.Amount, 0, MaxFood);
+                }                    
                 MaxFood += resource.MaxAmount;
                 break;
             case ResourcesType.Wood:
-                Wood = Mathf.Clamp(Wood + resource.Amount, 0, MaxWood);
+                if(Wood < MaxWood)
+                {
+                    Wood = Mathf.Clamp(Wood + resource.Amount, 0, MaxWood);
+                }                
                 MaxWood += resource.MaxAmount;
                 break;
             case ResourcesType.Stone:
-                Stone = Mathf.Clamp(Stone + resource.Amount, 0, MaxStone);
+                if(Stone < MaxStone)
+                {
+                    Stone = Mathf.Clamp(Stone + resource.Amount, 0, MaxStone);
+                }                
                 MaxStone += resource.MaxAmount;
                 break;
             case ResourcesType.Iron:
-                Iron = Mathf.Clamp(Iron + resource.Amount, 0, MaxIron);
+                if(Iron < MaxIron)
+                {
+                    Iron = Mathf.Clamp(Iron + resource.Amount, 0, MaxIron);
+                }                
                 MaxIron += resource.MaxAmount;
                 break;
             case ResourcesType.Electricity:
-                Electricity = Mathf.Clamp(Electricity + resource.Amount, 0, MaxElectricity);
+                if(Electricity < MaxElectricity)
+                {
+                    Electricity = Mathf.Clamp(Electricity + resource.Amount, 0, MaxElectricity);
+                }                
                 MaxElectricity += resource.MaxAmount;
                 break;
             case ResourcesType.Population:
-                Population = Mathf.Clamp(Population + resource.Amount, 0, MaxPopulation);
+                if(Population < MaxPopulation)
+                {
+                    Population = Mathf.Clamp(Population + resource.Amount, 0, MaxPopulation);
+                }                
                 MaxPopulation += resource.MaxAmount;
                 break;
             default:

@@ -15,7 +15,7 @@ MonoBehaviour:
   <ObtainingTime>k__BackingField: 8
   <ObtainedAmount>k__BackingField: 15
   <MaxAmount>k__BackingField: 0
-  <IncreaseMaxAmount>k__BackingField: 5
+  <IncreaseMaxAmount>k__BackingField: 0
   <Icon>k__BackingField: {fileID: 21300000, guid: ceb864c7615e8ae4c86b8fdb23359c6e, type: 3}
   <ProducesOnlyOneTime>k__BackingField: 0
-  ResourceTypes: 2
+  ResourceTypes: 3

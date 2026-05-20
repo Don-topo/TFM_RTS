@@ -48,17 +48,20 @@ public class ProductionBuilding : BaseBuilding
     }
 
     public override void DestroyBuilding()
-    {
-        base.DestroyBuilding();
+    {        
         if (applyForEveryResource)
         {
-            ResourceOP resourceOP = new ResourceOP(SO_building.Cost.SO_Wood, 0, Resource.MaxAmount);
+            ResourceOP resourceOP = new ResourceOP(SO_building.Cost.SO_Wood, 0, -Resource.MaxAmount);
             resourceEvent.Raise(resourceOP);
-            resourceOP = new ResourceOP(SO_building.Cost.SO_Food, 0, Resource.MaxAmount);
+            resourceOP = new ResourceOP(SO_building.Cost.SO_Food, 0, -Resource.MaxAmount);
             resourceEvent.Raise(resourceOP);
-            resourceOP = new ResourceOP(SO_building.Cost.SO_Iron, 0, Resource.MaxAmount);
+            resourceOP = new ResourceOP(SO_building.Cost.SO_Iron, 0, -Resource.MaxAmount);
             resourceEvent.Raise(resourceOP);
-            resourceOP = new ResourceOP(SO_building.Cost.SO_Stone, 0, Resource.MaxAmount);
+            resourceOP = new ResourceOP(SO_building.Cost.SO_Stone, 0, -Resource.MaxAmount);
+            resourceEvent.Raise(resourceOP);
+            resourceEvent.Raise(new ResourceOP(SO_building.Cost.SO_Electricity, 0, -Resource.MaxAmount));
+            resourceEvent.Raise(resourceOP);
+            resourceEvent.Raise(new ResourceOP(SO_building.Cost.SO_Population, 0, -Resource.MaxAmount));
             resourceEvent.Raise(resourceOP);
         }
         else
@@ -86,7 +89,8 @@ public class ProductionBuilding : BaseBuilding
                 default:
                     break;
             }
-        }        
+        }
+        base.DestroyBuilding();
     }
 
     public override void BuildConstructed()

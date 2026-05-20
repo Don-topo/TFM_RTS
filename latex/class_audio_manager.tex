@@ -1,0 +1,212 @@
+\doxysection{Audio\+Manager Class Reference}
+\hypertarget{class_audio_manager}{}\label{class_audio_manager}\index{AudioManager@{AudioManager}}
+
+
+Inheritance diagram for Audio\+Manager:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_audio_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Audio\+Manager:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_audio_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_audio_manager_a7ec664a1e4f93e5e3e2332d3f9ac3376}{Play\+Defeat\+Audio}} (Null @null)
+\item 
+void \doxymbox{\hyperlink{class_audio_manager_ab73ce892e7ac69daaf694b4c3bcb40f6}{Play\+Victory\+Audio}} (Null @null)
+\item 
+void \doxymbox{\hyperlink{class_audio_manager_ac6ce60fedde296a402ca9787ea7dbc02}{Play\+Horde\+Audio}} (Null @null)
+\item 
+void \doxymbox{\hyperlink{class_audio_manager_aaee9c84765cd53efdfa9b11c1246eb9f}{Play\+Background\+Audio}} (Null @null)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{class_audio_manager_a8cbcdc0bf63bc89e1b36667dbf52994a}{Set\+Audio\+Clips}} (List$<$ Audio\+Clip $>$ new\+Audio\+Clips)
+\item 
+static void \doxymbox{\hyperlink{class_audio_manager_a43c60e322b5037ba3fdab1fcbe579eb8}{Play\+Audio}} ()
+\item 
+static void \doxymbox{\hyperlink{class_audio_manager_a2c0a598a1b7dfab90660ce5aef3c7000}{Clean\+Audio}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_audio_manager_a631d7d42b921bcbd82bd1baec2ec3ea7}{Awake}} ()
+\item 
+void \doxymbox{\hyperlink{class_audio_manager_a0cf84c64f2f28215053ebece1818f94e}{On\+Destroy}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Audio\+Mixer \doxymbox{\hyperlink{class_audio_manager_a1081038ce7267a4cace96e1a50ab1470}{audio\+Mixer}}
+\item 
+Audio\+Source \doxymbox{\hyperlink{class_audio_manager_a9ce7d9ada8e08772183e5c31ccf3bd60}{background\+Music\+Source}}
+\item 
+Audio\+Clip \doxymbox{\hyperlink{class_audio_manager_a5da108d424ce44421ae431d6481b6102}{main\+Background\+Audio\+Clip}}
+\item 
+Audio\+Clip \doxymbox{\hyperlink{class_audio_manager_a6c70a51d799f4e41b3ced9a33d78c1e8}{horde\+Audio\+Clip}}
+\item 
+Audio\+Clip \doxymbox{\hyperlink{class_audio_manager_a5d4525a2f84d4b638a8de42508bcf91e}{win\+Audio\+Clip}}
+\item 
+Audio\+Clip \doxymbox{\hyperlink{class_audio_manager_a669d0d5a1732187b352b1083d895f63f}{defeat\+Audio\+Clip}}
+\item 
+\doxymbox{\hyperlink{class_victory_event}{Victory\+Event}} \doxymbox{\hyperlink{class_audio_manager_a503dbcae2f09ccb905d1dbbad2de6174}{victory\+Event}}
+\item 
+\doxymbox{\hyperlink{class_game_over_event}{Game\+Over\+Event}} \doxymbox{\hyperlink{class_audio_manager_a41550fc43868ce4d2a1965dff2b0d831}{game\+Over\+Event}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static List$<$ Audio\+Clip $>$ \doxymbox{\hyperlink{class_audio_manager_a2042658d7c8919d6a408e3a55545907b}{audio\+Clips}}
+\item 
+static Audio\+Clip \doxymbox{\hyperlink{class_audio_manager_a656d15341c6e79ed7bcab0f260f244b0}{last\+Clip\+Played}}
+\item 
+static Audio\+Source \doxymbox{\hyperlink{class_audio_manager_a0c2aea6ea779d69228564aca9476ea80}{audio\+Source}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_audio_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_audio_manager_a631d7d42b921bcbd82bd1baec2ec3ea7}\index{AudioManager@{AudioManager}!Awake@{Awake}}
+\index{Awake@{Awake}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_audio_manager_a631d7d42b921bcbd82bd1baec2ec3ea7} 
+void Audio\+Manager.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_audio_manager_a2c0a598a1b7dfab90660ce5aef3c7000}\index{AudioManager@{AudioManager}!CleanAudio@{CleanAudio}}
+\index{CleanAudio@{CleanAudio}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{CleanAudio()}{CleanAudio()}}
+{\footnotesize\ttfamily \label{class_audio_manager_a2c0a598a1b7dfab90660ce5aef3c7000} 
+void Audio\+Manager.\+Clean\+Audio (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_audio_manager_a0cf84c64f2f28215053ebece1818f94e}\index{AudioManager@{AudioManager}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily \label{class_audio_manager_a0cf84c64f2f28215053ebece1818f94e} 
+void Audio\+Manager.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_audio_manager_a43c60e322b5037ba3fdab1fcbe579eb8}\index{AudioManager@{AudioManager}!PlayAudio@{PlayAudio}}
+\index{PlayAudio@{PlayAudio}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{PlayAudio()}{PlayAudio()}}
+{\footnotesize\ttfamily \label{class_audio_manager_a43c60e322b5037ba3fdab1fcbe579eb8} 
+void Audio\+Manager.\+Play\+Audio (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_audio_manager_aaee9c84765cd53efdfa9b11c1246eb9f}\index{AudioManager@{AudioManager}!PlayBackgroundAudio@{PlayBackgroundAudio}}
+\index{PlayBackgroundAudio@{PlayBackgroundAudio}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{PlayBackgroundAudio()}{PlayBackgroundAudio()}}
+{\footnotesize\ttfamily \label{class_audio_manager_aaee9c84765cd53efdfa9b11c1246eb9f} 
+void Audio\+Manager.\+Play\+Background\+Audio (\begin{DoxyParamCaption}\item[{Null @}]{null}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_audio_manager_a7ec664a1e4f93e5e3e2332d3f9ac3376}\index{AudioManager@{AudioManager}!PlayDefeatAudio@{PlayDefeatAudio}}
+\index{PlayDefeatAudio@{PlayDefeatAudio}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{PlayDefeatAudio()}{PlayDefeatAudio()}}
+{\footnotesize\ttfamily \label{class_audio_manager_a7ec664a1e4f93e5e3e2332d3f9ac3376} 
+void Audio\+Manager.\+Play\+Defeat\+Audio (\begin{DoxyParamCaption}\item[{Null @}]{null}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_audio_manager_ac6ce60fedde296a402ca9787ea7dbc02}\index{AudioManager@{AudioManager}!PlayHordeAudio@{PlayHordeAudio}}
+\index{PlayHordeAudio@{PlayHordeAudio}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{PlayHordeAudio()}{PlayHordeAudio()}}
+{\footnotesize\ttfamily \label{class_audio_manager_ac6ce60fedde296a402ca9787ea7dbc02} 
+void Audio\+Manager.\+Play\+Horde\+Audio (\begin{DoxyParamCaption}\item[{Null @}]{null}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_audio_manager_ab73ce892e7ac69daaf694b4c3bcb40f6}\index{AudioManager@{AudioManager}!PlayVictoryAudio@{PlayVictoryAudio}}
+\index{PlayVictoryAudio@{PlayVictoryAudio}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{PlayVictoryAudio()}{PlayVictoryAudio()}}
+{\footnotesize\ttfamily \label{class_audio_manager_ab73ce892e7ac69daaf694b4c3bcb40f6} 
+void Audio\+Manager.\+Play\+Victory\+Audio (\begin{DoxyParamCaption}\item[{Null @}]{null}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_audio_manager_a8cbcdc0bf63bc89e1b36667dbf52994a}\index{AudioManager@{AudioManager}!SetAudioClips@{SetAudioClips}}
+\index{SetAudioClips@{SetAudioClips}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{SetAudioClips()}{SetAudioClips()}}
+{\footnotesize\ttfamily \label{class_audio_manager_a8cbcdc0bf63bc89e1b36667dbf52994a} 
+void Audio\+Manager.\+Set\+Audio\+Clips (\begin{DoxyParamCaption}\item[{List$<$ Audio\+Clip $>$}]{new\+Audio\+Clips}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_audio_manager_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_audio_manager_a2042658d7c8919d6a408e3a55545907b}\index{AudioManager@{AudioManager}!audioClips@{audioClips}}
+\index{audioClips@{audioClips}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{audioClips}{audioClips}}
+{\footnotesize\ttfamily \label{class_audio_manager_a2042658d7c8919d6a408e3a55545907b} 
+List$<$Audio\+Clip$>$ Audio\+Manager.\+audio\+Clips\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{class_audio_manager_a1081038ce7267a4cace96e1a50ab1470}\index{AudioManager@{AudioManager}!audioMixer@{audioMixer}}
+\index{audioMixer@{audioMixer}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{audioMixer}{audioMixer}}
+{\footnotesize\ttfamily \label{class_audio_manager_a1081038ce7267a4cace96e1a50ab1470} 
+Audio\+Mixer Audio\+Manager.\+audio\+Mixer\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_audio_manager_a0c2aea6ea779d69228564aca9476ea80}\index{AudioManager@{AudioManager}!audioSource@{audioSource}}
+\index{audioSource@{audioSource}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{audioSource}{audioSource}}
+{\footnotesize\ttfamily \label{class_audio_manager_a0c2aea6ea779d69228564aca9476ea80} 
+Audio\+Source Audio\+Manager.\+audio\+Source\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{class_audio_manager_a9ce7d9ada8e08772183e5c31ccf3bd60}\index{AudioManager@{AudioManager}!backgroundMusicSource@{backgroundMusicSource}}
+\index{backgroundMusicSource@{backgroundMusicSource}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{backgroundMusicSource}{backgroundMusicSource}}
+{\footnotesize\ttfamily \label{class_audio_manager_a9ce7d9ada8e08772183e5c31ccf3bd60} 
+Audio\+Source Audio\+Manager.\+background\+Music\+Source\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_audio_manager_a669d0d5a1732187b352b1083d895f63f}\index{AudioManager@{AudioManager}!defeatAudioClip@{defeatAudioClip}}
+\index{defeatAudioClip@{defeatAudioClip}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{defeatAudioClip}{defeatAudioClip}}
+{\footnotesize\ttfamily \label{class_audio_manager_a669d0d5a1732187b352b1083d895f63f} 
+Audio\+Clip Audio\+Manager.\+defeat\+Audio\+Clip\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_audio_manager_a41550fc43868ce4d2a1965dff2b0d831}\index{AudioManager@{AudioManager}!gameOverEvent@{gameOverEvent}}
+\index{gameOverEvent@{gameOverEvent}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{gameOverEvent}{gameOverEvent}}
+{\footnotesize\ttfamily \label{class_audio_manager_a41550fc43868ce4d2a1965dff2b0d831} 
+\doxymbox{\hyperlink{class_game_over_event}{Game\+Over\+Event}} Audio\+Manager.\+game\+Over\+Event\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_audio_manager_a6c70a51d799f4e41b3ced9a33d78c1e8}\index{AudioManager@{AudioManager}!hordeAudioClip@{hordeAudioClip}}
+\index{hordeAudioClip@{hordeAudioClip}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{hordeAudioClip}{hordeAudioClip}}
+{\footnotesize\ttfamily \label{class_audio_manager_a6c70a51d799f4e41b3ced9a33d78c1e8} 
+Audio\+Clip Audio\+Manager.\+horde\+Audio\+Clip\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_audio_manager_a656d15341c6e79ed7bcab0f260f244b0}\index{AudioManager@{AudioManager}!lastClipPlayed@{lastClipPlayed}}
+\index{lastClipPlayed@{lastClipPlayed}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{lastClipPlayed}{lastClipPlayed}}
+{\footnotesize\ttfamily \label{class_audio_manager_a656d15341c6e79ed7bcab0f260f244b0} 
+Audio\+Clip Audio\+Manager.\+last\+Clip\+Played\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{class_audio_manager_a5da108d424ce44421ae431d6481b6102}\index{AudioManager@{AudioManager}!mainBackgroundAudioClip@{mainBackgroundAudioClip}}
+\index{mainBackgroundAudioClip@{mainBackgroundAudioClip}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{mainBackgroundAudioClip}{mainBackgroundAudioClip}}
+{\footnotesize\ttfamily \label{class_audio_manager_a5da108d424ce44421ae431d6481b6102} 
+Audio\+Clip Audio\+Manager.\+main\+Background\+Audio\+Clip\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_audio_manager_a503dbcae2f09ccb905d1dbbad2de6174}\index{AudioManager@{AudioManager}!victoryEvent@{victoryEvent}}
+\index{victoryEvent@{victoryEvent}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{victoryEvent}{victoryEvent}}
+{\footnotesize\ttfamily \label{class_audio_manager_a503dbcae2f09ccb905d1dbbad2de6174} 
+\doxymbox{\hyperlink{class_victory_event}{Victory\+Event}} Audio\+Manager.\+victory\+Event\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_audio_manager_a5d4525a2f84d4b638a8de42508bcf91e}\index{AudioManager@{AudioManager}!winAudioClip@{winAudioClip}}
+\index{winAudioClip@{winAudioClip}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{winAudioClip}{winAudioClip}}
+{\footnotesize\ttfamily \label{class_audio_manager_a5d4525a2f84d4b638a8de42508bcf91e} 
+Audio\+Clip Audio\+Manager.\+win\+Audio\+Clip\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Scripts/\+\doxymbox{\hyperlink{_audio_manager_8cs}{Audio\+Manager.\+cs}}\end{DoxyCompactItemize}

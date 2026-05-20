@@ -7,7 +7,7 @@ Inheritance diagram for UIManager:\+
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=238pt]{class_u_i_manager__inherit__graph}
+\includegraphics[height=550pt]{class_u_i_manager__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -20,15 +20,6 @@ Collaboration diagram for UIManager:\+
 \includegraphics[width=350pt]{class_u_i_manager__coll__graph}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Public Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\doxymbox{\hyperlink{class_unit_selected_event}{Unit\+Selected\+Event}} \doxymbox{\hyperlink{class_u_i_manager_ae6bbe549830f747be59fc8df883cae34}{unit\+Selected\+Event}}
-\item 
-\doxymbox{\hyperlink{class_unit_deselect_event}{Unit\+Deselect\+Event}} \doxymbox{\hyperlink{class_u_i_manager_ad4b829477bdc3287000ecca4a4023adf}{unit\+Deselect\+Event}}
-\item 
-\doxymbox{\hyperlink{class_refresh_u_i_event}{Refresh\+UIEvent}} \doxymbox{\hyperlink{class_u_i_manager_a2b5191a8218e88189309dfd08c677fb8}{refresh\+UIEvent}}
-\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -42,7 +33,13 @@ void \doxymbox{\hyperlink{class_u_i_manager_ada4c664a2cd7176fad8f01057ba05208}{U
 \item 
 void \doxymbox{\hyperlink{class_u_i_manager_a8815256d7c08613f19af57370a5391ed}{Unit\+Deselected}} (\doxymbox{\hyperlink{class_common_actions}{Common\+Actions}} unit\+Deselect)
 \item 
+void \doxymbox{\hyperlink{class_u_i_manager_a1eceacc83e59f415a15612488e9c9ff0}{Death\+Unit}} (\doxymbox{\hyperlink{class_common_actions}{Common\+Actions}} unit\+Death)
+\item 
 void \doxymbox{\hyperlink{class_u_i_manager_a3133024798d74794336ff18e86baea79}{Hard\+Refresh\+By\+Event}} (bool refresh)
+\item 
+void \doxymbox{\hyperlink{class_u_i_manager_a0a574e256cd7b2549bb8b0032973808a}{Show\+Victory}} (Null @null)
+\item 
+void \doxymbox{\hyperlink{class_u_i_manager_a821bf777e80101724e1fdb1b0423a6ad}{Show\+Defeat}} (Null @null)
 \item 
 void \doxymbox{\hyperlink{class_u_i_manager_a83774d9e5373b94cde77b96b639687ac}{Update\+UI}} ()
 \end{DoxyCompactItemize}
@@ -59,6 +56,24 @@ void \doxymbox{\hyperlink{class_u_i_manager_a83774d9e5373b94cde77b96b639687ac}{U
 \item 
 \doxymbox{\hyperlink{class_u_i_selected_building}{UISelected\+Building}} \doxymbox{\hyperlink{class_u_i_manager_acc5743479b4afbc495c0834add4e23d0}{ui\+Selected\+Building}}
 \item 
+\doxymbox{\hyperlink{class_u_i_unit_groups}{UIUnit\+Groups}} \doxymbox{\hyperlink{class_u_i_manager_a0ccad408a4bc96b5a26a3c3e8c0701f9}{ui\+Unit\+Groups}}
+\item 
+Game\+Object \doxymbox{\hyperlink{class_u_i_manager_a33f7a3003b563a1e287b3a91b225b542}{win\+Menu}}
+\item 
+Game\+Object \doxymbox{\hyperlink{class_u_i_manager_a089634c9e41e7bf1a3ff2f125579e880}{defeat\+Menu}}
+\item 
+\doxymbox{\hyperlink{class_unit_selected_event}{Unit\+Selected\+Event}} \doxymbox{\hyperlink{class_u_i_manager_ae6bbe549830f747be59fc8df883cae34}{unit\+Selected\+Event}}
+\item 
+\doxymbox{\hyperlink{class_unit_deselect_event}{Unit\+Deselect\+Event}} \doxymbox{\hyperlink{class_u_i_manager_ad4b829477bdc3287000ecca4a4023adf}{unit\+Deselect\+Event}}
+\item 
+\doxymbox{\hyperlink{class_refresh_u_i_event}{Refresh\+UIEvent}} \doxymbox{\hyperlink{class_u_i_manager_a2b5191a8218e88189309dfd08c677fb8}{refresh\+UIEvent}}
+\item 
+\doxymbox{\hyperlink{class_unit_death_event}{Unit\+Death\+Event}} \doxymbox{\hyperlink{class_u_i_manager_a0818094172ba735287428d533f995943}{death\+Event}}
+\item 
+\doxymbox{\hyperlink{class_game_over_event}{Game\+Over\+Event}} \doxymbox{\hyperlink{class_u_i_manager_ae7f373242a18709daa89feeeb1805404}{game\+Over\+Event}}
+\item 
+\doxymbox{\hyperlink{class_victory_event}{Victory\+Event}} \doxymbox{\hyperlink{class_u_i_manager_a4a43e4d2aa24f951efa7efecb756aebd}{victory\+Event}}
+\item 
 List$<$ \doxymbox{\hyperlink{interface_i_selectable}{ISelectable}} $>$ \doxymbox{\hyperlink{class_u_i_manager_a26f0235fd32c9651ac33787eb36cf021}{selected\+Units}} = new List$<$\doxymbox{\hyperlink{interface_i_selectable}{ISelectable}}$>$(12)
 \end{DoxyCompactItemize}
 
@@ -72,6 +87,12 @@ List$<$ \doxymbox{\hyperlink{interface_i_selectable}{ISelectable}} $>$ \doxymbox
 {\footnotesize\ttfamily \label{class_u_i_manager_acc416c0efeedcaf946f3f278127dc241} 
 void UIManager.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
+\Hypertarget{class_u_i_manager_a1eceacc83e59f415a15612488e9c9ff0}\index{UIManager@{UIManager}!DeathUnit@{DeathUnit}}
+\index{DeathUnit@{DeathUnit}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{DeathUnit()}{DeathUnit()}}
+{\footnotesize\ttfamily \label{class_u_i_manager_a1eceacc83e59f415a15612488e9c9ff0} 
+void UIManager.\+Death\+Unit (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}]{unit\+Death}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
 \Hypertarget{class_u_i_manager_a3133024798d74794336ff18e86baea79}\index{UIManager@{UIManager}!HardRefreshByEvent@{HardRefreshByEvent}}
 \index{HardRefreshByEvent@{HardRefreshByEvent}!UIManager@{UIManager}}
 \doxysubsubsection{\texorpdfstring{HardRefreshByEvent()}{HardRefreshByEvent()}}
@@ -83,6 +104,18 @@ void UIManager.\+Hard\+Refresh\+By\+Event (\begin{DoxyParamCaption}\item[{bool}]
 \doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
 {\footnotesize\ttfamily \label{class_u_i_manager_a03255ab474c26f8da63d87821decd3e1} 
 void UIManager.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_u_i_manager_a821bf777e80101724e1fdb1b0423a6ad}\index{UIManager@{UIManager}!ShowDefeat@{ShowDefeat}}
+\index{ShowDefeat@{ShowDefeat}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{ShowDefeat()}{ShowDefeat()}}
+{\footnotesize\ttfamily \label{class_u_i_manager_a821bf777e80101724e1fdb1b0423a6ad} 
+void UIManager.\+Show\+Defeat (\begin{DoxyParamCaption}\item[{Null @}]{null}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_u_i_manager_a0a574e256cd7b2549bb8b0032973808a}\index{UIManager@{UIManager}!ShowVictory@{ShowVictory}}
+\index{ShowVictory@{ShowVictory}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{ShowVictory()}{ShowVictory()}}
+{\footnotesize\ttfamily \label{class_u_i_manager_a0a574e256cd7b2549bb8b0032973808a} 
+void UIManager.\+Show\+Victory (\begin{DoxyParamCaption}\item[{Null @}]{null}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
 \Hypertarget{class_u_i_manager_a2bd6b48b13b9e14e6292e4b713f59584}\index{UIManager@{UIManager}!Start@{Start}}
 \index{Start@{Start}!UIManager@{UIManager}}
@@ -113,11 +146,29 @@ void UIManager.\+Update\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})
 \label{doc-variable-members}
 \Hypertarget{class_u_i_manager_doc-variable-members}
 \doxysubsection{Member Data Documentation}
+\Hypertarget{class_u_i_manager_a0818094172ba735287428d533f995943}\index{UIManager@{UIManager}!deathEvent@{deathEvent}}
+\index{deathEvent@{deathEvent}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{deathEvent}{deathEvent}}
+{\footnotesize\ttfamily \label{class_u_i_manager_a0818094172ba735287428d533f995943} 
+\doxymbox{\hyperlink{class_unit_death_event}{Unit\+Death\+Event}} UIManager.\+death\+Event\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_u_i_manager_a089634c9e41e7bf1a3ff2f125579e880}\index{UIManager@{UIManager}!defeatMenu@{defeatMenu}}
+\index{defeatMenu@{defeatMenu}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{defeatMenu}{defeatMenu}}
+{\footnotesize\ttfamily \label{class_u_i_manager_a089634c9e41e7bf1a3ff2f125579e880} 
+Game\+Object UIManager.\+defeat\+Menu\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_u_i_manager_ae7f373242a18709daa89feeeb1805404}\index{UIManager@{UIManager}!gameOverEvent@{gameOverEvent}}
+\index{gameOverEvent@{gameOverEvent}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{gameOverEvent}{gameOverEvent}}
+{\footnotesize\ttfamily \label{class_u_i_manager_ae7f373242a18709daa89feeeb1805404} 
+\doxymbox{\hyperlink{class_game_over_event}{Game\+Over\+Event}} UIManager.\+game\+Over\+Event\hspace{0.3cm}{\ttfamily [private]}}
+
 \Hypertarget{class_u_i_manager_a2b5191a8218e88189309dfd08c677fb8}\index{UIManager@{UIManager}!refreshUIEvent@{refreshUIEvent}}
 \index{refreshUIEvent@{refreshUIEvent}!UIManager@{UIManager}}
 \doxysubsubsection{\texorpdfstring{refreshUIEvent}{refreshUIEvent}}
 {\footnotesize\ttfamily \label{class_u_i_manager_a2b5191a8218e88189309dfd08c677fb8} 
-\doxymbox{\hyperlink{class_refresh_u_i_event}{Refresh\+UIEvent}} UIManager.\+refresh\+UIEvent}
+\doxymbox{\hyperlink{class_refresh_u_i_event}{Refresh\+UIEvent}} UIManager.\+refresh\+UIEvent\hspace{0.3cm}{\ttfamily [private]}}
 
 \Hypertarget{class_u_i_manager_a26f0235fd32c9651ac33787eb36cf021}\index{UIManager@{UIManager}!selectedUnits@{selectedUnits}}
 \index{selectedUnits@{selectedUnits}!UIManager@{UIManager}}
@@ -155,17 +206,35 @@ List$<$\doxymbox{\hyperlink{interface_i_selectable}{ISelectable}}$>$ UIManager.\
 {\footnotesize\ttfamily \label{class_u_i_manager_add4c54019aa84a551e4fd297d3608129} 
 \doxymbox{\hyperlink{class_u_i_unit_base_info}{UIUnit\+Base\+Info}} UIManager.\+ui\+Unit\+Base\hspace{0.3cm}{\ttfamily [private]}}
 
+\Hypertarget{class_u_i_manager_a0ccad408a4bc96b5a26a3c3e8c0701f9}\index{UIManager@{UIManager}!uiUnitGroups@{uiUnitGroups}}
+\index{uiUnitGroups@{uiUnitGroups}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{uiUnitGroups}{uiUnitGroups}}
+{\footnotesize\ttfamily \label{class_u_i_manager_a0ccad408a4bc96b5a26a3c3e8c0701f9} 
+\doxymbox{\hyperlink{class_u_i_unit_groups}{UIUnit\+Groups}} UIManager.\+ui\+Unit\+Groups\hspace{0.3cm}{\ttfamily [private]}}
+
 \Hypertarget{class_u_i_manager_ad4b829477bdc3287000ecca4a4023adf}\index{UIManager@{UIManager}!unitDeselectEvent@{unitDeselectEvent}}
 \index{unitDeselectEvent@{unitDeselectEvent}!UIManager@{UIManager}}
 \doxysubsubsection{\texorpdfstring{unitDeselectEvent}{unitDeselectEvent}}
 {\footnotesize\ttfamily \label{class_u_i_manager_ad4b829477bdc3287000ecca4a4023adf} 
-\doxymbox{\hyperlink{class_unit_deselect_event}{Unit\+Deselect\+Event}} UIManager.\+unit\+Deselect\+Event}
+\doxymbox{\hyperlink{class_unit_deselect_event}{Unit\+Deselect\+Event}} UIManager.\+unit\+Deselect\+Event\hspace{0.3cm}{\ttfamily [private]}}
 
 \Hypertarget{class_u_i_manager_ae6bbe549830f747be59fc8df883cae34}\index{UIManager@{UIManager}!unitSelectedEvent@{unitSelectedEvent}}
 \index{unitSelectedEvent@{unitSelectedEvent}!UIManager@{UIManager}}
 \doxysubsubsection{\texorpdfstring{unitSelectedEvent}{unitSelectedEvent}}
 {\footnotesize\ttfamily \label{class_u_i_manager_ae6bbe549830f747be59fc8df883cae34} 
-\doxymbox{\hyperlink{class_unit_selected_event}{Unit\+Selected\+Event}} UIManager.\+unit\+Selected\+Event}
+\doxymbox{\hyperlink{class_unit_selected_event}{Unit\+Selected\+Event}} UIManager.\+unit\+Selected\+Event\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_u_i_manager_a4a43e4d2aa24f951efa7efecb756aebd}\index{UIManager@{UIManager}!victoryEvent@{victoryEvent}}
+\index{victoryEvent@{victoryEvent}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{victoryEvent}{victoryEvent}}
+{\footnotesize\ttfamily \label{class_u_i_manager_a4a43e4d2aa24f951efa7efecb756aebd} 
+\doxymbox{\hyperlink{class_victory_event}{Victory\+Event}} UIManager.\+victory\+Event\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_u_i_manager_a33f7a3003b563a1e287b3a91b225b542}\index{UIManager@{UIManager}!winMenu@{winMenu}}
+\index{winMenu@{winMenu}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{winMenu}{winMenu}}
+{\footnotesize\ttfamily \label{class_u_i_manager_a33f7a3003b563a1e287b3a91b225b542} 
+Game\+Object UIManager.\+win\+Menu\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

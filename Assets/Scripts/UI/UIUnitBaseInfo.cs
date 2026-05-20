@@ -34,6 +34,7 @@ public class UIUnitBaseInfo : MonoBehaviour
     public void Enable(CommonActions newAction)
 
     {
+        if(gameObject == null) return;
         action = newAction;
         gameObject.SetActive(true);
         unitImage.sprite = action.SO_BaseUnit.Icon;

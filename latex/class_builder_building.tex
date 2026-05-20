@@ -1,0 +1,209 @@
+\doxysection{Builder\+Building Class Reference}
+\hypertarget{class_builder_building}{}\label{class_builder_building}\index{BuilderBuilding@{BuilderBuilding}}
+
+
+Inheritance diagram for Builder\+Building:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_builder_building__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Builder\+Building:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_builder_building__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_builder_building_a1d8a3ef8b0b1faf89ab111425da4f4a5}{Cancel\+Construct}} ()
+\item 
+Game\+Object \doxymbox{\hyperlink{class_builder_building_a9b02354e163bcab75d0ed9de70e9a30c}{Construct\+Building}} (\doxymbox{\hyperlink{class_s_o___building}{SO\+\_\+\+Building}} building, Vector3 target\+Position)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_base_building}{Base\+Building}}}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_base_building_aa6b81f186d3b4f5705de9c8da2a35cf2}{Build\+Building}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_base_building_a4bbaf42b6e0d8fd4cdb933f05dbc3ed1}{Destroy\+Building}} ()
+\item 
+void \doxymbox{\hyperlink{class_base_building_a9033febb086dfc89a4dc125bc71a341b}{Heal}} (int amount)
+\item 
+void \doxymbox{\hyperlink{class_base_building_ac50b496e6babaffeb977fa73dcf1dd25}{Refresh\+UI}} ()
+\item 
+void \doxymbox{\hyperlink{class_base_building_a3be49a6ba09aa9939e99dbbd68fb6a5f}{Restore\+Materials}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_base_building_af2c6e3189f4d62b191f406899446204f}{Build\+Constructed}} ()
+\item 
+void \doxymbox{\hyperlink{class_base_building_aedc0efa53e793fc854b4f0cf8d5b548e}{Reset\+Actions}} ()
+\item 
+override void \doxymbox{\hyperlink{class_base_building_ab6152887e801c62b2e10370fb9287e6c}{Deselect}} ()
+\item 
+override void \doxymbox{\hyperlink{class_base_building_adc2e3a3694cf9295b94715203f5db8d8}{Select}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_common_actions_a31efbfded7bac0694367df1e807b5f26}{Set\+Commands\+Overrides}} (\doxymbox{\hyperlink{class_base_action}{Base\+Action}}\+[$\,$]\+ actions)
+\item 
+void \doxymbox{\hyperlink{class_common_actions_a9aeadc1e41e81f959cebe4b3f83f55f4}{Apply\+Damage}} (int damage\+Amount)
+\item 
+void \doxymbox{\hyperlink{class_common_actions_a4679ef5476cba71a56901c3909c2e921}{Die}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_builder_building_ae17c9e56f7e2f198fa40f97471625774}{Is\+Under\+Construction}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_base_building}{Base\+Building}}}
+\begin{DoxyCompactItemize}
+\item 
+Material \doxymbox{\hyperlink{class_base_building_a3be5a979246ab2dc4dc2569f18f711c9}{Place\+Material}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+\doxymbox{\hyperlink{class_s_o___building}{SO\+\_\+\+Building}} \doxymbox{\hyperlink{class_base_building_a99a2a8072153b85c81fe201070cbfdd6}{SO\+\_\+building}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+Behavior\+Graph\+Agent \doxymbox{\hyperlink{class_base_building_a1ea800ad146506789e1ec1081dcfe4ab}{Graph\+Agent}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+bool \doxymbox{\hyperlink{class_base_building_a9e0a09e7fcff563b701d1c248d2b7939}{Is\+Constructed}} = false\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_common_actions_a3a0d3db8c141d0c160f63a1d673bd04e}{Is\+Selected}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+\doxymbox{\hyperlink{class_base_action}{Base\+Action}}\+[$\,$]\+ \doxymbox{\hyperlink{class_common_actions_a75764b7c55f8ddfaf1dfbe346257491c}{Actions}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+\doxymbox{\hyperlink{class_s_o___base_unit}{SO\+\_\+\+Base\+Unit}} \doxymbox{\hyperlink{class_common_actions_ab8bbed6a15c8b971481b14f01310fdb7}{SO\+\_\+\+Base\+Unit}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+int \doxymbox{\hyperlink{class_common_actions_a7ce50eea9d7904e4c745b8af489531f2}{Current\+Health}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+int \doxymbox{\hyperlink{class_common_actions_a603564a07381db22a5f3e9d5ac51403a}{Max\+Health}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+Transform \doxymbox{\hyperlink{class_common_actions_a75b141d8781f3ff94932ac9d10bb2060}{Target\+Position}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+bool \doxymbox{\hyperlink{class_common_actions_a058d0dd3c4c061940a903ffafa026001}{is\+Dead}} = false\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{interface_i_healable}{IHealable}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{interface_i_healable_aa79b1f7ce4592ba82c78690271e8c6b3}{Current\+Health}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+int \doxymbox{\hyperlink{interface_i_healable_a259a0ecc362aa9e09f4ae7b229c0af52}{Max\+Health}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+Transform \doxymbox{\hyperlink{interface_i_healable_a7a0795b7c8985b586247a430179185ed}{Target\+Position}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_base_action}{Base\+Action}} \doxymbox{\hyperlink{class_builder_building_af918b34f838c9bd380c441ca6983cc91}{Cancel\+Building\+Command}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \doxymbox{\hyperlink{class_base_building}{Base\+Building}}}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{class_base_building_af717a451ffec46b300852c1f0ac35636}{Start\+Time}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_unit_selected_event}{Unit\+Selected\+Event}} \doxymbox{\hyperlink{class_common_actions_aad887a416c9c496cdad14969a759b02f}{unit\+Select\+Event}}
+\item 
+\doxymbox{\hyperlink{class_unit_deselect_event}{Unit\+Deselect\+Event}} \doxymbox{\hyperlink{class_common_actions_ae602ba5252ed6e84255eea302c63a274}{unit\+Deselect\+Event}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_base_building}{Base\+Building}}}
+\begin{DoxyCompactItemize}
+\item 
+override void \doxymbox{\hyperlink{class_base_building_a2e27c33fc066b75e7b5e7f5764a55211}{Start}} ()
+\item 
+override void \doxymbox{\hyperlink{class_base_building_a3f1a908922f4a450466da213dd45bb2b}{On\+Destroy}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_aace304ed9479d52725fe618c746667d9}{Awake}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_ae605f8ae1a8915928869b81dae283577}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_base_building}{Base\+Building}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_resource_event}{Resource\+Event}} \doxymbox{\hyperlink{class_base_building_ab6355df41dc1aa5119a5f896bfdd234e}{resource\+Event}}
+\item 
+\doxymbox{\hyperlink{class_refresh_u_i_event}{Refresh\+UIEvent}} \doxymbox{\hyperlink{class_base_building_af0786c1953ac18913c6fdcb6adbd7719}{refresh\+Event}}
+\item 
+\doxymbox{\hyperlink{class_building_destroyed_event}{Building\+Destroyed\+Event}} \doxymbox{\hyperlink{class_base_building_a087de66c1dc2a0fbbdfcea68e3ea336a}{build\+Destroyed\+Event}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+Decal\+Projector \doxymbox{\hyperlink{class_common_actions_a0551ee27e1d92c4cab5583499081a0d3}{selection\+Decal}}
+\item 
+Animator \doxymbox{\hyperlink{class_common_actions_a8596da371da49e83b31076f91b89e707}{animator}}
+\item 
+\doxymbox{\hyperlink{class_update_health_event}{Update\+Health\+Event}} \doxymbox{\hyperlink{class_common_actions_a4a0946e2ad67e943e6364d7066ef8931}{update\+Health\+Event}}
+\item 
+\doxymbox{\hyperlink{class_unit_death_event}{Unit\+Death\+Event}} \doxymbox{\hyperlink{class_common_actions_a7bacbe25f3f281191a76a8477347caed}{unit\+Death\+Event}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_builder_building_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_builder_building_a1d8a3ef8b0b1faf89ab111425da4f4a5}\index{BuilderBuilding@{BuilderBuilding}!CancelConstruct@{CancelConstruct}}
+\index{CancelConstruct@{CancelConstruct}!BuilderBuilding@{BuilderBuilding}}
+\doxysubsubsection{\texorpdfstring{CancelConstruct()}{CancelConstruct()}}
+{\footnotesize\ttfamily \label{class_builder_building_a1d8a3ef8b0b1faf89ab111425da4f4a5} 
+void Builder\+Building.\+Cancel\+Construct (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \doxymbox{\hyperlink{interface_i_construct_building_a448721e7c46275089cc532277923614a}{IConstruct\+Building}}.
+
+\Hypertarget{class_builder_building_a9b02354e163bcab75d0ed9de70e9a30c}\index{BuilderBuilding@{BuilderBuilding}!ConstructBuilding@{ConstructBuilding}}
+\index{ConstructBuilding@{ConstructBuilding}!BuilderBuilding@{BuilderBuilding}}
+\doxysubsubsection{\texorpdfstring{ConstructBuilding()}{ConstructBuilding()}}
+{\footnotesize\ttfamily \label{class_builder_building_a9b02354e163bcab75d0ed9de70e9a30c} 
+Game\+Object Builder\+Building.\+Construct\+Building (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_s_o___building}{SO\+\_\+\+Building}}}]{building}{, }\item[{Vector3}]{target\+Position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \doxymbox{\hyperlink{interface_i_construct_building_ac6eb0b2dc292633c9eaba062d66c5965}{IConstruct\+Building}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_builder_building_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_builder_building_af918b34f838c9bd380c441ca6983cc91}\index{BuilderBuilding@{BuilderBuilding}!CancelBuildingCommand@{CancelBuildingCommand}}
+\index{CancelBuildingCommand@{CancelBuildingCommand}!BuilderBuilding@{BuilderBuilding}}
+\doxysubsubsection{\texorpdfstring{CancelBuildingCommand}{CancelBuildingCommand}}
+{\footnotesize\ttfamily \label{class_builder_building_af918b34f838c9bd380c441ca6983cc91} 
+\doxymbox{\hyperlink{class_base_action}{Base\+Action}} Builder\+Building.\+Cancel\+Building\+Command\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_builder_building_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_builder_building_ae17c9e56f7e2f198fa40f97471625774}\index{BuilderBuilding@{BuilderBuilding}!IsUnderConstruction@{IsUnderConstruction}}
+\index{IsUnderConstruction@{IsUnderConstruction}!BuilderBuilding@{BuilderBuilding}}
+\doxysubsubsection{\texorpdfstring{IsUnderConstruction}{IsUnderConstruction}}
+{\footnotesize\ttfamily \label{class_builder_building_ae17c9e56f7e2f198fa40f97471625774} 
+bool Builder\+Building.\+Is\+Under\+Construction\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \doxymbox{\hyperlink{interface_i_construct_building_af6727378e8ac833f2209b6f92f2d4ffa}{IConstruct\+Building}}.
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Scripts/\+\+Buildings/\+\doxymbox{\hyperlink{_builder_building_8cs}{Builder\+Building.\+cs}}\end{DoxyCompactItemize}

@@ -24,18 +24,28 @@ Collaboration diagram for Production\+Building:\+
 \begin{DoxyCompactItemize}
 \item 
 override void \doxymbox{\hyperlink{class_production_building_afa08f15536bf1eab8ce260cfb968b4cb}{Destroy\+Building}} ()
+\item 
+override void \doxymbox{\hyperlink{class_production_building_aa49a6ae6141be2b4d9f22bacc0620ddd}{Build\+Constructed}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_base_building}{Base\+Building}}}
 \begin{DoxyCompactItemize}
 \item 
 void \doxymbox{\hyperlink{class_base_building_aa6b81f186d3b4f5705de9c8da2a35cf2}{Build\+Building}} ()
+\item 
+void \doxymbox{\hyperlink{class_base_building_a9033febb086dfc89a4dc125bc71a341b}{Heal}} (int amount)
+\item 
+void \doxymbox{\hyperlink{class_base_building_ac50b496e6babaffeb977fa73dcf1dd25}{Refresh\+UI}} ()
+\item 
+void \doxymbox{\hyperlink{class_base_building_a3be49a6ba09aa9939e99dbbd68fb6a5f}{Restore\+Materials}} ()
+\item 
+void \doxymbox{\hyperlink{class_base_building_aedc0efa53e793fc854b4f0cf8d5b548e}{Reset\+Actions}} ()
+\item 
+override void \doxymbox{\hyperlink{class_base_building_ab6152887e801c62b2e10370fb9287e6c}{Deselect}} ()
+\item 
+override void \doxymbox{\hyperlink{class_base_building_adc2e3a3694cf9295b94715203f5db8d8}{Select}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
 \begin{DoxyCompactItemize}
-\item 
-virtual void \doxymbox{\hyperlink{class_common_actions_ab819292d2b539af3fd654934925c3d43}{Deselect}} ()
-\item 
-virtual void \doxymbox{\hyperlink{class_common_actions_a20fe334501ba458268ea75a5e9cbd9aa}{Select}} ()
 \item 
 void \doxymbox{\hyperlink{class_common_actions_a31efbfded7bac0694367df1e807b5f26}{Set\+Commands\+Overrides}} (\doxymbox{\hyperlink{class_base_action}{Base\+Action}}\+[$\,$]\+ actions)
 \item 
@@ -60,14 +70,18 @@ virtual void \doxymbox{\hyperlink{class_common_actions_aace304ed9479d52725fe618c
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-\doxymbox{\hyperlink{class_s_o___resource}{SO\+\_\+\+Resource}} \doxymbox{\hyperlink{class_production_building_a93319f1b1e0fc01ad4774ac4f5df522d}{resource}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
-\item 
-float \doxymbox{\hyperlink{class_production_building_af9a84c3ddc9697152b125ed18bad0d04}{Start\+Time}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\doxymbox{\hyperlink{class_s_o___resource}{SO\+\_\+\+Resource}} \doxymbox{\hyperlink{class_production_building_acc90413b1b9a31a1642df018814a4db8}{Resource}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
 \end{DoxyCompactItemize}
 \doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_base_building}{Base\+Building}}}
 \begin{DoxyCompactItemize}
 \item 
 Material \doxymbox{\hyperlink{class_base_building_a3be5a979246ab2dc4dc2569f18f711c9}{Place\+Material}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+\doxymbox{\hyperlink{class_s_o___building}{SO\+\_\+\+Building}} \doxymbox{\hyperlink{class_base_building_a99a2a8072153b85c81fe201070cbfdd6}{SO\+\_\+building}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+Behavior\+Graph\+Agent \doxymbox{\hyperlink{class_base_building_a1ea800ad146506789e1ec1081dcfe4ab}{Graph\+Agent}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+bool \doxymbox{\hyperlink{class_base_building_a9e0a09e7fcff563b701d1c248d2b7939}{Is\+Constructed}} = false\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
 \end{DoxyCompactItemize}
 \doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
 \begin{DoxyCompactItemize}
@@ -83,13 +97,34 @@ int \doxymbox{\hyperlink{class_common_actions_a7ce50eea9d7904e4c745b8af489531f2}
 int \doxymbox{\hyperlink{class_common_actions_a603564a07381db22a5f3e9d5ac51403a}{Max\+Health}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
 \item 
 Transform \doxymbox{\hyperlink{class_common_actions_a75b141d8781f3ff94932ac9d10bb2060}{Target\+Position}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+bool \doxymbox{\hyperlink{class_common_actions_a058d0dd3c4c061940a903ffafa026001}{is\+Dead}} = false\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{interface_i_healable}{IHealable}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{interface_i_healable_aa79b1f7ce4592ba82c78690271e8c6b3}{Current\+Health}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+int \doxymbox{\hyperlink{interface_i_healable_a259a0ecc362aa9e09f4ae7b229c0af52}{Max\+Health}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+Transform \doxymbox{\hyperlink{interface_i_healable_a7a0795b7c8985b586247a430179185ed}{Target\+Position}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \doxymbox{\hyperlink{class_production_building_a955f803291699f9ca43a51ea0d39b8b1}{Produce\+Resource}} ()
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_production_building_a3334aff7f2335fabf7fb0faeec18f740}{apply\+For\+Every\+Resource}}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \doxymbox{\hyperlink{class_base_building}{Base\+Building}}}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{class_base_building_af717a451ffec46b300852c1f0ac35636}{Start\+Time}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -102,18 +137,36 @@ void \doxymbox{\hyperlink{class_production_building_a955f803291699f9ca43a51ea0d3
 \item 
 \doxymbox{\hyperlink{class_resource_event}{Resource\+Event}} \doxymbox{\hyperlink{class_base_building_ab6355df41dc1aa5119a5f896bfdd234e}{resource\+Event}}
 \item 
-\doxymbox{\hyperlink{class_s_o___building}{SO\+\_\+\+Building}} \doxymbox{\hyperlink{class_base_building_aab5454d1d52c28c91d6e579d9424b6a4}{so\+\_\+building}}
+\doxymbox{\hyperlink{class_refresh_u_i_event}{Refresh\+UIEvent}} \doxymbox{\hyperlink{class_base_building_af0786c1953ac18913c6fdcb6adbd7719}{refresh\+Event}}
+\item 
+\doxymbox{\hyperlink{class_building_destroyed_event}{Building\+Destroyed\+Event}} \doxymbox{\hyperlink{class_base_building_a087de66c1dc2a0fbbdfcea68e3ea336a}{build\+Destroyed\+Event}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
 \begin{DoxyCompactItemize}
 \item 
 Decal\+Projector \doxymbox{\hyperlink{class_common_actions_a0551ee27e1d92c4cab5583499081a0d3}{selection\+Decal}}
+\item 
+Animator \doxymbox{\hyperlink{class_common_actions_a8596da371da49e83b31076f91b89e707}{animator}}
+\item 
+\doxymbox{\hyperlink{class_update_health_event}{Update\+Health\+Event}} \doxymbox{\hyperlink{class_common_actions_a4a0946e2ad67e943e6364d7066ef8931}{update\+Health\+Event}}
+\item 
+\doxymbox{\hyperlink{class_unit_death_event}{Unit\+Death\+Event}} \doxymbox{\hyperlink{class_common_actions_a7bacbe25f3f281191a76a8477347caed}{unit\+Death\+Event}}
 \end{DoxyCompactItemize}
 
 
 \label{doc-func-members}
 \Hypertarget{class_production_building_doc-func-members}
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_production_building_aa49a6ae6141be2b4d9f22bacc0620ddd}\index{ProductionBuilding@{ProductionBuilding}!BuildConstructed@{BuildConstructed}}
+\index{BuildConstructed@{BuildConstructed}!ProductionBuilding@{ProductionBuilding}}
+\doxysubsubsection{\texorpdfstring{BuildConstructed()}{BuildConstructed()}}
+{\footnotesize\ttfamily \label{class_production_building_aa49a6ae6141be2b4d9f22bacc0620ddd} 
+override void Production\+Building.\+Build\+Constructed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_base_building_af2c6e3189f4d62b191f406899446204f}{Base\+Building}}.
+
 \Hypertarget{class_production_building_afa08f15536bf1eab8ce260cfb968b4cb}\index{ProductionBuilding@{ProductionBuilding}!DestroyBuilding@{DestroyBuilding}}
 \index{DestroyBuilding@{DestroyBuilding}!ProductionBuilding@{ProductionBuilding}}
 \doxysubsubsection{\texorpdfstring{DestroyBuilding()}{DestroyBuilding()}}
@@ -162,20 +215,25 @@ Reimplemented from \doxymbox{\hyperlink{class_common_actions_ae605f8ae1a89159288
 
 
 
+\label{doc-variable-members}
+\Hypertarget{class_production_building_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_production_building_a3334aff7f2335fabf7fb0faeec18f740}\index{ProductionBuilding@{ProductionBuilding}!applyForEveryResource@{applyForEveryResource}}
+\index{applyForEveryResource@{applyForEveryResource}!ProductionBuilding@{ProductionBuilding}}
+\doxysubsubsection{\texorpdfstring{applyForEveryResource}{applyForEveryResource}}
+{\footnotesize\ttfamily \label{class_production_building_a3334aff7f2335fabf7fb0faeec18f740} 
+bool Production\+Building.\+apply\+For\+Every\+Resource\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
 \label{doc-property-members}
 \Hypertarget{class_production_building_doc-property-members}
 \doxysubsection{Property Documentation}
-\Hypertarget{class_production_building_a93319f1b1e0fc01ad4774ac4f5df522d}\index{ProductionBuilding@{ProductionBuilding}!resource@{resource}}
-\index{resource@{resource}!ProductionBuilding@{ProductionBuilding}}
-\doxysubsubsection{\texorpdfstring{resource}{resource}}
-{\footnotesize\ttfamily \label{class_production_building_a93319f1b1e0fc01ad4774ac4f5df522d} 
-\doxymbox{\hyperlink{class_s_o___resource}{SO\+\_\+\+Resource}} Production\+Building.\+resource\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
-
-\Hypertarget{class_production_building_af9a84c3ddc9697152b125ed18bad0d04}\index{ProductionBuilding@{ProductionBuilding}!StartTime@{StartTime}}
-\index{StartTime@{StartTime}!ProductionBuilding@{ProductionBuilding}}
-\doxysubsubsection{\texorpdfstring{StartTime}{StartTime}}
-{\footnotesize\ttfamily \label{class_production_building_af9a84c3ddc9697152b125ed18bad0d04} 
-float Production\+Building.\+Start\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+\Hypertarget{class_production_building_acc90413b1b9a31a1642df018814a4db8}\index{ProductionBuilding@{ProductionBuilding}!Resource@{Resource}}
+\index{Resource@{Resource}!ProductionBuilding@{ProductionBuilding}}
+\doxysubsubsection{\texorpdfstring{Resource}{Resource}}
+{\footnotesize\ttfamily \label{class_production_building_acc90413b1b9a31a1642df018814a4db8} 
+\doxymbox{\hyperlink{class_s_o___resource}{SO\+\_\+\+Resource}} Production\+Building.\+Resource\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
 
 
 

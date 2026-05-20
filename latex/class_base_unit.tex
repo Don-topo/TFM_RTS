@@ -27,7 +27,7 @@ void \doxymbox{\hyperlink{class_base_unit_ab5d81eb87981f27162ef262c27503f16}{Mov
 \item 
 void \doxymbox{\hyperlink{class_base_unit_a83f3e7544cfd61b4f1a7fc0b2129a79a}{Move}} (Vector3 position)
 \item 
-void \doxymbox{\hyperlink{class_base_unit_ac4c809c7ca8c11b964c0dfcb3a0f3c1b}{Stop\+Move}} ()
+void \doxymbox{\hyperlink{class_base_unit_a257f72b36551efe5ca4587d64e071bc1}{Stop}} ()
 \item 
 void \doxymbox{\hyperlink{class_base_unit_af855b91ba492443c755482dc5f41f622}{Heal}} (int amount)
 \end{DoxyCompactItemize}
@@ -49,17 +49,19 @@ void \doxymbox{\hyperlink{class_common_actions_a4679ef5476cba71a56901c3909c2e921
 \item 
 override void \doxymbox{\hyperlink{class_base_unit_a1b5d82dfb2d7c344e241e7f882665604}{Awake}} ()
 \item 
-override void \doxymbox{\hyperlink{class_base_unit_a292f18709a110307d563f485539a1087}{Update}} ()
+override void \doxymbox{\hyperlink{class_base_unit_a709115831365face9e32f39501113684}{On\+Destroy}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
 \begin{DoxyCompactItemize}
 \item 
 virtual void \doxymbox{\hyperlink{class_common_actions_aeae7ae6e7935fe45dfbf97700170c334}{Start}} ()
 \item 
-virtual void \doxymbox{\hyperlink{class_common_actions_afa3327aad40e00b114f4af1eb32fec58}{On\+Destroy}} ()
+virtual void \doxymbox{\hyperlink{class_common_actions_ae605f8ae1a8915928869b81dae283577}{Update}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
+\item 
+List$<$ Audio\+Clip $>$ \doxymbox{\hyperlink{class_base_unit_a82a32db994d4a69b8db8212d8273ac40}{move\+Audio\+Clips}}
 \item 
 Behavior\+Graph\+Agent \doxymbox{\hyperlink{class_base_unit_a7f7deeabec2f78becadbfc914580754f}{behavior\+Graph\+Agent}}
 \item 
@@ -69,6 +71,12 @@ Nav\+Mesh\+Agent \doxymbox{\hyperlink{class_base_unit_afe76c53d054177ca3a6f15aef
 \begin{DoxyCompactItemize}
 \item 
 Decal\+Projector \doxymbox{\hyperlink{class_common_actions_a0551ee27e1d92c4cab5583499081a0d3}{selection\+Decal}}
+\item 
+Animator \doxymbox{\hyperlink{class_common_actions_a8596da371da49e83b31076f91b89e707}{animator}}
+\item 
+\doxymbox{\hyperlink{class_update_health_event}{Update\+Health\+Event}} \doxymbox{\hyperlink{class_common_actions_a4a0946e2ad67e943e6364d7066ef8931}{update\+Health\+Event}}
+\item 
+\doxymbox{\hyperlink{class_unit_death_event}{Unit\+Death\+Event}} \doxymbox{\hyperlink{class_common_actions_a7bacbe25f3f281191a76a8477347caed}{unit\+Death\+Event}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
@@ -89,6 +97,8 @@ int \doxymbox{\hyperlink{class_common_actions_a7ce50eea9d7904e4c745b8af489531f2}
 int \doxymbox{\hyperlink{class_common_actions_a603564a07381db22a5f3e9d5ac51403a}{Max\+Health}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
 \item 
 Transform \doxymbox{\hyperlink{class_common_actions_a75b141d8781f3ff94932ac9d10bb2060}{Target\+Position}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+bool \doxymbox{\hyperlink{class_common_actions_a058d0dd3c4c061940a903ffafa026001}{is\+Dead}} = false\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
 \end{DoxyCompactItemize}
 \doxysubsection*{Properties inherited from \doxymbox{\hyperlink{interface_i_healable}{IHealable}}}
 \begin{DoxyCompactItemize}
@@ -98,6 +108,18 @@ int \doxymbox{\hyperlink{interface_i_healable_aa79b1f7ce4592ba82c78690271e8c6b3}
 int \doxymbox{\hyperlink{interface_i_healable_a259a0ecc362aa9e09f4ae7b229c0af52}{Max\+Health}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
 \item 
 Transform \doxymbox{\hyperlink{interface_i_healable_a7a0795b7c8985b586247a430179185ed}{Target\+Position}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_base_unit_a02739647620613549c734535f75b71f1}{Play\+Move\+Audio}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_unit_recruited_event}{Unit\+Recruited\+Event}} \doxymbox{\hyperlink{class_base_unit_a1ca0cf57337785ff161ce85c85d87a79}{recruited\+Event}}
+\item 
+\doxymbox{\hyperlink{class_resource_event}{Resource\+Event}} \doxymbox{\hyperlink{class_base_unit_ae02d91f41d0a89d3457dd3a651b33775}{resource\+Event}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Public Attributes inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
@@ -152,25 +174,31 @@ void Base\+Unit.\+Move (\begin{DoxyParamCaption}\item[{Vector3}]{position}{}\end
 
 Implements \doxymbox{\hyperlink{interface_i_moveable_aba871c5bcaee79e8b2994d339d0dd379}{IMoveable}}.
 
-\Hypertarget{class_base_unit_ac4c809c7ca8c11b964c0dfcb3a0f3c1b}\index{BaseUnit@{BaseUnit}!StopMove@{StopMove}}
-\index{StopMove@{StopMove}!BaseUnit@{BaseUnit}}
-\doxysubsubsection{\texorpdfstring{StopMove()}{StopMove()}}
-{\footnotesize\ttfamily \label{class_base_unit_ac4c809c7ca8c11b964c0dfcb3a0f3c1b} 
-void Base\+Unit.\+Stop\+Move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\Hypertarget{class_base_unit_a709115831365face9e32f39501113684}\index{BaseUnit@{BaseUnit}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!BaseUnit@{BaseUnit}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily \label{class_base_unit_a709115831365face9e32f39501113684} 
+override void Base\+Unit.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
 
 
 
-Implements \doxymbox{\hyperlink{interface_i_moveable_a75d844ac7ffa55f30c300a93400aa5eb}{IMoveable}}.
+Reimplemented from \doxymbox{\hyperlink{class_common_actions_afa3327aad40e00b114f4af1eb32fec58}{Common\+Actions}}.
 
-\Hypertarget{class_base_unit_a292f18709a110307d563f485539a1087}\index{BaseUnit@{BaseUnit}!Update@{Update}}
-\index{Update@{Update}!BaseUnit@{BaseUnit}}
-\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
-{\footnotesize\ttfamily \label{class_base_unit_a292f18709a110307d563f485539a1087} 
-override void Base\+Unit.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+\Hypertarget{class_base_unit_a02739647620613549c734535f75b71f1}\index{BaseUnit@{BaseUnit}!PlayMoveAudio@{PlayMoveAudio}}
+\index{PlayMoveAudio@{PlayMoveAudio}!BaseUnit@{BaseUnit}}
+\doxysubsubsection{\texorpdfstring{PlayMoveAudio()}{PlayMoveAudio()}}
+{\footnotesize\ttfamily \label{class_base_unit_a02739647620613549c734535f75b71f1} 
+void Base\+Unit.\+Play\+Move\+Audio (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_base_unit_a257f72b36551efe5ca4587d64e071bc1}\index{BaseUnit@{BaseUnit}!Stop@{Stop}}
+\index{Stop@{Stop}!BaseUnit@{BaseUnit}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily \label{class_base_unit_a257f72b36551efe5ca4587d64e071bc1} 
+void Base\+Unit.\+Stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Reimplemented from \doxymbox{\hyperlink{class_common_actions_ae605f8ae1a8915928869b81dae283577}{Common\+Actions}}.
+Implements \doxymbox{\hyperlink{interface_i_moveable_a377791289ea1a26e8b4d95ce2182e47d}{IMoveable}}.
 
 
 
@@ -183,11 +211,29 @@ Reimplemented from \doxymbox{\hyperlink{class_common_actions_ae605f8ae1a89159288
 {\footnotesize\ttfamily \label{class_base_unit_a7f7deeabec2f78becadbfc914580754f} 
 Behavior\+Graph\+Agent Base\+Unit.\+behavior\+Graph\+Agent\hspace{0.3cm}{\ttfamily [protected]}}
 
+\Hypertarget{class_base_unit_a82a32db994d4a69b8db8212d8273ac40}\index{BaseUnit@{BaseUnit}!moveAudioClips@{moveAudioClips}}
+\index{moveAudioClips@{moveAudioClips}!BaseUnit@{BaseUnit}}
+\doxysubsubsection{\texorpdfstring{moveAudioClips}{moveAudioClips}}
+{\footnotesize\ttfamily \label{class_base_unit_a82a32db994d4a69b8db8212d8273ac40} 
+List$<$Audio\+Clip$>$ Base\+Unit.\+move\+Audio\+Clips\hspace{0.3cm}{\ttfamily [protected]}}
+
 \Hypertarget{class_base_unit_afe76c53d054177ca3a6f15aef9337a27}\index{BaseUnit@{BaseUnit}!navMeshAgent@{navMeshAgent}}
 \index{navMeshAgent@{navMeshAgent}!BaseUnit@{BaseUnit}}
 \doxysubsubsection{\texorpdfstring{navMeshAgent}{navMeshAgent}}
 {\footnotesize\ttfamily \label{class_base_unit_afe76c53d054177ca3a6f15aef9337a27} 
 Nav\+Mesh\+Agent Base\+Unit.\+nav\+Mesh\+Agent\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_base_unit_a1ca0cf57337785ff161ce85c85d87a79}\index{BaseUnit@{BaseUnit}!recruitedEvent@{recruitedEvent}}
+\index{recruitedEvent@{recruitedEvent}!BaseUnit@{BaseUnit}}
+\doxysubsubsection{\texorpdfstring{recruitedEvent}{recruitedEvent}}
+{\footnotesize\ttfamily \label{class_base_unit_a1ca0cf57337785ff161ce85c85d87a79} 
+\doxymbox{\hyperlink{class_unit_recruited_event}{Unit\+Recruited\+Event}} Base\+Unit.\+recruited\+Event\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_base_unit_ae02d91f41d0a89d3457dd3a651b33775}\index{BaseUnit@{BaseUnit}!resourceEvent@{resourceEvent}}
+\index{resourceEvent@{resourceEvent}!BaseUnit@{BaseUnit}}
+\doxysubsubsection{\texorpdfstring{resourceEvent}{resourceEvent}}
+{\footnotesize\ttfamily \label{class_base_unit_ae02d91f41d0a89d3457dd3a651b33775} 
+\doxymbox{\hyperlink{class_resource_event}{Resource\+Event}} Base\+Unit.\+resource\+Event\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

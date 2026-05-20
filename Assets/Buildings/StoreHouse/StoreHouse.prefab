@@ -139,7 +139,7 @@ MonoBehaviour:
   explotionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
   StartTime: 0
   <Resource>k__BackingField: {fileID: 11400000, guid: c322eadb0ee20e84297844fdf650ec4a, type: 2}
-  applyForEveryResource: 0
+  applyForEveryResource: 1
 --- !u!114 &3543567407994746258
 MonoBehaviour:
   m_ObjectHideFlags: 0

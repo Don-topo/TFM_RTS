@@ -27,7 +27,12 @@ bool \doxymbox{\hyperlink{class_enemy_spawner_a838b860d28806c2f394d2b9522858ec3}
 \item 
 void \doxymbox{\hyperlink{class_enemy_spawner_a63d5afe63646ef4e56a52bf3fe4a6624}{Set\+Dificulty\+Mode}} (\doxymbox{\hyperlink{_dificulty_mode_8cs_ad872f53881ec26b805201ed897c2e4a2}{Dificulty\+Mode}} mode)
 \item 
-void \doxymbox{\hyperlink{class_enemy_spawner_ad70679a8807ff7a3e779ed73203529df}{Generate\+Wave}} (int wave\+Number, \doxymbox{\hyperlink{_dificulty_mode_8cs_ad872f53881ec26b805201ed897c2e4a2}{Dificulty\+Mode}} dificulty\+Modifier, Vector3 spawn\+Position)
+void \doxymbox{\hyperlink{class_enemy_spawner_a4d794ac881363f374b7281116537f7bd}{Generate\+Wave}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_enemy_spawner_a5b01cc5b651186059fb0ddd35768db1e}{Current\+Wave}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -69,8 +74,6 @@ List$<$ Transform $>$ \doxymbox{\hyperlink{class_enemy_spawner_a57bae46d8e97f79c
 \item 
 int \doxymbox{\hyperlink{class_enemy_spawner_aeef4502f39bfb3fc82588b57e3cb4747}{base\+Enemies\+Per\+Wave}} = 10
 \item 
-int \doxymbox{\hyperlink{class_enemy_spawner_ae5a35a02390ee369a5cad81d2836e300}{current\+Wave}}
-\item 
 bool \doxymbox{\hyperlink{class_enemy_spawner_a3d3cff2e6c143c7f370897a83acd6af7}{active\+Wave}} = false
 \item 
 Transform \doxymbox{\hyperlink{class_enemy_spawner_a4bcdd1b3b336f8ca5e6d93d70eb96d05}{selected\+Spawn\+Position}}
@@ -92,11 +95,11 @@ void Enemy\+Spawner.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})
 {\footnotesize\ttfamily \label{class_enemy_spawner_ab94f95300e886e904430a4dc5ad63187} 
 int Enemy\+Spawner.\+Calculate\+Wave\+Enemies (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
-\Hypertarget{class_enemy_spawner_ad70679a8807ff7a3e779ed73203529df}\index{EnemySpawner@{EnemySpawner}!GenerateWave@{GenerateWave}}
+\Hypertarget{class_enemy_spawner_a4d794ac881363f374b7281116537f7bd}\index{EnemySpawner@{EnemySpawner}!GenerateWave@{GenerateWave}}
 \index{GenerateWave@{GenerateWave}!EnemySpawner@{EnemySpawner}}
 \doxysubsubsection{\texorpdfstring{GenerateWave()}{GenerateWave()}}
-{\footnotesize\ttfamily \label{class_enemy_spawner_ad70679a8807ff7a3e779ed73203529df} 
-void Enemy\+Spawner.\+Generate\+Wave (\begin{DoxyParamCaption}\item[{int}]{wave\+Number}{, }\item[{\doxymbox{\hyperlink{_dificulty_mode_8cs_ad872f53881ec26b805201ed897c2e4a2}{Dificulty\+Mode}}}]{dificulty\+Modifier}{, }\item[{Vector3}]{spawn\+Position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{class_enemy_spawner_a4d794ac881363f374b7281116537f7bd} 
+void Enemy\+Spawner.\+Generate\+Wave (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 \Hypertarget{class_enemy_spawner_ad2d4d70d2832eb6108baaa8178e623ec}\index{EnemySpawner@{EnemySpawner}!GetEnemyPrefab@{GetEnemyPrefab}}
 \index{GetEnemyPrefab@{GetEnemyPrefab}!EnemySpawner@{EnemySpawner}}
@@ -163,12 +166,6 @@ bool Enemy\+Spawner.\+active\+Wave = false\hspace{0.3cm}{\ttfamily [private]}}
 {\footnotesize\ttfamily \label{class_enemy_spawner_aeef4502f39bfb3fc82588b57e3cb4747} 
 int Enemy\+Spawner.\+base\+Enemies\+Per\+Wave = 10\hspace{0.3cm}{\ttfamily [private]}}
 
-\Hypertarget{class_enemy_spawner_ae5a35a02390ee369a5cad81d2836e300}\index{EnemySpawner@{EnemySpawner}!currentWave@{currentWave}}
-\index{currentWave@{currentWave}!EnemySpawner@{EnemySpawner}}
-\doxysubsubsection{\texorpdfstring{currentWave}{currentWave}}
-{\footnotesize\ttfamily \label{class_enemy_spawner_ae5a35a02390ee369a5cad81d2836e300} 
-int Enemy\+Spawner.\+current\+Wave\hspace{0.3cm}{\ttfamily [private]}}
-
 \Hypertarget{class_enemy_spawner_a0b0634e84ada4caa5fea04a8136654a6}\index{EnemySpawner@{EnemySpawner}!dificultyMode@{dificultyMode}}
 \index{dificultyMode@{dificultyMode}!EnemySpawner@{EnemySpawner}}
 \doxysubsubsection{\texorpdfstring{dificultyMode}{dificultyMode}}
@@ -222,6 +219,17 @@ Game\+Object Enemy\+Spawner.\+spitter\hspace{0.3cm}{\ttfamily [private]}}
 \doxysubsubsection{\texorpdfstring{walker}{walker}}
 {\footnotesize\ttfamily \label{class_enemy_spawner_a840937ec9d41b56b5b09af7ea6650fe8} 
 Game\+Object Enemy\+Spawner.\+walker\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_enemy_spawner_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_enemy_spawner_a5b01cc5b651186059fb0ddd35768db1e}\index{EnemySpawner@{EnemySpawner}!CurrentWave@{CurrentWave}}
+\index{CurrentWave@{CurrentWave}!EnemySpawner@{EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{CurrentWave}{CurrentWave}}
+{\footnotesize\ttfamily \label{class_enemy_spawner_a5b01cc5b651186059fb0ddd35768db1e} 
+int Enemy\+Spawner.\+Current\+Wave\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
 
 
 

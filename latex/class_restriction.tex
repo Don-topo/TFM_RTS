@@ -1,0 +1,205 @@
+\doxysection{Restriction Class Reference}
+\hypertarget{class_restriction}{}\label{class_restriction}\index{Restriction@{Restriction}}
+
+
+Inheritance diagram for Restriction:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{class_restriction__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Restriction:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{class_restriction__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{class_restriction_ad382d64566f6a9183fcd3f37f518c18e}{Overlap\+Style}} \{ \doxymbox{\hyperlink{class_restriction_ad382d64566f6a9183fcd3f37f518c18eab7095f057db3fefa7325ad93a04e14fd}{Sphere}}
+, \doxymbox{\hyperlink{class_restriction_ad382d64566f6a9183fcd3f37f518c18ea3cfce651e667ab85486dd42a8185f98a}{Box}}
+, \doxymbox{\hyperlink{class_restriction_ad382d64566f6a9183fcd3f37f518c18ea99a0628d9f7179c032e0cf59efbc0fad}{Vision}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_restriction_a9cf15fd33d79035ea2cb8d04ba1d5e4e}{Can\+Place}} (Vector3 position)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{class_restriction_ae3a6e661a8e726a61eb8b4bd51ab1986}{Radius}} = 1f\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+Layer\+Mask \doxymbox{\hyperlink{class_restriction_a79f1331db4974fdd7b3542aebc0e8602}{Layer\+Mask}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+\doxymbox{\hyperlink{class_restriction_ad382d64566f6a9183fcd3f37f518c18e}{Overlap\+Style}} \doxymbox{\hyperlink{class_restriction_a9f5c6067d4bd9aa3065f1f1ea7fa7615}{Hit\+Detection\+Style}} = \doxymbox{\hyperlink{class_restriction_ad382d64566f6a9183fcd3f37f518c18eab7095f057db3fefa7325ad93a04e14fd}{Overlap\+Style.\+Sphere}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+bool \doxymbox{\hyperlink{class_restriction_ace0235edd691926ba6c0c289e8623de9}{Must\+Be\+Fully\+On\+Nave\+Mesh}} = true\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+int \doxymbox{\hyperlink{class_restriction_a60f5ba1b504b4bfc25c5c989df5ef0d0}{Nav\+Mesh\+Agent\+Type\+Id}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+float \doxymbox{\hyperlink{class_restriction_a4674ccbd98f7292db9e91d127328dc6a}{Nav\+Mesh\+Tolerance}} = 0.\+1f\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+Vector3 \doxymbox{\hyperlink{class_restriction_a5cde0a0020fc7493010e7734b255f265}{Extents}} = Vector3.\+one\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+\doxymbox{\hyperlink{_resources_types_8cs_ac6a8e7f9aceccab28989924b5b28e04f}{Resources\+Type}} \doxymbox{\hyperlink{class_restriction_a7705e9735b02af12ded093ba8b30d624}{Resource\+Place\+To\+Check}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+bool \doxymbox{\hyperlink{class_restriction_a9d1c4711e1a4ce2f24a3467d5e437019}{Check\+For\+Resource}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+\doxymbox{\hyperlink{class_restriction_a79f1331db4974fdd7b3542aebc0e8602}{Layer\+Mask}} \doxymbox{\hyperlink{class_restriction_a378c141e74f6548b6ae095cde7f2e3f9}{Resource\+Layer}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_restriction_a8645cb9321b7233f5e0d398020d5dc0e}{Is\+Fully\+On\+Nav\+Mesh}} (Vector3 position, Nav\+Mesh\+Query\+Filter query\+Filter)
+\item 
+bool \doxymbox{\hyperlink{class_restriction_ac1027809ad692c5723628d621047bd11}{Is\+On\+Supported\+Resource}} (Vector3 position)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Collider\+[$\,$]\+ \doxymbox{\hyperlink{class_restriction_ab2b5e9b738c924a0f6e307914fa75040}{hit\+Colliders}} = new Collider\+[1]\+
+\end{DoxyCompactItemize}
+
+
+\label{doc-enum-members}
+\Hypertarget{class_restriction_doc-enum-members}
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_restriction_ad382d64566f6a9183fcd3f37f518c18e}\index{Restriction@{Restriction}!OverlapStyle@{OverlapStyle}}
+\index{OverlapStyle@{OverlapStyle}!Restriction@{Restriction}}
+\doxysubsubsection{\texorpdfstring{OverlapStyle}{OverlapStyle}}
+{\footnotesize\ttfamily \label{class_restriction_ad382d64566f6a9183fcd3f37f518c18e} 
+enum \doxymbox{\hyperlink{class_restriction_ad382d64566f6a9183fcd3f37f518c18e}{Restriction.\+Overlap\+Style}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sphere@{Sphere}!Restriction@{Restriction}}
+\index{Restriction@{Restriction}!Sphere@{Sphere}}
+}\Hypertarget{class_restriction_ad382d64566f6a9183fcd3f37f518c18eab7095f057db3fefa7325ad93a04e14fd}\label{class_restriction_ad382d64566f6a9183fcd3f37f518c18eab7095f057db3fefa7325ad93a04e14fd} 
+Sphere&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Box@{Box}!Restriction@{Restriction}}
+\index{Restriction@{Restriction}!Box@{Box}}
+}\Hypertarget{class_restriction_ad382d64566f6a9183fcd3f37f518c18ea3cfce651e667ab85486dd42a8185f98a}\label{class_restriction_ad382d64566f6a9183fcd3f37f518c18ea3cfce651e667ab85486dd42a8185f98a} 
+Box&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Vision@{Vision}!Restriction@{Restriction}}
+\index{Restriction@{Restriction}!Vision@{Vision}}
+}\Hypertarget{class_restriction_ad382d64566f6a9183fcd3f37f518c18ea99a0628d9f7179c032e0cf59efbc0fad}\label{class_restriction_ad382d64566f6a9183fcd3f37f518c18ea99a0628d9f7179c032e0cf59efbc0fad} 
+Vision&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{class_restriction_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_restriction_a9cf15fd33d79035ea2cb8d04ba1d5e4e}\index{Restriction@{Restriction}!CanPlace@{CanPlace}}
+\index{CanPlace@{CanPlace}!Restriction@{Restriction}}
+\doxysubsubsection{\texorpdfstring{CanPlace()}{CanPlace()}}
+{\footnotesize\ttfamily \label{class_restriction_a9cf15fd33d79035ea2cb8d04ba1d5e4e} 
+bool Restriction.\+Can\+Place (\begin{DoxyParamCaption}\item[{Vector3}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_restriction_a8645cb9321b7233f5e0d398020d5dc0e}\index{Restriction@{Restriction}!IsFullyOnNavMesh@{IsFullyOnNavMesh}}
+\index{IsFullyOnNavMesh@{IsFullyOnNavMesh}!Restriction@{Restriction}}
+\doxysubsubsection{\texorpdfstring{IsFullyOnNavMesh()}{IsFullyOnNavMesh()}}
+{\footnotesize\ttfamily \label{class_restriction_a8645cb9321b7233f5e0d398020d5dc0e} 
+bool Restriction.\+Is\+Fully\+On\+Nav\+Mesh (\begin{DoxyParamCaption}\item[{Vector3}]{position}{, }\item[{Nav\+Mesh\+Query\+Filter}]{query\+Filter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_restriction_ac1027809ad692c5723628d621047bd11}\index{Restriction@{Restriction}!IsOnSupportedResource@{IsOnSupportedResource}}
+\index{IsOnSupportedResource@{IsOnSupportedResource}!Restriction@{Restriction}}
+\doxysubsubsection{\texorpdfstring{IsOnSupportedResource()}{IsOnSupportedResource()}}
+{\footnotesize\ttfamily \label{class_restriction_ac1027809ad692c5723628d621047bd11} 
+bool Restriction.\+Is\+On\+Supported\+Resource (\begin{DoxyParamCaption}\item[{Vector3}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_restriction_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_restriction_ab2b5e9b738c924a0f6e307914fa75040}\index{Restriction@{Restriction}!hitColliders@{hitColliders}}
+\index{hitColliders@{hitColliders}!Restriction@{Restriction}}
+\doxysubsubsection{\texorpdfstring{hitColliders}{hitColliders}}
+{\footnotesize\ttfamily \label{class_restriction_ab2b5e9b738c924a0f6e307914fa75040} 
+Collider \+[$\,$]\+ Restriction.\+hit\+Colliders = new Collider\+[1]\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_restriction_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_restriction_a9d1c4711e1a4ce2f24a3467d5e437019}\index{Restriction@{Restriction}!CheckForResource@{CheckForResource}}
+\index{CheckForResource@{CheckForResource}!Restriction@{Restriction}}
+\doxysubsubsection{\texorpdfstring{CheckForResource}{CheckForResource}}
+{\footnotesize\ttfamily \label{class_restriction_a9d1c4711e1a4ce2f24a3467d5e437019} 
+bool Restriction.\+Check\+For\+Resource\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+\Hypertarget{class_restriction_a5cde0a0020fc7493010e7734b255f265}\index{Restriction@{Restriction}!Extents@{Extents}}
+\index{Extents@{Extents}!Restriction@{Restriction}}
+\doxysubsubsection{\texorpdfstring{Extents}{Extents}}
+{\footnotesize\ttfamily \label{class_restriction_a5cde0a0020fc7493010e7734b255f265} 
+Vector3 Restriction.\+Extents = Vector3.\+one\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+\Hypertarget{class_restriction_a9f5c6067d4bd9aa3065f1f1ea7fa7615}\index{Restriction@{Restriction}!HitDetectionStyle@{HitDetectionStyle}}
+\index{HitDetectionStyle@{HitDetectionStyle}!Restriction@{Restriction}}
+\doxysubsubsection{\texorpdfstring{HitDetectionStyle}{HitDetectionStyle}}
+{\footnotesize\ttfamily \label{class_restriction_a9f5c6067d4bd9aa3065f1f1ea7fa7615} 
+\doxymbox{\hyperlink{class_restriction_ad382d64566f6a9183fcd3f37f518c18e}{Overlap\+Style}} Restriction.\+Hit\+Detection\+Style = \doxymbox{\hyperlink{class_restriction_ad382d64566f6a9183fcd3f37f518c18eab7095f057db3fefa7325ad93a04e14fd}{Overlap\+Style.\+Sphere}}\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+\Hypertarget{class_restriction_a79f1331db4974fdd7b3542aebc0e8602}\index{Restriction@{Restriction}!LayerMask@{LayerMask}}
+\index{LayerMask@{LayerMask}!Restriction@{Restriction}}
+\doxysubsubsection{\texorpdfstring{LayerMask}{LayerMask}}
+{\footnotesize\ttfamily \label{class_restriction_a79f1331db4974fdd7b3542aebc0e8602} 
+Layer\+Mask Restriction.\+Layer\+Mask\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+\Hypertarget{class_restriction_ace0235edd691926ba6c0c289e8623de9}\index{Restriction@{Restriction}!MustBeFullyOnNaveMesh@{MustBeFullyOnNaveMesh}}
+\index{MustBeFullyOnNaveMesh@{MustBeFullyOnNaveMesh}!Restriction@{Restriction}}
+\doxysubsubsection{\texorpdfstring{MustBeFullyOnNaveMesh}{MustBeFullyOnNaveMesh}}
+{\footnotesize\ttfamily \label{class_restriction_ace0235edd691926ba6c0c289e8623de9} 
+bool Restriction.\+Must\+Be\+Fully\+On\+Nave\+Mesh = true\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+\Hypertarget{class_restriction_a60f5ba1b504b4bfc25c5c989df5ef0d0}\index{Restriction@{Restriction}!NavMeshAgentTypeId@{NavMeshAgentTypeId}}
+\index{NavMeshAgentTypeId@{NavMeshAgentTypeId}!Restriction@{Restriction}}
+\doxysubsubsection{\texorpdfstring{NavMeshAgentTypeId}{NavMeshAgentTypeId}}
+{\footnotesize\ttfamily \label{class_restriction_a60f5ba1b504b4bfc25c5c989df5ef0d0} 
+int Restriction.\+Nav\+Mesh\+Agent\+Type\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+\Hypertarget{class_restriction_a4674ccbd98f7292db9e91d127328dc6a}\index{Restriction@{Restriction}!NavMeshTolerance@{NavMeshTolerance}}
+\index{NavMeshTolerance@{NavMeshTolerance}!Restriction@{Restriction}}
+\doxysubsubsection{\texorpdfstring{NavMeshTolerance}{NavMeshTolerance}}
+{\footnotesize\ttfamily \label{class_restriction_a4674ccbd98f7292db9e91d127328dc6a} 
+float Restriction.\+Nav\+Mesh\+Tolerance = 0.\+1f\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+\Hypertarget{class_restriction_ae3a6e661a8e726a61eb8b4bd51ab1986}\index{Restriction@{Restriction}!Radius@{Radius}}
+\index{Radius@{Radius}!Restriction@{Restriction}}
+\doxysubsubsection{\texorpdfstring{Radius}{Radius}}
+{\footnotesize\ttfamily \label{class_restriction_ae3a6e661a8e726a61eb8b4bd51ab1986} 
+float Restriction.\+Radius = 1f\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+\Hypertarget{class_restriction_a378c141e74f6548b6ae095cde7f2e3f9}\index{Restriction@{Restriction}!ResourceLayer@{ResourceLayer}}
+\index{ResourceLayer@{ResourceLayer}!Restriction@{Restriction}}
+\doxysubsubsection{\texorpdfstring{ResourceLayer}{ResourceLayer}}
+{\footnotesize\ttfamily \label{class_restriction_a378c141e74f6548b6ae095cde7f2e3f9} 
+\doxymbox{\hyperlink{class_restriction_a79f1331db4974fdd7b3542aebc0e8602}{Layer\+Mask}} Restriction.\+Resource\+Layer\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+\Hypertarget{class_restriction_a7705e9735b02af12ded093ba8b30d624}\index{Restriction@{Restriction}!ResourcePlaceToCheck@{ResourcePlaceToCheck}}
+\index{ResourcePlaceToCheck@{ResourcePlaceToCheck}!Restriction@{Restriction}}
+\doxysubsubsection{\texorpdfstring{ResourcePlaceToCheck}{ResourcePlaceToCheck}}
+{\footnotesize\ttfamily \label{class_restriction_a7705e9735b02af12ded093ba8b30d624} 
+\doxymbox{\hyperlink{_resources_types_8cs_ac6a8e7f9aceccab28989924b5b28e04f}{Resources\+Type}} Restriction.\+Resource\+Place\+To\+Check\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Scripts/\+\+Actions/\+\doxymbox{\hyperlink{_restriction_8cs}{Restriction.\+cs}}\end{DoxyCompactItemize}
