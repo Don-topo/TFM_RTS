@@ -1,5 +1,9 @@
 Patches relases:
 
+v.0.34 => 20/05/2026:
+  - Fix resource building placement.
+  - Fix production config.
+    
 v.0.33 => 19/05/2026:
   - Add Win UI.
   - Add Game Over UI.
