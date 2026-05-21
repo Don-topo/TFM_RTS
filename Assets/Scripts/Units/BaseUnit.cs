@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Unity.Behavior;
 using Unity.VisualScripting;
@@ -17,6 +18,7 @@ public class BaseUnit : CommonActions, IMoveable, IHealable
     public float GetNavMeshAgentRadius => navMeshAgent.radius;
     protected BehaviorGraphAgent behaviorGraphAgent;
     protected NavMeshAgent navMeshAgent;
+    protected Vector3? movePosition;
 
    
     protected override void Awake()
@@ -43,6 +45,7 @@ public class BaseUnit : CommonActions, IMoveable, IHealable
     public void Move(Transform transform)
     {
         if (isDead) Stop();
+        movePosition = transform.position;
         PlayMoveAudio();
         behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Move);
         behaviorGraphAgent.SetVariableValue("TargetGameObject", transform.gameObject);        
@@ -51,6 +54,7 @@ public class BaseUnit : CommonActions, IMoveable, IHealable
     public void Move(Vector3 position)
     {
         if (isDead) Stop();
+        movePosition = position;
         PlayMoveAudio();
         behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Move);
         behaviorGraphAgent.SetVariableValue("TargetPosition", position);

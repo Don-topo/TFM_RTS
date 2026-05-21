@@ -54,7 +54,7 @@ public partial class MoveToGameObjectBehaviourAction : Action
             navMeshAgent.isStopped = true;
             return Status.Success;
         }
-        animator.SetFloat("MoveSpeed", navMeshAgent.velocity.magnitude);
+        animator.SetFloat("MoveSpeed", 1);// navMeshAgent.velocity.magnitude);
 
         // Sanity check to avoid errors
         if (navMeshAgent.pathPending) return Status.Running;

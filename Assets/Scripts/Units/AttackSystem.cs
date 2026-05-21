@@ -31,7 +31,7 @@ public class AttackSystem : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // Get only if the object is an enemy and can take damage
-        if(other.TryGetComponent(out IAttackable enemy) && !other.CompareTag(tag))
+        if(other.TryGetComponent(out IAttackable enemy) && other.CompareTag("Enemy")) //!other.CompareTag(tag))
         {
             enemiesInRange.Add(enemy);
             // TODO Check if the enemy is visible

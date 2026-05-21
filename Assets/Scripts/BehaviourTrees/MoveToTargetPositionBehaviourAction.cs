@@ -36,7 +36,7 @@ public partial class MoveToTargetPositionBehaviourAction : Action
         
         // Set the new destination
         navMeshAgent.SetDestination(TargetPosition.Value);
-
+        animator.SetFloat("MoveSpeed", 1);
         return Status.Running;
 
     }
@@ -49,7 +49,7 @@ public partial class MoveToTargetPositionBehaviourAction : Action
             navMeshAgent.isStopped = true;      
             return Status.Success;
         }
-        animator.SetFloat("MoveSpeed", navMeshAgent.velocity.magnitude);
+        animator.SetFloat("MoveSpeed", 1);// navMeshAgent.velocity.magnitude);
         // Finish if unity is calculating the path
         if (navMeshAgent.pathPending) return Status.Running;
 

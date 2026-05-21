@@ -50,7 +50,7 @@ public partial class AttackTargetBehaviourAction : Action
             navMeshAgent.isStopped = false;
             if(animator != null)
             {
-                animator.SetFloat("MoveSpeed", navMeshAgent.speed);
+                animator.SetFloat("MoveSpeed", 1);// navMeshAgent.speed);
             }            
         }
 
@@ -74,7 +74,7 @@ public partial class AttackTargetBehaviourAction : Action
         navMeshAgent.isStopped = true;
         if(animator != null)
         {
-            animator.SetFloat("MoveSpeed", navMeshAgent.speed);
+            animator.SetFloat("MoveSpeed", 0);// navMeshAgent.speed);
         }
         
         LookAtTarget();

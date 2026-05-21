@@ -15,7 +15,7 @@ public partial class StopMoveBehaviourAction : Action
 
     protected override Status OnStart()
     {
-        if(Self.Value.gameObject.TryGetComponent(out navMeshAgent))
+        if(Self.Value.TryGetComponent(out navMeshAgent))
         {
             // Stop and clear agent path
             navMeshAgent.isStopped = true;
