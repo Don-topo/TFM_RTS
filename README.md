@@ -1,5 +1,8 @@
 Patches relases:
 
+v.0.35 => 21/05/2026:
+  - Fix Attack bug.
+    
 v.0.34 => 20/05/2026:
   - Fix resource building placement.
   - Fix production config.
