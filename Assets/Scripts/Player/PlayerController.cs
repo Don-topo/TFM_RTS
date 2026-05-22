@@ -181,7 +181,8 @@ public class PlayerController : MonoBehaviour
     private void RigthClick()
     {
         if (addedUnits.Any(unit => unit.CompareTag("Enemy"))) return;
-        
+        if (selectedUnits.Any(unit => ((CommonActions)unit).CompareTag("Enemy"))) return;
+
         if (selectedUnits.Count == 0 || EventSystem.current.IsPointerOverGameObject())
         {
             return;

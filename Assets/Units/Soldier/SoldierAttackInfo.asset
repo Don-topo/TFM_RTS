@@ -25,3 +25,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c3ea3a21225d0fb478d211e41739d44a, type: 3}
   - {fileID: 8300000, guid: 6de89cb03b3cfb34ca647e2a76b5ab86, type: 3}
   - {fileID: 8300000, guid: b042c677df9a25a4d87a40e71158b957, type: 3}
+  <AttackEffect>k__BackingField: {fileID: 198234346748616026, guid: ad2ab49d0a2a17148bd51c93d977bdbc, type: 3}

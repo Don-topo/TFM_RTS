@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e766ad877836f414490017ef6206d145, type: 3}
-  m_Name: Walker
+  m_Name: Heavier
   m_EditorClassIdentifier: Assembly-CSharp::SO_BaseUnit
-  <Name>k__BackingField: Walker
-  <Icon>k__BackingField: {fileID: 21300000, guid: 081d96c79272f994a8c6247cb6d88966, type: 3}
-  <UnitPrefab>k__BackingField: {fileID: 3247594861463002968, guid: a35d41cda6a2c604cb488ac26523d144, type: 3}
-  <Health>k__BackingField: 10000
+  <Name>k__BackingField: Heavier
+  <Icon>k__BackingField: {fileID: 21300000, guid: 1d06b505fbc9a024cbc894f0f4ee814d, type: 3}
+  <UnitPrefab>k__BackingField: {fileID: 1719111298791097942, guid: bd30fbd75d4f57340ab2e436a4fd3451, type: 3}
+  <Health>k__BackingField: 100
   <GenerationTime>k__BackingField: 8
   <Cost>k__BackingField: {fileID: 11400000, guid: 66a35b8f2864a2c4bb78a43af18179ac, type: 2}
   <SelectionAudioClips>k__BackingField: []

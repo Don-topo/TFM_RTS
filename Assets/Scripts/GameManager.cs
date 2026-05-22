@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Game Properties")]
     [Range(0, 1)][SerializeField] private float dificultyModifier;
-    [SerializeField] private int totalDays = 25;
+    [SerializeField] private int totalDays = 25; 
     [SerializeField] private float timeBetweenWaves = 320f;
 
     [Header("Events")]
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        buildDestroyedEvent?.Unregister(ManageBuildingDestroyed);
+        buildDestroyedEvent.Unregister(ManageBuildingDestroyed);
         StopAllCoroutines();
     }
 
