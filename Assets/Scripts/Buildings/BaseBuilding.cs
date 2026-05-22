@@ -36,6 +36,9 @@ public class BaseBuilding : CommonActions, IHealable
 
     protected override void OnDestroy()
     {
+        // Play explotion
+        GameObject explotionInstance = Instantiate(explotionPrefab, transform.position, Quaternion.identity);
+        Destroy(explotionInstance, explotionInstance.GetComponent<ParticleSystem>().main.duration);
         base.OnDestroy();
         buildDestroyedEvent.Raise(this);
     }

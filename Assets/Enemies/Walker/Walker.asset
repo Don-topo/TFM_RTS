@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e766ad877836f414490017ef6206d145, type: 3}
+  m_Name: Walker
+  m_EditorClassIdentifier: Assembly-CSharp::SO_BaseUnit
+  <Name>k__BackingField: Unit Name
+  <Icon>k__BackingField: {fileID: 21300000, guid: 081d96c79272f994a8c6247cb6d88966, type: 3}
+  <UnitPrefab>k__BackingField: {fileID: 3247594861463002968, guid: a35d41cda6a2c604cb488ac26523d144, type: 3}
+  <Health>k__BackingField: 10000
+  <GenerationTime>k__BackingField: 8
+  <Cost>k__BackingField: {fileID: 11400000, guid: 66a35b8f2864a2c4bb78a43af18179ac, type: 2}
+  <SelectionAudioClips>k__BackingField: []

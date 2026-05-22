@@ -180,7 +180,9 @@ public class PlayerController : MonoBehaviour
 
     private void RigthClick()
     {
-        if(selectedUnits.Count == 0 || EventSystem.current.IsPointerOverGameObject())
+        if (addedUnits.Any(unit => unit.CompareTag("Enemy"))) return;
+        
+        if (selectedUnits.Count == 0 || EventSystem.current.IsPointerOverGameObject())
         {
             return;
         }
@@ -219,8 +221,7 @@ public class PlayerController : MonoBehaviour
 
     private void LeftClick()
     {
-        if (camera == null) return;
-
+        if (camera == null) return;        
         Ray cameraRay = camera.ScreenPointToRay(Mouse.current.position.ReadValue());
 
         if (addedUnits.Count == 0

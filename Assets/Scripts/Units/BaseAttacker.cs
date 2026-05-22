@@ -21,7 +21,12 @@ public class BaseAttacker : BaseUnit, IAttacker
         behaviorGraphAgent.SetVariableValue("SO Attack Info", AttackInfo);
         unitEnterRange.Register(UnitInRange);
         unitOutOfRange.Register(UnitOutOfRange);
-        audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();        
+    }
+
+    protected override void Start()
+    {
+        attackSystem.SetAttackRange(AttackInfo.AttackRange);
     }
 
     protected override void OnDestroy()
@@ -105,7 +110,7 @@ public class BaseAttacker : BaseUnit, IAttacker
                 movePosition = null;
             }
 
-            if (currentAction != UnitActions.Patrol)
+            if (currentAction != UnitActions.Patrol && currentAction != UnitActions.Attack)
             {
                 behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Stop);
             }

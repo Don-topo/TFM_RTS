@@ -31,15 +31,21 @@ public class BaseUnit : CommonActions, IMoveable, IHealable
         MaxHealth = CurrentHealth;
         // Set behaviour agent
         behaviorGraphAgent.SetVariableValue("Command", UnitActions.Stop);
-        // Raise recruit event
-        recruitedEvent.Raise(this);
+        if(recruitedEvent != null)
+        {
+            // Raise recruit event
+            recruitedEvent.Raise(this);
+        }        
     }
 
     protected override void OnDestroy()
     {
         base.OnDestroy();
         ResourceOP resource = new ResourceOP(SO_BaseUnit.Cost.SO_Population, SO_BaseUnit.Cost.Population, 0);
-        resourceEvent.Raise(resource);
+        if (resourceEvent != null)
+        {
+            resourceEvent.Raise(resource);
+        }
     }
 
     public void Move(Transform transform)

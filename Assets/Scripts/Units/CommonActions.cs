@@ -28,14 +28,14 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
 
     protected virtual void Start()
     {
-        startingActions = SO_BaseUnit.UnitPrefab.GetComponent<CommonActions>().Actions;
-        rb = GetComponent<Rigidbody>();
+        startingActions = SO_BaseUnit.UnitPrefab.GetComponent<CommonActions>().Actions;        
     }
 
     protected virtual void Awake()
     {
         startingActions = SO_BaseUnit.UnitPrefab.GetComponent<CommonActions>().Actions;
         col = GetComponent<Collider>();
+        rb = GetComponent<Rigidbody>();
     }
 
     protected virtual void Update()
@@ -120,7 +120,8 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
         rb.detectCollisions = false;
         Deselect();
         unitDeathEvent.Raise(this);
-        Destroy(gameObject, 3f);
+        float delayTime = this is BaseBuilding ? 0f : 3f;
+        Destroy(gameObject, delayTime);
     }
 
     private void PlaySelectionAudio()
