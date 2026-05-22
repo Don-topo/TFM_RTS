@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9194698569456023830}
   - component: {fileID: 723660578403786026}
   - component: {fileID: 8038841288552749089}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: AttackSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: -1429488155776992337}
   m_Layer: 6
   m_Name: Flamethrower
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

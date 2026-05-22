@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 454658379435797831}
   m_Layer: 7
   m_Name: ExplosiveMine
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -225,6 +225,10 @@ PrefabInstance:
     - target: {fileID: 7081553782613979908, guid: 82cefb9ba5cac464fa89b0923f328546, type: 3}
       propertyPath: m_Name
       value: AllyMinimap
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081553782613979908, guid: 82cefb9ba5cac464fa89b0923f328546, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8899357448280862195, guid: 82cefb9ba5cac464fa89b0923f328546, type: 3}
       propertyPath: m_LocalScale.x
