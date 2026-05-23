@@ -133,6 +133,16 @@ public class RecruitBuilding : BaseBuilding
         }
     }
 
+    public void CancellAllUnits()
+    {
+        int i = RecruitUnitsQueue.Count - 1;
+        while (RecruitUnitsQueue.Count > 0)
+        {
+            CancelRecruitUnit(i);
+            i--;
+        }
+    }
+
     private void SetRecruitDestination(GameObject recruitedUnit)
     {
         if (isRecruitDestinationSet)

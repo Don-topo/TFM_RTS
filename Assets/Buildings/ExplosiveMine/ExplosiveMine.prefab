@@ -158,7 +158,7 @@ MonoBehaviour:
           m_Value0: 10638356103869450573
           m_Value1: 5209077369174025454
         Name: BuildingActions
-        m_Value: 2
+        m_Value: 3
 --- !u!54 &2096792690754745401
 Rigidbody:
   m_ObjectHideFlags: 0

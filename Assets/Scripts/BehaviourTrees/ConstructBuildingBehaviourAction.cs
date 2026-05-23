@@ -1,8 +1,9 @@
 using System;
 using Unity.Behavior;
-using UnityEngine;
-using Action = Unity.Behavior.Action;
 using Unity.Properties;
+using UnityEngine;
+using UnityEngine.UIElements;
+using Action = Unity.Behavior.Action;
 
 [Serializable, GeneratePropertyBag]
 [NodeDescription(name: "ConstructBuilding", story: "[Self] construct [SO_Building] to [TargetPosition]", category: "Action", id: "6c118eeef84d95867712ba399be64fcf")]
@@ -65,6 +66,10 @@ public partial class ConstructBuildingBehaviourAction : Action
         if(completedBuilding is ProductionBuilding a)
         {
             a.BuildConstructed();
+        }
+        if (completedBuilding is AttackerBuilding)
+        {
+            ((AttackerBuilding)completedBuilding).ResetAttackSystem();
         }
         completedBuilding.RefreshUI();
     }

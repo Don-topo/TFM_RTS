@@ -21,10 +21,23 @@ public class UIBuildSelectedBuilding : MonoBehaviour
     }
 
     private IEnumerator UpdateProgressBar(BaseBuilding baseBuilding)
-    {        
-        float startTime = baseBuilding.StartTime;
+    {
+        float maxHealth = baseBuilding.SO_building.Health;
+
+        while (baseBuilding.CurrentHealth < maxHealth)
+        {
+            float progress =
+                baseBuilding.CurrentHealth / maxHealth;
+
+            progressBar.UpdateProgress(progress);
+
+            yield return null;
+        }
+
+        progressBar.UpdateProgress(1f);
+        /*float startTime = baseBuilding.StartTime;
         float endTime =  startTime + baseBuilding.SO_building.GenerationTime;
         progressBar.UpdateProgress(Mathf.Clamp01((Time.time - startTime) / (endTime - startTime)));
-        yield return null;
+        yield return null;*/
     }
 }

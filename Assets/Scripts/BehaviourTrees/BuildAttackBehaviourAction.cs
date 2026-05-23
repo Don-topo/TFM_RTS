@@ -47,7 +47,7 @@ public partial class BuildAttackBehaviourAction : Action
         {
             return Status.Running;
         }
-        if (Time.time > lastAttack + AttackInfo.Value.AttackSpeed)
+        if (Time.time > lastAttack + AttackInfo.Value.AttackSpeed && !Self.Value.GetComponent<AttackerBuilding>().IsRepairing)
         {
             Attack();
         }

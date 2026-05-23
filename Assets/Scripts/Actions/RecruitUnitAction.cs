@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 [CreateAssetMenu(fileName = "Recruit Unit", menuName = "Buildings/Actions/Recruit Unit", order = 100)]
 public class RecruitUnitAction : BaseAction
@@ -8,23 +9,21 @@ public class RecruitUnitAction : BaseAction
 
     public override bool Blocked(ActionInfo actionInfo)
     {
-        BaseBuilding buildling = actionInfo.Action as BaseBuilding;
-        return !CheckIfThereIsAvailableResources(actionInfo) || (buildling != null && !buildling.IsConstructed);
+        BaseBuilding building = actionInfo.Action as BaseBuilding;
+        return !(CheckIfThereIsAvailableResources(actionInfo) && building.IsConstructed && !building.IsRepairing);
     }
 
     public override bool CanExecute(ActionInfo actionInfo)
     {
-        BaseBuilding buildling = actionInfo.Action as BaseBuilding;
-        bool a = CheckIfThereIsAvailableResources(actionInfo) && buildling != null && buildling.IsConstructed;
-        return CheckIfThereIsAvailableResources(actionInfo) && buildling != null && buildling.IsConstructed;
+        BaseBuilding building = actionInfo.Action as BaseBuilding;
+        return CheckIfThereIsAvailableResources(actionInfo) && building.IsConstructed && !building.IsRepairing;
     }
 
     public override void Execute(ActionInfo actionInfo)
     {
         RecruitBuilding building = (RecruitBuilding)actionInfo.Action;
-        bool t = !CheckIfThereIsAvailableResources(actionInfo) || (building != null && !building.IsConstructed);
         // Check if there is enought resources
-        if (!CheckIfThereIsAvailableResources(actionInfo) && (building != null && !building.IsConstructed)) return;
+        if (!CheckIfThereIsAvailableResources(actionInfo) && building.IsConstructed && !building.IsRepairing) return;
 
         // Build Unit
         building.RecruitUnit(UnitToBuild);

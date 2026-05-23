@@ -16,7 +16,7 @@ public class ProductionBuilding : BaseBuilding
     protected override void Update()
     {
         // Check if the generation of the resource is completed
-        if(IsConstructed && !Resource.ProducesOnlyOneTime && Resource.ObtainingTime + StartTime <= Time.time)
+        if(IsConstructed && !IsRepairing && !Resource.ProducesOnlyOneTime && Resource.ObtainingTime + StartTime <= Time.time)
         {
             // Generation complete, reset start value and raise resource event
             StartTime = Time.time;

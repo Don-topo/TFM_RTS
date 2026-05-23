@@ -5,6 +5,7 @@ using Unity.Behavior;
 public enum BuildingActions
 {
 	Build,
+	Repair,
 	Attack,
 	Stop
 }

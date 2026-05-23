@@ -125,6 +125,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b46cddd9723ed0d428f18f5d25b294f5, type: 2}
   - {fileID: 11400000, guid: 587217207c8ca754e98e27c4489be7d4, type: 2}
   - {fileID: 11400000, guid: dfca6df8a2147a74abbfc29b6c91166d, type: 2}
+  - {fileID: 11400000, guid: 6f9016982df9c7e4fb9b3bc429700cda, type: 2}
   <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: d64692461d3826045a5fc5a916a23a6f, type: 2}
   <CurrentHealth>k__BackingField: 0
   <MaxHealth>k__BackingField: 0
@@ -140,6 +141,7 @@ MonoBehaviour:
   <SO_building>k__BackingField: {fileID: 11400000, guid: d64692461d3826045a5fc5a916a23a6f, type: 2}
   <GraphAgent>k__BackingField: {fileID: -1742060763542524178}
   <IsConstructed>k__BackingField: 0
+  <IsRepairing>k__BackingField: 0
   explotionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
   StartTime: 0
   queueEvent: {fileID: 11400000, guid: 1dd8e8867b7a3644e9d24fe108f29d73, type: 2}
@@ -181,7 +183,7 @@ MonoBehaviour:
           m_Value0: 10638356103869450573
           m_Value1: 5209077369174025454
         Name: BuildingActions
-        m_Value: 2
+        m_Value: 3
 --- !u!1 &4431179083648844727
 GameObject:
   m_ObjectHideFlags: 0

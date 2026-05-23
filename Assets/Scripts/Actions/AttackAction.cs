@@ -6,10 +6,24 @@ public class AttackAction : BaseAction
 {
     [SerializeField] MoveAction moveAction;
 
-    public override bool Blocked(ActionInfo actionInfo) => false;
+    public override bool Blocked(ActionInfo actionInfo)
+    {
+        if(actionInfo.Action == null) return false;
+        if(actionInfo.Action.TryGetComponent<BaseBuilding>(out BaseBuilding building))
+        {
+            return !(building.IsConstructed && !building.IsRepairing);
+        }
+
+        return false;
+    }
 
     public override bool CanExecute(ActionInfo actionInfo)
     {
+        if (actionInfo.Action.TryGetComponent<BaseBuilding>(out BaseBuilding building))
+        {
+            return !(building.IsConstructed && !building.IsRepairing) &&
+                actionInfo.Action is IAttackable && actionInfo.Hit.collider != null;
+        }
         return actionInfo.Action is IAttackable && actionInfo.Hit.collider != null;
     }
 

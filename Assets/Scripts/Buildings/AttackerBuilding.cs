@@ -53,7 +53,7 @@ public class AttackerBuilding : BaseBuilding, IAttacker
     private void UnitInRange(IAttackable enemyInRange)
     {
         List<GameObject> targets = SetNearbyEnemiesOnBlackboard();
-
+        if(!IsConstructed || IsRepairing) return;
         if (GraphAgent.GetVariable("TargetGameObject", out BlackboardVariable<GameObject> targetVariable)
             && targetVariable.Value == null && targets.Count > 0)
         {
@@ -62,10 +62,22 @@ public class AttackerBuilding : BaseBuilding, IAttacker
         }
     }
 
+    public void ResetAttackSystem() 
+    {
+        UnitInRange(null);
+    }
+
+    public override void RepairBuilding()
+    {
+        GraphAgent.SetVariableValue<GameObject>("TargetGameObject", null);
+        GraphAgent.SetVariableValue<List<GameObject>>("Enemies", null);
+        base.RepairBuilding();
+    }
+
     private void UnitOutOfRange(IAttackable enemyOutOfRange)
     {
         List<GameObject> targets = SetNearbyEnemiesOnBlackboard();
-
+        if (!IsConstructed || IsRepairing) return;
         if (!GraphAgent.GetVariable("TargetGameObject", out BlackboardVariable<GameObject> targetVariable)
             || enemyOutOfRange.TargetPosition.gameObject != targetVariable.Value) return;
 

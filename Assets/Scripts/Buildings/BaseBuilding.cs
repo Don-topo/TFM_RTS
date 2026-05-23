@@ -14,6 +14,7 @@ public class BaseBuilding : CommonActions, IHealable
     [field: SerializeField] public SO_Building SO_building { get; private set; }
     [field: SerializeField] public BehaviorGraphAgent GraphAgent { get; private set; }
     [field: SerializeField] public bool IsConstructed { get; set; } = false;
+    [field: SerializeField] public bool IsRepairing { get; set; } = false;
     [Header("Effects")]
     [SerializeField] private GameObject explotionPrefab;
 
@@ -85,6 +86,7 @@ public class BaseBuilding : CommonActions, IHealable
         resourceOP = new ResourceOP(SO_building.Cost.SO_Population, -SO_building.Cost.Population, 0);
         resourceEvent.Raise(resourceOP);
 
+        Deselect();
         // Play explotion
         GameObject explotionInstance = Instantiate(explotionPrefab, transform.position, Quaternion.identity);
         Destroy(explotionInstance, explotionInstance.GetComponent<ParticleSystem>().main.duration);
@@ -114,7 +116,7 @@ public class BaseBuilding : CommonActions, IHealable
         refreshEvent.Raise(true);
     }
 
-    private void SaveMaterials()
+    public void SaveMaterials()
     {
         baseRenderers = GetComponentsInChildren<Renderer>();
         initialMaterials = new Material[baseRenderers.Length];
@@ -143,6 +145,15 @@ public class BaseBuilding : CommonActions, IHealable
     }
 
     public virtual void BuildConstructed() { }
+
+    public virtual void RepairBuilding()
+    {
+        // TODO Calculate cost
+        IsRepairing = true;
+        StartTime = Time.time;
+        StopAllCoroutines();
+        GraphAgent.SetVariableValue("BuildingActions", BuildingActions.Repair);
+    }
 
     public void ResetActions()
     {

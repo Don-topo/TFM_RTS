@@ -11,7 +11,7 @@ public class UISelectedBuilding : MonoBehaviour
     public void Enable(BaseBuilding baseBuilding)
     {
         Disable();
-        if (baseBuilding.IsConstructed)
+        if (baseBuilding.IsConstructed && !baseBuilding.IsRepairing)
         {
             if (baseBuilding is ProductionBuilding)
             {                

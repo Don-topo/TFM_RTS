@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 [CreateAssetMenu(fileName = "Build Building", menuName = "Building/Action/Build Building")]
 public class BuildBuildingAction : BaseAction
@@ -9,7 +10,15 @@ public class BuildBuildingAction : BaseAction
 
     public override bool Blocked(ActionInfo actionInfo)
     {
-        return !CheckIfThereIsAvailableResources(actionInfo);
+        if(actionInfo.Action == null) return false;
+        if(actionInfo.Action.TryGetComponent<BaseBuilding>(out BaseBuilding building))
+        {
+            return !(CheckIfThereIsAvailableResources(actionInfo) && building.IsConstructed && !building.IsRepairing);
+        }
+        else
+        {
+            return false;
+        }        
     }
 
     public override bool CanExecute(ActionInfo actionInfo)
@@ -19,7 +28,10 @@ public class BuildBuildingAction : BaseAction
 
         // Check if the player has enought resources
         // Check if the build placement requirements are fullfiled
-        return CheckIfThereIsAvailableResources(actionInfo) && AllRestrictionsPass(actionInfo.Hit.point);
+        return CheckIfThereIsAvailableResources(actionInfo) && 
+            AllRestrictionsPass(actionInfo.Hit.point) && 
+            baseBuilding.IsConstructed && 
+            !baseBuilding.IsRepairing;
     }
 
     public override void Execute(ActionInfo actionInfo)

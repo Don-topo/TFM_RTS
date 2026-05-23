@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e99e91f68c41e44b3a1749e523ef46, type: 3}
+  m_Name: RepairBuilding
+  m_EditorClassIdentifier: Assembly-CSharp::RepairAction
+  <Name>k__BackingField: Repair
+  <Icon>k__BackingField: {fileID: 21300000, guid: fea8e38a9673ba141b0cdf0f4940d2ad, type: 3}
+  <HotKey>k__BackingField: 32
+  <UIPosition>k__BackingField: 6
+  <IsSingleUnitAction>k__BackingField: 0
+  <UseClickToExecute>k__BackingField: 0
+  <ExecuteAudio>k__BackingField: []
+  <Restrictions>k__BackingField: []

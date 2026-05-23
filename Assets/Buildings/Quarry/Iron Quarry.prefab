@@ -178,6 +178,7 @@ MonoBehaviour:
   selectionDecal: {fileID: 1649319494955040566}
   <Actions>k__BackingField:
   - {fileID: 11400000, guid: dfca6df8a2147a74abbfc29b6c91166d, type: 2}
+  - {fileID: 11400000, guid: 6f9016982df9c7e4fb9b3bc429700cda, type: 2}
   <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: ce69d12851cbea0449fbab786665a96a, type: 2}
   <CurrentHealth>k__BackingField: 0
   <MaxHealth>k__BackingField: 0
@@ -193,6 +194,7 @@ MonoBehaviour:
   <SO_building>k__BackingField: {fileID: 11400000, guid: ce69d12851cbea0449fbab786665a96a, type: 2}
   <GraphAgent>k__BackingField: {fileID: 1026010116861686373}
   <IsConstructed>k__BackingField: 0
+  <IsRepairing>k__BackingField: 0
   explotionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
   StartTime: 0
   <Resource>k__BackingField: {fileID: 11400000, guid: f40d809013950064999a6c26e53abc43, type: 2}
@@ -234,7 +236,7 @@ MonoBehaviour:
           m_Value0: 10638356103869450573
           m_Value1: 5209077369174025454
         Name: BuildingActions
-        m_Value: 2
+        m_Value: 3
 --- !u!1001 &4157786232609760842
 PrefabInstance:
   m_ObjectHideFlags: 0
