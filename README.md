@@ -1,5 +1,8 @@
 Patches relases:
 
+v.0.36 => 23/05/2026:
+  - Add Repair Building actions and restrictions.
+    
 v.0.35 => 21/05/2026:
   - Fix Attack bug.
     
