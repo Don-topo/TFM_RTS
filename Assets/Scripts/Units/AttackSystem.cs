@@ -32,7 +32,7 @@ public class AttackSystem : MonoBehaviour
     {
         // Get only if the object is an enemy and can take damage
         //if(other.TryGetComponent(out IAttackable enemy) && !other.CompareTag(tag)) //other.CompareTag("Enemy")) //!other.CompareTag(tag))
-        if(other.TryGetComponent(out IAttackable enemy) && !other.CompareTag(tag))
+        if(other.TryGetComponent(out IAttackable enemy) && !other.CompareTag(tag) && !other.CompareTag("Mine"))
         {
             enemiesInRange.Add(enemy);
             // TODO Check if the enemy is visible

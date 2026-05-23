@@ -2,12 +2,15 @@ using UnityEngine;
 
 public class ExplodingBuilding : BaseBuilding
 {
-    private SphereCollider sphereCollider;
+    [Header("Required Components")]
+    [SerializeField] private SO_AttackInfo attackInfo;
+    [SerializeField] private SphereCollider sphereCollider;
+    [SerializeField] private float actionRadius = 1f;
 
     protected override void Awake()
     {
-        sphereCollider = GetComponent<SphereCollider>();
         // Set mine radius
+        sphereCollider.radius = actionRadius;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -22,17 +25,17 @@ public class ExplodingBuilding : BaseBuilding
 
     private void Explode()
     {
-        // Play explotion
-
         // Get nearby enemies
-        Collider[] enemiesInRange = Physics.OverlapSphere(transform.position, 1f);
+        Collider[] enemiesInRange = Physics.OverlapSphere(transform.position, attackInfo.AttackRange);
 
         foreach (Collider enemyCollider in enemiesInRange)
         {
             if (enemyCollider.CompareTag("Enemy"))
             {
-                IAttackable enemy = (IAttackable)enemyCollider;
-                enemy.ApplyDamage(12);
+                if (enemyCollider.TryGetComponent<IAttackable>(out var attackable))
+                {
+                    attackable.ApplyDamage(attackInfo.AttackDamage);
+                }                
             }
         }
 
