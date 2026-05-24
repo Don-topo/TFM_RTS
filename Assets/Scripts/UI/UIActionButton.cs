@@ -178,8 +178,9 @@ public class UIActionButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     private void UpdateInteractable()
     {
-        button.interactable = this.commonActions
-            .Any(commandable => !this.action.Blocked(new ActionInfo(commandable, new RaycastHit(), this.action.UIPosition)));
+        if(button != null)
+            button.interactable = this.commonActions
+                .Any(commandable => !this.action.Blocked(new ActionInfo(commandable, new RaycastHit(), this.action.UIPosition)));
     }
 
     private void HandleResourceEvent(ResourceOP resource)

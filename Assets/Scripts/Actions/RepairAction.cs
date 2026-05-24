@@ -6,14 +6,22 @@ public class RepairAction : BaseAction
 {
     public override bool Blocked(ActionInfo actionInfo)
     {
-        BaseBuilding building = actionInfo.Action.GetComponent<BaseBuilding>();
-        return !(actionInfo.Action.CurrentHealth < actionInfo.Action.SO_BaseUnit.Health && building.IsConstructed && !building.IsRepairing);
+        if(actionInfo.Action != null && actionInfo.Action.TryGetComponent<BaseBuilding>(out BaseBuilding building))
+        {
+            return !(actionInfo.Action.CurrentHealth < actionInfo.Action.SO_BaseUnit.Health && building.IsConstructed && !building.IsRepairing);
+        }
+        
+        return false;
     }
 
     public override bool CanExecute(ActionInfo actionInfo)
     {
-        BaseBuilding building = actionInfo.Action.GetComponent<BaseBuilding>();
-        return actionInfo.Action.CurrentHealth < actionInfo.Action.SO_BaseUnit.Health && building.IsConstructed && !building.IsRepairing;
+        if(actionInfo.Action != null && actionInfo.Action.TryGetComponent<BaseBuilding>(out BaseBuilding building))
+        {
+            return actionInfo.Action.CurrentHealth < actionInfo.Action.SO_BaseUnit.Health && building.IsConstructed && !building.IsRepairing;
+        }
+
+        return false;
     }
 
     public override void Execute(ActionInfo actionInfo)

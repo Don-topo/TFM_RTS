@@ -95,13 +95,11 @@ public class PlayerController : MonoBehaviour
         {
             selectedUnits.Add(action);
         }
-        Debug.Log("Selected Unit");
     }
 
     private void DeselectUnit(CommonActions action)
     {
         selectedUnits.Remove(action);
-        Debug.Log("Deselected Unit");
     }
 
     private void CameraMovement()

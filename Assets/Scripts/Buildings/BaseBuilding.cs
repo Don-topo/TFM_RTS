@@ -37,9 +37,10 @@ public class BaseBuilding : CommonActions, IHealable
 
     protected override void OnDestroy()
     {
+        // TODO FIX don't instantiate things on OnDestroy, is not the right place
         // Play explotion
-        GameObject explotionInstance = Instantiate(explotionPrefab, transform.position, Quaternion.identity);
-        Destroy(explotionInstance, explotionInstance.GetComponent<ParticleSystem>().main.duration);
+        //GameObject explotionInstance = Instantiate(explotionPrefab, transform.position, Quaternion.identity);
+        //Destroy(explotionInstance, explotionInstance.GetComponent<ParticleSystem>().main.duration);
         base.OnDestroy();
         buildDestroyedEvent.Raise(this);
     }

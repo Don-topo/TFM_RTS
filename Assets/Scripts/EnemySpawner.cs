@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -16,15 +17,18 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private List<Transform> spawnPositions;
 
     [Header("Waves configuration")]
-    [SerializeField] private DificultyMode dificultyMode;
     [SerializeField] private int baseEnemiesPerWave = 10;
 
-    public int CurrentWave { get; private set; }
-    private bool activeWave = false;
-    private Transform selectedSpawnPosition;
+    [Header("Events")]
+    [SerializeField] private StartWaveEvent startWaveEvent;
+    [SerializeField] private FinishWaveEvent finishWaveEvent;
+    [SerializeField] private DeathEnemy deathEnemyEvent;
 
-    public bool IsWaveActive() => activeWave;
-    public void SetDificultyMode(DificultyMode mode) => dificultyMode = mode;
+    private int currentWave;
+    private Transform selectedSpawnPosition;
+    private DificultyMode dificultyMode;
+    int enemiesToSpawn;
+
 
     private void Awake()
     {
@@ -37,11 +41,20 @@ public class EnemySpawner : MonoBehaviour
         {
             Debug.LogError("EnemySpawner missing spawn positions!");
         }
+        LoadData();
+        startWaveEvent.Register(GenerateWave);
+        deathEnemyEvent.Register(DeathEnemy);
     }
 
-    public void GenerateWave()
+    private void OnDestroy()
     {
-        CurrentWave++;
+        startWaveEvent.Unregister(GenerateWave);
+        deathEnemyEvent.Unregister(DeathEnemy);
+    }
+
+    public void GenerateWave(int newWave)
+    {
+        currentWave = newWave;
         // Select a randomly spawn point for this wave
         selectedSpawnPosition = SelectSpawnPosition();
         // Spawn enemies
@@ -56,7 +69,7 @@ public class EnemySpawner : MonoBehaviour
     private int CalculateWaveEnemies()
     {
         // Set the base enemies to spawn based on current way
-        int enemiesToSpawn = baseEnemiesPerWave * CurrentWave;
+        enemiesToSpawn = baseEnemiesPerWave * currentWave;
 
         // Add difficulty modifier
         switch (dificultyMode)
@@ -73,7 +86,7 @@ public class EnemySpawner : MonoBehaviour
     {
         int roll = Random.Range(0, 100);
 
-        int specialRatio = Mathf.Clamp(CurrentWave * 2, 0, 25);
+        int specialRatio = Mathf.Clamp(currentWave * 2, 0, 25);
 
         if(roll < specialRatio)
         {
@@ -125,7 +138,25 @@ public class EnemySpawner : MonoBehaviour
         {
             SpawnEnemy();
 
-            yield return new WaitForSeconds(Mathf.Lerp(0.5f, 0.2f, CurrentWave / 20f));
+            yield return new WaitForSeconds(Mathf.Lerp(0.5f, 0.2f, currentWave / 20f));
+        }
+    }
+
+    private void LoadData()
+    {
+        // Load Difficulty
+        if (PlayerPrefs.HasKey("dificultyMode"))
+        {
+            dificultyMode = (DificultyMode)PlayerPrefs.GetInt("dificultyMode");
+        }
+    }
+
+    private void DeathEnemy(Null @null)
+    {
+        enemiesToSpawn--;
+        if(enemiesToSpawn <= 0)
+        {
+            finishWaveEvent.Raise(null);
         }
     }
 }

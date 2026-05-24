@@ -23,22 +23,21 @@ public class UIPauseMenu : MonoBehaviour
         resumeButton.onClick.RemoveAllListeners();
     }
 
-
-
     private void GoToGame()
     {
-
+        PauseManager.Resume();
     }
 
     private void GoToMainMenu()
     {
-        fadeGameObject.SetActive(true);
+        fadeGameObject.SetActive(true);        
         StartCoroutine(nameof(FadeOut), "Menu");
+        PauseManager.ResumeTime();
     }
 
     private IEnumerator FadeOut(string scene)
     {
         yield return new WaitForSeconds(1.9f);
-        SceneManager.LoadScene(scene);
+        SceneManager.LoadScene("Menu");
     }
 }

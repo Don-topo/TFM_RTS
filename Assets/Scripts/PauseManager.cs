@@ -4,12 +4,13 @@ using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour
 {
     public static bool IsPaused { get; private set; }
-    [SerializeField] private static GameObject pauseMenu;
+    [SerializeField] private GameObject pauseMenu;
 
+    private static GameObject pauseMenuPrefab;
 
-    void Update()
+    private void Awake()
     {
-        
+        pauseMenuPrefab = pauseMenu;    
     }
 
     public static void Pause()
@@ -18,9 +19,7 @@ public class PauseManager : MonoBehaviour
 
         Time.timeScale = 0f;
 
-        pauseMenu.SetActive(true);
-
-        AudioListener.pause = true;
+        pauseMenuPrefab.SetActive(true);
     }
 
     public static void Resume()
@@ -29,10 +28,13 @@ public class PauseManager : MonoBehaviour
 
         Time.timeScale = 1f;
 
-        pauseMenu.SetActive(false);
-
-        AudioListener.pause = false;
+        pauseMenuPrefab.SetActive(false);
     }
 
-    
+    public static void ResumeTime()
+    {
+        IsPaused = false;
+
+        Time.timeScale = 1f;
+    }    
 }

@@ -3,7 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 
-[RequireComponent(typeof(AudioSource), typeof(AudioListener))]
+
 public class AudioManager : MonoBehaviour
 {
     [Header("Components")]
@@ -17,6 +17,8 @@ public class AudioManager : MonoBehaviour
     [Header("Events")]
     [SerializeField] private VictoryEvent victoryEvent;
     [SerializeField] private GameOverEvent gameOverEvent;
+    [SerializeField] private StartWaveEvent startWaveEvent;
+    [SerializeField] private FinishWaveEvent finishWaveEvent;
 
     private static List<AudioClip> audioClips;
     private static AudioClip lastClipPlayed;
@@ -27,6 +29,8 @@ public class AudioManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         victoryEvent.Register(PlayVictoryAudio);
         gameOverEvent.Register(PlayDefeatAudio);
+        startWaveEvent.Register(PlayHordeAudio);
+        finishWaveEvent.Register(PlayBackgroundAudio);
         PlayBackgroundAudio(null);
     }
 
@@ -34,6 +38,8 @@ public class AudioManager : MonoBehaviour
     {
         victoryEvent.Unregister(PlayVictoryAudio);
         gameOverEvent.Unregister(PlayDefeatAudio);
+        startWaveEvent.Unregister(PlayHordeAudio);
+        finishWaveEvent.Unregister(PlayBackgroundAudio);
     }
 
     public static void SetAudioClips(List<AudioClip> newAudioClips)
@@ -50,10 +56,11 @@ public class AudioManager : MonoBehaviour
             AudioClip clipToPlay = audioClips[Random.Range(0, audioClips.Count)];
             while (lastClipPlayed != null && clipToPlay.name.Equals(lastClipPlayed.name))
             {
-                clipToPlay = audioClips[Random.Range(0, audioClips.Count)];
+                clipToPlay = audioClips[Random.Range(0, audioClips.Count)];                
             }
                 
             audioSource.PlayOneShot(clipToPlay);
+            lastClipPlayed = clipToPlay;
         }
     }
 
@@ -79,7 +86,7 @@ public class AudioManager : MonoBehaviour
         backgroundMusicSource.Play();
     }
 
-    public void PlayHordeAudio(Null @null)
+    public void PlayHordeAudio(int wave)
     {
         backgroundMusicSource.Stop();
         backgroundMusicSource.clip = hordeAudioClip;
@@ -95,4 +102,11 @@ public class AudioManager : MonoBehaviour
         backgroundMusicSource.Play();
     }
 
+    public void ShowInfo()
+    {
+        Debug.Log("IsPlaying: " + backgroundMusicSource.isPlaying);
+        Debug.Log("Volume: " + backgroundMusicSource.volume);
+        Debug.Log("Mute: " + backgroundMusicSource.mute);
+        Debug.Log("Clip: " + backgroundMusicSource.clip.name);
+    }
 }

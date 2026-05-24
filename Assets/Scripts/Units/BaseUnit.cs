@@ -41,6 +41,7 @@ public class BaseUnit : CommonActions, IMoveable, IHealable
     protected override void OnDestroy()
     {
         base.OnDestroy();
+        // TODO This is the wrong place for this
         ResourceOP resource = new ResourceOP(SO_BaseUnit.Cost.SO_Population, SO_BaseUnit.Cost.Population, 0);
         if (resourceEvent != null)
         {

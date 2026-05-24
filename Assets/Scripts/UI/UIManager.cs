@@ -93,6 +93,9 @@ public class UIManager : MonoBehaviour
         List<CommonActions> list1 = new();
         list1.AddRange(selectedUnits);
         uiUnitGroups.Enable(list1);
+        // Safety check to avoid error when execution is finished
+        if (uiUnitBase == null || uiSelectedBuilding == null || uiSingleUnit == null || uIMultipleUnits == null) return;
+
         if (selectedUnits.Count > 0)
         {
             if(selectedUnits.Count == 1)

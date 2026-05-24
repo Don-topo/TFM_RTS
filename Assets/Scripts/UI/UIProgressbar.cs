@@ -36,4 +36,9 @@ public class UIProgressbar : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+
+    public void SetColor(Color color)
+    {
+        progressbarImage.color = color;
+    }
 }

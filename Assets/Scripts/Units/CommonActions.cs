@@ -108,7 +108,7 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
         }
     }
 
-    public void Die()
+    public virtual void Die()
     {
         if(animator != null)
         {
