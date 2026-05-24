@@ -1,5 +1,11 @@
 Patches relases:
 
+v.0.37 => 24/05/2026:
+  - Add Game loop.
+  - Add Wave UI counter.
+  - Finish pause.
+  - Fix null errors on stop play mode.
+    
 v.0.36 => 23/05/2026:
   - Add Repair Building actions and restrictions.
     
