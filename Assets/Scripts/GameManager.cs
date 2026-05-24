@@ -1,20 +1,24 @@
 using System.Collections;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using static Unity.Burst.Intrinsics.X86.Avx;
 
 public class GameManager : MonoBehaviour
 {
     [Header("Required Components")]
     [SerializeField] private UIProgressbar progressbar;
-    [SerializeField] private Button pauseButton;
+    [SerializeField] private TextMeshProUGUI remainingDaysText;
     [Header("Managers")]
     [SerializeField] private DayManager dayManager;
 
-    [Header("Game Properties")]    
-    [SerializeField] private int totaWaves = 25; 
+    [Header("Game Properties")]        
     [SerializeField] private float timeBetweenWaves = 320f;
     [SerializeField] private float timeBetweenDays;
+    [SerializeField] private int easyTotalWaves = 25;
+    [SerializeField] private int mediumTotalWaves = 25;
+    [SerializeField] private int hardTotalWaves = 25;
 
     [Header("Events")]
     [SerializeField] private BuildingDestroyedEvent buildDestroyedEvent;
@@ -26,6 +30,7 @@ public class GameManager : MonoBehaviour
     private DificultyMode difficultyModifier;
     private int currentWave;
     private float startTime;
+    private int totalWaves = 25;
 
     private void Awake()
     {
@@ -34,6 +39,7 @@ public class GameManager : MonoBehaviour
         LoadData();
 
         currentWave = 1;
+        SetWavesText();
         StartCoroutine(nameof(FillWatch));
     }
 
@@ -55,13 +61,20 @@ public class GameManager : MonoBehaviour
         switch (difficultyModifier)
         {
             case DificultyMode.Easy:
+                totalWaves = easyTotalWaves;
+                timeBetweenWaves *= 1;
                 break;
             case DificultyMode.Medium:
+                totalWaves = mediumTotalWaves;
+                timeBetweenWaves *= 0.75f;
                 break;
             case DificultyMode.Hard:
+                totalWaves = hardTotalWaves;
+                timeBetweenWaves *= 0.5f;
                 break;
             case DificultyMode.Infinite:
-                totaWaves = 99999999;
+                totalWaves = 99999999;
+                timeBetweenWaves *= 0.5f;
                 break;
             default:
                 break;
@@ -88,13 +101,29 @@ public class GameManager : MonoBehaviour
     {
         currentWave++;
         // Check for victory
-        if(currentWave > totaWaves)
+        if(currentWave > totalWaves)
         {
             Win();
             return;
         }
         startTime = Time.time;
+        SetWavesText();
         StartCoroutine(nameof(FillWatch));
+    }
+
+    private void SetWavesText()
+    {
+        // Use text instead of settex to avoid breaking the animations
+        if (difficultyModifier == DificultyMode.Infinite)
+        {            
+            remainingDaysText.text = "Survived Days " + currentWave.ToString();
+        }
+        else
+        {
+            remainingDaysText.text = "Remaining Days " + (totalWaves - currentWave + 1).ToString();
+        }
+
+        remainingDaysText.ForceMeshUpdate();
     }
 
     private IEnumerator FillWatch()
@@ -114,9 +143,4 @@ public class GameManager : MonoBehaviour
         // Start Wave
         startWaveEvent.Raise(currentWave);
     }
-
-    // TODO UI info (Events)
-    // Day x Animation
-    // Horde is Comming
-    // Horde Finish
 }
