@@ -51,12 +51,14 @@ void \doxymbox{\hyperlink{class_common_actions_a31efbfded7bac0694367df1e807b5f26
 \item 
 void \doxymbox{\hyperlink{class_common_actions_a9aeadc1e41e81f959cebe4b3f83f55f4}{Apply\+Damage}} (int damage\+Amount)
 \item 
-void \doxymbox{\hyperlink{class_common_actions_a4679ef5476cba71a56901c3909c2e921}{Die}} ()
+virtual void \doxymbox{\hyperlink{class_common_actions_a8e7f24683c4995eadb235cb40cfcec13}{Die}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 override void \doxymbox{\hyperlink{class_base_attacker_a7bbd0506fdab70bc5e25133d88bdf9a4}{Awake}} ()
+\item 
+override void \doxymbox{\hyperlink{class_base_attacker_ac4fb5cea800f64266e1d1f3678afea07}{Start}} ()
 \item 
 override void \doxymbox{\hyperlink{class_base_attacker_a9b5e33d8a9e9431fe57a48d51683713b}{On\+Destroy}} ()
 \end{DoxyCompactItemize}
@@ -69,8 +71,6 @@ override void \doxymbox{\hyperlink{class_base_unit_a709115831365face9e32f3950111
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
 \begin{DoxyCompactItemize}
-\item 
-virtual void \doxymbox{\hyperlink{class_common_actions_aeae7ae6e7935fe45dfbf97700170c334}{Start}} ()
 \item 
 virtual void \doxymbox{\hyperlink{class_common_actions_ae605f8ae1a8915928869b81dae283577}{Update}} ()
 \end{DoxyCompactItemize}
@@ -152,6 +152,8 @@ List$<$ Audio\+Clip $>$ \doxymbox{\hyperlink{class_base_unit_a82a32db994d4a69b8d
 Behavior\+Graph\+Agent \doxymbox{\hyperlink{class_base_unit_a7f7deeabec2f78becadbfc914580754f}{behavior\+Graph\+Agent}}
 \item 
 Nav\+Mesh\+Agent \doxymbox{\hyperlink{class_base_unit_afe76c53d054177ca3a6f15aef9337a27}{nav\+Mesh\+Agent}}
+\item 
+Vector3? \doxymbox{\hyperlink{class_base_unit_aedd960a1a9c2f86d226efd0c66655ce4}{move\+Position}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
 \begin{DoxyCompactItemize}
@@ -209,6 +211,10 @@ override void Base\+Attacker.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{Dox
 
 Reimplemented from \doxymbox{\hyperlink{class_common_actions_afa3327aad40e00b114f4af1eb32fec58}{Common\+Actions}}.
 
+
+
+Reimplemented in \doxymbox{\hyperlink{class_enemy_controller_a4520f46ce3c50343d9c158fd9d5febaa}{Enemy\+Controller}}.
+
 \Hypertarget{class_base_attacker_a5ea4793c716fc278cc7cf22375d6ea2b}\index{BaseAttacker@{BaseAttacker}!Patrol@{Patrol}}
 \index{Patrol@{Patrol}!BaseAttacker@{BaseAttacker}}
 \doxysubsubsection{\texorpdfstring{Patrol()}{Patrol()}}
@@ -232,6 +238,20 @@ void Base\+Attacker.\+Play\+Patrol\+Autdio (\begin{DoxyParamCaption}{}{}\end{Dox
 \doxysubsubsection{\texorpdfstring{SetNearbyEnemiesOnBlackboard()}{SetNearbyEnemiesOnBlackboard()}}
 {\footnotesize\ttfamily \label{class_base_attacker_a36c1b5d5972a42d7ae479279a0646201} 
 List$<$ Game\+Object $>$ Base\+Attacker.\+Set\+Nearby\+Enemies\+On\+Blackboard (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_base_attacker_ac4fb5cea800f64266e1d1f3678afea07}\index{BaseAttacker@{BaseAttacker}!Start@{Start}}
+\index{Start@{Start}!BaseAttacker@{BaseAttacker}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_base_attacker_ac4fb5cea800f64266e1d1f3678afea07} 
+override void Base\+Attacker.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_common_actions_aeae7ae6e7935fe45dfbf97700170c334}{Common\+Actions}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_enemy_controller_ad1305e8f91aab6e4a37cc37344e5367f}{Enemy\+Controller}}.
 
 \Hypertarget{class_base_attacker_abd6aab2ef247cccf42827c9d9d3c6a7b}\index{BaseAttacker@{BaseAttacker}!UnitInRange@{UnitInRange}}
 \index{UnitInRange@{UnitInRange}!BaseAttacker@{BaseAttacker}}

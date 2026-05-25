@@ -31,9 +31,13 @@ void \doxymbox{\hyperlink{class_base_building_a9033febb086dfc89a4dc125bc71a341b}
 \item 
 void \doxymbox{\hyperlink{class_base_building_ac50b496e6babaffeb977fa73dcf1dd25}{Refresh\+UI}} ()
 \item 
+void \doxymbox{\hyperlink{class_base_building_a12ed88aff8c20ed2f064628ad5360e64}{Save\+Materials}} ()
+\item 
 void \doxymbox{\hyperlink{class_base_building_a3be49a6ba09aa9939e99dbbd68fb6a5f}{Restore\+Materials}} ()
 \item 
 virtual void \doxymbox{\hyperlink{class_base_building_af2c6e3189f4d62b191f406899446204f}{Build\+Constructed}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_base_building_ac8377500ad0f61b14269f10825cd19ba}{Repair\+Building}} ()
 \item 
 void \doxymbox{\hyperlink{class_base_building_aedc0efa53e793fc854b4f0cf8d5b548e}{Reset\+Actions}} ()
 \item 
@@ -48,7 +52,7 @@ void \doxymbox{\hyperlink{class_common_actions_a31efbfded7bac0694367df1e807b5f26
 \item 
 void \doxymbox{\hyperlink{class_common_actions_a9aeadc1e41e81f959cebe4b3f83f55f4}{Apply\+Damage}} (int damage\+Amount)
 \item 
-void \doxymbox{\hyperlink{class_common_actions_a4679ef5476cba71a56901c3909c2e921}{Die}} ()
+virtual void \doxymbox{\hyperlink{class_common_actions_a8e7f24683c4995eadb235cb40cfcec13}{Die}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -106,6 +110,8 @@ Material \doxymbox{\hyperlink{class_base_building_a3be5a979246ab2dc4dc2569f18f71
 Behavior\+Graph\+Agent \doxymbox{\hyperlink{class_base_building_a1ea800ad146506789e1ec1081dcfe4ab}{Graph\+Agent}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
 \item 
 bool \doxymbox{\hyperlink{class_base_building_a9e0a09e7fcff563b701d1c248d2b7939}{Is\+Constructed}} = false\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+bool \doxymbox{\hyperlink{class_base_building_a856046e66c2a5fbda4ff2dab6154ab59}{Is\+Repairing}} = false\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
 \end{DoxyCompactItemize}
 \doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
 \begin{DoxyCompactItemize}
@@ -137,8 +143,6 @@ Transform \doxymbox{\hyperlink{interface_i_healable_a7a0795b7c8985b586247a430179
 \begin{DoxyCompactItemize}
 \item 
 float \doxymbox{\hyperlink{class_base_building_a82c16266d7c3c61fc70c0668e5d3ce4c}{Calculate\+Refund}} ()
-\item 
-void \doxymbox{\hyperlink{class_base_building_a12ed88aff8c20ed2f064628ad5360e64}{Save\+Materials}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -230,6 +234,16 @@ Reimplemented in \doxymbox{\hyperlink{class_production_building_aab5eb8d0eb3b39f
 {\footnotesize\ttfamily \label{class_base_building_ac50b496e6babaffeb977fa73dcf1dd25} 
 void Base\+Building.\+Refresh\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+\Hypertarget{class_base_building_ac8377500ad0f61b14269f10825cd19ba}\index{BaseBuilding@{BaseBuilding}!RepairBuilding@{RepairBuilding}}
+\index{RepairBuilding@{RepairBuilding}!BaseBuilding@{BaseBuilding}}
+\doxysubsubsection{\texorpdfstring{RepairBuilding()}{RepairBuilding()}}
+{\footnotesize\ttfamily \label{class_base_building_ac8377500ad0f61b14269f10825cd19ba} 
+virtual void Base\+Building.\+Repair\+Building (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_attacker_building_a7029218d4d71da8a1d0b4c8488bdd75c}{Attacker\+Building}}.
+
 \Hypertarget{class_base_building_aedc0efa53e793fc854b4f0cf8d5b548e}\index{BaseBuilding@{BaseBuilding}!ResetActions@{ResetActions}}
 \index{ResetActions@{ResetActions}!BaseBuilding@{BaseBuilding}}
 \doxysubsubsection{\texorpdfstring{ResetActions()}{ResetActions()}}
@@ -246,7 +260,7 @@ void Base\+Building.\+Restore\+Materials (\begin{DoxyParamCaption}{}{}\end{DoxyP
 \index{SaveMaterials@{SaveMaterials}!BaseBuilding@{BaseBuilding}}
 \doxysubsubsection{\texorpdfstring{SaveMaterials()}{SaveMaterials()}}
 {\footnotesize\ttfamily \label{class_base_building_a12ed88aff8c20ed2f064628ad5360e64} 
-void Base\+Building.\+Save\+Materials (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+void Base\+Building.\+Save\+Materials (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 \Hypertarget{class_base_building_adc2e3a3694cf9295b94715203f5db8d8}\index{BaseBuilding@{BaseBuilding}!Select@{Select}}
 \index{Select@{Select}!BaseBuilding@{BaseBuilding}}
@@ -339,6 +353,12 @@ Behavior\+Graph\+Agent Base\+Building.\+Graph\+Agent\hspace{0.3cm}{\ttfamily [ge
 \doxysubsubsection{\texorpdfstring{IsConstructed}{IsConstructed}}
 {\footnotesize\ttfamily \label{class_base_building_a9e0a09e7fcff563b701d1c248d2b7939} 
 bool Base\+Building.\+Is\+Constructed = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_base_building_a856046e66c2a5fbda4ff2dab6154ab59}\index{BaseBuilding@{BaseBuilding}!IsRepairing@{IsRepairing}}
+\index{IsRepairing@{IsRepairing}!BaseBuilding@{BaseBuilding}}
+\doxysubsubsection{\texorpdfstring{IsRepairing}{IsRepairing}}
+{\footnotesize\ttfamily \label{class_base_building_a856046e66c2a5fbda4ff2dab6154ab59} 
+bool Base\+Building.\+Is\+Repairing = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 \Hypertarget{class_base_building_a3be5a979246ab2dc4dc2569f18f711c9}\index{BaseBuilding@{BaseBuilding}!PlaceMaterial@{PlaceMaterial}}
 \index{PlaceMaterial@{PlaceMaterial}!BaseBuilding@{BaseBuilding}}

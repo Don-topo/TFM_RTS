@@ -31,7 +31,7 @@ void \doxymbox{\hyperlink{class_common_actions_a31efbfded7bac0694367df1e807b5f26
 \item 
 void \doxymbox{\hyperlink{class_common_actions_a9aeadc1e41e81f959cebe4b3f83f55f4}{Apply\+Damage}} (int damage\+Amount)
 \item 
-void \doxymbox{\hyperlink{class_common_actions_a4679ef5476cba71a56901c3909c2e921}{Die}} ()
+virtual void \doxymbox{\hyperlink{class_common_actions_a8e7f24683c4995eadb235cb40cfcec13}{Die}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -132,15 +132,19 @@ Implements \doxymbox{\hyperlink{interface_i_selectable_a5f07adf329433922c67f2967
 
 Reimplemented in \doxymbox{\hyperlink{class_base_building_ab6152887e801c62b2e10370fb9287e6c}{Base\+Building}}, and \doxymbox{\hyperlink{class_recruit_building_a68b6467f90f127322722c0fa805f3b07}{Recruit\+Building}}.
 
-\Hypertarget{class_common_actions_a4679ef5476cba71a56901c3909c2e921}\index{CommonActions@{CommonActions}!Die@{Die}}
+\Hypertarget{class_common_actions_a8e7f24683c4995eadb235cb40cfcec13}\index{CommonActions@{CommonActions}!Die@{Die}}
 \index{Die@{Die}!CommonActions@{CommonActions}}
 \doxysubsubsection{\texorpdfstring{Die()}{Die()}}
-{\footnotesize\ttfamily \label{class_common_actions_a4679ef5476cba71a56901c3909c2e921} 
-void Common\+Actions.\+Die (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{class_common_actions_a8e7f24683c4995eadb235cb40cfcec13} 
+virtual void Common\+Actions.\+Die (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
 Implements \doxymbox{\hyperlink{interface_i_attackable_a208c9c48f9ffd3ec76359f2a44f981e4}{IAttackable}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_enemy_controller_ae4643988c3365d89c1ec7377f6ad42e6}{Enemy\+Controller}}.
 
 \Hypertarget{class_common_actions_afa3327aad40e00b114f4af1eb32fec58}\index{CommonActions@{CommonActions}!OnDestroy@{OnDestroy}}
 \index{OnDestroy@{OnDestroy}!CommonActions@{CommonActions}}
@@ -150,7 +154,7 @@ virtual void Common\+Actions.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{Dox
 
 
 
-Reimplemented in \doxymbox{\hyperlink{class_attacker_building_a05e2af55c32690bf1da552f8999b37de}{Attacker\+Building}}, \doxymbox{\hyperlink{class_base_attacker_a9b5e33d8a9e9431fe57a48d51683713b}{Base\+Attacker}}, \doxymbox{\hyperlink{class_base_building_a3f1a908922f4a450466da213dd45bb2b}{Base\+Building}}, \doxymbox{\hyperlink{class_base_healer_a68d3c1e2deb76d7e883e66c304d59d2e}{Base\+Healer}}, \doxymbox{\hyperlink{class_base_unit_a709115831365face9e32f39501113684}{Base\+Unit}}, \doxymbox{\hyperlink{class_production_building_aab5eb8d0eb3b39fb1b116da98838a709}{Production\+Building}}, and \doxymbox{\hyperlink{class_recruit_building_a406e4508d43e7420d37b80c40f49d44f}{Recruit\+Building}}.
+Reimplemented in \doxymbox{\hyperlink{class_attacker_building_a05e2af55c32690bf1da552f8999b37de}{Attacker\+Building}}, \doxymbox{\hyperlink{class_base_attacker_a9b5e33d8a9e9431fe57a48d51683713b}{Base\+Attacker}}, \doxymbox{\hyperlink{class_base_building_a3f1a908922f4a450466da213dd45bb2b}{Base\+Building}}, \doxymbox{\hyperlink{class_base_healer_a68d3c1e2deb76d7e883e66c304d59d2e}{Base\+Healer}}, \doxymbox{\hyperlink{class_base_unit_a709115831365face9e32f39501113684}{Base\+Unit}}, \doxymbox{\hyperlink{class_enemy_controller_a4520f46ce3c50343d9c158fd9d5febaa}{Enemy\+Controller}}, \doxymbox{\hyperlink{class_production_building_aab5eb8d0eb3b39fb1b116da98838a709}{Production\+Building}}, and \doxymbox{\hyperlink{class_recruit_building_a406e4508d43e7420d37b80c40f49d44f}{Recruit\+Building}}.
 
 \Hypertarget{class_common_actions_a8ab1d4104fb13a1a9eceb45993ed391c}\index{CommonActions@{CommonActions}!PlaySelectionAudio@{PlaySelectionAudio}}
 \index{PlaySelectionAudio@{PlaySelectionAudio}!CommonActions@{CommonActions}}
@@ -186,7 +190,7 @@ virtual void Common\+Actions.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParam
 
 
 
-Reimplemented in \doxymbox{\hyperlink{class_base_building_a2e27c33fc066b75e7b5e7f5764a55211}{Base\+Building}}, and \doxymbox{\hyperlink{class_production_building_a56f316f53c19bcd0021ff99391170cd5}{Production\+Building}}.
+Reimplemented in \doxymbox{\hyperlink{class_base_attacker_ac4fb5cea800f64266e1d1f3678afea07}{Base\+Attacker}}, \doxymbox{\hyperlink{class_base_building_a2e27c33fc066b75e7b5e7f5764a55211}{Base\+Building}}, \doxymbox{\hyperlink{class_enemy_controller_ad1305e8f91aab6e4a37cc37344e5367f}{Enemy\+Controller}}, and \doxymbox{\hyperlink{class_production_building_a56f316f53c19bcd0021ff99391170cd5}{Production\+Building}}.
 
 \Hypertarget{class_common_actions_ae605f8ae1a8915928869b81dae283577}\index{CommonActions@{CommonActions}!Update@{Update}}
 \index{Update@{Update}!CommonActions@{CommonActions}}

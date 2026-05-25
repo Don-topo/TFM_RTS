@@ -1,0 +1,228 @@
+\doxysection{Enemy\+Controller Class Reference}
+\hypertarget{class_enemy_controller}{}\label{class_enemy_controller}\index{EnemyController@{EnemyController}}
+
+
+Inheritance diagram for Enemy\+Controller:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_enemy_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Enemy\+Controller:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_enemy_controller__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \doxymbox{\hyperlink{class_enemy_controller_ae4643988c3365d89c1ec7377f6ad42e6}{Die}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_base_attacker}{Base\+Attacker}}}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_base_attacker_a1ba1fe66bf38fabb13461714cd700182}{Attack}} (\doxymbox{\hyperlink{interface_i_attackable}{IAttackable}} attackable)
+\item 
+void \doxymbox{\hyperlink{class_base_attacker_a7089cabc3aeffb0a2a9fa23f3fbc8d27}{Attack}} (Vector3 attack\+Position)
+\item 
+void \doxymbox{\hyperlink{class_base_attacker_a5ea4793c716fc278cc7cf22375d6ea2b}{Patrol}} (Vector3 target\+Position)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_base_unit}{Base\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_base_unit_ab5d81eb87981f27162ef262c27503f16}{Move}} (Transform transform)
+\item 
+void \doxymbox{\hyperlink{class_base_unit_a83f3e7544cfd61b4f1a7fc0b2129a79a}{Move}} (Vector3 position)
+\item 
+void \doxymbox{\hyperlink{class_base_unit_a257f72b36551efe5ca4587d64e071bc1}{Stop}} ()
+\item 
+void \doxymbox{\hyperlink{class_base_unit_af855b91ba492443c755482dc5f41f622}{Heal}} (int amount)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_ab819292d2b539af3fd654934925c3d43}{Deselect}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_a20fe334501ba458268ea75a5e9cbd9aa}{Select}} ()
+\item 
+void \doxymbox{\hyperlink{class_common_actions_a31efbfded7bac0694367df1e807b5f26}{Set\+Commands\+Overrides}} (\doxymbox{\hyperlink{class_base_action}{Base\+Action}}\+[$\,$]\+ actions)
+\item 
+void \doxymbox{\hyperlink{class_common_actions_a9aeadc1e41e81f959cebe4b3f83f55f4}{Apply\+Damage}} (int damage\+Amount)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \doxymbox{\hyperlink{class_enemy_controller_ad1305e8f91aab6e4a37cc37344e5367f}{Start}} ()
+\item 
+override void \doxymbox{\hyperlink{class_enemy_controller_a4520f46ce3c50343d9c158fd9d5febaa}{On\+Destroy}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_base_attacker}{Base\+Attacker}}}
+\begin{DoxyCompactItemize}
+\item 
+override void \doxymbox{\hyperlink{class_base_attacker_a7bbd0506fdab70bc5e25133d88bdf9a4}{Awake}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_base_unit}{Base\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+override void \doxymbox{\hyperlink{class_base_unit_a1b5d82dfb2d7c344e241e7f882665604}{Awake}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_ae605f8ae1a8915928869b81dae283577}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_enemy_controller_a58a2d8849fcc1571448fd5f88e1fa423}{explodes}}
+\item 
+Game\+Object \doxymbox{\hyperlink{class_enemy_controller_a6511e94c9197fc95a687e13f2c8fd229}{death\+Explotion}}
+\item 
+Game\+Object \doxymbox{\hyperlink{class_enemy_controller_a5f403bdf4d024f8f1e431dc103b25996}{target}}
+\item 
+\doxymbox{\hyperlink{class_death_enemy}{Death\+Enemy}} \doxymbox{\hyperlink{class_enemy_controller_ac9541d2569ec0fb65fd582e176315bce}{death\+Enemy}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_unit_selected_event}{Unit\+Selected\+Event}} \doxymbox{\hyperlink{class_common_actions_aad887a416c9c496cdad14969a759b02f}{unit\+Select\+Event}}
+\item 
+\doxymbox{\hyperlink{class_unit_deselect_event}{Unit\+Deselect\+Event}} \doxymbox{\hyperlink{class_common_actions_ae602ba5252ed6e84255eea302c63a274}{unit\+Deselect\+Event}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_base_unit}{Base\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ Audio\+Clip $>$ \doxymbox{\hyperlink{class_base_unit_a82a32db994d4a69b8db8212d8273ac40}{move\+Audio\+Clips}}
+\item 
+Behavior\+Graph\+Agent \doxymbox{\hyperlink{class_base_unit_a7f7deeabec2f78becadbfc914580754f}{behavior\+Graph\+Agent}}
+\item 
+Nav\+Mesh\+Agent \doxymbox{\hyperlink{class_base_unit_afe76c53d054177ca3a6f15aef9337a27}{nav\+Mesh\+Agent}}
+\item 
+Vector3? \doxymbox{\hyperlink{class_base_unit_aedd960a1a9c2f86d226efd0c66655ce4}{move\+Position}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+Decal\+Projector \doxymbox{\hyperlink{class_common_actions_a0551ee27e1d92c4cab5583499081a0d3}{selection\+Decal}}
+\item 
+Animator \doxymbox{\hyperlink{class_common_actions_a8596da371da49e83b31076f91b89e707}{animator}}
+\item 
+\doxymbox{\hyperlink{class_update_health_event}{Update\+Health\+Event}} \doxymbox{\hyperlink{class_common_actions_a4a0946e2ad67e943e6364d7066ef8931}{update\+Health\+Event}}
+\item 
+\doxymbox{\hyperlink{class_unit_death_event}{Unit\+Death\+Event}} \doxymbox{\hyperlink{class_common_actions_a7bacbe25f3f281191a76a8477347caed}{unit\+Death\+Event}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_base_attacker}{Base\+Attacker}}}
+\begin{DoxyCompactItemize}
+\item 
+Transform \doxymbox{\hyperlink{class_base_attacker_a359c162c452874d9f1301dd8f50005e7}{Transform}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+\doxymbox{\hyperlink{class_s_o___attack_info}{SO\+\_\+\+Attack\+Info}} \doxymbox{\hyperlink{class_base_attacker_a5ba0f656315774b83e5ad6f38ffc7bee}{Attack\+Info}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_base_unit}{Base\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{class_base_unit_af7ad9d99459a688e2a47141d72ea7a14}{Get\+Nav\+Mesh\+Agent\+Radius}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_common_actions_a3a0d3db8c141d0c160f63a1d673bd04e}{Is\+Selected}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+\doxymbox{\hyperlink{class_base_action}{Base\+Action}}\+[$\,$]\+ \doxymbox{\hyperlink{class_common_actions_a75764b7c55f8ddfaf1dfbe346257491c}{Actions}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+\doxymbox{\hyperlink{class_s_o___base_unit}{SO\+\_\+\+Base\+Unit}} \doxymbox{\hyperlink{class_common_actions_ab8bbed6a15c8b971481b14f01310fdb7}{SO\+\_\+\+Base\+Unit}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+int \doxymbox{\hyperlink{class_common_actions_a7ce50eea9d7904e4c745b8af489531f2}{Current\+Health}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+int \doxymbox{\hyperlink{class_common_actions_a603564a07381db22a5f3e9d5ac51403a}{Max\+Health}}\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+Transform \doxymbox{\hyperlink{class_common_actions_a75b141d8781f3ff94932ac9d10bb2060}{Target\+Position}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+bool \doxymbox{\hyperlink{class_common_actions_a058d0dd3c4c061940a903ffafa026001}{is\+Dead}} = false\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{interface_i_healable}{IHealable}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{interface_i_healable_aa79b1f7ce4592ba82c78690271e8c6b3}{Current\+Health}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+int \doxymbox{\hyperlink{interface_i_healable_a259a0ecc362aa9e09f4ae7b229c0af52}{Max\+Health}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+Transform \doxymbox{\hyperlink{interface_i_healable_a7a0795b7c8985b586247a430179185ed}{Target\+Position}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_enemy_controller_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_enemy_controller_ae4643988c3365d89c1ec7377f6ad42e6}\index{EnemyController@{EnemyController}!Die@{Die}}
+\index{Die@{Die}!EnemyController@{EnemyController}}
+\doxysubsubsection{\texorpdfstring{Die()}{Die()}}
+{\footnotesize\ttfamily \label{class_enemy_controller_ae4643988c3365d89c1ec7377f6ad42e6} 
+override void Enemy\+Controller.\+Die (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_common_actions_a8e7f24683c4995eadb235cb40cfcec13}{Common\+Actions}}.
+
+\Hypertarget{class_enemy_controller_a4520f46ce3c50343d9c158fd9d5febaa}\index{EnemyController@{EnemyController}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!EnemyController@{EnemyController}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily \label{class_enemy_controller_a4520f46ce3c50343d9c158fd9d5febaa} 
+override void Enemy\+Controller.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_base_attacker_a9b5e33d8a9e9431fe57a48d51683713b}{Base\+Attacker}}.
+
+\Hypertarget{class_enemy_controller_ad1305e8f91aab6e4a37cc37344e5367f}\index{EnemyController@{EnemyController}!Start@{Start}}
+\index{Start@{Start}!EnemyController@{EnemyController}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_enemy_controller_ad1305e8f91aab6e4a37cc37344e5367f} 
+override void Enemy\+Controller.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_base_attacker_ac4fb5cea800f64266e1d1f3678afea07}{Base\+Attacker}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_enemy_controller_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_enemy_controller_ac9541d2569ec0fb65fd582e176315bce}\index{EnemyController@{EnemyController}!deathEnemy@{deathEnemy}}
+\index{deathEnemy@{deathEnemy}!EnemyController@{EnemyController}}
+\doxysubsubsection{\texorpdfstring{deathEnemy}{deathEnemy}}
+{\footnotesize\ttfamily \label{class_enemy_controller_ac9541d2569ec0fb65fd582e176315bce} 
+\doxymbox{\hyperlink{class_death_enemy}{Death\+Enemy}} Enemy\+Controller.\+death\+Enemy\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_controller_a6511e94c9197fc95a687e13f2c8fd229}\index{EnemyController@{EnemyController}!deathExplotion@{deathExplotion}}
+\index{deathExplotion@{deathExplotion}!EnemyController@{EnemyController}}
+\doxysubsubsection{\texorpdfstring{deathExplotion}{deathExplotion}}
+{\footnotesize\ttfamily \label{class_enemy_controller_a6511e94c9197fc95a687e13f2c8fd229} 
+Game\+Object Enemy\+Controller.\+death\+Explotion\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_controller_a58a2d8849fcc1571448fd5f88e1fa423}\index{EnemyController@{EnemyController}!explodes@{explodes}}
+\index{explodes@{explodes}!EnemyController@{EnemyController}}
+\doxysubsubsection{\texorpdfstring{explodes}{explodes}}
+{\footnotesize\ttfamily \label{class_enemy_controller_a58a2d8849fcc1571448fd5f88e1fa423} 
+bool Enemy\+Controller.\+explodes\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_controller_a5f403bdf4d024f8f1e431dc103b25996}\index{EnemyController@{EnemyController}!target@{target}}
+\index{target@{target}!EnemyController@{EnemyController}}
+\doxysubsubsection{\texorpdfstring{target}{target}}
+{\footnotesize\ttfamily \label{class_enemy_controller_a5f403bdf4d024f8f1e431dc103b25996} 
+Game\+Object Enemy\+Controller.\+target\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Scripts/\+\+Enemies/\+\doxymbox{\hyperlink{_enemy_controller_8cs}{Enemy\+Controller.\+cs}}\end{DoxyCompactItemize}

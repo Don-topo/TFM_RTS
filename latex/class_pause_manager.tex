@@ -2,8 +2,7 @@
 \hypertarget{class_pause_manager}{}\label{class_pause_manager}\index{PauseManager@{PauseManager}}
 
 
-Inheritance diagram for Pause\+Manager:\+
-\nopagebreak
+Inheritance diagram for Pause\+Manager:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for Pause\+Manager:\+
 \end{figure}
 
 
-Collaboration diagram for Pause\+Manager:\+
-\nopagebreak
+Collaboration diagram for Pause\+Manager:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,6 +24,8 @@ Collaboration diagram for Pause\+Manager:\+
 static void \doxymbox{\hyperlink{class_pause_manager_a6e1e20b17a4bdaf0cc89c81e22242c0f}{Pause}} ()
 \item 
 static void \doxymbox{\hyperlink{class_pause_manager_abc5732c06236b9bfdcf4e7d2b2ff24d6}{Resume}} ()
+\item 
+static void \doxymbox{\hyperlink{class_pause_manager_a7595cba26e80c0437ce5b4de04e3c193}{Resume\+Time}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
@@ -35,18 +35,29 @@ static bool \doxymbox{\hyperlink{class_pause_manager_a9b66eae84bc613c48cfa13fd80
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \doxymbox{\hyperlink{class_pause_manager_a9a225204222baf47aae7ca94feedad7e}{Update}} ()
+void \doxymbox{\hyperlink{class_pause_manager_a655b826847bdc4c8721d35aa47a4c880}{Awake}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \doxymbox{\hyperlink{class_pause_manager_a5ab46f9e7bd0124fb6feb7b42b6898a5}{pause\+Menu}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-static Game\+Object \doxymbox{\hyperlink{class_pause_manager_a5ab46f9e7bd0124fb6feb7b42b6898a5}{pause\+Menu}}
+static Game\+Object \doxymbox{\hyperlink{class_pause_manager_a0a8f3080b0d0b3e5c9d6507185c974ee}{pause\+Menu\+Prefab}}
 \end{DoxyCompactItemize}
 
 
 \label{doc-func-members}
 \Hypertarget{class_pause_manager_doc-func-members}
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_pause_manager_a655b826847bdc4c8721d35aa47a4c880}\index{PauseManager@{PauseManager}!Awake@{Awake}}
+\index{Awake@{Awake}!PauseManager@{PauseManager}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_pause_manager_a655b826847bdc4c8721d35aa47a4c880} 
+void Pause\+Manager.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
 \Hypertarget{class_pause_manager_a6e1e20b17a4bdaf0cc89c81e22242c0f}\index{PauseManager@{PauseManager}!Pause@{Pause}}
 \index{Pause@{Pause}!PauseManager@{PauseManager}}
 \doxysubsubsection{\texorpdfstring{Pause()}{Pause()}}
@@ -59,11 +70,11 @@ void Pause\+Manager.\+Pause (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})
 {\footnotesize\ttfamily \label{class_pause_manager_abc5732c06236b9bfdcf4e7d2b2ff24d6} 
 void Pause\+Manager.\+Resume (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
-\Hypertarget{class_pause_manager_a9a225204222baf47aae7ca94feedad7e}\index{PauseManager@{PauseManager}!Update@{Update}}
-\index{Update@{Update}!PauseManager@{PauseManager}}
-\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
-{\footnotesize\ttfamily \label{class_pause_manager_a9a225204222baf47aae7ca94feedad7e} 
-void Pause\+Manager.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+\Hypertarget{class_pause_manager_a7595cba26e80c0437ce5b4de04e3c193}\index{PauseManager@{PauseManager}!ResumeTime@{ResumeTime}}
+\index{ResumeTime@{ResumeTime}!PauseManager@{PauseManager}}
+\doxysubsubsection{\texorpdfstring{ResumeTime()}{ResumeTime()}}
+{\footnotesize\ttfamily \label{class_pause_manager_a7595cba26e80c0437ce5b4de04e3c193} 
+void Pause\+Manager.\+Resume\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
 
@@ -74,7 +85,13 @@ void Pause\+Manager.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}
 \index{pauseMenu@{pauseMenu}!PauseManager@{PauseManager}}
 \doxysubsubsection{\texorpdfstring{pauseMenu}{pauseMenu}}
 {\footnotesize\ttfamily \label{class_pause_manager_a5ab46f9e7bd0124fb6feb7b42b6898a5} 
-Game\+Object Pause\+Manager.\+pause\+Menu\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+Game\+Object Pause\+Manager.\+pause\+Menu\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_pause_manager_a0a8f3080b0d0b3e5c9d6507185c974ee}\index{PauseManager@{PauseManager}!pauseMenuPrefab@{pauseMenuPrefab}}
+\index{pauseMenuPrefab@{pauseMenuPrefab}!PauseManager@{PauseManager}}
+\doxysubsubsection{\texorpdfstring{pauseMenuPrefab}{pauseMenuPrefab}}
+{\footnotesize\ttfamily \label{class_pause_manager_a0a8f3080b0d0b3e5c9d6507185c974ee} 
+Game\+Object Pause\+Manager.\+pause\+Menu\+Prefab\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 

@@ -42,7 +42,7 @@ void \doxymbox{\hyperlink{class_common_actions_a31efbfded7bac0694367df1e807b5f26
 \item 
 void \doxymbox{\hyperlink{class_common_actions_a9aeadc1e41e81f959cebe4b3f83f55f4}{Apply\+Damage}} (int damage\+Amount)
 \item 
-void \doxymbox{\hyperlink{class_common_actions_a4679ef5476cba71a56901c3909c2e921}{Die}} ()
+virtual void \doxymbox{\hyperlink{class_common_actions_a8e7f24683c4995eadb235cb40cfcec13}{Die}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -66,6 +66,8 @@ List$<$ Audio\+Clip $>$ \doxymbox{\hyperlink{class_base_unit_a82a32db994d4a69b8d
 Behavior\+Graph\+Agent \doxymbox{\hyperlink{class_base_unit_a7f7deeabec2f78becadbfc914580754f}{behavior\+Graph\+Agent}}
 \item 
 Nav\+Mesh\+Agent \doxymbox{\hyperlink{class_base_unit_afe76c53d054177ca3a6f15aef9337a27}{nav\+Mesh\+Agent}}
+\item 
+Vector3? \doxymbox{\hyperlink{class_base_unit_aedd960a1a9c2f86d226efd0c66655ce4}{move\+Position}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
 \begin{DoxyCompactItemize}
@@ -184,6 +186,10 @@ override void Base\+Unit.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyPar
 
 Reimplemented from \doxymbox{\hyperlink{class_common_actions_afa3327aad40e00b114f4af1eb32fec58}{Common\+Actions}}.
 
+
+
+Reimplemented in \doxymbox{\hyperlink{class_enemy_controller_a4520f46ce3c50343d9c158fd9d5febaa}{Enemy\+Controller}}.
+
 \Hypertarget{class_base_unit_a02739647620613549c734535f75b71f1}\index{BaseUnit@{BaseUnit}!PlayMoveAudio@{PlayMoveAudio}}
 \index{PlayMoveAudio@{PlayMoveAudio}!BaseUnit@{BaseUnit}}
 \doxysubsubsection{\texorpdfstring{PlayMoveAudio()}{PlayMoveAudio()}}
@@ -216,6 +222,12 @@ Behavior\+Graph\+Agent Base\+Unit.\+behavior\+Graph\+Agent\hspace{0.3cm}{\ttfami
 \doxysubsubsection{\texorpdfstring{moveAudioClips}{moveAudioClips}}
 {\footnotesize\ttfamily \label{class_base_unit_a82a32db994d4a69b8db8212d8273ac40} 
 List$<$Audio\+Clip$>$ Base\+Unit.\+move\+Audio\+Clips\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_base_unit_aedd960a1a9c2f86d226efd0c66655ce4}\index{BaseUnit@{BaseUnit}!movePosition@{movePosition}}
+\index{movePosition@{movePosition}!BaseUnit@{BaseUnit}}
+\doxysubsubsection{\texorpdfstring{movePosition}{movePosition}}
+{\footnotesize\ttfamily \label{class_base_unit_aedd960a1a9c2f86d226efd0c66655ce4} 
+Vector3? Base\+Unit.\+move\+Position\hspace{0.3cm}{\ttfamily [protected]}}
 
 \Hypertarget{class_base_unit_afe76c53d054177ca3a6f15aef9337a27}\index{BaseUnit@{BaseUnit}!navMeshAgent@{navMeshAgent}}
 \index{navMeshAgent@{navMeshAgent}!BaseUnit@{BaseUnit}}

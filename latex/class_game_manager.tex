@@ -2,12 +2,11 @@
 \hypertarget{class_game_manager}{}\label{class_game_manager}\index{GameManager@{GameManager}}
 
 
-Inheritance diagram for Game\+Manager:\+
-\nopagebreak
+Inheritance diagram for Game\+Manager:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=241pt]{class_game_manager__inherit__graph}
+\includegraphics[width=230pt]{class_game_manager__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -29,30 +28,52 @@ void \doxymbox{\hyperlink{class_game_manager_a246f3c0e365f4eff658e779f4336a4fa}{
 \item 
 void \doxymbox{\hyperlink{class_game_manager_aafd31c8dff1a85c6ebcb0d66ec4ba8ae}{Load\+Data}} ()
 \item 
-IEnumerator \doxymbox{\hyperlink{class_game_manager_a23d157efddaab22d48890fe4a698d2ce}{Spawn}} ()
-\item 
 void \doxymbox{\hyperlink{class_game_manager_a7849a875b0ff055ea15df769a977624e}{Manage\+Building\+Destroyed}} (\doxymbox{\hyperlink{class_base_building}{Base\+Building}} building)
 \item 
 void \doxymbox{\hyperlink{class_game_manager_a76a27f36d082e328bd1c7748d8832816}{Win}} ()
+\item 
+void \doxymbox{\hyperlink{class_game_manager_a9551bfe6e90fce9d34c3038036e292a1}{Wave\+Finished}} (Null @null)
+\item 
+void \doxymbox{\hyperlink{class_game_manager_aae9435b0f541fc0264fcfb5c411ffca3}{Set\+Waves\+Text}} ()
+\item 
+IEnumerator \doxymbox{\hyperlink{class_game_manager_a704e73bd2e87bfee50a8c617d52c8c9e}{Fill\+Watch}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\doxymbox{\hyperlink{class_enemy_spawner}{Enemy\+Spawner}} \doxymbox{\hyperlink{class_game_manager_a4e9c0d93b448041e08bc6466e34148a0}{enemy\+Spawner}}
+\doxymbox{\hyperlink{class_u_i_progressbar}{UIProgressbar}} \doxymbox{\hyperlink{class_game_manager_a3f6059b74d38ee802d5d0144e8b25e5c}{progressbar}}
+\item 
+Text\+Mesh\+Pro\+UGUI \doxymbox{\hyperlink{class_game_manager_ae76dc24ba350f3d5a7fe83277b4bfc02}{remaining\+Days\+Text}}
 \item 
 \doxymbox{\hyperlink{class_day_manager}{Day\+Manager}} \doxymbox{\hyperlink{class_game_manager_a23de2d4989571ed0d731480f6f1bfd42}{day\+Manager}}
 \item 
-float \doxymbox{\hyperlink{class_game_manager_a9f7b5cfa9af83187954310c2c871d235}{dificulty\+Modifier}}
-\item 
-int \doxymbox{\hyperlink{class_game_manager_acd1cfc15996482ab72a8f9a26b800ff7}{total\+Days}} = 25
-\item 
 float \doxymbox{\hyperlink{class_game_manager_aa8a374b7ceb6d34ccaafbce0c35220b2}{time\+Between\+Waves}} = 320f
+\item 
+float \doxymbox{\hyperlink{class_game_manager_a1c5ea66d4cc34538b8d0a5a290783954}{time\+Between\+Days}}
+\item 
+int \doxymbox{\hyperlink{class_game_manager_a80b5f58a9ec17f7d9febbe98e2a00e4a}{easy\+Total\+Waves}} = 25
+\item 
+int \doxymbox{\hyperlink{class_game_manager_a865191fa148a9a9a6614f871511dfb58}{medium\+Total\+Waves}} = 25
+\item 
+int \doxymbox{\hyperlink{class_game_manager_a75d67032f6e8fc3b31effae2888a7b9c}{hard\+Total\+Waves}} = 25
 \item 
 \doxymbox{\hyperlink{class_building_destroyed_event}{Building\+Destroyed\+Event}} \doxymbox{\hyperlink{class_game_manager_ae5be5202c5d974844255bec2fdc8a191}{build\+Destroyed\+Event}}
 \item 
 \doxymbox{\hyperlink{class_victory_event}{Victory\+Event}} \doxymbox{\hyperlink{class_game_manager_a85e5091a25f3af3489c252bb728446e6}{victory\+Event}}
 \item 
 \doxymbox{\hyperlink{class_game_over_event}{Game\+Over\+Event}} \doxymbox{\hyperlink{class_game_manager_a0400d66a9ee14b4c599de923c4d0fada}{game\+Over\+Event}}
+\item 
+\doxymbox{\hyperlink{class_finish_wave_event}{Finish\+Wave\+Event}} \doxymbox{\hyperlink{class_game_manager_a6c8633e843962f44bac8af180d45d6b5}{finish\+Wave\+Event}}
+\item 
+\doxymbox{\hyperlink{class_start_wave_event}{Start\+Wave\+Event}} \doxymbox{\hyperlink{class_game_manager_a4c60139d0507228a634d9d083e365e6b}{start\+Wave\+Event}}
+\item 
+\doxymbox{\hyperlink{_dificulty_mode_8cs_ad872f53881ec26b805201ed897c2e4a2}{Dificulty\+Mode}} \doxymbox{\hyperlink{class_game_manager_acb609632402891f83a38bd5006f3d1e0}{difficulty\+Modifier}}
+\item 
+int \doxymbox{\hyperlink{class_game_manager_a4f59b2ba558ed4f44d5c67a98c49b7e2}{current\+Wave}}
+\item 
+float \doxymbox{\hyperlink{class_game_manager_ad543a5b95f1e21169bf6abf183acfb59}{start\+Time}}
+\item 
+int \doxymbox{\hyperlink{class_game_manager_a4aa60defed17a708f4ad4e4cf086178a}{total\+Waves}} = 25
 \end{DoxyCompactItemize}
 
 
@@ -64,6 +85,12 @@ float \doxymbox{\hyperlink{class_game_manager_aa8a374b7ceb6d34ccaafbce0c35220b2}
 \doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
 {\footnotesize\ttfamily \label{class_game_manager_a2959177ee51ac31badbf8b1bc8f7f637} 
 void Game\+Manager.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_game_manager_a704e73bd2e87bfee50a8c617d52c8c9e}\index{GameManager@{GameManager}!FillWatch@{FillWatch}}
+\index{FillWatch@{FillWatch}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{FillWatch()}{FillWatch()}}
+{\footnotesize\ttfamily \label{class_game_manager_a704e73bd2e87bfee50a8c617d52c8c9e} 
+IEnumerator Game\+Manager.\+Fill\+Watch (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
 \Hypertarget{class_game_manager_aafd31c8dff1a85c6ebcb0d66ec4ba8ae}\index{GameManager@{GameManager}!LoadData@{LoadData}}
 \index{LoadData@{LoadData}!GameManager@{GameManager}}
@@ -83,11 +110,17 @@ void Game\+Manager.\+Manage\+Building\+Destroyed (\begin{DoxyParamCaption}\item[
 {\footnotesize\ttfamily \label{class_game_manager_a246f3c0e365f4eff658e779f4336a4fa} 
 void Game\+Manager.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
-\Hypertarget{class_game_manager_a23d157efddaab22d48890fe4a698d2ce}\index{GameManager@{GameManager}!Spawn@{Spawn}}
-\index{Spawn@{Spawn}!GameManager@{GameManager}}
-\doxysubsubsection{\texorpdfstring{Spawn()}{Spawn()}}
-{\footnotesize\ttfamily \label{class_game_manager_a23d157efddaab22d48890fe4a698d2ce} 
-IEnumerator Game\+Manager.\+Spawn (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+\Hypertarget{class_game_manager_aae9435b0f541fc0264fcfb5c411ffca3}\index{GameManager@{GameManager}!SetWavesText@{SetWavesText}}
+\index{SetWavesText@{SetWavesText}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{SetWavesText()}{SetWavesText()}}
+{\footnotesize\ttfamily \label{class_game_manager_aae9435b0f541fc0264fcfb5c411ffca3} 
+void Game\+Manager.\+Set\+Waves\+Text (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_game_manager_a9551bfe6e90fce9d34c3038036e292a1}\index{GameManager@{GameManager}!WaveFinished@{WaveFinished}}
+\index{WaveFinished@{WaveFinished}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{WaveFinished()}{WaveFinished()}}
+{\footnotesize\ttfamily \label{class_game_manager_a9551bfe6e90fce9d34c3038036e292a1} 
+void Game\+Manager.\+Wave\+Finished (\begin{DoxyParamCaption}\item[{Null @}]{null}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
 \Hypertarget{class_game_manager_a76a27f36d082e328bd1c7748d8832816}\index{GameManager@{GameManager}!Win@{Win}}
 \index{Win@{Win}!GameManager@{GameManager}}
@@ -106,23 +139,35 @@ void Game\+Manager.\+Win (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hs
 {\footnotesize\ttfamily \label{class_game_manager_ae5be5202c5d974844255bec2fdc8a191} 
 \doxymbox{\hyperlink{class_building_destroyed_event}{Building\+Destroyed\+Event}} Game\+Manager.\+build\+Destroyed\+Event\hspace{0.3cm}{\ttfamily [private]}}
 
+\Hypertarget{class_game_manager_a4f59b2ba558ed4f44d5c67a98c49b7e2}\index{GameManager@{GameManager}!currentWave@{currentWave}}
+\index{currentWave@{currentWave}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{currentWave}{currentWave}}
+{\footnotesize\ttfamily \label{class_game_manager_a4f59b2ba558ed4f44d5c67a98c49b7e2} 
+int Game\+Manager.\+current\+Wave\hspace{0.3cm}{\ttfamily [private]}}
+
 \Hypertarget{class_game_manager_a23de2d4989571ed0d731480f6f1bfd42}\index{GameManager@{GameManager}!dayManager@{dayManager}}
 \index{dayManager@{dayManager}!GameManager@{GameManager}}
 \doxysubsubsection{\texorpdfstring{dayManager}{dayManager}}
 {\footnotesize\ttfamily \label{class_game_manager_a23de2d4989571ed0d731480f6f1bfd42} 
 \doxymbox{\hyperlink{class_day_manager}{Day\+Manager}} Game\+Manager.\+day\+Manager\hspace{0.3cm}{\ttfamily [private]}}
 
-\Hypertarget{class_game_manager_a9f7b5cfa9af83187954310c2c871d235}\index{GameManager@{GameManager}!dificultyModifier@{dificultyModifier}}
-\index{dificultyModifier@{dificultyModifier}!GameManager@{GameManager}}
-\doxysubsubsection{\texorpdfstring{dificultyModifier}{dificultyModifier}}
-{\footnotesize\ttfamily \label{class_game_manager_a9f7b5cfa9af83187954310c2c871d235} 
-float Game\+Manager.\+dificulty\+Modifier\hspace{0.3cm}{\ttfamily [private]}}
+\Hypertarget{class_game_manager_acb609632402891f83a38bd5006f3d1e0}\index{GameManager@{GameManager}!difficultyModifier@{difficultyModifier}}
+\index{difficultyModifier@{difficultyModifier}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{difficultyModifier}{difficultyModifier}}
+{\footnotesize\ttfamily \label{class_game_manager_acb609632402891f83a38bd5006f3d1e0} 
+\doxymbox{\hyperlink{_dificulty_mode_8cs_ad872f53881ec26b805201ed897c2e4a2}{Dificulty\+Mode}} Game\+Manager.\+difficulty\+Modifier\hspace{0.3cm}{\ttfamily [private]}}
 
-\Hypertarget{class_game_manager_a4e9c0d93b448041e08bc6466e34148a0}\index{GameManager@{GameManager}!enemySpawner@{enemySpawner}}
-\index{enemySpawner@{enemySpawner}!GameManager@{GameManager}}
-\doxysubsubsection{\texorpdfstring{enemySpawner}{enemySpawner}}
-{\footnotesize\ttfamily \label{class_game_manager_a4e9c0d93b448041e08bc6466e34148a0} 
-\doxymbox{\hyperlink{class_enemy_spawner}{Enemy\+Spawner}} Game\+Manager.\+enemy\+Spawner\hspace{0.3cm}{\ttfamily [private]}}
+\Hypertarget{class_game_manager_a80b5f58a9ec17f7d9febbe98e2a00e4a}\index{GameManager@{GameManager}!easyTotalWaves@{easyTotalWaves}}
+\index{easyTotalWaves@{easyTotalWaves}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{easyTotalWaves}{easyTotalWaves}}
+{\footnotesize\ttfamily \label{class_game_manager_a80b5f58a9ec17f7d9febbe98e2a00e4a} 
+int Game\+Manager.\+easy\+Total\+Waves = 25\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_game_manager_a6c8633e843962f44bac8af180d45d6b5}\index{GameManager@{GameManager}!finishWaveEvent@{finishWaveEvent}}
+\index{finishWaveEvent@{finishWaveEvent}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{finishWaveEvent}{finishWaveEvent}}
+{\footnotesize\ttfamily \label{class_game_manager_a6c8633e843962f44bac8af180d45d6b5} 
+\doxymbox{\hyperlink{class_finish_wave_event}{Finish\+Wave\+Event}} Game\+Manager.\+finish\+Wave\+Event\hspace{0.3cm}{\ttfamily [private]}}
 
 \Hypertarget{class_game_manager_a0400d66a9ee14b4c599de923c4d0fada}\index{GameManager@{GameManager}!gameOverEvent@{gameOverEvent}}
 \index{gameOverEvent@{gameOverEvent}!GameManager@{GameManager}}
@@ -130,17 +175,59 @@ float Game\+Manager.\+dificulty\+Modifier\hspace{0.3cm}{\ttfamily [private]}}
 {\footnotesize\ttfamily \label{class_game_manager_a0400d66a9ee14b4c599de923c4d0fada} 
 \doxymbox{\hyperlink{class_game_over_event}{Game\+Over\+Event}} Game\+Manager.\+game\+Over\+Event\hspace{0.3cm}{\ttfamily [private]}}
 
+\Hypertarget{class_game_manager_a75d67032f6e8fc3b31effae2888a7b9c}\index{GameManager@{GameManager}!hardTotalWaves@{hardTotalWaves}}
+\index{hardTotalWaves@{hardTotalWaves}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{hardTotalWaves}{hardTotalWaves}}
+{\footnotesize\ttfamily \label{class_game_manager_a75d67032f6e8fc3b31effae2888a7b9c} 
+int Game\+Manager.\+hard\+Total\+Waves = 25\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_game_manager_a865191fa148a9a9a6614f871511dfb58}\index{GameManager@{GameManager}!mediumTotalWaves@{mediumTotalWaves}}
+\index{mediumTotalWaves@{mediumTotalWaves}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{mediumTotalWaves}{mediumTotalWaves}}
+{\footnotesize\ttfamily \label{class_game_manager_a865191fa148a9a9a6614f871511dfb58} 
+int Game\+Manager.\+medium\+Total\+Waves = 25\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_game_manager_a3f6059b74d38ee802d5d0144e8b25e5c}\index{GameManager@{GameManager}!progressbar@{progressbar}}
+\index{progressbar@{progressbar}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{progressbar}{progressbar}}
+{\footnotesize\ttfamily \label{class_game_manager_a3f6059b74d38ee802d5d0144e8b25e5c} 
+\doxymbox{\hyperlink{class_u_i_progressbar}{UIProgressbar}} Game\+Manager.\+progressbar\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_game_manager_ae76dc24ba350f3d5a7fe83277b4bfc02}\index{GameManager@{GameManager}!remainingDaysText@{remainingDaysText}}
+\index{remainingDaysText@{remainingDaysText}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{remainingDaysText}{remainingDaysText}}
+{\footnotesize\ttfamily \label{class_game_manager_ae76dc24ba350f3d5a7fe83277b4bfc02} 
+Text\+Mesh\+Pro\+UGUI Game\+Manager.\+remaining\+Days\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_game_manager_ad543a5b95f1e21169bf6abf183acfb59}\index{GameManager@{GameManager}!startTime@{startTime}}
+\index{startTime@{startTime}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{startTime}{startTime}}
+{\footnotesize\ttfamily \label{class_game_manager_ad543a5b95f1e21169bf6abf183acfb59} 
+float Game\+Manager.\+start\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_game_manager_a4c60139d0507228a634d9d083e365e6b}\index{GameManager@{GameManager}!startWaveEvent@{startWaveEvent}}
+\index{startWaveEvent@{startWaveEvent}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{startWaveEvent}{startWaveEvent}}
+{\footnotesize\ttfamily \label{class_game_manager_a4c60139d0507228a634d9d083e365e6b} 
+\doxymbox{\hyperlink{class_start_wave_event}{Start\+Wave\+Event}} Game\+Manager.\+start\+Wave\+Event\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_game_manager_a1c5ea66d4cc34538b8d0a5a290783954}\index{GameManager@{GameManager}!timeBetweenDays@{timeBetweenDays}}
+\index{timeBetweenDays@{timeBetweenDays}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{timeBetweenDays}{timeBetweenDays}}
+{\footnotesize\ttfamily \label{class_game_manager_a1c5ea66d4cc34538b8d0a5a290783954} 
+float Game\+Manager.\+time\+Between\+Days\hspace{0.3cm}{\ttfamily [private]}}
+
 \Hypertarget{class_game_manager_aa8a374b7ceb6d34ccaafbce0c35220b2}\index{GameManager@{GameManager}!timeBetweenWaves@{timeBetweenWaves}}
 \index{timeBetweenWaves@{timeBetweenWaves}!GameManager@{GameManager}}
 \doxysubsubsection{\texorpdfstring{timeBetweenWaves}{timeBetweenWaves}}
 {\footnotesize\ttfamily \label{class_game_manager_aa8a374b7ceb6d34ccaafbce0c35220b2} 
 float Game\+Manager.\+time\+Between\+Waves = 320f\hspace{0.3cm}{\ttfamily [private]}}
 
-\Hypertarget{class_game_manager_acd1cfc15996482ab72a8f9a26b800ff7}\index{GameManager@{GameManager}!totalDays@{totalDays}}
-\index{totalDays@{totalDays}!GameManager@{GameManager}}
-\doxysubsubsection{\texorpdfstring{totalDays}{totalDays}}
-{\footnotesize\ttfamily \label{class_game_manager_acd1cfc15996482ab72a8f9a26b800ff7} 
-int Game\+Manager.\+total\+Days = 25\hspace{0.3cm}{\ttfamily [private]}}
+\Hypertarget{class_game_manager_a4aa60defed17a708f4ad4e4cf086178a}\index{GameManager@{GameManager}!totalWaves@{totalWaves}}
+\index{totalWaves@{totalWaves}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{totalWaves}{totalWaves}}
+{\footnotesize\ttfamily \label{class_game_manager_a4aa60defed17a708f4ad4e4cf086178a} 
+int Game\+Manager.\+total\+Waves = 25\hspace{0.3cm}{\ttfamily [private]}}
 
 \Hypertarget{class_game_manager_a85e5091a25f3af3489c252bb728446e6}\index{GameManager@{GameManager}!victoryEvent@{victoryEvent}}
 \index{victoryEvent@{victoryEvent}!GameManager@{GameManager}}
