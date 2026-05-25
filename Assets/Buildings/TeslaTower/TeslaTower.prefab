@@ -531,6 +531,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AllyMinimap
       objectReference: {fileID: 0}
+    - target: {fileID: 7081553782613979908, guid: 82cefb9ba5cac464fa89b0923f328546, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8899357448280862195, guid: 82cefb9ba5cac464fa89b0923f328546, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
