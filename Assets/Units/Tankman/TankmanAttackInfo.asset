@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: TankmanAttackInfo
   m_EditorClassIdentifier: Assembly-CSharp::SO_AttackInfo
   <AttackDamage>k__BackingField: 20
-  <AttackRange>k__BackingField: 2
-  <AttackSpeed>k__BackingField: 1
+  <AttackRange>k__BackingField: 5
+  <AttackSpeed>k__BackingField: 0.5
   AttackAudioClips:
   - {fileID: 8300000, guid: 0f86a144cc2f40148be50ef805927d1a, type: 3}
   - {fileID: 8300000, guid: 75832a2543e5814499198468e2853410, type: 3}
