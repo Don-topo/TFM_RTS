@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     [Header("Required Components")]
     [SerializeField] private UIProgressbar progressbar;
     [SerializeField] private TextMeshProUGUI remainingDaysText;
+    [SerializeField] private GameObject snowGameObject;
+    [SerializeField] private GameObject blizzardGameObject;
     [Header("Managers")]
     [SerializeField] private DayManager dayManager;
 
@@ -107,6 +109,8 @@ public class GameManager : MonoBehaviour
             return;
         }
         startTime = Time.time;
+        blizzardGameObject.SetActive(false);
+        snowGameObject.SetActive(true);
         SetWavesText();
         StartCoroutine(nameof(FillWatch));
     }
@@ -141,6 +145,8 @@ public class GameManager : MonoBehaviour
             progressbar.SetColor(currentColor);
         }
         // Start Wave
+        snowGameObject.SetActive(false);
+        blizzardGameObject.SetActive(true);
         startWaveEvent.Raise(currentWave);
     }
 }
