@@ -1,5 +1,11 @@
 Patches relases:
 
+v.0.38 => 25/05/2026:
+  - Add Blizzard effect.
+  - Fix machine gun turret and flamethrower turret "turrets".
+  - Add sound and effects to unit and enemies attacks.
+  - Start working on fog of war.
+    
 v.0.37 => 24/05/2026:
   - Add Game loop.
   - Add Wave UI counter.
