@@ -3134,6 +3134,7 @@ MonoBehaviour:
   <OkPlaceMaterial>k__BackingField: {fileID: 2100000, guid: c9a82397c89109f48b0720745728b270, type: 2}
   <KoPlaceMaterial>k__BackingField: {fileID: 2100000, guid: 8ef1b8ea055164640a6723f241caed57, type: 2}
   invalidAction: {fileID: 8300000, guid: f69d7901f99036f429797b3945e181e7, type: 3}
+  defaultCursor: {fileID: 2800000, guid: ffa40b92e566c674a9fcb498bce437f0, type: 3}
   moveIndicator: {fileID: 677793086761249318, guid: 93785f4a735864d47abb495aaf3d42be, type: 3}
   edgeSize: 10
   playerUnits: []

@@ -18,3 +18,6 @@ MonoBehaviour:
   <UIPosition>k__BackingField: 2
   <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 1
+  <ExecuteAudio>k__BackingField: []
+  <Restrictions>k__BackingField: []
+  <CursorIcon>k__BackingField: {fileID: 2800000, guid: 6e9a3cb41aed05448ba23efee6bd8f05, type: 3}

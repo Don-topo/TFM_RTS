@@ -13,6 +13,7 @@ public abstract class BaseAction : ScriptableObject, IAction
     [field: SerializeField] public bool UseClickToExecute { get; private set; }
     [field: SerializeField] public List<AudioClip> ExecuteAudio {  get; private set; }
     [field: SerializeField] public Restriction[] Restrictions { get; private set; }
+    [field: SerializeField] public Texture2D CursorIcon { get; private set; }
 
     public abstract bool CanExecute(ActionInfo actionInfo);
     public abstract bool Blocked(ActionInfo actionInfo);

@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour
     [field: SerializeField] public Material KoPlaceMaterial { get; private set; }
     [Header("Audio")]
     [SerializeField] private AudioClip invalidAction;
+    [Header("Cursor")]
+    [SerializeField] private Texture2D defaultCursor;
 
     [SerializeField] private GameObject moveIndicator;
 
@@ -336,6 +338,10 @@ public class PlayerController : MonoBehaviour
     private void ActionClicked(BaseAction actionClicked)
     {
         selectedAction = actionClicked;
+        if(selectedAction.CursorIcon != null)
+        {
+            Cursor.SetCursor(selectedAction.CursorIcon, Vector2.zero, CursorMode.Auto);
+        }
         if (!selectedAction.UseClickToExecute)
         {
             ExecuteAction(new RaycastHit());
@@ -404,7 +410,8 @@ public class PlayerController : MonoBehaviour
         {
             PlaySound(new List<AudioClip> { invalidAction });
         }
-        
+
+        Cursor.SetCursor(defaultCursor, Vector2.zero, CursorMode.Auto);
         actionExecuted.Raise(selectedAction);
 
         selectedAction = null;
