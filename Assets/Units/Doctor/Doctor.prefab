@@ -445,6 +445,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9278922036e9f934eb47681f5676103f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 350921365519008193}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9278922036e9f934eb47681f5676103f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5537535328010530706}
   m_SourcePrefab: {fileID: 100100000, guid: 9278922036e9f934eb47681f5676103f, type: 3}
 --- !u!4 &500800537440101444 stripped
 Transform:
@@ -478,6 +481,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5537535328010530706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988790548687060734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1fbb7e0c691c2e4a8046cdb66b13964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Shoot
+  shootParticles: {fileID: 0}
+  audioSource: {fileID: 2164363278572929613}
 --- !u!1001 &6660743541663164036
 PrefabInstance:
   m_ObjectHideFlags: 0

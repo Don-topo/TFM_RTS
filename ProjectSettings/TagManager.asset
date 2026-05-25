@@ -20,9 +20,9 @@ TagManager:
   - Minimap
   - Attack
   - Placement
-  - 
-  - 
-  - 
+  - Fog of War
+  - Fog of War Vision
+  - RenderOverFog
   - 
   - 
   - 

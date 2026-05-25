@@ -15,7 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: Build Door
   <Icon>k__BackingField: {fileID: 21300000, guid: acedf47427d78074aa01b3bdacbea0f7, type: 3}
   <HotKey>k__BackingField: 18
-  <UIPosition>k__BackingField: 0
+  <UIPosition>k__BackingField: 4
   <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 1
   <ExecuteAudio>k__BackingField:

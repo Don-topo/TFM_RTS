@@ -11,4 +11,5 @@ public class SO_BaseUnit : ScriptableObject
     [field: SerializeField] public float GenerationTime { get; private set; } = 8;
     [field: SerializeField] public SO_ResourceCost Cost { get; private set; }
     [field: SerializeField] public List<AudioClip> SelectionAudioClips { get; private set; }    
+    [field: SerializeField] public VisionConfig VisionConf { get; private set; }
 }

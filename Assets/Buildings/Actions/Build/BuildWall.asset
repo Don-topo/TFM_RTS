@@ -15,12 +15,13 @@ MonoBehaviour:
   <Name>k__BackingField: Build Wall
   <Icon>k__BackingField: {fileID: 21300000, guid: 83b95ac280ddd5045b1139cde7bbf7d7, type: 3}
   <HotKey>k__BackingField: 37
-  <UIPosition>k__BackingField: 0
+  <UIPosition>k__BackingField: 3
   <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 1
   <ExecuteAudio>k__BackingField:
   - {fileID: 8300000, guid: d02e8cf5fd09384419575d2a44d84e6c, type: 3}
   <Restrictions>k__BackingField:
   - {fileID: 11400000, guid: 708b1ee18c971164994ba75b14322c18, type: 2}
+  <CursorIcon>k__BackingField: {fileID: 0}
   <BuildingToBuild>k__BackingField: {fileID: 11400000, guid: 506f4a45fb5bff74abbbea559fa4b6b2, type: 2}
   <PlaceBuilding>k__BackingField: {fileID: 6167051766781658125, guid: 8094f5715daa4e84fbd36845b3b5417e, type: 3}

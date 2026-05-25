@@ -20,9 +20,12 @@ MonoBehaviour:
   <UseClickToExecute>k__BackingField: 0
   <ExecuteAudio>k__BackingField: []
   <Restrictions>k__BackingField: []
+  <CursorIcon>k__BackingField: {fileID: 0}
   <Commands>k__BackingField:
   - {fileID: 11400000, guid: b91ee546770c2464db1a42242bcb4e92, type: 2}
   - {fileID: 11400000, guid: 393fc92b9b1234a4e895f9fec83fdf4f, type: 2}
   - {fileID: 11400000, guid: c7939afd66dfcc8498403fa7a1e3a2cc, type: 2}
   - {fileID: 11400000, guid: 30650188b01adef4fa52820db154dc49, type: 2}
+  - {fileID: 11400000, guid: 75709d95e5c394a469d2728abf4cb4a6, type: 2}
+  - {fileID: 11400000, guid: 7e0b7d71860426b40beb74e3c7e5664f, type: 2}
   - {fileID: 11400000, guid: a7a6b925b774df04185eb97de5c95798, type: 2}

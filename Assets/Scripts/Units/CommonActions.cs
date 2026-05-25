@@ -1,8 +1,9 @@
+using System;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using static UnityEngine.UI.GridLayoutGroup;
 
-public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
+public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable, IHideable
 {
     [field: SerializeField] public bool IsSelected { get; protected set; }
 
@@ -15,7 +16,9 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
     [Header("Events")]
     [SerializeField] protected UpdateHealthEvent updateHealthEvent;
     [SerializeField] protected UnitDeathEvent unitDeathEvent;
+    [SerializeField] protected VisibilityEvent visibilityEvent;
 
+    [SerializeField] protected Transform visionTransform;
     public Transform TargetPosition => transform;
 
     // Base Unit Events
@@ -23,11 +26,23 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
     public UnitDeselectEvent unitDeselectEvent;
     private BaseAction[] startingActions;
     public bool isDead { get; protected set; } = false;
+
+    public Transform Transform => throw new System.NotImplementedException();
+
+    [field: SerializeField] public bool IsVisible { get; private set; } = true;
+
     private Collider col;
     private Rigidbody rb;
+    private Renderer[] renderers = Array.Empty<Renderer>();
 
     protected virtual void Start()
     {
+        if (SO_BaseUnit != null && visionTransform != null)
+        {
+            float size = SO_BaseUnit.VisionConf.VisionRange * 2;
+            visionTransform.localScale = new Vector3(size, size, size);
+            visionTransform.gameObject.SetActive(true);
+        }
         startingActions = SO_BaseUnit.UnitPrefab.GetComponent<CommonActions>().Actions;        
     }
 
@@ -36,6 +51,7 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
         startingActions = SO_BaseUnit.UnitPrefab.GetComponent<CommonActions>().Actions;
         col = GetComponent<Collider>();
         rb = GetComponent<Rigidbody>();
+        renderers = GetComponentsInChildren<Renderer>();
     }
 
     protected virtual void Update()
@@ -130,6 +146,39 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable
         {
             AudioManager.SetAudioClips(SO_BaseUnit.SelectionAudioClips);
             AudioManager.PlayAudio();
+        }
+    }
+
+    public void SetVisible(bool isVisible)
+    {
+        if (isVisible == IsVisible) return;
+
+        IsVisible = isVisible;
+        visibilityEvent.Raise(new Vision(this, isVisible));
+        
+        if (IsVisible)
+        {
+            OnGainVisibility();
+        }
+        else
+        {
+            OnLoseVisibility();
+        }
+    }
+
+    protected virtual void OnGainVisibility()
+    {
+        foreach (Renderer renderer in renderers)
+        {
+            renderer.enabled = true;
+        }        
+    }
+
+    protected virtual void OnLoseVisibility()
+    {
+        foreach (Renderer renderer in renderers)
+        {
+            renderer.enabled = false;
         }
     }
 }

@@ -62,11 +62,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Explored_Fog_of_War_Render_Texture:
-        m_Texture: {fileID: 8400000, guid: 5b6398fd5e6122746800ba7410c6308c, type: 2}
+        m_Texture: {fileID: 8400000, guid: b04f593904548a948812c00883d23f2d, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Fog_of_War_Render_Texture:
-        m_Texture: {fileID: 8400000, guid: b04f593904548a948812c00883d23f2d, type: 2}
+        m_Texture: {fileID: 8400000, guid: 5b6398fd5e6122746800ba7410c6308c, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:

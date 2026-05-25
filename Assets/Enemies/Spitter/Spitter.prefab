@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4438592104543162042}
   - component: {fileID: 3783512073418934867}
   - component: {fileID: 3590857302091536945}
+  - component: {fileID: 6836546519368660834}
   m_Layer: 6
   m_Name: Spitter
   m_TagString: Enemy
@@ -186,6 +187,103 @@ MonoBehaviour:
   deathExplotion: {fileID: 0}
   target: {fileID: 0}
   deathEnemy: {fileID: 11400000, guid: 0ce4891f4e178cc48b90497818052367, type: 2}
+--- !u!82 &6836546519368660834
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2221879108527537169}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 3037251842310994449, guid: 6fa1c336ba8340f4f8c8901d3714c549, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 2a940479178eba748a3da17a32d845c2, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 30
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3388819053563870909
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,6 +507,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4396671266920006, guid: 5656e7ea1f1a75d4c895547ec2b824b3, type: 3}
   m_PrefabInstance: {fileID: 951770960907692467}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &1149627026243576745 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198463038704093722, guid: 5656e7ea1f1a75d4c895547ec2b824b3, type: 3}
+  m_PrefabInstance: {fileID: 951770960907692467}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1564701971622533537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -608,7 +711,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 499725e1d154f254a866e1cc67a80193, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7507700133238288324}
   m_SourcePrefab: {fileID: 100100000, guid: 499725e1d154f254a866e1cc67a80193, type: 3}
 --- !u!95 &1299057848735215314 stripped
 Animator:
@@ -620,3 +726,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 499725e1d154f254a866e1cc67a80193, type: 3}
   m_PrefabInstance: {fileID: 4858745812689818435}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5741194810451439122 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 499725e1d154f254a866e1cc67a80193, type: 3}
+  m_PrefabInstance: {fileID: 4858745812689818435}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7507700133238288324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5741194810451439122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1fbb7e0c691c2e4a8046cdb66b13964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Shoot
+  shootParticles: {fileID: 1149627026243576745}
+  audioSource: {fileID: 6836546519368660834}
