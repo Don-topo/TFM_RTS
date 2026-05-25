@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackSystem
   unitInRangeEvent: {fileID: 11400000, guid: a9267367e362866478e1cc864c850a3d, type: 2}
-  unitOutRangeEvent: {fileID: 0}
+  unitOutRangeEvent: {fileID: 11400000, guid: a9267367e362866478e1cc864c850a3d, type: 2}
   unitDeathEvent: {fileID: 11400000, guid: 46b246a8aa2a6484aa30cca95cadc3fa, type: 2}
 --- !u!1 &846720333982450958
 GameObject:
@@ -313,7 +313,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 3037251842310994449, guid: 6fa1c336ba8340f4f8c8901d3714c549, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: af04cf32dc30e5d49ba90ff79f02fc21, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -562,6 +562,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4300533007854612, guid: ad2ab49d0a2a17148bd51c93d977bdbc, type: 3}
   m_PrefabInstance: {fileID: 1855592306020259169}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &1945597131657218107 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198234346748616026, guid: ad2ab49d0a2a17148bd51c93d977bdbc, type: 3}
+  m_PrefabInstance: {fileID: 1855592306020259169}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4892372988819917339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -690,7 +695,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -639763325267172598, guid: b265f401912cdf4488ba9385add60b04, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1192433669825834794}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b265f401912cdf4488ba9385add60b04, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3278597336682256044}
   m_SourcePrefab: {fileID: 100100000, guid: b265f401912cdf4488ba9385add60b04, type: 3}
 --- !u!4 &2204281687577334216 stripped
 Transform:
@@ -702,6 +710,25 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: b265f401912cdf4488ba9385add60b04, type: 3}
   m_PrefabInstance: {fileID: 7604385287922430658}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7298467959891005331 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b265f401912cdf4488ba9385add60b04, type: 3}
+  m_PrefabInstance: {fileID: 7604385287922430658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3278597336682256044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7298467959891005331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1fbb7e0c691c2e4a8046cdb66b13964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Shoot
+  shootParticles: {fileID: 1945597131657218107}
+  audioSource: {fileID: 7103092357651762035}
 --- !u!4 &7927053721801839913 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b265f401912cdf4488ba9385add60b04, type: 3}
