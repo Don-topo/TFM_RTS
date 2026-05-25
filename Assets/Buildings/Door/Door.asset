@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34632c87c82091e40b0f3bf6beb4df67, type: 3}
+  m_Name: Door
+  m_EditorClassIdentifier: Assembly-CSharp::SO_Building
+  <Name>k__BackingField: Door
+  <Icon>k__BackingField: {fileID: 21300000, guid: acedf47427d78074aa01b3bdacbea0f7, type: 3}
+  <UnitPrefab>k__BackingField: {fileID: 243146226994124573, guid: 674b68b7fabda2b45bef86374cbca206, type: 3}
+  <Health>k__BackingField: 100
+  <GenerationTime>k__BackingField: 8
+  <Cost>k__BackingField: {fileID: 11400000, guid: c9eb2be2ca829354da46b299e7a40503, type: 2}
+  <SelectionAudioClips>k__BackingField: []
+  <PrebuildMaterial>k__BackingField: {fileID: 2100000, guid: d83ecade081c9e84b8d9c103e26560ae, type: 2}

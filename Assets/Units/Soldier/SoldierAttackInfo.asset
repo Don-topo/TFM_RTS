@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SoldierAttackInfo
   m_EditorClassIdentifier: Assembly-CSharp::SO_AttackInfo
   <AttackDamage>k__BackingField: 20
-  <AttackRange>k__BackingField: 2
-  <AttackSpeed>k__BackingField: 1
+  <AttackRange>k__BackingField: 15
+  <AttackSpeed>k__BackingField: 2
   AttackAudioClips:
   - {fileID: 8300000, guid: c7dbbf3f15f803240b6e8600619215f7, type: 3}
   - {fileID: 8300000, guid: 35121d89e511a524b93f3a6d834d0467, type: 3}

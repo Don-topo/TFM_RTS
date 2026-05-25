@@ -23,7 +23,6 @@ public partial class AttackTargetBehaviourAction : Action
     private List<Collider> targetColliders;
     private float lastAttack;
     private IAttackable targetAttackable;
-    private AudioSource audioSource;
 
     protected override Status OnStart()
     {
@@ -35,7 +34,6 @@ public partial class AttackTargetBehaviourAction : Action
         animator = Self.Value.GetComponentInChildren<Animator>();
         targetTransform = TargetGameObject.Value.transform;
         targetAttackable = TargetGameObject.Value.GetComponent<IAttackable>();
-        audioSource = Self.Value.GetComponent<AudioSource>();
         lastAttack = Time.time;
 
         if (Self.Value.GetComponent<CommonActions>().isDead && navMeshAgent != null)
@@ -97,18 +95,16 @@ public partial class AttackTargetBehaviourAction : Action
 
     private void LookAtTarget()
     {
-        Vector3 dir = targetTransform.position - selfTransform.position;
-        dir.y = 0f;
+        Quaternion lookRotation = Quaternion.LookRotation(
+                    (targetTransform.position - selfTransform.position).normalized,
+                    Vector3.up
+                );
+        selfTransform.rotation = Quaternion.Euler(
+            selfTransform.root.eulerAngles.x,
+            lookRotation.eulerAngles.y,
+            selfTransform.rotation.eulerAngles.z
+        );
 
-        if (dir != Vector3.zero)
-        {
-            Quaternion targetRot = Quaternion.LookRotation(dir);
-            selfTransform.rotation = Quaternion.Slerp(
-                selfTransform.rotation,
-                targetRot,
-                1.5f * Time.deltaTime
-            );
-        }
     }
 
     private void Attack()
@@ -118,7 +114,6 @@ public partial class AttackTargetBehaviourAction : Action
             animator.SetTrigger("Attack");
         }
         lastAttack = Time.time;
-        if (audioSource != null) audioSource.Play();
         targetAttackable.ApplyDamage(AttackInfo.Value.AttackDamage);       
     }
 }
