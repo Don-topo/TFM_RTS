@@ -1,5 +1,8 @@
 Patches relases:
 
+v.0.39 => 26/05/2026:
+  - Finish fog of war.
+    
 v.0.38 => 25/05/2026:
   - Add Blizzard effect.
   - Fix machine gun turret and flamethrower turret "turrets".
