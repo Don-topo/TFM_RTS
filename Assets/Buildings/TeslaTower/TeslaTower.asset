@@ -23,4 +23,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ef5fe15dca182a84e9b51f0e79cf7b07, type: 3}
   - {fileID: 8300000, guid: a8b96054c4d2b8c46b583636d1fcd98d, type: 3}
   - {fileID: 8300000, guid: ad09b3440119ef945a76acd481273353, type: 3}
+  <VisionConf>k__BackingField: {fileID: 11400000, guid: 1fabcd4d1338df14d8d09f80d0d18ea1, type: 2}
   <PrebuildMaterial>k__BackingField: {fileID: 2100000, guid: d83ecade081c9e84b8d9c103e26560ae, type: 2}

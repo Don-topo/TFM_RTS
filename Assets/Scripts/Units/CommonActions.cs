@@ -27,8 +27,6 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable, I
     private BaseAction[] startingActions;
     public bool isDead { get; protected set; } = false;
 
-    public Transform Transform => throw new System.NotImplementedException();
-
     [field: SerializeField] public bool IsVisible { get; private set; } = true;
 
     private Collider col;
@@ -40,8 +38,8 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable, I
         if (SO_BaseUnit != null && visionTransform != null)
         {
             float size = SO_BaseUnit.VisionConf.VisionRange * 2;
-            visionTransform.localScale = new Vector3(size, size, size);
-            visionTransform.gameObject.SetActive(true);
+            visionTransform.localScale = new Vector3(size, size, size);            
+            visionTransform.gameObject.SetActive(CompareTag("Player"));
         }
         startingActions = SO_BaseUnit.UnitPrefab.GetComponent<CommonActions>().Actions;        
     }

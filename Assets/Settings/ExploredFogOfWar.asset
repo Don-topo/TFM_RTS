@@ -69,5 +69,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KeepFrameFeature
   m_Active: 1
   settings:
-    displayMaterial: {fileID: -876546973899608171, guid: 489314b276d32f346b052cf28780b7de, type: 3}
+    displayMaterial: {fileID: 2100000, guid: 5cf8d3b17ec8211488532ad3b7293fdd, type: 2}
     textureName: 

@@ -35,6 +35,16 @@ public class BaseBuilding : CommonActions, IHealable
         MaxHealth = SO_building.Health;        
     }
 
+    protected override void Awake()
+    {
+        base.Awake();
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+    }
+
     protected override void OnDestroy()
     {
         // TODO FIX don't instantiate things on OnDestroy, is not the right place

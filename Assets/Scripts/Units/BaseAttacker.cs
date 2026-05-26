@@ -26,6 +26,7 @@ public class BaseAttacker : BaseUnit, IAttacker
 
     protected override void Start()
     {
+        base.Start();
         attackSystem.SetAttackRange(AttackInfo.AttackRange);
     }
 

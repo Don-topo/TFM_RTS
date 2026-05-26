@@ -10,6 +10,11 @@ public class EnemyController : BaseAttacker
     [Header("Enemy Events")]
     [SerializeField] DeathEnemy deathEnemy;
 
+    protected override void Awake()
+    {
+        base.Awake();
+    }
+
     protected override void Start()
     {
         base.Start();

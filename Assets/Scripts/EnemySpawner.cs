@@ -23,6 +23,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private StartWaveEvent startWaveEvent;
     [SerializeField] private FinishWaveEvent finishWaveEvent;
     [SerializeField] private DeathEnemy deathEnemyEvent;
+    [SerializeField] private UnitRecruitedEvent unitRecruitedEvent;
 
     private int currentWave;
     private Transform selectedSpawnPosition;
@@ -127,7 +128,8 @@ public class EnemySpawner : MonoBehaviour
     private void SpawnEnemy()
     {
         EnemyType enemyTypeToSpawn = GetEnemyTypeRandomly();
-        Instantiate(GetEnemyPrefab(enemyTypeToSpawn), selectedSpawnPosition.position, Quaternion.identity);
+        GameObject enemy = Instantiate(GetEnemyPrefab(enemyTypeToSpawn), selectedSpawnPosition.position, Quaternion.identity);
+        unitRecruitedEvent.Raise(enemy.GetComponent<BaseUnit>());
     }
 
     private IEnumerator SpawnEnemiesCoroutines()

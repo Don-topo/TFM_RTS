@@ -9,6 +9,7 @@ public class AttackSystem : MonoBehaviour
     [SerializeField] private EnemyInRangeEvent unitInRangeEvent;
     [SerializeField] private EnemyInRangeEvent unitOutRangeEvent;
     [SerializeField] private UnitDeathEvent unitDeathEvent;
+    [SerializeField] private VisibilityEvent unitVisibilityEvent;
     
     private List<IAttackable> enemiesInRange = new List<IAttackable>();
     private List<IAttackable> enemiesVisible = new List<IAttackable>();
@@ -25,19 +26,34 @@ public class AttackSystem : MonoBehaviour
 
     private void OnDestroy()
     {
+        foreach(IAttackable enemy in enemiesInRange)
+        {
+            unitVisibilityEvent.Unregister(HandleVisivilityChange);
+        }
         unitDeathEvent.Unregister(UnitDeath);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         // Get only if the object is an enemy and can take damage
-        //if(other.TryGetComponent(out IAttackable enemy) && !other.CompareTag(tag)) //other.CompareTag("Enemy")) //!other.CompareTag(tag))
-        if(other.TryGetComponent(out IAttackable enemy) && !other.CompareTag(tag) && !other.CompareTag("Mine"))
+        if(other.TryGetComponent(out IAttackable enemy) && !other.CompareTag(transform.parent.tag))
         {
             enemiesInRange.Add(enemy);
-            // TODO Check if the enemy is visible
-            enemiesVisible.Add(enemy);
-            unitInRangeEvent.Raise(enemy);
+            if(other.TryGetComponent(out IHideable hideable))
+            {
+                unitVisibilityEvent.Register(HandleVisivilityChange);
+                if (hideable.IsVisible)
+                {
+                    enemiesVisible.Add(enemy);
+                    unitInRangeEvent.Raise(enemy);
+                }
+            }
+            else
+            {
+                enemiesVisible.Add(enemy);
+                unitInRangeEvent.Raise(enemy);
+            }
+                
             unitDeathEvent.Register(UnitDeath);
         }
     }
@@ -46,6 +62,11 @@ public class AttackSystem : MonoBehaviour
     {
         if(other.TryGetComponent(out IAttackable enemy))
         {            
+            if(enemy is IHideable)
+            {
+                unitVisibilityEvent.Unregister(HandleVisivilityChange);
+            }
+            
             enemiesVisible.Remove(enemy);
             enemiesInRange.Remove(enemy);
             unitOutRangeEvent.Raise(enemy);
@@ -65,6 +86,21 @@ public class AttackSystem : MonoBehaviour
         {
             // Trigger Manually TriggerExit
             OnTriggerExit(unitDeathEvent.GetComponent<Collider>());
+        }
+    }
+
+    private void HandleVisivilityChange(Vision vision)
+    {
+        IAttackable damageable = vision.Hideable.TargetPosition.GetComponent<IAttackable>();
+        if (vision.IsVisible)
+        {
+            enemiesVisible.Add(damageable);            
+            unitInRangeEvent.Raise(damageable);            
+        }
+        else
+        {
+            enemiesVisible.Remove(damageable);
+            unitOutRangeEvent.Raise(damageable);                       
         }
     }
 }

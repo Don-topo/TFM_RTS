@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class Vision
 {
-    private IHideable hideable;
-    private bool isVisible;
+    public IHideable Hideable;
+    public bool IsVisible;
 
     public Vision(IHideable hideable, bool isVisible)
     {
-        this.hideable = hideable;
-        this.isVisible = isVisible;
+        this.Hideable = hideable;
+        this.IsVisible = isVisible;
     }
 }
 
