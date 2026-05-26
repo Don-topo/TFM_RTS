@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
 
         currentWave = 1;
         SetWavesText();
+        startTime = Time.time;
         StartCoroutine(nameof(FillWatch));
     }
 

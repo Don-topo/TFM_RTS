@@ -6,6 +6,7 @@ public class BaseBuilding : CommonActions, IHealable
 {
     [Header("Placement Materials")]
     [field: SerializeField] public Material PlaceMaterial { get; private set; }
+    [field: SerializeField] public MeshRenderer[] Renderers { get; private set; }
     [Header("Events")]
     [SerializeField] protected ResourceEvent resourceEvent;
     [SerializeField] protected RefreshUIEvent refreshEvent;
@@ -24,15 +25,16 @@ public class BaseBuilding : CommonActions, IHealable
     private Material[] initialMaterials;
     
     protected override void Start()
-    {
-        base.Start();
+   {
+        
         if (!IsConstructed)
         {
             SaveMaterials();
             BuildBuilding();
         }
         CurrentHealth = IsConstructed ? SO_BaseUnit.Health : 1;          
-        MaxHealth = SO_building.Health;        
+        MaxHealth = SO_building.Health;
+        base.Start();
     }
 
     protected override void Awake()

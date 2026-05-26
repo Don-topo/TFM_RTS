@@ -358,9 +358,15 @@ public class PlayerController : MonoBehaviour
 
     private void MinimapClicked(MinimapEventInfo info)
     {
-        if ((info.MouseButton == MouseButton.Left || info.MouseButton == MouseButton.Right) && selectedAction != null)
+        if ((info.MouseButton == MouseButton.Left && selectedAction != null))
         {
             ExecuteAction(info.RaycastHit);
+        }
+        else if (info.MouseButton == MouseButton.Right)
+        {
+            if(selectedUnits.All(unit => unit is BaseUnit)){
+                ExecuteAction(info.RaycastHit);
+            }
         }
     }
 

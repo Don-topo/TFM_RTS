@@ -38,8 +38,8 @@ public abstract class CommonActions : MonoBehaviour, ISelectable, IAttackable, I
         if (SO_BaseUnit != null && visionTransform != null)
         {
             float size = SO_BaseUnit.VisionConf.VisionRange * 2;
-            visionTransform.localScale = new Vector3(size, size, size);            
-            visionTransform.gameObject.SetActive(CompareTag("Player"));
+            visionTransform.localScale = new Vector3(size, size, size);
+            visionTransform.gameObject.SetActive(CompareTag("Player") || CompareTag("CommandPost"));
         }
         startingActions = SO_BaseUnit.UnitPrefab.GetComponent<CommonActions>().Actions;        
     }

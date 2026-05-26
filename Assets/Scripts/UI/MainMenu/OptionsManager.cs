@@ -222,7 +222,7 @@ public class OptionsManager : MonoBehaviour
     private void SetResolution(int resolutionIndex)
     {
         Resolution resolution = resolutions[resolutionIndex];
-        resolutionsDropdown.value = PlayerPrefs.GetInt("resolution");
+        resolutionsDropdown.value = resolutionIndex;
         Screen.SetResolution(resolution.width, resolution.width, Screen.fullScreen);
     }
 

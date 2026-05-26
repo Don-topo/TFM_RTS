@@ -26,7 +26,7 @@ public partial class ConstructBuildingBehaviourAction : Action
         completedBuilding = Self.Value.GetComponent<BaseBuilding>();
         startBuildTime = Time.time;
         completedBuilding.StartTime = startBuildTime;
-        buildingRenderers = completedBuilding.GetComponentsInChildren<Renderer>();
+        buildingRenderers = completedBuilding.Renderers;
         startPosition = new Vector3[buildingRenderers.Length];
         endPosition = new Vector3[buildingRenderers.Length];
         for(int i = 0; i < buildingRenderers.Length; i++)
@@ -35,7 +35,7 @@ public partial class ConstructBuildingBehaviourAction : Action
             endPosition[i] = TargetPosition.Value;
             buildingRenderers[i].transform.position = startPosition[i];
         }
-       
+
         return OnUpdate();
     }
 
@@ -70,7 +70,7 @@ public partial class ConstructBuildingBehaviourAction : Action
         if (completedBuilding is AttackerBuilding)
         {
             ((AttackerBuilding)completedBuilding).ResetAttackSystem();
-        }
+        }        
         completedBuilding.RefreshUI();
     }
 }
