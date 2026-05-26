@@ -44,21 +44,24 @@ public class AudioManager : MonoBehaviour
 
     public static void SetAudioClips(List<AudioClip> newAudioClips)
     {
-        if(audioClips == newAudioClips) return;
         audioSource.Stop();
+        if (audioClips == newAudioClips) return;        
         audioClips = newAudioClips;
     }
 
     public static void PlayAudio()
     {
         if(audioClips.Count > 0 && !audioSource.isPlaying)
-        {            
+        {                       
             AudioClip clipToPlay = audioClips[Random.Range(0, audioClips.Count)];
-            while (lastClipPlayed != null && clipToPlay.name.Equals(lastClipPlayed.name))
+            if(audioClips.Count > 1)
             {
-                clipToPlay = audioClips[Random.Range(0, audioClips.Count)];                
+                while (lastClipPlayed != null && clipToPlay.name.Equals(lastClipPlayed.name))
+                {
+                    clipToPlay = audioClips[Random.Range(0, audioClips.Count)];
+                }
             }
-                
+                            
             audioSource.PlayOneShot(clipToPlay);
             lastClipPlayed = clipToPlay;
         }

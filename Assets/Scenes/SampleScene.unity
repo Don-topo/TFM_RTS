@@ -15683,7 +15683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4422508749860553673, guid: edb7b43f9e6595449a73ba1069a9dc36, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7616919415399624264, guid: edb7b43f9e6595449a73ba1069a9dc36, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -15752,7 +15752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3781212917411057242, guid: 424d36d30a2973946a22106e5225f597, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6421313554203090929, guid: 424d36d30a2973946a22106e5225f597, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15888,29 +15888,65 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1229475382064796065, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1693615665711396410, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1693615665711396410, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 1793356419852951401, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4e321fb6075f27a4dabe6e298cf4bc5a, type: 2}
+    - target: {fileID: 2830693810254291811, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830693810254291811, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830693810254291811, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830693810254291811, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960619540145860913, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5478659412641264360, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
       propertyPath: m_Name
       value: FoodArea
       objectReference: {fileID: 0}
     - target: {fileID: 5478659412641264360, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6571007220421284796, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931510625736995025, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9102167571610305723, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.4137
+      value: 12.2
       objectReference: {fileID: 0}
     - target: {fileID: 9102167571610305723, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.5
+      value: 1.02
       objectReference: {fileID: 0}
     - target: {fileID: 9102167571610305723, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16132,7 +16168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3276751932395777859, guid: 31d962b7c14123a45b45e79e2355bd7f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4023447407378582086, guid: 31d962b7c14123a45b45e79e2355bd7f, type: 3}
       propertyPath: m_IsActive
