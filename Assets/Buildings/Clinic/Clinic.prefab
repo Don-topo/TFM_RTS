@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 3272828028586840403}
   - component: {fileID: 5959588799078095154}
   - component: {fileID: 8757795733588372114}
+  - component: {fileID: 427032684840327329}
   m_Layer: 7
   m_Name: Clinic
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,6 +138,10 @@ MonoBehaviour:
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
   <IsVisible>k__BackingField: 1
   <PlaceMaterial>k__BackingField: {fileID: 2100000, guid: d83ecade081c9e84b8d9c103e26560ae, type: 2}
+  <Renderers>k__BackingField:
+  - {fileID: 8336165036560757758}
+  - {fileID: 5776149350390328578}
+  - {fileID: 4199126347571187130}
   resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
   refreshEvent: {fileID: 11400000, guid: 2d6eed5983d3d1c42836ee74b2c39f02, type: 2}
   buildDestroyedEvent: {fileID: 11400000, guid: 869600177de64bf4c981cfb650144b5e, type: 2}
@@ -186,6 +191,33 @@ MonoBehaviour:
           m_Value1: 5209077369174025454
         Name: BuildingActions
         m_Value: 3
+--- !u!54 &427032684840327329
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3848502374205284590}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7895740077418726802
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2532186607695621712, guid: 08a7e57eb88b5e04f8aa59eb25e33765, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6656315645636407258, guid: 08a7e57eb88b5e04f8aa59eb25e33765, type: 3}
       propertyPath: m_LocalPosition.x

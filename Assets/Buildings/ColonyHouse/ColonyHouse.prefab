@@ -73,9 +73,10 @@ GameObject:
   - component: {fileID: 7275571752041018419}
   - component: {fileID: 2672072812299453875}
   - component: {fileID: -6295446183898412409}
+  - component: {fileID: 8253976049248382994}
   m_Layer: 7
   m_Name: ColonyHouse
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,6 +166,8 @@ MonoBehaviour:
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
   <IsVisible>k__BackingField: 1
   <PlaceMaterial>k__BackingField: {fileID: 2100000, guid: d83ecade081c9e84b8d9c103e26560ae, type: 2}
+  <Renderers>k__BackingField:
+  - {fileID: 175535158551875866}
   resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
   refreshEvent: {fileID: 11400000, guid: 2d6eed5983d3d1c42836ee74b2c39f02, type: 2}
   buildDestroyedEvent: {fileID: 11400000, guid: 869600177de64bf4c981cfb650144b5e, type: 2}
@@ -214,6 +217,33 @@ MonoBehaviour:
           m_Value1: 5209077369174025454
         Name: BuildingActions
         m_Value: 3
+--- !u!54 &8253976049248382994
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3063000841305874336}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1562245400448011678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -279,6 +309,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70ef37f4466666349ac7ba5e596d2e7d, type: 3}
+--- !u!23 &175535158551875866 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 70ef37f4466666349ac7ba5e596d2e7d, type: 3}
+  m_PrefabInstance: {fileID: 1562245400448011678}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1307324373606886005 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 70ef37f4466666349ac7ba5e596d2e7d, type: 3}

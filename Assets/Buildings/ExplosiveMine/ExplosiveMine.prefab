@@ -114,6 +114,9 @@ MonoBehaviour:
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
   <IsVisible>k__BackingField: 1
   <PlaceMaterial>k__BackingField: {fileID: 2100000, guid: d83ecade081c9e84b8d9c103e26560ae, type: 2}
+  <Renderers>k__BackingField:
+  - {fileID: 3101042319895053783}
+  - {fileID: 6992610114901053601}
   resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
   refreshEvent: {fileID: 11400000, guid: 2d6eed5983d3d1c42836ee74b2c39f02, type: 2}
   buildDestroyedEvent: {fileID: 11400000, guid: 869600177de64bf4c981cfb650144b5e, type: 2}
@@ -517,6 +520,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 245eae0344d6fdb46b34541df30492d2, type: 3}
+--- !u!23 &3101042319895053783 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 245eae0344d6fdb46b34541df30492d2, type: 3}
+  m_PrefabInstance: {fileID: 4379900370989537619}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4270029633460879032 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 245eae0344d6fdb46b34541df30492d2, type: 3}
@@ -595,6 +603,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93e684b2058e2e04b9e1012dd7decda1, type: 3}
+--- !u!23 &6992610114901053601 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 93e684b2058e2e04b9e1012dd7decda1, type: 3}
+  m_PrefabInstance: {fileID: 8559980012841307173}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8160963452368907214 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 93e684b2058e2e04b9e1012dd7decda1, type: 3}

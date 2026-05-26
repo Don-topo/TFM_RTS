@@ -13,6 +13,11 @@ public class ProductionBuilding : BaseBuilding
         base.Start();        
     }
 
+    protected override void Awake()
+    {
+        base.Awake();
+    }
+
     protected override void Update()
     {
         // Check if the generation of the resource is completed

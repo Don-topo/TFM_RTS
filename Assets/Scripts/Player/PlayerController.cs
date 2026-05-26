@@ -362,12 +362,12 @@ public class PlayerController : MonoBehaviour
         {
             ExecuteAction(info.RaycastHit);
         }
-        else if (info.MouseButton == MouseButton.Right)
+       /* else if (info.MouseButton == MouseButton.Right)
         {
             if(selectedUnits.All(unit => unit is BaseUnit)){
                 ExecuteAction(info.RaycastHit);
             }
-        }
+        }*/
     }
 
     private void ExecuteAction(RaycastHit hit)
@@ -410,11 +410,11 @@ public class PlayerController : MonoBehaviour
 
         if (canExecuteAction)
         {
-            PlaySound(selectedAction.ExecuteAudio);
+            //PlaySound(selectedAction.ExecuteAudio);
         }
         else
         {
-            PlaySound(new List<AudioClip> { invalidAction });
+           // PlaySound(new List<AudioClip> { invalidAction });
         }
 
         Cursor.SetCursor(defaultCursor, Vector2.zero, CursorMode.Auto);

@@ -169,6 +169,8 @@ MonoBehaviour:
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
   <IsVisible>k__BackingField: 1
   <PlaceMaterial>k__BackingField: {fileID: 2100000, guid: d83ecade081c9e84b8d9c103e26560ae, type: 2}
+  <Renderers>k__BackingField:
+  - {fileID: 8274823830351139903}
   resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
   refreshEvent: {fileID: 11400000, guid: 2d6eed5983d3d1c42836ee74b2c39f02, type: 2}
   buildDestroyedEvent: {fileID: 11400000, guid: 869600177de64bf4c981cfb650144b5e, type: 2}
@@ -455,5 +457,10 @@ PrefabInstance:
 --- !u!4 &7105898124871970640 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9a532a90626e33f4eb8d40260eb5db1c, type: 3}
+  m_PrefabInstance: {fileID: 7284433649857382587}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8274823830351139903 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 9a532a90626e33f4eb8d40260eb5db1c, type: 3}
   m_PrefabInstance: {fileID: 7284433649857382587}
   m_PrefabAsset: {fileID: 0}

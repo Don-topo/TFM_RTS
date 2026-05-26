@@ -74,9 +74,10 @@ GameObject:
   - component: {fileID: 7087214314907716618}
   - component: {fileID: 1416171660571647950}
   - component: {fileID: 1026010116861686373}
+  - component: {fileID: 3080172371898459255}
   m_Layer: 7
   m_Name: Iron Quarry
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,6 +193,10 @@ MonoBehaviour:
   unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
   <IsVisible>k__BackingField: 1
   <PlaceMaterial>k__BackingField: {fileID: 2100000, guid: d83ecade081c9e84b8d9c103e26560ae, type: 2}
+  <Renderers>k__BackingField:
+  - {fileID: 3347011446437608142}
+  - {fileID: 3162876441437374597}
+  - {fileID: 5712065702238844343}
   resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
   refreshEvent: {fileID: 11400000, guid: 2d6eed5983d3d1c42836ee74b2c39f02, type: 2}
   buildDestroyedEvent: {fileID: 11400000, guid: 869600177de64bf4c981cfb650144b5e, type: 2}
@@ -241,6 +246,33 @@ MonoBehaviour:
           m_Value1: 5209077369174025454
         Name: BuildingActions
         m_Value: 3
+--- !u!54 &3080172371898459255
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6402155466190684576}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &2494035491310152269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -364,6 +396,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65a1b45d131c1064cb1f65bb5450e5c2, type: 3}
+--- !u!23 &3347011446437608142 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 65a1b45d131c1064cb1f65bb5450e5c2, type: 3}
+  m_PrefabInstance: {fileID: 4157786232609760842}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4483850138444071329 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 65a1b45d131c1064cb1f65bb5450e5c2, type: 3}
@@ -504,6 +541,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c628d0585ffa63f4a8e74176b88c2409, type: 3}
+--- !u!23 &3162876441437374597 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: c628d0585ffa63f4a8e74176b88c2409, type: 3}
+  m_PrefabInstance: {fileID: 4333974654901359617}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4300910710471029738 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c628d0585ffa63f4a8e74176b88c2409, type: 3}
@@ -570,6 +612,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad05036c661569040997f32c1d1030a1, type: 3}
+--- !u!23 &5712065702238844343 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: ad05036c661569040997f32c1d1030a1, type: 3}
+  m_PrefabInstance: {fileID: 6378435039914486067}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6849545822782918360 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ad05036c661569040997f32c1d1030a1, type: 3}
