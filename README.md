@@ -1,5 +1,9 @@
 Patches relases:
 
+v.0.40 => 27/05/2026:
+  - Add Unit UI Details.
+  - Tune cost attributes and time values.
+    
 v.0.39 => 26/05/2026:
   - Finish fog of war.
     
