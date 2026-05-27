@@ -15,8 +15,8 @@ MonoBehaviour:
   <Name>k__BackingField: House
   <Icon>k__BackingField: {fileID: 21300000, guid: dbae1447d1946b44dbc1072427f1073b, type: 3}
   <UnitPrefab>k__BackingField: {fileID: 201542786292628489, guid: 0f3557a26c90fcc48a19eecf14fc3ff0, type: 3}
-  <Health>k__BackingField: 100
-  <GenerationTime>k__BackingField: 8
+  <Health>k__BackingField: 150
+  <GenerationTime>k__BackingField: 10
   <Cost>k__BackingField: {fileID: 11400000, guid: 38bc8ee6bf7e90f488f0a2c0b1c30721, type: 2}
   <SelectionAudioClips>k__BackingField:
   - {fileID: 8300000, guid: 1cc755bee0c3a60429673d83cb2ea4fc, type: 3}

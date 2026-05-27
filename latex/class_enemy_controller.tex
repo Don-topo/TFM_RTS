@@ -2,8 +2,7 @@
 \hypertarget{class_enemy_controller}{}\label{class_enemy_controller}\index{EnemyController@{EnemyController}}
 
 
-Inheritance diagram for Enemy\+Controller:\+
-\nopagebreak
+Inheritance diagram for Enemy\+Controller:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for Enemy\+Controller:\+
 \end{figure}
 
 
-Collaboration diagram for Enemy\+Controller:\+
-\nopagebreak
+Collaboration diagram for Enemy\+Controller:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -55,28 +53,26 @@ virtual void \doxymbox{\hyperlink{class_common_actions_a20fe334501ba458268ea75a5
 void \doxymbox{\hyperlink{class_common_actions_a31efbfded7bac0694367df1e807b5f26}{Set\+Commands\+Overrides}} (\doxymbox{\hyperlink{class_base_action}{Base\+Action}}\+[$\,$]\+ actions)
 \item 
 void \doxymbox{\hyperlink{class_common_actions_a9aeadc1e41e81f959cebe4b3f83f55f4}{Apply\+Damage}} (int damage\+Amount)
+\item 
+void \doxymbox{\hyperlink{class_common_actions_a90885d6a94c66a103c660866f9a7eace}{Set\+Visible}} (bool is\+Visible)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
+\item 
+override void \doxymbox{\hyperlink{class_enemy_controller_ab6deef38df6828a5152e1fd0c73061d8}{Awake}} ()
 \item 
 override void \doxymbox{\hyperlink{class_enemy_controller_ad1305e8f91aab6e4a37cc37344e5367f}{Start}} ()
 \item 
 override void \doxymbox{\hyperlink{class_enemy_controller_a4520f46ce3c50343d9c158fd9d5febaa}{On\+Destroy}} ()
 \end{DoxyCompactItemize}
-\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_base_attacker}{Base\+Attacker}}}
-\begin{DoxyCompactItemize}
-\item 
-override void \doxymbox{\hyperlink{class_base_attacker_a7bbd0506fdab70bc5e25133d88bdf9a4}{Awake}} ()
-\end{DoxyCompactItemize}
-\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_base_unit}{Base\+Unit}}}
-\begin{DoxyCompactItemize}
-\item 
-override void \doxymbox{\hyperlink{class_base_unit_a1b5d82dfb2d7c344e241e7f882665604}{Awake}} ()
-\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
 \begin{DoxyCompactItemize}
 \item 
 virtual void \doxymbox{\hyperlink{class_common_actions_ae605f8ae1a8915928869b81dae283577}{Update}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_ac38f7081f60a2d559b85496fef73c6fe}{On\+Gain\+Visibility}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_a049ffeeb9cd685fa4ab80443ad700072}{On\+Lose\+Visibility}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -118,6 +114,10 @@ Animator \doxymbox{\hyperlink{class_common_actions_a8596da371da49e83b31076f91b89
 \doxymbox{\hyperlink{class_update_health_event}{Update\+Health\+Event}} \doxymbox{\hyperlink{class_common_actions_a4a0946e2ad67e943e6364d7066ef8931}{update\+Health\+Event}}
 \item 
 \doxymbox{\hyperlink{class_unit_death_event}{Unit\+Death\+Event}} \doxymbox{\hyperlink{class_common_actions_a7bacbe25f3f281191a76a8477347caed}{unit\+Death\+Event}}
+\item 
+\doxymbox{\hyperlink{class_visibility_event}{Visibility\+Event}} \doxymbox{\hyperlink{class_common_actions_a5b24e7eefe463c9befee19ad4577cc59}{visibility\+Event}}
+\item 
+Transform \doxymbox{\hyperlink{class_common_actions_a13dd4da78ac88afaf33f5cac43d63c18}{vision\+Transform}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_base_attacker}{Base\+Attacker}}}
 \begin{DoxyCompactItemize}
@@ -147,6 +147,8 @@ int \doxymbox{\hyperlink{class_common_actions_a603564a07381db22a5f3e9d5ac51403a}
 Transform \doxymbox{\hyperlink{class_common_actions_a75b141d8781f3ff94932ac9d10bb2060}{Target\+Position}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
 \item 
 bool \doxymbox{\hyperlink{class_common_actions_a058d0dd3c4c061940a903ffafa026001}{is\+Dead}} = false\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+bool \doxymbox{\hyperlink{class_common_actions_a59aec3d420e4f815ff9e9162f0c5573c}{Is\+Visible}} = true\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
 \end{DoxyCompactItemize}
 \doxysubsection*{Properties inherited from \doxymbox{\hyperlink{interface_i_healable}{IHealable}}}
 \begin{DoxyCompactItemize}
@@ -162,6 +164,16 @@ Transform \doxymbox{\hyperlink{interface_i_healable_a7a0795b7c8985b586247a430179
 \label{doc-func-members}
 \Hypertarget{class_enemy_controller_doc-func-members}
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_enemy_controller_ab6deef38df6828a5152e1fd0c73061d8}\index{EnemyController@{EnemyController}!Awake@{Awake}}
+\index{Awake@{Awake}!EnemyController@{EnemyController}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_enemy_controller_ab6deef38df6828a5152e1fd0c73061d8} 
+override void Enemy\+Controller.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_base_attacker_a7bbd0506fdab70bc5e25133d88bdf9a4}{Base\+Attacker}}.
+
 \Hypertarget{class_enemy_controller_ae4643988c3365d89c1ec7377f6ad42e6}\index{EnemyController@{EnemyController}!Die@{Die}}
 \index{Die@{Die}!EnemyController@{EnemyController}}
 \doxysubsubsection{\texorpdfstring{Die()}{Die()}}

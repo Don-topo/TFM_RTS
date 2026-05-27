@@ -15,7 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: Electric Generator
   <Icon>k__BackingField: {fileID: 21300000, guid: fed295ec3f08ebf49bccf644d0a413f8, type: 3}
   <UnitPrefab>k__BackingField: {fileID: 4269700698457629418, guid: ef47ef361161b24499ca87961e989bee, type: 3}
-  <Health>k__BackingField: 100
+  <Health>k__BackingField: 300
   <GenerationTime>k__BackingField: 8
   <Cost>k__BackingField: {fileID: 11400000, guid: 96b350d270f7b6d4db7f51b63a285388, type: 2}
   <SelectionAudioClips>k__BackingField:

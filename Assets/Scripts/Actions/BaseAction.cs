@@ -17,7 +17,7 @@ public abstract class BaseAction : ScriptableObject, IAction
 
     public abstract bool CanExecute(ActionInfo actionInfo);
     public abstract bool Blocked(ActionInfo actionInfo);
-    public bool AllRestrictionsPass(Vector3 point) =>
+    public bool CheckRestrictions(Vector3 point) =>
         Restrictions.Length == 0 || Restrictions.All(restriction => restriction.CanPlace(point));
     public abstract void Execute(ActionInfo actionInfo);
 }

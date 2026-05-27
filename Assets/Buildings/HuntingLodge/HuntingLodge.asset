@@ -15,7 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: Hunting Lodge
   <Icon>k__BackingField: {fileID: 21300000, guid: 19b115e963334c7448f736a261716dfd, type: 3}
   <UnitPrefab>k__BackingField: {fileID: 3299834643917803685, guid: 77073b2344d1456469a20ea73a5f47ed, type: 3}
-  <Health>k__BackingField: 75
+  <Health>k__BackingField: 200
   <GenerationTime>k__BackingField: 8
   <Cost>k__BackingField: {fileID: 11400000, guid: 7444a23ae766e7642b28d00f58b7bed0, type: 2}
   <SelectionAudioClips>k__BackingField:

@@ -9,8 +9,7 @@ public class FogOfWar : MonoBehaviour
     [Header("Events")]
     [SerializeField] private UnitRecruitedEvent unitRecruitedEvent;
     [SerializeField] private UnitDeathEvent UnitDeathEvent;
-    [SerializeField] private BuildingCreatedEvent buildingCreatedEvent;
-    [SerializeField] private BuildingDestroyedEvent buildingDestroyedEvent;
+
     private Camera fogOfWarCamera;
     private Texture2D visionTexture;
     private Rect textureRect;
@@ -30,41 +29,14 @@ public class FogOfWar : MonoBehaviour
         visionTexture = new Texture2D(fogOfWarCamera.targetTexture.width, fogOfWarCamera.targetTexture.height);
         textureRect = new Rect(0, 0, visionTexture.width, visionTexture.height);
 
-        //Bus<UnitSpawnEvent>.RegisterForAll(HandleUnitSpawn);
         unitRecruitedEvent.Register(HandleUnitSpawn);
-        //Bus<UnitDeathEvent>.RegisterForAll(HandleUnitDeath);
         UnitDeathEvent.Register(HandleUnitDeath);
-
-        //Bus<BuildingSpawnEvent>.RegisterForAll(HandleBuildingSpawn);
-        //buildingCreatedEvent.Register(HandleBuildingSpawn);
-        //Bus<BuildingDeathEvent>.RegisterForAll(HandleBuildingDeath);
-        buildingDestroyedEvent.Register(HandleBuildingDeath);
-        //TODO
-        //Bus<PlaceholderSpawnEvent>.RegisterForAll(HandlePlaceholderSpawn);
-        //Bus<PlaceholderDestroyEvent>.RegisterForAll(HandlePlaceholderDestroy);
-
-        //Bus<SupplySpawnEvent>.OnEvent[Owner.Unowned] += HandleSupplySpawn;
-        //Bus<SupplyDepletedEvent>.OnEvent[Owner.Unowned] += HandleSupplyDepleted;
     }
 
     private void OnDestroy()
     {
-        //Bus<UnitSpawnEvent>.UnregisterForAll(HandleUnitSpawn);
         unitRecruitedEvent.Unregister(HandleUnitSpawn);
-        //Bus<UnitDeathEvent>.UnregisterForAll(HandleUnitDeath);
         UnitDeathEvent.Unregister(HandleUnitDeath);
-
-        //Bus<BuildingSpawnEvent>.UnregisterForAll(HandleBuildingSpawn);
-        //buildingCreatedEvent.Unregister(HandleBuildingSpawn);
-        //Bus<BuildingDeathEvent>.UnregisterForAll(HandleBuildingDeath);
-        buildingDestroyedEvent.Unregister(HandleBuildingDeath);
-
-        // TODO
-        //Bus<PlaceholderSpawnEvent>.UnregisterForAll(HandlePlaceholderSpawn);
-        //Bus<PlaceholderDestroyEvent>.UnregisterForAll(HandlePlaceholderDestroy);
-
-        //Bus<SupplySpawnEvent>.OnEvent[Owner.Unowned] -= HandleSupplySpawn;
-        //Bus<SupplyDepletedEvent>.OnEvent[Owner.Unowned] -= HandleSupplyDepleted;
     }
 
     private void LateUpdate()
@@ -108,34 +80,4 @@ public class FogOfWar : MonoBehaviour
     {
         hideables.Remove(unit);
     }
-
-    private void HandleBuildingSpawn(BaseBuilding baseBuilding)
-    {
-        hideables.Add(baseBuilding);
-    }
-
-    private void HandleBuildingDeath(BaseBuilding baseBuilding)
-    {
-        hideables.Remove(baseBuilding);
-    }
-
-    /*private void HandleSupplySpawn(SupplySpawnEvent evt)
-    {
-        hideables.Add(evt.Supply);
-    }
-
-    private void HandleSupplyDepleted(SupplyDepletedEvent evt)
-    {
-        hideables.Remove(evt.Supply);
-    }*/
-
-    /*private void HandlePlaceholderSpawn(PlaceholderSpawnEvent evt)
-    {
-        hideables.Add(evt.Placeholder);
-    }
-
-    private void HandlePlaceholderDestroy(PlaceholderDestroyEvent evt)
-    {
-        hideables.Remove(evt.Placeholder);
-    }*/
 }

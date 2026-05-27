@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RecruitUnitAction
   <Name>k__BackingField: Recruit Tankman
   <Icon>k__BackingField: {fileID: 21300000, guid: 0d6e03a108c8b5043a0b92eab8b8d5fd, type: 3}
-  <HotKey>k__BackingField: 33
+  <HotKey>k__BackingField: 34
   <UIPosition>k__BackingField: 1
   <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 0
   <ExecuteAudio>k__BackingField: []
   <Restrictions>k__BackingField: []
+  <CursorIcon>k__BackingField: {fileID: 0}
   <UnitToBuild>k__BackingField: {fileID: 11400000, guid: 7f895f3e6e2b92d4c80b37ad2d16b6f4, type: 2}

@@ -29,7 +29,7 @@ public class BuildBuildingAction : BaseAction
         // Check if the player has enought resources
         // Check if the build placement requirements are fullfiled
         return CheckIfThereIsAvailableResources(actionInfo) && 
-            AllRestrictionsPass(actionInfo.Hit.point) && 
+            CheckRestrictions(actionInfo.Hit.point) && 
             baseBuilding.IsConstructed && 
             !baseBuilding.IsRepairing;
     }

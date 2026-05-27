@@ -15,13 +15,13 @@ MonoBehaviour:
   <Name>k__BackingField: Flamethrower Tower
   <Icon>k__BackingField: {fileID: 21300000, guid: 70b8a56dbfa4b274c8fa27b1031583d8, type: 3}
   <UnitPrefab>k__BackingField: {fileID: 8058570114665064668, guid: 6f71cc566eae37a44bf2cad420d2b36d, type: 3}
-  <Health>k__BackingField: 100
-  <GenerationTime>k__BackingField: 8
+  <Health>k__BackingField: 800
+  <GenerationTime>k__BackingField: 35
   <Cost>k__BackingField: {fileID: 11400000, guid: 737f278153798ef45ba1e11f15a7c26f, type: 2}
   <SelectionAudioClips>k__BackingField:
   - {fileID: 8300000, guid: 91575e1db8030b54aa2be820a4ca6696, type: 3}
   - {fileID: 8300000, guid: 862017030159bea429717be873d9876b, type: 3}
   - {fileID: 8300000, guid: a9743a132b6036e4d808cac0d308a034, type: 3}
   - {fileID: 8300000, guid: 3b4a83874e2f62a4e880b9c68b9ffd78, type: 3}
-  <VisionConf>k__BackingField: {fileID: 11400000, guid: 1fabcd4d1338df14d8d09f80d0d18ea1, type: 2}
+  <VisionConf>k__BackingField: {fileID: 11400000, guid: 2ef632d19da614e41a437fd12f520c93, type: 2}
   <PrebuildMaterial>k__BackingField: {fileID: 2100000, guid: d83ecade081c9e84b8d9c103e26560ae, type: 2}

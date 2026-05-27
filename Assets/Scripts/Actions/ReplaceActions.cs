@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Override Commands", menuName = "Units/Commands/Override Commands", order = 110)]
-public class OverrideCommandsCommand : BaseAction
+public class ReplaceActions : BaseAction
 {
     [field: SerializeField] public BaseAction[] Commands { get; private set; }
 

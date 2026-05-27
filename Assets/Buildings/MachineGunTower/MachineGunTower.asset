@@ -15,7 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: Machine Gun Tower
   <Icon>k__BackingField: {fileID: 21300000, guid: fc74606edc8e92141bb6d963cabf340a, type: 3}
   <UnitPrefab>k__BackingField: {fileID: 4871337886555064014, guid: 13fd3a339284005419990713d7802d8e, type: 3}
-  <Health>k__BackingField: 100
+  <Health>k__BackingField: 300
   <GenerationTime>k__BackingField: 30
   <Cost>k__BackingField: {fileID: 11400000, guid: ea5296d1603f67e4f909d04f69a0c268, type: 2}
   <SelectionAudioClips>k__BackingField:
@@ -23,5 +23,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0360cfd45f3d8014fb7da166bb344aa7, type: 3}
   - {fileID: 8300000, guid: 53be0190f8dfaf74782cf4c4444402fd, type: 3}
   - {fileID: 8300000, guid: 92e927a10a8e9c84f825748dd055947a, type: 3}
-  <VisionConf>k__BackingField: {fileID: 11400000, guid: 1fabcd4d1338df14d8d09f80d0d18ea1, type: 2}
+  <VisionConf>k__BackingField: {fileID: 11400000, guid: 2ef632d19da614e41a437fd12f520c93, type: 2}
   <PrebuildMaterial>k__BackingField: {fileID: 2100000, guid: d83ecade081c9e84b8d9c103e26560ae, type: 2}

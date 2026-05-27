@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RecruitUnitAction
   <Name>k__BackingField: Recruit Destroyer
   <Icon>k__BackingField: {fileID: 21300000, guid: fa152695fa2810b419deca55dbc0dc9f, type: 3}
-  <HotKey>k__BackingField: 18
+  <HotKey>k__BackingField: 19
   <UIPosition>k__BackingField: 0
   <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 0
   <ExecuteAudio>k__BackingField: []
   <Restrictions>k__BackingField: []
+  <CursorIcon>k__BackingField: {fileID: 0}
   <UnitToBuild>k__BackingField: {fileID: 11400000, guid: 5d38c7dfb6c07904a87978e9e7562d3f, type: 2}

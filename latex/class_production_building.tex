@@ -2,8 +2,7 @@
 \hypertarget{class_production_building}{}\label{class_production_building}\index{ProductionBuilding@{ProductionBuilding}}
 
 
-Inheritance diagram for Production\+Building:\+
-\nopagebreak
+Inheritance diagram for Production\+Building:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for Production\+Building:\+
 \end{figure}
 
 
-Collaboration diagram for Production\+Building:\+
-\nopagebreak
+Collaboration diagram for Production\+Building:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -56,11 +54,15 @@ void \doxymbox{\hyperlink{class_common_actions_a31efbfded7bac0694367df1e807b5f26
 void \doxymbox{\hyperlink{class_common_actions_a9aeadc1e41e81f959cebe4b3f83f55f4}{Apply\+Damage}} (int damage\+Amount)
 \item 
 virtual void \doxymbox{\hyperlink{class_common_actions_a8e7f24683c4995eadb235cb40cfcec13}{Die}} ()
+\item 
+void \doxymbox{\hyperlink{class_common_actions_a90885d6a94c66a103c660866f9a7eace}{Set\+Visible}} (bool is\+Visible)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 override void \doxymbox{\hyperlink{class_production_building_a56f316f53c19bcd0021ff99391170cd5}{Start}} ()
+\item 
+override void \doxymbox{\hyperlink{class_production_building_a769c3133d97e383d81f989edc6c31477}{Awake}} ()
 \item 
 override void \doxymbox{\hyperlink{class_production_building_a4dcb8481ff5a9b6a8ccfa4a8b6c6b835}{Update}} ()
 \item 
@@ -69,7 +71,9 @@ override void \doxymbox{\hyperlink{class_production_building_aab5eb8d0eb3b39fb1b
 \doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \doxymbox{\hyperlink{class_common_actions_aace304ed9479d52725fe618c746667d9}{Awake}} ()
+virtual void \doxymbox{\hyperlink{class_common_actions_ac38f7081f60a2d559b85496fef73c6fe}{On\+Gain\+Visibility}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_a049ffeeb9cd685fa4ab80443ad700072}{On\+Lose\+Visibility}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
@@ -80,6 +84,8 @@ virtual void \doxymbox{\hyperlink{class_common_actions_aace304ed9479d52725fe618c
 \begin{DoxyCompactItemize}
 \item 
 Material \doxymbox{\hyperlink{class_base_building_a3be5a979246ab2dc4dc2569f18f711c9}{Place\+Material}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+Mesh\+Renderer\+[$\,$]\+ \doxymbox{\hyperlink{class_base_building_a10f540fec4e7d50af5be9e0b2121a22a}{Renderers}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
 \item 
 \doxymbox{\hyperlink{class_s_o___building}{SO\+\_\+\+Building}} \doxymbox{\hyperlink{class_base_building_a99a2a8072153b85c81fe201070cbfdd6}{SO\+\_\+building}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
 \item 
@@ -105,6 +111,8 @@ int \doxymbox{\hyperlink{class_common_actions_a603564a07381db22a5f3e9d5ac51403a}
 Transform \doxymbox{\hyperlink{class_common_actions_a75b141d8781f3ff94932ac9d10bb2060}{Target\+Position}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
 \item 
 bool \doxymbox{\hyperlink{class_common_actions_a058d0dd3c4c061940a903ffafa026001}{is\+Dead}} = false\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+bool \doxymbox{\hyperlink{class_common_actions_a59aec3d420e4f815ff9e9162f0c5573c}{Is\+Visible}} = true\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
 \end{DoxyCompactItemize}
 \doxysubsection*{Properties inherited from \doxymbox{\hyperlink{interface_i_healable}{IHealable}}}
 \begin{DoxyCompactItemize}
@@ -157,12 +165,26 @@ Animator \doxymbox{\hyperlink{class_common_actions_a8596da371da49e83b31076f91b89
 \doxymbox{\hyperlink{class_update_health_event}{Update\+Health\+Event}} \doxymbox{\hyperlink{class_common_actions_a4a0946e2ad67e943e6364d7066ef8931}{update\+Health\+Event}}
 \item 
 \doxymbox{\hyperlink{class_unit_death_event}{Unit\+Death\+Event}} \doxymbox{\hyperlink{class_common_actions_a7bacbe25f3f281191a76a8477347caed}{unit\+Death\+Event}}
+\item 
+\doxymbox{\hyperlink{class_visibility_event}{Visibility\+Event}} \doxymbox{\hyperlink{class_common_actions_a5b24e7eefe463c9befee19ad4577cc59}{visibility\+Event}}
+\item 
+Transform \doxymbox{\hyperlink{class_common_actions_a13dd4da78ac88afaf33f5cac43d63c18}{vision\+Transform}}
 \end{DoxyCompactItemize}
 
 
 \label{doc-func-members}
 \Hypertarget{class_production_building_doc-func-members}
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_production_building_a769c3133d97e383d81f989edc6c31477}\index{ProductionBuilding@{ProductionBuilding}!Awake@{Awake}}
+\index{Awake@{Awake}!ProductionBuilding@{ProductionBuilding}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_production_building_a769c3133d97e383d81f989edc6c31477} 
+override void Production\+Building.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_base_building_a19d91c8f26a7cf77e6d5b5c25b039fbb}{Base\+Building}}.
+
 \Hypertarget{class_production_building_aa49a6ae6141be2b4d9f22bacc0620ddd}\index{ProductionBuilding@{ProductionBuilding}!BuildConstructed@{BuildConstructed}}
 \index{BuildConstructed@{BuildConstructed}!ProductionBuilding@{ProductionBuilding}}
 \doxysubsubsection{\texorpdfstring{BuildConstructed()}{BuildConstructed()}}
@@ -217,7 +239,7 @@ override void Production\+Building.\+Update (\begin{DoxyParamCaption}{}{}\end{Do
 
 
 
-Reimplemented from \doxymbox{\hyperlink{class_common_actions_ae605f8ae1a8915928869b81dae283577}{Common\+Actions}}.
+Reimplemented from \doxymbox{\hyperlink{class_base_building_ac0d1db829825022ddda2eacc1bea159d}{Base\+Building}}.
 
 
 

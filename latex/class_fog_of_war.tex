@@ -2,45 +2,170 @@
 \hypertarget{class_fog_of_war}{}\label{class_fog_of_war}\index{FogOfWar@{FogOfWar}}
 
 
-Inheritance diagram for Fog\+Of\+War:\+\nopagebreak
+Inheritance diagram for Fog\+Of\+War:\+
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=156pt]{class_fog_of_war__inherit__graph}
+\includegraphics[width=245pt]{class_fog_of_war__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Fog\+Of\+War:\+\nopagebreak
+Collaboration diagram for Fog\+Of\+War:\+
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=156pt]{class_fog_of_war__coll__graph}
+\includegraphics[height=550pt]{class_fog_of_war__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_fog_of_war_a98b88d1bd2dccf9214aca903ac628a60}{Is\+Visible}} (Vector3 position)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{class_fog_of_war}{Fog\+Of\+War}} \doxymbox{\hyperlink{class_fog_of_war_ad7de3f91056d0d3449fb0aec16a515d1}{Instance}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \doxymbox{\hyperlink{class_fog_of_war_a86cb46dd6a2257e2a2b6682a208a8fd3}{Start}} ()
+void \doxymbox{\hyperlink{class_fog_of_war_aaa8017a186496f56ad8fb59f8d6d5be3}{Awake}} ()
 \item 
-void \doxymbox{\hyperlink{class_fog_of_war_a04e8697a279222507e6c38083462e341}{Update}} ()
+void \doxymbox{\hyperlink{class_fog_of_war_a81669d2c7fb5d9ce17c2306e7f32f638}{On\+Destroy}} ()
+\item 
+void \doxymbox{\hyperlink{class_fog_of_war_a3011d83ae40b3927f59e5ac90cb208b8}{Late\+Update}} ()
+\item 
+void \doxymbox{\hyperlink{class_fog_of_war_a178c2c2b0353f12d0cc9fd48240168e8}{Read\+Pixels\+To\+Vision\+Texture}} ()
+\item 
+void \doxymbox{\hyperlink{class_fog_of_war_a3c4d993ce6728598e9a814e4cdfac7f9}{Set\+Unit\+Visibility\+Status}} (\doxymbox{\hyperlink{interface_i_hideable}{IHideable}} hideable)
+\item 
+void \doxymbox{\hyperlink{class_fog_of_war_a46a68f52f018da607bdf6540afe001c6}{Handle\+Unit\+Spawn}} (\doxymbox{\hyperlink{class_base_unit}{Base\+Unit}} base\+Unit)
+\item 
+void \doxymbox{\hyperlink{class_fog_of_war_afd78ed1feb7a4aafb5093443f7c6f2bb}{Handle\+Unit\+Death}} (\doxymbox{\hyperlink{class_common_actions}{Common\+Actions}} unit)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_unit_recruited_event}{Unit\+Recruited\+Event}} \doxymbox{\hyperlink{class_fog_of_war_abe7ee7bee7d11cee80cb0fd82ac26fdf}{unit\+Recruited\+Event}}
+\item 
+\doxymbox{\hyperlink{class_unit_death_event}{Unit\+Death\+Event}} \doxymbox{\hyperlink{class_fog_of_war_a7633daf70b0ad0e69b902622c0c53457}{Unit\+Death\+Event}}
+\item 
+Camera \doxymbox{\hyperlink{class_fog_of_war_ab983ef53713b89362348305010630e31}{fog\+Of\+War\+Camera}}
+\item 
+Texture2D \doxymbox{\hyperlink{class_fog_of_war_a145f00ef2469f26e05ada32da0ca0b68}{vision\+Texture}}
+\item 
+Rect \doxymbox{\hyperlink{class_fog_of_war_a2ffe6119ee061cb8f0b17dd58897681c}{texture\+Rect}}
+\item 
+Hash\+Set$<$ \doxymbox{\hyperlink{interface_i_hideable}{IHideable}} $>$ \doxymbox{\hyperlink{class_fog_of_war_a9e41aa3630f772dda9d28121cd79cedd}{hideables}} = new(1000)
 \end{DoxyCompactItemize}
 
 
 \label{doc-func-members}
 \Hypertarget{class_fog_of_war_doc-func-members}
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_fog_of_war_a86cb46dd6a2257e2a2b6682a208a8fd3}\index{FogOfWar@{FogOfWar}!Start@{Start}}
-\index{Start@{Start}!FogOfWar@{FogOfWar}}
-\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
-{\footnotesize\ttfamily \label{class_fog_of_war_a86cb46dd6a2257e2a2b6682a208a8fd3} 
-void Fog\+Of\+War.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+\Hypertarget{class_fog_of_war_aaa8017a186496f56ad8fb59f8d6d5be3}\index{FogOfWar@{FogOfWar}!Awake@{Awake}}
+\index{Awake@{Awake}!FogOfWar@{FogOfWar}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_fog_of_war_aaa8017a186496f56ad8fb59f8d6d5be3} 
+void Fog\+Of\+War.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
-\Hypertarget{class_fog_of_war_a04e8697a279222507e6c38083462e341}\index{FogOfWar@{FogOfWar}!Update@{Update}}
-\index{Update@{Update}!FogOfWar@{FogOfWar}}
-\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
-{\footnotesize\ttfamily \label{class_fog_of_war_a04e8697a279222507e6c38083462e341} 
-void Fog\+Of\+War.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+\Hypertarget{class_fog_of_war_afd78ed1feb7a4aafb5093443f7c6f2bb}\index{FogOfWar@{FogOfWar}!HandleUnitDeath@{HandleUnitDeath}}
+\index{HandleUnitDeath@{HandleUnitDeath}!FogOfWar@{FogOfWar}}
+\doxysubsubsection{\texorpdfstring{HandleUnitDeath()}{HandleUnitDeath()}}
+{\footnotesize\ttfamily \label{class_fog_of_war_afd78ed1feb7a4aafb5093443f7c6f2bb} 
+void Fog\+Of\+War.\+Handle\+Unit\+Death (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_common_actions}{Common\+Actions}}}]{unit}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_fog_of_war_a46a68f52f018da607bdf6540afe001c6}\index{FogOfWar@{FogOfWar}!HandleUnitSpawn@{HandleUnitSpawn}}
+\index{HandleUnitSpawn@{HandleUnitSpawn}!FogOfWar@{FogOfWar}}
+\doxysubsubsection{\texorpdfstring{HandleUnitSpawn()}{HandleUnitSpawn()}}
+{\footnotesize\ttfamily \label{class_fog_of_war_a46a68f52f018da607bdf6540afe001c6} 
+void Fog\+Of\+War.\+Handle\+Unit\+Spawn (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_base_unit}{Base\+Unit}}}]{base\+Unit}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_fog_of_war_a98b88d1bd2dccf9214aca903ac628a60}\index{FogOfWar@{FogOfWar}!IsVisible@{IsVisible}}
+\index{IsVisible@{IsVisible}!FogOfWar@{FogOfWar}}
+\doxysubsubsection{\texorpdfstring{IsVisible()}{IsVisible()}}
+{\footnotesize\ttfamily \label{class_fog_of_war_a98b88d1bd2dccf9214aca903ac628a60} 
+bool Fog\+Of\+War.\+Is\+Visible (\begin{DoxyParamCaption}\item[{Vector3}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_fog_of_war_a3011d83ae40b3927f59e5ac90cb208b8}\index{FogOfWar@{FogOfWar}!LateUpdate@{LateUpdate}}
+\index{LateUpdate@{LateUpdate}!FogOfWar@{FogOfWar}}
+\doxysubsubsection{\texorpdfstring{LateUpdate()}{LateUpdate()}}
+{\footnotesize\ttfamily \label{class_fog_of_war_a3011d83ae40b3927f59e5ac90cb208b8} 
+void Fog\+Of\+War.\+Late\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_fog_of_war_a81669d2c7fb5d9ce17c2306e7f32f638}\index{FogOfWar@{FogOfWar}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!FogOfWar@{FogOfWar}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily \label{class_fog_of_war_a81669d2c7fb5d9ce17c2306e7f32f638} 
+void Fog\+Of\+War.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_fog_of_war_a178c2c2b0353f12d0cc9fd48240168e8}\index{FogOfWar@{FogOfWar}!ReadPixelsToVisionTexture@{ReadPixelsToVisionTexture}}
+\index{ReadPixelsToVisionTexture@{ReadPixelsToVisionTexture}!FogOfWar@{FogOfWar}}
+\doxysubsubsection{\texorpdfstring{ReadPixelsToVisionTexture()}{ReadPixelsToVisionTexture()}}
+{\footnotesize\ttfamily \label{class_fog_of_war_a178c2c2b0353f12d0cc9fd48240168e8} 
+void Fog\+Of\+War.\+Read\+Pixels\+To\+Vision\+Texture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_fog_of_war_a3c4d993ce6728598e9a814e4cdfac7f9}\index{FogOfWar@{FogOfWar}!SetUnitVisibilityStatus@{SetUnitVisibilityStatus}}
+\index{SetUnitVisibilityStatus@{SetUnitVisibilityStatus}!FogOfWar@{FogOfWar}}
+\doxysubsubsection{\texorpdfstring{SetUnitVisibilityStatus()}{SetUnitVisibilityStatus()}}
+{\footnotesize\ttfamily \label{class_fog_of_war_a3c4d993ce6728598e9a814e4cdfac7f9} 
+void Fog\+Of\+War.\+Set\+Unit\+Visibility\+Status (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interface_i_hideable}{IHideable}}}]{hideable}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_fog_of_war_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_fog_of_war_ab983ef53713b89362348305010630e31}\index{FogOfWar@{FogOfWar}!fogOfWarCamera@{fogOfWarCamera}}
+\index{fogOfWarCamera@{fogOfWarCamera}!FogOfWar@{FogOfWar}}
+\doxysubsubsection{\texorpdfstring{fogOfWarCamera}{fogOfWarCamera}}
+{\footnotesize\ttfamily \label{class_fog_of_war_ab983ef53713b89362348305010630e31} 
+Camera Fog\+Of\+War.\+fog\+Of\+War\+Camera\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_fog_of_war_a9e41aa3630f772dda9d28121cd79cedd}\index{FogOfWar@{FogOfWar}!hideables@{hideables}}
+\index{hideables@{hideables}!FogOfWar@{FogOfWar}}
+\doxysubsubsection{\texorpdfstring{hideables}{hideables}}
+{\footnotesize\ttfamily \label{class_fog_of_war_a9e41aa3630f772dda9d28121cd79cedd} 
+Hash\+Set$<$\doxymbox{\hyperlink{interface_i_hideable}{IHideable}}$>$ Fog\+Of\+War.\+hideables = new(1000)\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_fog_of_war_a2ffe6119ee061cb8f0b17dd58897681c}\index{FogOfWar@{FogOfWar}!textureRect@{textureRect}}
+\index{textureRect@{textureRect}!FogOfWar@{FogOfWar}}
+\doxysubsubsection{\texorpdfstring{textureRect}{textureRect}}
+{\footnotesize\ttfamily \label{class_fog_of_war_a2ffe6119ee061cb8f0b17dd58897681c} 
+Rect Fog\+Of\+War.\+texture\+Rect\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_fog_of_war_a7633daf70b0ad0e69b902622c0c53457}\index{FogOfWar@{FogOfWar}!UnitDeathEvent@{UnitDeathEvent}}
+\index{UnitDeathEvent@{UnitDeathEvent}!FogOfWar@{FogOfWar}}
+\doxysubsubsection{\texorpdfstring{UnitDeathEvent}{UnitDeathEvent}}
+{\footnotesize\ttfamily \label{class_fog_of_war_a7633daf70b0ad0e69b902622c0c53457} 
+\doxymbox{\hyperlink{class_unit_death_event}{Unit\+Death\+Event}} Fog\+Of\+War.\+Unit\+Death\+Event\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_fog_of_war_abe7ee7bee7d11cee80cb0fd82ac26fdf}\index{FogOfWar@{FogOfWar}!unitRecruitedEvent@{unitRecruitedEvent}}
+\index{unitRecruitedEvent@{unitRecruitedEvent}!FogOfWar@{FogOfWar}}
+\doxysubsubsection{\texorpdfstring{unitRecruitedEvent}{unitRecruitedEvent}}
+{\footnotesize\ttfamily \label{class_fog_of_war_abe7ee7bee7d11cee80cb0fd82ac26fdf} 
+\doxymbox{\hyperlink{class_unit_recruited_event}{Unit\+Recruited\+Event}} Fog\+Of\+War.\+unit\+Recruited\+Event\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_fog_of_war_a145f00ef2469f26e05ada32da0ca0b68}\index{FogOfWar@{FogOfWar}!visionTexture@{visionTexture}}
+\index{visionTexture@{visionTexture}!FogOfWar@{FogOfWar}}
+\doxysubsubsection{\texorpdfstring{visionTexture}{visionTexture}}
+{\footnotesize\ttfamily \label{class_fog_of_war_a145f00ef2469f26e05ada32da0ca0b68} 
+Texture2D Fog\+Of\+War.\+vision\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_fog_of_war_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_fog_of_war_ad7de3f91056d0d3449fb0aec16a515d1}\index{FogOfWar@{FogOfWar}!Instance@{Instance}}
+\index{Instance@{Instance}!FogOfWar@{FogOfWar}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \label{class_fog_of_war_ad7de3f91056d0d3449fb0aec16a515d1} 
+\doxymbox{\hyperlink{class_fog_of_war}{Fog\+Of\+War}} Fog\+Of\+War.\+Instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [private set]}}
 
 
 

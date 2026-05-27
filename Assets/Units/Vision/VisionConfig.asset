@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 586ecad29fd608844892d2309465647a, type: 3}
   m_Name: VisionConfig
   m_EditorClassIdentifier: Assembly-CSharp::VisionConfig
-  <VisionRange>k__BackingField: 5
+  <VisionRange>k__BackingField: 10

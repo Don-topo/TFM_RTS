@@ -6,17 +6,16 @@ Inheritance diagram for Attack\+System:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=239pt]{class_attack_system__inherit__graph}
+\includegraphics[height=550pt]{class_attack_system__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Attack\+System:\+
-\nopagebreak
+Collaboration diagram for Attack\+System:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=550pt]{class_attack_system__coll__graph}
+\includegraphics[width=350pt]{class_attack_system__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
@@ -40,6 +39,8 @@ void \doxymbox{\hyperlink{class_attack_system_ac9f516c0e0d8d9cea11db4bbf4d99d49}
 void \doxymbox{\hyperlink{class_attack_system_a00db477bde6e8683ce5741eea5cbc5c0}{On\+Trigger\+Exit}} (Collider other)
 \item 
 void \doxymbox{\hyperlink{class_attack_system_ab238d1607eed80440aa6fe40d25934b4}{Unit\+Death}} (\doxymbox{\hyperlink{class_common_actions}{Common\+Actions}} \doxymbox{\hyperlink{class_attack_system_a83778d37924af55cb51300b7c83339e9}{unit\+Death\+Event}})
+\item 
+void \doxymbox{\hyperlink{class_attack_system_a30f1a88980445a108a574748d18b46c1}{Handle\+Visivility\+Change}} (\doxymbox{\hyperlink{class_vision}{Vision}} vision)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -49,6 +50,8 @@ void \doxymbox{\hyperlink{class_attack_system_ab238d1607eed80440aa6fe40d25934b4}
 \doxymbox{\hyperlink{class_enemy_in_range_event}{Enemy\+In\+Range\+Event}} \doxymbox{\hyperlink{class_attack_system_a6e79b120e6b5c55ee5d5186529a5c6f4}{unit\+Out\+Range\+Event}}
 \item 
 \doxymbox{\hyperlink{class_unit_death_event}{Unit\+Death\+Event}} \doxymbox{\hyperlink{class_attack_system_a83778d37924af55cb51300b7c83339e9}{unit\+Death\+Event}}
+\item 
+\doxymbox{\hyperlink{class_visibility_event}{Visibility\+Event}} \doxymbox{\hyperlink{class_attack_system_a3283a36c549ce623fc9ce1324a1fafb9}{unit\+Visibility\+Event}}
 \item 
 List$<$ \doxymbox{\hyperlink{interface_i_attackable}{IAttackable}} $>$ \doxymbox{\hyperlink{class_attack_system_a1e2d493b622a73c6c1f6d65adab6b908}{enemies\+In\+Range}} = new List$<$\doxymbox{\hyperlink{interface_i_attackable}{IAttackable}}$>$()
 \item 
@@ -78,6 +81,12 @@ List$<$ \doxymbox{\hyperlink{interface_i_attackable}{IAttackable}} $>$ Attack\+S
 \doxysubsubsection{\texorpdfstring{GetVisibleEnemies()}{GetVisibleEnemies()}}
 {\footnotesize\ttfamily \label{class_attack_system_af505df309c907d5ea6f944503c3bcfea} 
 List$<$ \doxymbox{\hyperlink{interface_i_attackable}{IAttackable}} $>$ Attack\+System.\+Get\+Visible\+Enemies (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_attack_system_a30f1a88980445a108a574748d18b46c1}\index{AttackSystem@{AttackSystem}!HandleVisivilityChange@{HandleVisivilityChange}}
+\index{HandleVisivilityChange@{HandleVisivilityChange}!AttackSystem@{AttackSystem}}
+\doxysubsubsection{\texorpdfstring{HandleVisivilityChange()}{HandleVisivilityChange()}}
+{\footnotesize\ttfamily \label{class_attack_system_a30f1a88980445a108a574748d18b46c1} 
+void Attack\+System.\+Handle\+Visivility\+Change (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vision}{Vision}}}]{vision}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
 \Hypertarget{class_attack_system_aaa5a645912f57556e16dd6ee8703279a}\index{AttackSystem@{AttackSystem}!OnDestroy@{OnDestroy}}
 \index{OnDestroy@{OnDestroy}!AttackSystem@{AttackSystem}}
@@ -149,6 +158,12 @@ Sphere\+Collider Attack\+System.\+sphere\+Collider\hspace{0.3cm}{\ttfamily [priv
 \doxysubsubsection{\texorpdfstring{unitOutRangeEvent}{unitOutRangeEvent}}
 {\footnotesize\ttfamily \label{class_attack_system_a6e79b120e6b5c55ee5d5186529a5c6f4} 
 \doxymbox{\hyperlink{class_enemy_in_range_event}{Enemy\+In\+Range\+Event}} Attack\+System.\+unit\+Out\+Range\+Event\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_attack_system_a3283a36c549ce623fc9ce1324a1fafb9}\index{AttackSystem@{AttackSystem}!unitVisibilityEvent@{unitVisibilityEvent}}
+\index{unitVisibilityEvent@{unitVisibilityEvent}!AttackSystem@{AttackSystem}}
+\doxysubsubsection{\texorpdfstring{unitVisibilityEvent}{unitVisibilityEvent}}
+{\footnotesize\ttfamily \label{class_attack_system_a3283a36c549ce623fc9ce1324a1fafb9} 
+\doxymbox{\hyperlink{class_visibility_event}{Visibility\+Event}} Attack\+System.\+unit\+Visibility\+Event\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

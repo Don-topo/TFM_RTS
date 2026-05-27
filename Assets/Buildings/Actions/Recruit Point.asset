@@ -14,13 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RecruitPoint
   <Name>k__BackingField: Recruit Point
   <Icon>k__BackingField: {fileID: 21300000, guid: 575c64041e3c5314d893fa189e4d3d4e, type: 3}
-  <HotKey>k__BackingField: 32
+  <HotKey>k__BackingField: 38
   <UIPosition>k__BackingField: 5
   <IsSingleUnitAction>k__BackingField: 0
   <UseClickToExecute>k__BackingField: 1
   <ExecuteAudio>k__BackingField:
   - {fileID: 8300000, guid: 2c35d415acb41984aa5befb916ec6651, type: 3}
   <Restrictions>k__BackingField: []
+  <CursorIcon>k__BackingField: {fileID: 0}
   <IgnoreTerrain>k__BackingField:
     serializedVersion: 2
     m_Bits: 54

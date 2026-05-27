@@ -15,13 +15,13 @@ MonoBehaviour:
   <Name>k__BackingField: Wall
   <Icon>k__BackingField: {fileID: 21300000, guid: 83b95ac280ddd5045b1139cde7bbf7d7, type: 3}
   <UnitPrefab>k__BackingField: {fileID: 2984138956801422112, guid: 460ef71f264d91a4180615436df988fe, type: 3}
-  <Health>k__BackingField: 100
-  <GenerationTime>k__BackingField: 8
+  <Health>k__BackingField: 1000
+  <GenerationTime>k__BackingField: 10
   <Cost>k__BackingField: {fileID: 11400000, guid: 52ed96c5ecfb73741b235717a89f20bc, type: 2}
   <SelectionAudioClips>k__BackingField:
   - {fileID: 8300000, guid: 6426cfa1072a5444ab6e46c812240718, type: 3}
   - {fileID: 8300000, guid: 0a0663f16b326b6459c53fe7635f612b, type: 3}
   - {fileID: 8300000, guid: c3ff3185ba16de940808e6cb78fb436f, type: 3}
   - {fileID: 8300000, guid: 463c3fe0d8b215847beaf603470e1747, type: 3}
-  <VisionConf>k__BackingField: {fileID: 11400000, guid: 1fabcd4d1338df14d8d09f80d0d18ea1, type: 2}
+  <VisionConf>k__BackingField: {fileID: 11400000, guid: 2ef632d19da614e41a437fd12f520c93, type: 2}
   <PrebuildMaterial>k__BackingField: {fileID: 2100000, guid: d83ecade081c9e84b8d9c103e26560ae, type: 2}

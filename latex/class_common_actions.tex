@@ -2,8 +2,7 @@
 \hypertarget{class_common_actions}{}\label{class_common_actions}\index{CommonActions@{CommonActions}}
 
 
-Inheritance diagram for Common\+Actions:\+
-\nopagebreak
+Inheritance diagram for Common\+Actions:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -32,6 +31,8 @@ void \doxymbox{\hyperlink{class_common_actions_a31efbfded7bac0694367df1e807b5f26
 void \doxymbox{\hyperlink{class_common_actions_a9aeadc1e41e81f959cebe4b3f83f55f4}{Apply\+Damage}} (int damage\+Amount)
 \item 
 virtual void \doxymbox{\hyperlink{class_common_actions_a8e7f24683c4995eadb235cb40cfcec13}{Die}} ()
+\item 
+void \doxymbox{\hyperlink{class_common_actions_a90885d6a94c66a103c660866f9a7eace}{Set\+Visible}} (bool is\+Visible)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -50,6 +51,10 @@ virtual void \doxymbox{\hyperlink{class_common_actions_aace304ed9479d52725fe618c
 virtual void \doxymbox{\hyperlink{class_common_actions_ae605f8ae1a8915928869b81dae283577}{Update}} ()
 \item 
 virtual void \doxymbox{\hyperlink{class_common_actions_afa3327aad40e00b114f4af1eb32fec58}{On\+Destroy}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_ac38f7081f60a2d559b85496fef73c6fe}{On\+Gain\+Visibility}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_common_actions_a049ffeeb9cd685fa4ab80443ad700072}{On\+Lose\+Visibility}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -61,6 +66,10 @@ Animator \doxymbox{\hyperlink{class_common_actions_a8596da371da49e83b31076f91b89
 \doxymbox{\hyperlink{class_update_health_event}{Update\+Health\+Event}} \doxymbox{\hyperlink{class_common_actions_a4a0946e2ad67e943e6364d7066ef8931}{update\+Health\+Event}}
 \item 
 \doxymbox{\hyperlink{class_unit_death_event}{Unit\+Death\+Event}} \doxymbox{\hyperlink{class_common_actions_a7bacbe25f3f281191a76a8477347caed}{unit\+Death\+Event}}
+\item 
+\doxymbox{\hyperlink{class_visibility_event}{Visibility\+Event}} \doxymbox{\hyperlink{class_common_actions_a5b24e7eefe463c9befee19ad4577cc59}{visibility\+Event}}
+\item 
+Transform \doxymbox{\hyperlink{class_common_actions_a13dd4da78ac88afaf33f5cac43d63c18}{vision\+Transform}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
@@ -78,6 +87,8 @@ int \doxymbox{\hyperlink{class_common_actions_a603564a07381db22a5f3e9d5ac51403a}
 Transform \doxymbox{\hyperlink{class_common_actions_a75b141d8781f3ff94932ac9d10bb2060}{Target\+Position}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
 \item 
 bool \doxymbox{\hyperlink{class_common_actions_a058d0dd3c4c061940a903ffafa026001}{is\+Dead}} = false\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+bool \doxymbox{\hyperlink{class_common_actions_a59aec3d420e4f815ff9e9162f0c5573c}{Is\+Visible}} = true\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -92,6 +103,8 @@ void \doxymbox{\hyperlink{class_common_actions_a8ab1d4104fb13a1a9eceb45993ed391c
 Collider \doxymbox{\hyperlink{class_common_actions_a03ab7c3b3c8f6865ba55803fda5f3599}{col}}
 \item 
 Rigidbody \doxymbox{\hyperlink{class_common_actions_a1e6c636514b6be2096ef99897319e125}{rb}}
+\item 
+Renderer\+[$\,$]\+ \doxymbox{\hyperlink{class_common_actions_a432c029ed46f65b76ea11c3aadac395f}{renderers}} = Array.\+Empty$<$Renderer$>$()
 \end{DoxyCompactItemize}
 
 
@@ -116,7 +129,7 @@ virtual void Common\+Actions.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParam
 
 
 
-Reimplemented in \doxymbox{\hyperlink{class_attacker_building_a3bc938a6e6af3637de179f7ccdc5a44b}{Attacker\+Building}}, \doxymbox{\hyperlink{class_base_attacker_a7bbd0506fdab70bc5e25133d88bdf9a4}{Base\+Attacker}}, \doxymbox{\hyperlink{class_base_healer_a634fe8f55eefde9837e0b58e68f5dbea}{Base\+Healer}}, \doxymbox{\hyperlink{class_base_unit_a1b5d82dfb2d7c344e241e7f882665604}{Base\+Unit}}, \doxymbox{\hyperlink{class_exploding_building_a7f8f3d87512b15324f99cff3956eba21}{Exploding\+Building}}, and \doxymbox{\hyperlink{class_recruit_building_a33f0340d86520e975d9697aaaaa1a723}{Recruit\+Building}}.
+Reimplemented in \doxymbox{\hyperlink{class_attacker_building_a3bc938a6e6af3637de179f7ccdc5a44b}{Attacker\+Building}}, \doxymbox{\hyperlink{class_base_attacker_a7bbd0506fdab70bc5e25133d88bdf9a4}{Base\+Attacker}}, \doxymbox{\hyperlink{class_base_building_a19d91c8f26a7cf77e6d5b5c25b039fbb}{Base\+Building}}, \doxymbox{\hyperlink{class_base_healer_a634fe8f55eefde9837e0b58e68f5dbea}{Base\+Healer}}, \doxymbox{\hyperlink{class_base_unit_a1b5d82dfb2d7c344e241e7f882665604}{Base\+Unit}}, \doxymbox{\hyperlink{class_enemy_controller_ab6deef38df6828a5152e1fd0c73061d8}{Enemy\+Controller}}, \doxymbox{\hyperlink{class_exploding_building_a7f8f3d87512b15324f99cff3956eba21}{Exploding\+Building}}, \doxymbox{\hyperlink{class_production_building_a769c3133d97e383d81f989edc6c31477}{Production\+Building}}, and \doxymbox{\hyperlink{class_recruit_building_a33f0340d86520e975d9697aaaaa1a723}{Recruit\+Building}}.
 
 \Hypertarget{class_common_actions_ab819292d2b539af3fd654934925c3d43}\index{CommonActions@{CommonActions}!Deselect@{Deselect}}
 \index{Deselect@{Deselect}!CommonActions@{CommonActions}}
@@ -156,6 +169,18 @@ virtual void Common\+Actions.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{Dox
 
 Reimplemented in \doxymbox{\hyperlink{class_attacker_building_a05e2af55c32690bf1da552f8999b37de}{Attacker\+Building}}, \doxymbox{\hyperlink{class_base_attacker_a9b5e33d8a9e9431fe57a48d51683713b}{Base\+Attacker}}, \doxymbox{\hyperlink{class_base_building_a3f1a908922f4a450466da213dd45bb2b}{Base\+Building}}, \doxymbox{\hyperlink{class_base_healer_a68d3c1e2deb76d7e883e66c304d59d2e}{Base\+Healer}}, \doxymbox{\hyperlink{class_base_unit_a709115831365face9e32f39501113684}{Base\+Unit}}, \doxymbox{\hyperlink{class_enemy_controller_a4520f46ce3c50343d9c158fd9d5febaa}{Enemy\+Controller}}, \doxymbox{\hyperlink{class_production_building_aab5eb8d0eb3b39fb1b116da98838a709}{Production\+Building}}, and \doxymbox{\hyperlink{class_recruit_building_a406e4508d43e7420d37b80c40f49d44f}{Recruit\+Building}}.
 
+\Hypertarget{class_common_actions_ac38f7081f60a2d559b85496fef73c6fe}\index{CommonActions@{CommonActions}!OnGainVisibility@{OnGainVisibility}}
+\index{OnGainVisibility@{OnGainVisibility}!CommonActions@{CommonActions}}
+\doxysubsubsection{\texorpdfstring{OnGainVisibility()}{OnGainVisibility()}}
+{\footnotesize\ttfamily \label{class_common_actions_ac38f7081f60a2d559b85496fef73c6fe} 
+virtual void Common\+Actions.\+On\+Gain\+Visibility (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_common_actions_a049ffeeb9cd685fa4ab80443ad700072}\index{CommonActions@{CommonActions}!OnLoseVisibility@{OnLoseVisibility}}
+\index{OnLoseVisibility@{OnLoseVisibility}!CommonActions@{CommonActions}}
+\doxysubsubsection{\texorpdfstring{OnLoseVisibility()}{OnLoseVisibility()}}
+{\footnotesize\ttfamily \label{class_common_actions_a049ffeeb9cd685fa4ab80443ad700072} 
+virtual void Common\+Actions.\+On\+Lose\+Visibility (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
 \Hypertarget{class_common_actions_a8ab1d4104fb13a1a9eceb45993ed391c}\index{CommonActions@{CommonActions}!PlaySelectionAudio@{PlaySelectionAudio}}
 \index{PlaySelectionAudio@{PlaySelectionAudio}!CommonActions@{CommonActions}}
 \doxysubsubsection{\texorpdfstring{PlaySelectionAudio()}{PlaySelectionAudio()}}
@@ -182,6 +207,16 @@ Reimplemented in \doxymbox{\hyperlink{class_base_building_adc2e3a3694cf9295b9471
 {\footnotesize\ttfamily \label{class_common_actions_a31efbfded7bac0694367df1e807b5f26} 
 void Common\+Actions.\+Set\+Commands\+Overrides (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_base_action}{Base\+Action}}\+[$\,$]\+}]{actions}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+\Hypertarget{class_common_actions_a90885d6a94c66a103c660866f9a7eace}\index{CommonActions@{CommonActions}!SetVisible@{SetVisible}}
+\index{SetVisible@{SetVisible}!CommonActions@{CommonActions}}
+\doxysubsubsection{\texorpdfstring{SetVisible()}{SetVisible()}}
+{\footnotesize\ttfamily \label{class_common_actions_a90885d6a94c66a103c660866f9a7eace} 
+void Common\+Actions.\+Set\+Visible (\begin{DoxyParamCaption}\item[{bool}]{is\+Visible}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \doxymbox{\hyperlink{interface_i_hideable_a1a0615138e26a84198ea888f6fb12034}{IHideable}}.
+
 \Hypertarget{class_common_actions_aeae7ae6e7935fe45dfbf97700170c334}\index{CommonActions@{CommonActions}!Start@{Start}}
 \index{Start@{Start}!CommonActions@{CommonActions}}
 \doxysubsubsection{\texorpdfstring{Start()}{Start()}}
@@ -200,7 +235,7 @@ virtual void Common\+Actions.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyPara
 
 
 
-Reimplemented in \doxymbox{\hyperlink{class_production_building_a4dcb8481ff5a9b6a8ccfa4a8b6c6b835}{Production\+Building}}.
+Reimplemented in \doxymbox{\hyperlink{class_base_building_ac0d1db829825022ddda2eacc1bea159d}{Base\+Building}}, and \doxymbox{\hyperlink{class_production_building_a4dcb8481ff5a9b6a8ccfa4a8b6c6b835}{Production\+Building}}.
 
 
 
@@ -224,6 +259,12 @@ Collider Common\+Actions.\+col\hspace{0.3cm}{\ttfamily [private]}}
 \doxysubsubsection{\texorpdfstring{rb}{rb}}
 {\footnotesize\ttfamily \label{class_common_actions_a1e6c636514b6be2096ef99897319e125} 
 Rigidbody Common\+Actions.\+rb\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_common_actions_a432c029ed46f65b76ea11c3aadac395f}\index{CommonActions@{CommonActions}!renderers@{renderers}}
+\index{renderers@{renderers}!CommonActions@{CommonActions}}
+\doxysubsubsection{\texorpdfstring{renderers}{renderers}}
+{\footnotesize\ttfamily \label{class_common_actions_a432c029ed46f65b76ea11c3aadac395f} 
+Renderer \+[$\,$]\+ Common\+Actions.\+renderers = Array.\+Empty$<$Renderer$>$()\hspace{0.3cm}{\ttfamily [private]}}
 
 \Hypertarget{class_common_actions_a0551ee27e1d92c4cab5583499081a0d3}\index{CommonActions@{CommonActions}!selectionDecal@{selectionDecal}}
 \index{selectionDecal@{selectionDecal}!CommonActions@{CommonActions}}
@@ -261,6 +302,18 @@ Decal\+Projector Common\+Actions.\+selection\+Decal\hspace{0.3cm}{\ttfamily [pro
 {\footnotesize\ttfamily \label{class_common_actions_a4a0946e2ad67e943e6364d7066ef8931} 
 \doxymbox{\hyperlink{class_update_health_event}{Update\+Health\+Event}} Common\+Actions.\+update\+Health\+Event\hspace{0.3cm}{\ttfamily [protected]}}
 
+\Hypertarget{class_common_actions_a5b24e7eefe463c9befee19ad4577cc59}\index{CommonActions@{CommonActions}!visibilityEvent@{visibilityEvent}}
+\index{visibilityEvent@{visibilityEvent}!CommonActions@{CommonActions}}
+\doxysubsubsection{\texorpdfstring{visibilityEvent}{visibilityEvent}}
+{\footnotesize\ttfamily \label{class_common_actions_a5b24e7eefe463c9befee19ad4577cc59} 
+\doxymbox{\hyperlink{class_visibility_event}{Visibility\+Event}} Common\+Actions.\+visibility\+Event\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_common_actions_a13dd4da78ac88afaf33f5cac43d63c18}\index{CommonActions@{CommonActions}!visionTransform@{visionTransform}}
+\index{visionTransform@{visionTransform}!CommonActions@{CommonActions}}
+\doxysubsubsection{\texorpdfstring{visionTransform}{visionTransform}}
+{\footnotesize\ttfamily \label{class_common_actions_a13dd4da78ac88afaf33f5cac43d63c18} 
+Transform Common\+Actions.\+vision\+Transform\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 \label{doc-property-members}
@@ -297,6 +350,16 @@ bool Common\+Actions.\+Is\+Selected\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [
 
 
 Implements \doxymbox{\hyperlink{interface_i_selectable_a52eadd6ad90b4dcb9073f4488b0b137f}{ISelectable}}.
+
+\Hypertarget{class_common_actions_a59aec3d420e4f815ff9e9162f0c5573c}\index{CommonActions@{CommonActions}!IsVisible@{IsVisible}}
+\index{IsVisible@{IsVisible}!CommonActions@{CommonActions}}
+\doxysubsubsection{\texorpdfstring{IsVisible}{IsVisible}}
+{\footnotesize\ttfamily \label{class_common_actions_a59aec3d420e4f815ff9e9162f0c5573c} 
+bool Common\+Actions.\+Is\+Visible = true\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+
+
+Implements \doxymbox{\hyperlink{interface_i_hideable_a01d0e4601ad887154d6488e2c3d25f9e}{IHideable}}.
 
 \Hypertarget{class_common_actions_a603564a07381db22a5f3e9d5ac51403a}\index{CommonActions@{CommonActions}!MaxHealth@{MaxHealth}}
 \index{MaxHealth@{MaxHealth}!CommonActions@{CommonActions}}

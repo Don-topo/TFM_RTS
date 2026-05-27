@@ -451,7 +451,7 @@ public class PlayerController : MonoBehaviour
         {
             placeBuildingInstance.transform.position = hit.point;
             placeBuildingInstance.GetComponentsInChildren<Renderer>().All(rend => 
-                rend.material = selectedAction.AllRestrictionsPass(hit.point) ? OkPlaceMaterial : KoPlaceMaterial);            
+                rend.material = selectedAction.CheckRestrictions(hit.point) ? OkPlaceMaterial : KoPlaceMaterial);            
         }
     }
 
@@ -476,21 +476,21 @@ public class PlayerController : MonoBehaviour
 
     private List<BaseAction> GetAvailableCommands(CommonActions unit)
     {
-        OverrideCommandsCommand[] overrideCommandsCommands = unit.Actions
-            .Where(command => command is OverrideCommandsCommand)
-            .Cast<OverrideCommandsCommand>()
+        ReplaceActions[] overrideCommandsCommands = unit.Actions
+            .Where(command => command is ReplaceActions)
+            .Cast<ReplaceActions>()
             .ToArray();
 
         List<BaseAction> allAvailableCommands = new();
-        foreach (OverrideCommandsCommand overrideCommand in overrideCommandsCommands)
+        foreach (ReplaceActions overrideCommand in overrideCommandsCommands)
         {
             allAvailableCommands.AddRange(overrideCommand.Commands
-                .Where(command => command is not OverrideCommandsCommand)
+                .Where(command => command is not ReplaceActions)
             );
         }
 
         allAvailableCommands.AddRange(unit.Actions
-            .Where(command => command is not OverrideCommandsCommand)
+            .Where(command => command is not ReplaceActions)
         );
 
         return allAvailableCommands;

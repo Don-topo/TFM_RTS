@@ -19,5 +19,5 @@ MonoBehaviour:
   <GenerationTime>k__BackingField: 8
   <Cost>k__BackingField: {fileID: 11400000, guid: c9eb2be2ca829354da46b299e7a40503, type: 2}
   <SelectionAudioClips>k__BackingField: []
-  <VisionConf>k__BackingField: {fileID: 11400000, guid: 1fabcd4d1338df14d8d09f80d0d18ea1, type: 2}
+  <VisionConf>k__BackingField: {fileID: 11400000, guid: 2ef632d19da614e41a437fd12f520c93, type: 2}
   <PrebuildMaterial>k__BackingField: {fileID: 2100000, guid: d83ecade081c9e84b8d9c103e26560ae, type: 2}
