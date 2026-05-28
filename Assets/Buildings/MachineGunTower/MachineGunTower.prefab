@@ -324,13 +324,14 @@ MonoBehaviour:
   <IsConstructed>k__BackingField: 0
   <IsRepairing>k__BackingField: 0
   explotionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
-  destroyBuildingAudio: {fileID: 0}
+  destroyBuildingAudio: {fileID: 8300000, guid: 974550277c1f4fe41a0d09da025af69a, type: 3}
   StartTime: 0
   attackSystem: {fileID: 8893650850957543049}
   <WeaponGameObject>k__BackingField: {fileID: 2497326195620051119}
   unitEnterRange: {fileID: 11400000, guid: a9267367e362866478e1cc864c850a3d, type: 2}
   unitOutOfRange: {fileID: 11400000, guid: a9267367e362866478e1cc864c850a3d, type: 2}
   <AttackInfo>k__BackingField: {fileID: 11400000, guid: 10a360d3de8622148a93d8a4a957878e, type: 2}
+  <AttackParticle>k__BackingField: {fileID: 1335172858648191052}
 --- !u!114 &8478311788194055489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -608,6 +609,11 @@ PrefabInstance:
 --- !u!4 &1173327329146654978 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4300533007854612, guid: ad2ab49d0a2a17148bd51c93d977bdbc, type: 3}
+  m_PrefabInstance: {fileID: 1172969667259301142}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1335172858648191052 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198234346748616026, guid: ad2ab49d0a2a17148bd51c93d977bdbc, type: 3}
   m_PrefabInstance: {fileID: 1172969667259301142}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1932869868327780710

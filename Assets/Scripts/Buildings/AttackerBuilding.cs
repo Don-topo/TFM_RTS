@@ -57,10 +57,8 @@ public class AttackerBuilding : BaseBuilding, IAttacker
 
         Vector3 boxSize = new Vector3(AttackInfo.XArea, AttackInfo.YArea, AttackInfo.ZArea);
         Vector3 forward = WeaponGameObject.transform.right;
-
-        Vector3 center =
-            WeaponGameObject.transform.position +
-            WeaponGameObject.transform.right * (boxSize.z * 0.5f);
+        Vector3 offset = AttackInfo.AddOffset ? (WeaponGameObject.transform.right * (boxSize.z * 0.5f)) : Vector3.zero;
+        Vector3 center = WeaponGameObject.transform.position + offset;            
 
         Gizmos.matrix = Matrix4x4.TRS(
             center,

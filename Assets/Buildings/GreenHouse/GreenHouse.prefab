@@ -111,6 +111,7 @@ MonoBehaviour:
   <IsConstructed>k__BackingField: 0
   <IsRepairing>k__BackingField: 0
   explotionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
+  destroyBuildingAudio: {fileID: 8300000, guid: 974550277c1f4fe41a0d09da025af69a, type: 3}
   StartTime: 0
   <Resource>k__BackingField: {fileID: 11400000, guid: b3c8180ffc8549f4b808c870127af8de, type: 2}
   applyForEveryResource: 0

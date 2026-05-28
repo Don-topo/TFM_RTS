@@ -71,13 +71,13 @@ public partial class BuildAttackBehaviourAction : Action
         {
             attackerBuilding.AttackParticle.Play();
         }
+
         if (attackerBuilding.AttackInfo.IsAttachedAreaEffect)
         {
             Vector3 forward = weapon.transform.right;
             Vector3 boxSize = new Vector3(AttackInfo.Value.XArea, AttackInfo.Value.YArea, AttackInfo.Value.ZArea);
-            Vector3 center =
-                weapon.transform.position +
-                weapon.transform.right * (boxSize.z * 0.5f);
+            Vector3 offset = AttackInfo.Value.AddOffset ? (weapon.transform.right * (boxSize.z * 0.5f)) :Vector3.zero;
+            Vector3 center = weapon.transform.position + offset;                            
 
             Collider[] hits = Physics.OverlapBox(
                 center,
@@ -104,7 +104,7 @@ public partial class BuildAttackBehaviourAction : Action
     {
         Vector3 direction = targetTransform.position - weapon.transform.position;
 
-        if (direction != Vector3.zero)
+        if (weapon != null && !AttackInfo.Value.FixedWeapon && direction != Vector3.zero)
         {
             weapon.transform.rotation = Quaternion.LookRotation(direction) * Quaternion.Euler(0, -90, 0);
         }

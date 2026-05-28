@@ -153,6 +153,7 @@ MonoBehaviour:
   <IsConstructed>k__BackingField: 0
   <IsRepairing>k__BackingField: 0
   explotionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
+  destroyBuildingAudio: {fileID: 8300000, guid: 974550277c1f4fe41a0d09da025af69a, type: 3}
   StartTime: 0
   queueEvent: {fileID: 11400000, guid: 1dd8e8867b7a3644e9d24fe108f29d73, type: 2}
   recruitDestination: {fileID: 6434967215031062788, guid: e2a5db46af34bb84097aa238fdbd9aea, type: 3}

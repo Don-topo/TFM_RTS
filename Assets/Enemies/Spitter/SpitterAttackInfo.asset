@@ -17,4 +17,14 @@ MonoBehaviour:
   <AttackSpeed>k__BackingField: 1
   AttackAudioClips: []
   PatrolAudioClips: []
-  <AttackEffect>k__BackingField: {fileID: 0}
+  <AreaOfEffectRadius>k__BackingField: 2
+  <IsDetachedAreaProyectile>k__BackingField: 0
+  <IsAttachedAreaEffect>k__BackingField: 1
+  <XArea>k__BackingField: 2
+  <YArea>k__BackingField: 2
+  <ZArea>k__BackingField: 2
+  <DamageableLayer>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 64
+  <AddOffset>k__BackingField: 1
+  <FixedWeapon>k__BackingField: 0

@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +12,6 @@ public class SO_AttackInfo : ScriptableObject
     [field: SerializeField] public List<AudioClip> AttackAudioClips;
     [field: SerializeField] public List<AudioClip> PatrolAudioClips;
     [Header("Effects")]
-    [field: SerializeField] public ParticleSystem AttackEffect { get; private set; }    
     [field: SerializeField] public float AreaOfEffectRadius { get; private set; } = 2;
     [Header("Area Config")]
     [field: SerializeField] public bool IsDetachedAreaProyectile { get; private set; } = false;
@@ -22,6 +20,8 @@ public class SO_AttackInfo : ScriptableObject
     [field: SerializeField] public float YArea { get; private set; } = 2f;
     [field: SerializeField] public float ZArea { get; private set; } = 2f;
     [field: SerializeField] public LayerMask DamageableLayer { get; private set; }
+    [field: SerializeField] public bool AddOffset { get; private set; } = true;
+    [field: SerializeField] public bool FixedWeapon { get; private set; } = false;
 
     public int CalculateAreaOfEffectDamage(Vector3 impactPoint, Vector3 targetPosition)
     {

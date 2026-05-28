@@ -125,6 +125,7 @@ MonoBehaviour:
   <IsConstructed>k__BackingField: 0
   <IsRepairing>k__BackingField: 0
   explotionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
+  destroyBuildingAudio: {fileID: 8300000, guid: 70c00237b29511445ad831db1031c1e5, type: 3}
   StartTime: 0
   attackInfo: {fileID: 11400000, guid: 7925b3bdcc71db743b724da7d8330017, type: 2}
   sphereCollider: {fileID: 8238269320531825781}
