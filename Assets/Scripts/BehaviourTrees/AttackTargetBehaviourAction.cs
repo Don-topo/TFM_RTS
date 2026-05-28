@@ -36,7 +36,7 @@ public partial class AttackTargetBehaviourAction : Action
         targetAttackable = TargetGameObject.Value.GetComponent<IAttackable>();
         //lastAttack = Time.time;
 
-        if (AttackInfo.Value.IsAreaEffect)
+        if (AttackInfo.Value.IsDetachedAreaProyectile)
         {
             targetColliders = new List<Collider>();
         }
@@ -119,7 +119,7 @@ public partial class AttackTargetBehaviourAction : Action
             animator.SetTrigger("Attack");
         }
         lastAttack = Time.time;
-        if (AttackInfo.Value.IsAreaEffect) return;
+        if (AttackInfo.Value.IsDetachedAreaProyectile) return;
         targetAttackable.ApplyDamage(AttackInfo.Value.AttackDamage);       
     }
 }

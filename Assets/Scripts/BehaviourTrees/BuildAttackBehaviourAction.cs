@@ -16,26 +16,27 @@ public partial class BuildAttackBehaviourAction : Action
     [SerializeReference] public BlackboardVariable<SO_AttackInfo> AttackInfo;
     [SerializeReference] public BlackboardVariable<List<GameObject>> Enemies;
 
-    private BaseUnit baseUnit;
+    private AttackerBuilding attackerBuilding;
     private Transform selfTransform;
     private Transform targetTransform;
-    private List<Collider> targetColliders;
+    private Collider[] targetColliders;
     private float lastAttack;
     private IAttackable targetAttackable;
     private AudioSource audioSource;
     private ParticleSystem particleSystem;
+    private GameObject weapon;
 
     protected override Status OnStart()
     {
         if (Self.Value == null || TargetGameObject.Value == null || Enemies.Value == null) return Status.Failure;
             
         selfTransform = Self.Value.transform;
-        particleSystem = Self.Value.GetComponent<AttackerBuilding>().AttackInfo.AttackEffect;
-        baseUnit = selfTransform.GetComponent<BaseUnit>();
+        attackerBuilding = selfTransform.GetComponent<AttackerBuilding>();
+        particleSystem = Self.Value.GetComponent<AttackerBuilding>().AttackParticle;
         targetTransform = TargetGameObject.Value.transform;
         targetAttackable = TargetGameObject.Value.GetComponent<IAttackable>();
         audioSource = Self.Value.GetComponent<AudioSource>();
-        lastAttack = Time.time;
+        weapon = Self.Value.GetComponent<AttackerBuilding>().WeaponGameObject;
         return Status.Running;
     }
 
@@ -47,6 +48,9 @@ public partial class BuildAttackBehaviourAction : Action
         {
             return Status.Running;
         }
+        
+        LookAtTarget();
+
         if (Time.time > lastAttack + AttackInfo.Value.AttackSpeed && !Self.Value.GetComponent<AttackerBuilding>().IsRepairing)
         {
             Attack();
@@ -63,7 +67,47 @@ public partial class BuildAttackBehaviourAction : Action
     {
         lastAttack = Time.time;        
         if (audioSource != null) audioSource.Play();
-        targetAttackable.ApplyDamage(AttackInfo.Value.AttackDamage);
+        if(attackerBuilding.AttackParticle != null)
+        {
+            attackerBuilding.AttackParticle.Play();
+        }
+        if (attackerBuilding.AttackInfo.IsAttachedAreaEffect)
+        {
+            Vector3 forward = weapon.transform.right;
+            Vector3 boxSize = new Vector3(AttackInfo.Value.XArea, AttackInfo.Value.YArea, AttackInfo.Value.ZArea);
+            Vector3 center =
+                weapon.transform.position +
+                weapon.transform.right * (boxSize.z * 0.5f);
+
+            Collider[] hits = Physics.OverlapBox(
+                center,
+                boxSize * 0.5f,
+                Quaternion.LookRotation(forward, weapon.transform.up),
+                AttackInfo.Value.DamageableLayer
+            );
+
+            foreach (Collider collider in hits)
+            {
+                if (collider.CompareTag("Enemy"))
+                {
+                    collider.GetComponent<IAttackable>().ApplyDamage(attackerBuilding.AttackInfo.AttackDamage);
+                }                    
+            }
+        }
+        else
+        {
+            targetAttackable.ApplyDamage(AttackInfo.Value.AttackDamage);
+        }        
+    }    
+
+    private void LookAtTarget()
+    {
+        Vector3 direction = targetTransform.position - weapon.transform.position;
+
+        if (direction != Vector3.zero)
+        {
+            weapon.transform.rotation = Quaternion.LookRotation(direction) * Quaternion.Euler(0, -90, 0);
+        }
     }
 }
 

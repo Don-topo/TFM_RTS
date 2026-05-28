@@ -18,9 +18,9 @@ public class EnemyController : BaseAttacker
     protected override void Start()
     {
         base.Start();
-        if(target != null )
+        if(target != null)
         {
-            Attack(target.transform.position);
+            //Attack(target.transform.position);
         }        
     }
 

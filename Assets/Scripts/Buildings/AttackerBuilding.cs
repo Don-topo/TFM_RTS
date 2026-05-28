@@ -7,11 +7,13 @@ public class AttackerBuilding : BaseBuilding, IAttacker
     [Header("Basic Info")]
     public Transform Transform => transform;
     [SerializeField] private AttackSystem attackSystem;
+    [field: SerializeField] public GameObject WeaponGameObject {  get; private set; }
     [Header("Events")]
     [SerializeField] private EnemyInRangeEvent unitEnterRange;
     [SerializeField] private EnemyInRangeEvent unitOutOfRange;
     [Header("Attack Info")]
     [field: SerializeField] public SO_AttackInfo AttackInfo { get; private set; }
+    [field: SerializeField] public ParticleSystem AttackParticle {  get; private set; }
 
 
     protected override void Awake()
@@ -47,6 +49,27 @@ public class AttackerBuilding : BaseBuilding, IAttacker
             AudioManager.SetAudioClips(AttackInfo.AttackAudioClips);
             AudioManager.PlayAudio();
         }
+    }
+
+    void OnDrawGizmos()
+    {
+        if (WeaponGameObject == null) return;
+
+        Vector3 boxSize = new Vector3(AttackInfo.XArea, AttackInfo.YArea, AttackInfo.ZArea);
+        Vector3 forward = WeaponGameObject.transform.right;
+
+        Vector3 center =
+            WeaponGameObject.transform.position +
+            WeaponGameObject.transform.right * (boxSize.z * 0.5f);
+
+        Gizmos.matrix = Matrix4x4.TRS(
+            center,
+            Quaternion.LookRotation(forward, WeaponGameObject.transform.up),
+            Vector3.one
+        );
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(Vector3.zero, boxSize);
     }
 
     private void UnitInRange(IAttackable enemyInRange)

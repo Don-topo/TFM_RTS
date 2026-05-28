@@ -87,7 +87,7 @@ public class ThrowerAttaker : BaseAttacker
             attackable.ApplyDamage(AttackInfo.AttackDamage);
         }
 
-        if (AttackInfo.IsAreaEffect)
+        if (AttackInfo.IsDetachedAreaProyectile)
         {
             int hits = Physics.OverlapSphereNonAlloc(
                 endPosition,

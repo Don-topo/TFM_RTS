@@ -16,13 +16,16 @@ public class SO_AttackInfo : ScriptableObject
     [field: SerializeField] public ParticleSystem AttackEffect { get; private set; }    
     [field: SerializeField] public float AreaOfEffectRadius { get; private set; } = 2;
     [Header("Area Config")]
-    [field: SerializeField] public bool isDetachedProyectile { get; private set; } = false;
-    [field: SerializeField] public bool IsAreaEffect { get; private set; } = false;
+    [field: SerializeField] public bool IsDetachedAreaProyectile { get; private set; } = false;
+    [field: SerializeField] public bool IsAttachedAreaEffect {  get; private set; } = false;
+    [field: SerializeField] public float XArea { get; private set; } = 2f;
+    [field: SerializeField] public float YArea { get; private set; } = 2f;
+    [field: SerializeField] public float ZArea { get; private set; } = 2f;
     [field: SerializeField] public LayerMask DamageableLayer { get; private set; }
 
     public int CalculateAreaOfEffectDamage(Vector3 impactPoint, Vector3 targetPosition)
     {
-        if (!IsAreaEffect) return 0;
+        if (!IsDetachedAreaProyectile) return 0;
 
         float distance = Vector3.Distance(impactPoint, targetPosition);
 
