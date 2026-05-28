@@ -1,5 +1,10 @@
 Patches relases:
 
+v.0.41 => 28/05/2026.
+  - Fix Building attacks (normal and area).
+  - Fix Unit attack (normal and throw).
+  - TODO Fix Unit attack (area).
+    
 v.0.40 => 27/05/2026:
   - Add Unit UI Details.
   - Tune cost attributes and time values.
