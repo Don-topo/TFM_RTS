@@ -15,7 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: Walker
   <Icon>k__BackingField: {fileID: 21300000, guid: 081d96c79272f994a8c6247cb6d88966, type: 3}
   <UnitPrefab>k__BackingField: {fileID: 3247594861463002968, guid: a35d41cda6a2c604cb488ac26523d144, type: 3}
-  <Health>k__BackingField: 10000
+  <Health>k__BackingField: 60
   <GenerationTime>k__BackingField: 8
   <Cost>k__BackingField: {fileID: 11400000, guid: 66a35b8f2864a2c4bb78a43af18179ac, type: 2}
   <SelectionAudioClips>k__BackingField: []

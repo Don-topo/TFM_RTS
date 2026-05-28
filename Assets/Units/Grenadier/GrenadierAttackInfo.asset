@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: GrenadierAttackInfo
   m_EditorClassIdentifier: Assembly-CSharp::SO_AttackInfo
   <AttackDamage>k__BackingField: 20
-  <AttackRange>k__BackingField: 2
-  <AttackSpeed>k__BackingField: 1
+  <AttackRange>k__BackingField: 5
+  <AttackSpeed>k__BackingField: 2.5
   AttackAudioClips:
   - {fileID: 8300000, guid: 0754deda5282c0847bd4f8477b336552, type: 3}
   - {fileID: 8300000, guid: 179a0ca28abfc544b827e1a18262fbb3, type: 3}
@@ -26,3 +26,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3db3de9fdaf434d4ea640470250f4ba8, type: 3}
   - {fileID: 8300000, guid: 5e8baac6078b85c4cb19a11081d7a0a8, type: 3}
   - {fileID: 8300000, guid: 0f3bbc3d8a699604e932d7d8749551b4, type: 3}
+  <AttackEffect>k__BackingField: {fileID: 0}
+  <AreaOfEffectRadius>k__BackingField: 2
+  <isDetachedProyectile>k__BackingField: 0
+  <IsAreaEffect>k__BackingField: 1
+  <DamageableLayer>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 64

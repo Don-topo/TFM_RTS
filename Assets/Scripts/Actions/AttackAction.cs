@@ -31,6 +31,7 @@ public class AttackAction : BaseAction
     {
         IAttacker attacker = actionInfo.Action as IAttacker;
         // Safety check
+
         if (attacker == null) return;
         IAttackable attackable = actionInfo.Hit.collider.GetComponent<IAttackable>();
         // Check if enemy is selected directly

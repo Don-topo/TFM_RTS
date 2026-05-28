@@ -18,15 +18,17 @@ public class BaseBuilding : CommonActions, IHealable
     [field: SerializeField] public bool IsRepairing { get; set; } = false;
     [Header("Effects")]
     [SerializeField] private GameObject explotionPrefab;
+    [Header("Audio")]
+    [SerializeField] private AudioClip destroyBuildingAudio;
 
     public float StartTime;
 
     private Renderer[] baseRenderers;
     private Material[] initialMaterials;
+    protected AudioSource audioSource;
     
     protected override void Start()
-   {
-        
+   {        
         if (!IsConstructed)
         {
             SaveMaterials();
@@ -34,6 +36,7 @@ public class BaseBuilding : CommonActions, IHealable
         }
         CurrentHealth = IsConstructed ? SO_BaseUnit.Health : 1;          
         MaxHealth = SO_building.Health;
+        audioSource = gameObject.AddComponent<AudioSource>();
         base.Start();
     }
 
@@ -49,10 +52,6 @@ public class BaseBuilding : CommonActions, IHealable
 
     protected override void OnDestroy()
     {
-        // TODO FIX don't instantiate things on OnDestroy, is not the right place
-        // Play explotion
-        //GameObject explotionInstance = Instantiate(explotionPrefab, transform.position, Quaternion.identity);
-        //Destroy(explotionInstance, explotionInstance.GetComponent<ParticleSystem>().main.duration);
         base.OnDestroy();
         buildDestroyedEvent.Raise(this);
     }
@@ -161,11 +160,36 @@ public class BaseBuilding : CommonActions, IHealable
 
     public virtual void RepairBuilding()
     {
-        // TODO Calculate cost
+        // Calculate repair cost
+        float cost = CalculateRefund();
+        // Spend Resources
+        ResourceOP resourceOP = new ResourceOP(SO_building.Cost.SO_Food, -(int)(SO_building.Cost.Food - (SO_building.Cost.Food * cost)), 0);
+        resourceEvent.Raise(resourceOP);
+        resourceOP = new ResourceOP(SO_building.Cost.SO_Wood, -(int)(SO_building.Cost.Wood - (SO_building.Cost.Wood * cost)), 0);
+        resourceEvent.Raise(resourceOP);
+        resourceOP = new ResourceOP(SO_building.Cost.SO_Stone, -(int)(SO_building.Cost.Stone - (SO_building.Cost.Stone * cost)), 0);
+        resourceEvent.Raise(resourceOP);
+        resourceOP = new ResourceOP(SO_building.Cost.SO_Iron, -(int)(SO_building.Cost.Iron - (SO_building.Cost.Iron * cost)), 0);
+        resourceEvent.Raise(resourceOP);
         IsRepairing = true;
         StartTime = Time.time;
         StopAllCoroutines();
         GraphAgent.SetVariableValue("BuildingActions", BuildingActions.Repair);
+    }
+
+    public override void Die()
+    {
+        // Play destruction audio
+        if(audioSource != null)
+        {
+            audioSource.clip = destroyBuildingAudio;
+            audioSource.loop = false;
+            audioSource.Play();
+        }        
+        // Play explotion
+        GameObject explotionInstance = Instantiate(explotionPrefab, transform.position, Quaternion.identity);
+        Destroy(explotionInstance, explotionInstance.GetComponent<ParticleSystem>().main.duration);
+        base.Die();
     }
 
     public void ResetActions()

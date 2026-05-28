@@ -9,11 +9,11 @@ AnimatorOverrideController:
   m_Name: SniperAnimatorController
   m_Controller: {fileID: 9100000, guid: eeb431d5f9a53284db14ea77c8f9824e, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: -203655887218126122, guid: 81185557adb9aa94bafb0834c5966308, type: 3}
-    m_OverrideClip: {fileID: -203655887218126122, guid: a3470b7596d44a14db877cdc7914df4b, type: 3}
   - m_OriginalClip: {fileID: -203655887218126122, guid: ce814b1411132454dba440d7dad30764, type: 3}
     m_OverrideClip: {fileID: -203655887218126122, guid: 0eea5ece3550ff9479f91a3aeb2b61d5, type: 3}
   - m_OriginalClip: {fileID: -203655887218126122, guid: 5126661892001ff4496ad75162878ab3, type: 3}
     m_OverrideClip: {fileID: -203655887218126122, guid: e4518845ccda546488a49f6f0b92a4a7, type: 3}
   - m_OriginalClip: {fileID: 7400000, guid: a89bb4b0f40d2f04d9e5ad307f0733ef, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: c9e27a170587c15488878246873e9194, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7b8c531cc388bc844b8bc03cef3f1bec, type: 2}
+    m_OverrideClip: {fileID: -203655887218126122, guid: a3470b7596d44a14db877cdc7914df4b, type: 3}

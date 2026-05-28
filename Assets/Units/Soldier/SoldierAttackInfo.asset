@@ -26,3 +26,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6de89cb03b3cfb34ca647e2a76b5ab86, type: 3}
   - {fileID: 8300000, guid: b042c677df9a25a4d87a40e71158b957, type: 3}
   <AttackEffect>k__BackingField: {fileID: 198234346748616026, guid: ad2ab49d0a2a17148bd51c93d977bdbc, type: 3}
+  <AreaOfEffectRadius>k__BackingField: 2
+  <isDetachedProyectile>k__BackingField: 0
+  <IsAreaEffect>k__BackingField: 0
+  <DamageableLayer>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 64

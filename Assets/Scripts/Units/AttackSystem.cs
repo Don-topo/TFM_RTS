@@ -36,25 +36,30 @@ public class AttackSystem : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // Get only if the object is an enemy and can take damage
-        if(other.TryGetComponent(out IAttackable enemy) && !other.CompareTag(transform.parent.tag))
+        if(other.TryGetComponent(out IAttackable enemy))
         {
-            enemiesInRange.Add(enemy);
-            if(other.TryGetComponent(out IHideable hideable))
+            if((transform.parent.CompareTag("Player") && other.CompareTag("Enemy")) 
+                || (transform.parent.CompareTag("Enemy") && other.CompareTag("Player")) 
+                || (transform.parent.CompareTag("Enemy") && other.CompareTag("CommandPost")))
             {
-                unitVisibilityEvent.Register(HandleVisivilityChange);
-                if (hideable.IsVisible)
+                enemiesInRange.Add(enemy);
+                if (other.TryGetComponent(out IHideable hideable))
+                {
+                    unitVisibilityEvent.Register(HandleVisivilityChange);
+                    if (hideable.IsVisible)
+                    {
+                        enemiesVisible.Add(enemy);
+                        unitInRangeEvent.Raise(enemy);
+                    }
+                }
+                else
                 {
                     enemiesVisible.Add(enemy);
                     unitInRangeEvent.Raise(enemy);
                 }
-            }
-            else
-            {
-                enemiesVisible.Add(enemy);
-                unitInRangeEvent.Raise(enemy);
-            }
-                
-            unitDeathEvent.Register(UnitDeath);
+
+                unitDeathEvent.Register(UnitDeath);
+            }            
         }
     }
 
@@ -91,16 +96,16 @@ public class AttackSystem : MonoBehaviour
 
     private void HandleVisivilityChange(Vision vision)
     {
-        IAttackable damageable = vision.Hideable.TargetPosition.GetComponent<IAttackable>();
+        IAttackable attackable = vision.Hideable.TargetPosition.GetComponent<IAttackable>();
         if (vision.IsVisible)
         {
-            enemiesVisible.Add(damageable);            
-            unitInRangeEvent.Raise(damageable);            
+            enemiesVisible.Add(attackable);            
+            unitInRangeEvent.Raise(attackable);            
         }
         else
         {
-            enemiesVisible.Remove(damageable);
-            unitOutRangeEvent.Raise(damageable);                       
+            enemiesVisible.Remove(attackable);
+            unitOutRangeEvent.Raise(attackable);                       
         }
     }
 }

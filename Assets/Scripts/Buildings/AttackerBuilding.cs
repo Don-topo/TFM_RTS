@@ -13,7 +13,6 @@ public class AttackerBuilding : BaseBuilding, IAttacker
     [Header("Attack Info")]
     [field: SerializeField] public SO_AttackInfo AttackInfo { get; private set; }
 
-    private AudioSource audioSource;
 
     protected override void Awake()
     {

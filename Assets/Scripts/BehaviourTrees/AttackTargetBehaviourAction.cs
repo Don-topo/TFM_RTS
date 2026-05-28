@@ -34,14 +34,19 @@ public partial class AttackTargetBehaviourAction : Action
         animator = Self.Value.GetComponentInChildren<Animator>();
         targetTransform = TargetGameObject.Value.transform;
         targetAttackable = TargetGameObject.Value.GetComponent<IAttackable>();
-        lastAttack = Time.time;
+        //lastAttack = Time.time;
 
-        if (Self.Value.GetComponent<CommonActions>().isDead && navMeshAgent != null)
+        if (AttackInfo.Value.IsAreaEffect)
+        {
+            targetColliders = new List<Collider>();
+        }
+
+        /*if (Self.Value.GetComponent<CommonActions>().isDead && navMeshAgent != null)
         {
             navMeshAgent.ResetPath();
             navMeshAgent.isStopped = true;
             return Status.Success;
-        }
+        }*/
         if (!Enemies.Value.Contains(TargetGameObject.Value))
         {
             navMeshAgent.SetDestination(targetTransform.position);
@@ -58,12 +63,12 @@ public partial class AttackTargetBehaviourAction : Action
     protected override Status OnUpdate()
     {
         if(TargetGameObject == null || targetAttackable.CurrentHealth == 0) return Status.Success;
-        if (Self.Value.GetComponent<CommonActions>().isDead && navMeshAgent != null)
+        /*if (Self.Value.GetComponent<CommonActions>().isDead && navMeshAgent != null)
         {
             navMeshAgent.ResetPath();
             navMeshAgent.isStopped = true;
             return Status.Success;
-        }
+        }*/
 
         if (!Enemies.Value.Contains(TargetGameObject.Value))
         {
@@ -114,6 +119,7 @@ public partial class AttackTargetBehaviourAction : Action
             animator.SetTrigger("Attack");
         }
         lastAttack = Time.time;
+        if (AttackInfo.Value.IsAreaEffect) return;
         targetAttackable.ApplyDamage(AttackInfo.Value.AttackDamage);       
     }
 }

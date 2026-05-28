@@ -9,11 +9,11 @@ AnimatorOverrideController:
   m_Name: GrenadierController
   m_Controller: {fileID: 9100000, guid: eeb431d5f9a53284db14ea77c8f9824e, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: -203655887218126122, guid: a6e759eefbdffed439b336a8ccbc2185, type: 3}
-    m_OverrideClip: {fileID: -203655887218126122, guid: 602fc532047469144a16d718a90a71fd, type: 3}
   - m_OriginalClip: {fileID: -203655887218126122, guid: ce814b1411132454dba440d7dad30764, type: 3}
     m_OverrideClip: {fileID: -203655887218126122, guid: aee12860b5d229641922d4fae42ecfc2, type: 3}
   - m_OriginalClip: {fileID: -203655887218126122, guid: 81185557adb9aa94bafb0834c5966308, type: 3}
     m_OverrideClip: {fileID: -203655887218126122, guid: 181e27ad8ef90dc47898113d02be9554, type: 3}
-  - m_OriginalClip: {fileID: -203655887218126122, guid: 8469f3a6a782c81479b5711742fefe29, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: a89bb4b0f40d2f04d9e5ad307f0733ef, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b0a0d785551d637429842ab8b7bd5a76, type: 2}
+  - m_OriginalClip: {fileID: -203655887218126122, guid: 5126661892001ff4496ad75162878ab3, type: 3}
     m_OverrideClip: {fileID: -203655887218126122, guid: 94be3ba2f0b3e994c941739c357b0d25, type: 3}
