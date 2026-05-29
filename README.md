@@ -1,6 +1,13 @@
 Patches relases:
 
-v.0.41 => 28/05/2026.
+v.0.42 => 29/05/2026:
+  - Finish Area attack.
+  - Add main map.
+  - Fix recruit UI bug.
+  - Small fixes.
+  - TODO Tune values and final tests.
+    
+v.0.41 => 28/05/2026:
   - Fix Building attacks (normal and area).
   - Fix Unit attack (normal and throw).
   - TODO Fix Unit attack (area).
