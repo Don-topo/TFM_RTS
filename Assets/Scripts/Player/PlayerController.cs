@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     [Header("Camera")]
     [SerializeField] private new Camera camera;
     [SerializeField] private CameraConfig cameraConfig;
-    [SerializeField] private Transform targetTransform;
     [Header("Layers")]
     [SerializeField] private LayerMask selectableUnitsLayers;
     [SerializeField] private LayerMask floorLayers;
