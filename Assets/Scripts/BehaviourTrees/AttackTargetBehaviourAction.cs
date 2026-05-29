@@ -17,12 +17,11 @@ public partial class AttackTargetBehaviourAction : Action
 
     private NavMeshAgent navMeshAgent;
     private Animator animator;
-    private BaseUnit baseUnit;
     private Transform selfTransform;
     private Transform targetTransform;
-    private List<Collider> targetColliders;
     private float lastAttack;
     private IAttackable targetAttackable;
+    private GameObject weapon;
 
     protected override Status OnStart()
     {
@@ -30,30 +29,25 @@ public partial class AttackTargetBehaviourAction : Action
 
         selfTransform = Self.Value.transform;
         navMeshAgent = Self.Value.GetComponent<NavMeshAgent>();
-        baseUnit = Self.Value.GetComponent<BaseUnit>();
         animator = Self.Value.GetComponentInChildren<Animator>();
         targetTransform = TargetGameObject.Value.transform;
         targetAttackable = TargetGameObject.Value.GetComponent<IAttackable>();
-        //lastAttack = Time.time;
+        weapon = Self.Value.GetComponent<BaseAttacker>().WeaponGameObject;
 
-        if (AttackInfo.Value.IsDetachedAreaProyectile)
-        {
-            targetColliders = new List<Collider>();
-        }
-
-        /*if (Self.Value.GetComponent<CommonActions>().isDead && navMeshAgent != null)
+        if (Self.Value.GetComponent<CommonActions>().isDead && navMeshAgent != null)
         {
             navMeshAgent.ResetPath();
             navMeshAgent.isStopped = true;
             return Status.Success;
-        }*/
+        }
+
         if (!Enemies.Value.Contains(TargetGameObject.Value))
         {
             navMeshAgent.SetDestination(targetTransform.position);
             navMeshAgent.isStopped = false;
             if(animator != null)
             {
-                animator.SetFloat("MoveSpeed", 1);// navMeshAgent.speed);
+                animator.SetFloat("MoveSpeed", 1);
             }            
         }
 
@@ -63,28 +57,29 @@ public partial class AttackTargetBehaviourAction : Action
     protected override Status OnUpdate()
     {
         if(TargetGameObject == null || targetAttackable.CurrentHealth == 0) return Status.Success;
-        /*if (Self.Value.GetComponent<CommonActions>().isDead && navMeshAgent != null)
+        if (Self.Value.GetComponent<CommonActions>().isDead && navMeshAgent != null)
         {
             navMeshAgent.ResetPath();
             navMeshAgent.isStopped = true;
             return Status.Success;
-        }*/
+        }
 
         if (!Enemies.Value.Contains(TargetGameObject.Value))
         {
             return Status.Running;
         }
+
         navMeshAgent.isStopped = true;
+
         if(animator != null)
         {
-            animator.SetFloat("MoveSpeed", 0);// navMeshAgent.speed);
+            animator.SetFloat("MoveSpeed", 0);
         }
         
-        LookAtTarget();
-
+        LookAtTarget();        
         if(Time.time > lastAttack + AttackInfo.Value.AttackSpeed)
-        {
-            Attack();
+        {           
+            Attack();             
         } 
 
         return Status.Running;
@@ -119,7 +114,30 @@ public partial class AttackTargetBehaviourAction : Action
             animator.SetTrigger("Attack");
         }
         lastAttack = Time.time;
-        if (AttackInfo.Value.IsDetachedAreaProyectile) return;
+        if (AttackInfo.Value.IsAttachedAreaEffect && weapon != null)
+        {
+            Vector3 forward = weapon.transform.right;
+            Vector3 boxSize = new Vector3(AttackInfo.Value.XArea, AttackInfo.Value.YArea, AttackInfo.Value.ZArea);
+            Vector3 offset = AttackInfo.Value.AddOffset ? (weapon.transform.right * (boxSize.z * 0.5f)) : Vector3.zero;
+            Vector3 center = weapon.transform.position + offset;
+
+            Collider[] hits = Physics.OverlapBox(
+                center,
+                boxSize * 0.5f,
+                Quaternion.LookRotation(forward, weapon.transform.up),
+                AttackInfo.Value.DamageableLayer
+            );
+
+            foreach (Collider collider in hits)
+            {
+                if (selfTransform.CompareTag("Enemy") && (collider.CompareTag("Player") || collider.CompareTag("CommandPost"))
+                    || (selfTransform.CompareTag("Player") && collider.CompareTag("Enemy")))
+                {
+                    collider.GetComponent<IAttackable>().ApplyDamage(AttackInfo.Value.AttackDamage);
+                }
+            }
+        }
+        if (AttackInfo.Value.IsAttachedAreaEffect) return;
         targetAttackable.ApplyDamage(AttackInfo.Value.AttackDamage);       
     }
 }

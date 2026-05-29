@@ -9,11 +9,11 @@ AnimatorOverrideController:
   m_Name: FlamethrowerController
   m_Controller: {fileID: 9100000, guid: eeb431d5f9a53284db14ea77c8f9824e, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: -203655887218126122, guid: 8469f3a6a782c81479b5711742fefe29, type: 3}
-    m_OverrideClip: {fileID: -203655887218126122, guid: 9846e6613d1daf84b9f886d3b4b4a177, type: 3}
-  - m_OriginalClip: {fileID: -203655887218126122, guid: 81185557adb9aa94bafb0834c5966308, type: 3}
-    m_OverrideClip: {fileID: -203655887218126122, guid: a0dbed05d52792843b05c8891cf36ee0, type: 3}
-  - m_OriginalClip: {fileID: -203655887218126122, guid: a6e759eefbdffed439b336a8ccbc2185, type: 3}
-    m_OverrideClip: {fileID: -203655887218126122, guid: 8436d4f0d338f9749ac0cfa6323794ba, type: 3}
   - m_OriginalClip: {fileID: -203655887218126122, guid: ce814b1411132454dba440d7dad30764, type: 3}
     m_OverrideClip: {fileID: -203655887218126122, guid: e402000be7a599c40b6a2f06f375501d, type: 3}
+  - m_OriginalClip: {fileID: -203655887218126122, guid: 5126661892001ff4496ad75162878ab3, type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 9846e6613d1daf84b9f886d3b4b4a177, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 7b8c531cc388bc844b8bc03cef3f1bec, type: 2}
+    m_OverrideClip: {fileID: -203655887218126122, guid: a0dbed05d52792843b05c8891cf36ee0, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: a89bb4b0f40d2f04d9e5ad307f0733ef, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 67cc7aef62b4c074fbdae96bb019dc7d, type: 2}

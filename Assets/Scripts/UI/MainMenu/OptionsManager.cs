@@ -33,6 +33,7 @@ public class OptionsManager : MonoBehaviour
     [SerializeField] private Slider effectsVolumeSlider;
     [SerializeField] private Slider generalVolumeSlider;
     [SerializeField] private Slider voicesVolumeSlider;
+    [SerializeField] private Slider backgroundVolumeSlider;
     [SerializeField] private Button audioBackButton;
     [SerializeField] private Button audioSaveButton;
 
@@ -105,6 +106,7 @@ public class OptionsManager : MonoBehaviour
         effectsVolumeSlider.onValueChanged.AddListener(val => SetEffectsVolume(val));
         generalVolumeSlider.onValueChanged.AddListener(val => SetGeneralVolume(val));
         voicesVolumeSlider.onValueChanged.AddListener(val => SetVoicesVolume(val));
+        backgroundVolumeSlider.onValueChanged.AddListener(val => SetBackgroundVolume(val));
         cameraMovementSlider.onValueChanged.AddListener(val => SetCameraSpeed(val));
         mouseSensitivitySlider.onValueChanged.AddListener(val => SetMouseSensibility(val));
     }
@@ -114,6 +116,7 @@ public class OptionsManager : MonoBehaviour
         effectsVolumeSlider.onValueChanged.RemoveAllListeners();
         generalVolumeSlider.onValueChanged.RemoveAllListeners();
         voicesVolumeSlider.onValueChanged.RemoveAllListeners();
+        backgroundVolumeSlider.onValueChanged.RemoveAllListeners();
         cameraMovementSlider.onValueChanged.RemoveAllListeners();
         mouseSensitivitySlider.onValueChanged.RemoveAllListeners();
     }
@@ -141,6 +144,11 @@ public class OptionsManager : MonoBehaviour
         if (PlayerPrefs.HasKey("generalVolume"))
         {
             SetGeneralVolume(PlayerPrefs.GetFloat("generalVolume"));
+        }
+
+        if (PlayerPrefs.HasKey("backgroundVolume"))
+        {
+            SetBackgroundVolume(PlayerPrefs.GetFloat("backgroundVolume"));
         }
 
         if (PlayerPrefs.HasKey("voicesVolume"))
@@ -176,6 +184,7 @@ public class OptionsManager : MonoBehaviour
         PlayerPrefs.SetFloat("generalVolume", generalVolumeSlider.value);
         PlayerPrefs.SetFloat("voicesVolume", voicesVolumeSlider.value);
         PlayerPrefs.SetFloat("effectsVolume", effectsVolumeSlider.value);
+        PlayerPrefs.SetFloat("backgroundVolume", backgroundVolumeSlider.value);
 
         // Gameplay
         PlayerPrefs.SetFloat("mouseSensibility", mouseSensitivitySlider.value);
@@ -255,6 +264,12 @@ public class OptionsManager : MonoBehaviour
     {
         audioMixer.SetFloat("Master", Mathf.Log10(volume) * 20);
         generalVolumeSlider.value = Mathf.Clamp01(volume);
+    }
+
+    private void SetBackgroundVolume(float volume)
+    {
+        audioMixer.SetFloat("BackgroundVolume", Mathf.Log10(volume) * 20);
+        backgroundVolumeSlider.value = Mathf.Clamp01(volume);
     }
 
     // Gameplay

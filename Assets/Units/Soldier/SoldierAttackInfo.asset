@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c26b45c28439f641bcfddeafad45703, type: 3}
   m_Name: SoldierAttackInfo
   m_EditorClassIdentifier: Assembly-CSharp::SO_AttackInfo
-  <AttackDamage>k__BackingField: 20
+  <AttackDamage>k__BackingField: 0
   <AttackRange>k__BackingField: 15
   <AttackSpeed>k__BackingField: 2
   AttackAudioClips:
@@ -25,10 +25,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c3ea3a21225d0fb478d211e41739d44a, type: 3}
   - {fileID: 8300000, guid: 6de89cb03b3cfb34ca647e2a76b5ab86, type: 3}
   - {fileID: 8300000, guid: b042c677df9a25a4d87a40e71158b957, type: 3}
-  <AttackEffect>k__BackingField: {fileID: 198234346748616026, guid: ad2ab49d0a2a17148bd51c93d977bdbc, type: 3}
   <AreaOfEffectRadius>k__BackingField: 2
-  <isDetachedProyectile>k__BackingField: 0
-  <IsAreaEffect>k__BackingField: 0
+  <IsDetachedAreaProyectile>k__BackingField: 0
+  <IsAttachedAreaEffect>k__BackingField: 0
+  <XArea>k__BackingField: 2
+  <YArea>k__BackingField: 2
+  <ZArea>k__BackingField: 2
   <DamageableLayer>k__BackingField:
     serializedVersion: 2
     m_Bits: 64
+  <AddOffset>k__BackingField: 1
+  <FixedWeapon>k__BackingField: 0

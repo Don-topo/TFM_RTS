@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: SpitterAttackInfo
   m_EditorClassIdentifier: Assembly-CSharp::SO_AttackInfo
   <AttackDamage>k__BackingField: 20
-  <AttackRange>k__BackingField: 2
-  <AttackSpeed>k__BackingField: 1
+  <AttackRange>k__BackingField: 10
+  <AttackSpeed>k__BackingField: 4
   AttackAudioClips: []
   PatrolAudioClips: []
-  <AreaOfEffectRadius>k__BackingField: 2
+  <AreaOfEffectRadius>k__BackingField: 4
   <IsDetachedAreaProyectile>k__BackingField: 0
   <IsAttachedAreaEffect>k__BackingField: 1
-  <XArea>k__BackingField: 2
+  <XArea>k__BackingField: 10
   <YArea>k__BackingField: 2
-  <ZArea>k__BackingField: 2
+  <ZArea>k__BackingField: 10
   <DamageableLayer>k__BackingField:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   <AddOffset>k__BackingField: 1
   <FixedWeapon>k__BackingField: 0

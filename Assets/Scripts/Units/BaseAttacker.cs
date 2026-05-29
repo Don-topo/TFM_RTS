@@ -12,7 +12,7 @@ public class BaseAttacker : BaseUnit, IAttacker
     [SerializeField] private EnemyInRangeEvent unitOutOfRange;
     [Header("Attack Info")]
     [field: SerializeField] public SO_AttackInfo AttackInfo { get; private set; }
-
+    [field: SerializeField] public GameObject WeaponGameObject { get; private set; }
     private AudioSource audioSource;
 
     protected override void Awake()
@@ -37,7 +37,25 @@ public class BaseAttacker : BaseUnit, IAttacker
         unitOutOfRange.Unregister(UnitOutOfRange);
     }
 
-   
+    void OnDrawGizmos()
+    {
+        if (WeaponGameObject == null) return;
+
+        Vector3 boxSize = new Vector3(AttackInfo.XArea, AttackInfo.YArea, AttackInfo.ZArea);
+        Vector3 forward = WeaponGameObject.transform.right;
+        Vector3 offset = AttackInfo.AddOffset ? (WeaponGameObject.transform.right * (boxSize.z * 0.5f)) : Vector3.zero;
+        Vector3 center = WeaponGameObject.transform.position + offset;
+
+        Gizmos.matrix = Matrix4x4.TRS(
+            center,
+            Quaternion.LookRotation(forward, WeaponGameObject.transform.up),
+            Vector3.one
+        );
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(Vector3.zero, boxSize);
+    }
+
     public void Attack(IAttackable attackable)
     {
         if (isDead) return;
