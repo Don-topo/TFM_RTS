@@ -10,6 +10,7 @@ public class UIRecruitUnitBuilding : MonoBehaviour
     [SerializeField] private UpdateRecruitQueueEvent queueEvent;    
 
     private RecruitBuilding productionBuilding;
+    private SO_BaseUnit unitToRecruitInfo;
     private Coroutine coroutine;
 
     public void Enable(RecruitBuilding productionBuilding)
@@ -48,6 +49,7 @@ public class UIRecruitUnitBuilding : MonoBehaviour
 
         if(units.Count == 1 && coroutine == null)
         {
+            unitToRecruitInfo = units[0];
             coroutine = StartCoroutine(UpdateProgressBar());
         }
 
@@ -80,10 +82,10 @@ public class UIRecruitUnitBuilding : MonoBehaviour
 
     private IEnumerator UpdateProgressBar()
     {
-        while(productionBuilding != null && productionBuilding.GetRecruitQueue().Count > 0)
+        while(unitToRecruitInfo != null && productionBuilding.GetRecruitQueue().Count > 0)
         {
             float recruitStartTime = productionBuilding.RecruitStartTime;
-            float recruitEndTime = recruitStartTime + productionBuilding.SO_BaseUnit.GenerationTime;
+            float recruitEndTime = recruitStartTime + unitToRecruitInfo.GenerationTime;
 
             float recruitProgress = Mathf.Clamp01((Time.time - recruitStartTime) / (recruitEndTime - recruitStartTime));
 

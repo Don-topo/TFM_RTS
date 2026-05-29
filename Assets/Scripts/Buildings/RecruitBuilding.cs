@@ -159,7 +159,7 @@ public class RecruitBuilding : BaseBuilding
         while(RecruitUnitsQueue.Count > 0)
         {
             // Refresh all UI
-            refreshEvent.Raise(true);
+            //refreshEvent.Raise(true);
             // Start by the first unit in the queue
             SO_BaseUnit unitToRecruit = RecruitUnitsQueue[0];
             RecruitStartTime = Time.time;

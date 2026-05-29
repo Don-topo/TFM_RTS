@@ -19,8 +19,8 @@ public class UIResources : MonoBehaviour
     // Resources values
     public static int Food { get; private set; } = 0;
     public static int MaxFood { get; private set; } = 15;
-    public static int Wood { get; private set;} = 0;
-    public static int MaxWood { get; private set; } = 1000;
+    public static int Wood { get; private set;} = 100;
+    public static int MaxWood { get; private set; } = 500;
     public static int Stone { get; private set; } = 0;
     public static int MaxStone { get; private set; } = 500;
     public static int Iron { get; private set; } = 0;
