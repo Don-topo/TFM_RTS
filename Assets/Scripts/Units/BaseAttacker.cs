@@ -122,8 +122,9 @@ public class BaseAttacker : BaseUnit, IAttacker
         else
         {
             behaviorGraphAgent.SetVariableValue<GameObject>("TargetGameObject", null);
+            behaviorGraphAgent.GetVariable("UnitActions", out BlackboardVariable<UnitActions> currentAction);
             behaviorGraphAgent.SetVariableValue("TargetLocation", enemyOutOfRange.TargetPosition.position);
-            behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Stop);
+            
             if(this is EnemyController)
             {
                 this.GetComponent<EnemyController>().AttackTarget();

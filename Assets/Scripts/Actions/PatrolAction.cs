@@ -3,6 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Patrol", menuName = "Units/Actions/Patrol", order = 100)]
 public class PatrolAction : BaseAction
 {
+    [SerializeField] MoveAction moveAction;
+
     public override bool Blocked(ActionInfo actionInfo) => false;
 
     public override bool CanExecute(ActionInfo actionInfo)
@@ -15,7 +17,14 @@ public class PatrolAction : BaseAction
         BaseAttacker attacker = (BaseAttacker)actionInfo.Action;
         if(attacker != null)
         {
-            attacker.Patrol(actionInfo.Hit.point);
+            if(moveAction != null)
+            {
+                attacker.Patrol(moveAction.CalculateMovePosition(actionInfo));
+            }
+            else
+            {
+                attacker.Patrol(actionInfo.Hit.point);
+            }            
         }
     }
 }
