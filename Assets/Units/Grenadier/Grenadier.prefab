@@ -5055,7 +5055,6 @@ MonoBehaviour:
   m_BlackboardVariableOverridesList:
   - rid: 7721842888152449170
   - rid: 7721842888152449171
-  - rid: 7721842888152449172
   m_OriginalGraph: {fileID: 0}
   m_IsInitialised: 0
   m_IsStarted: 0
@@ -5078,14 +5077,6 @@ MonoBehaviour:
           m_Value1: 691944216099911151
         Name: SO Attack Info
         m_Value: {fileID: 11400000, guid: edf191892a451d8488afec5dc2a9d4d0, type: 2}
-    - rid: 7721842888152449172
-      type: {class: 'BlackboardVariable`1[[UnitActions, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 16208545908445908422
-          m_Value1: 12445388921349676129
-        Name: UnitActions
-        m_Value: 1
 --- !u!82 &4281696727344829517
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5227,7 +5218,7 @@ MonoBehaviour:
   unitOutOfRange: {fileID: 11400000, guid: a9267367e362866478e1cc864c850a3d, type: 2}
   <AttackInfo>k__BackingField: {fileID: 11400000, guid: edf191892a451d8488afec5dc2a9d4d0, type: 2}
   <WeaponGameObject>k__BackingField: {fileID: 0}
-  throwItem: {fileID: 0}
+  throwItem: {fileID: 6440004945302785075}
   effectParticle: {fileID: 4738853318357732308}
 --- !u!95 &5148335731470539902
 Animator:
@@ -16184,6 +16175,11 @@ PrefabInstance:
 --- !u!4 &5914544402213656201 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a247274f5b10db5459cd975c50f127fe, type: 3}
+  m_PrefabInstance: {fileID: 6169394590274367842}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6440004945302785075 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a247274f5b10db5459cd975c50f127fe, type: 3}
   m_PrefabInstance: {fileID: 6169394590274367842}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8511748976606024516

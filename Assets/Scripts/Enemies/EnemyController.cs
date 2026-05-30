@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.Behavior;
 using UnityEngine;
 
 public class EnemyController : BaseAttacker
@@ -5,7 +7,6 @@ public class EnemyController : BaseAttacker
     [Header("Death Components")]
     [SerializeField] private bool explodes;
     [SerializeField] private GameObject deathExplotion;
-    
     [SerializeField] private GameObject target;
     [Header("Enemy Events")]
     [SerializeField] DeathEnemy deathEnemy;
@@ -24,7 +25,15 @@ public class EnemyController : BaseAttacker
         }        
     }
 
-    public void SetTarget(GameObject target) => this.target = target;
+    public void SetTarget(GameObject target)
+    {
+        this.target = target;
+    }
+
+    public void AttackTarget()
+    {
+        Attack(target.transform.position);
+    }
 
     void OnDrawGizmos()
     {

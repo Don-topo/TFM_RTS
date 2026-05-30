@@ -1,3 +1,4 @@
+using Mono.Cecil;
 using System;
 using System.Collections.Generic;
 using Unity.Behavior;
@@ -18,7 +19,7 @@ public class BaseUnit : CommonActions, IMoveable, IHealable
     public float GetNavMeshAgentRadius => navMeshAgent.radius;
     protected BehaviorGraphAgent behaviorGraphAgent;
     protected NavMeshAgent navMeshAgent;
-    protected Vector3? movePosition;
+    protected Vector3 movePosition;
 
    
     protected override void Awake()
@@ -30,7 +31,7 @@ public class BaseUnit : CommonActions, IMoveable, IHealable
         CurrentHealth = SO_BaseUnit.Health;
         MaxHealth = CurrentHealth;
         // Set behaviour agent
-        behaviorGraphAgent.SetVariableValue("Command", UnitActions.Stop);
+        behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Stop);
         if(recruitedEvent != null)
         {
             // Raise recruit event
@@ -40,15 +41,18 @@ public class BaseUnit : CommonActions, IMoveable, IHealable
 
     protected override void OnDestroy()
     {
-        base.OnDestroy();
-        // TODO This is the wrong place for this
-        ResourceOP resource = new ResourceOP(SO_BaseUnit.Cost.SO_Population, SO_BaseUnit.Cost.Population, 0);
+        base.OnDestroy(); 
+    }
+
+    public override void Die()
+    {
+        base.Die();
         if (resourceEvent != null)
         {
+            ResourceOP resource = new ResourceOP(SO_BaseUnit.Cost.SO_Population, SO_BaseUnit.Cost.Population, 0);
             resourceEvent.Raise(resource);
         }
     }
-
     public void Move(Transform transform)
     {
         if (isDead) Stop();

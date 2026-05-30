@@ -13,15 +13,13 @@ public class BaseAttacker : BaseUnit, IAttacker
     [Header("Attack Info")]
     [field: SerializeField] public SO_AttackInfo AttackInfo { get; private set; }
     [field: SerializeField] public GameObject WeaponGameObject { get; private set; }
-    private AudioSource audioSource;
 
     protected override void Awake()
     {
         base.Awake();
         behaviorGraphAgent.SetVariableValue("SO Attack Info", AttackInfo);
         unitEnterRange.Register(UnitInRange);
-        unitOutOfRange.Register(UnitOutOfRange);
-        audioSource = GetComponent<AudioSource>();        
+        unitOutOfRange.Register(UnitOutOfRange);   
     }
 
     protected override void Start()
@@ -61,7 +59,7 @@ public class BaseAttacker : BaseUnit, IAttacker
         if (isDead) return;
         PlayAttackAudio();
         behaviorGraphAgent.SetVariableValue<GameObject>("TargetGameObject", attackable.TargetPosition.gameObject);
-        behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Attack);
+        behaviorGraphAgent.SetVariableValue<UnitActions>("UnitActions", UnitActions.Attack);
     }
 
     public void Attack(Vector3 attackPosition)
@@ -70,7 +68,7 @@ public class BaseAttacker : BaseUnit, IAttacker
         PlayAttackAudio();
         behaviorGraphAgent.SetVariableValue<GameObject>("TargetGameObject", null);
         behaviorGraphAgent.SetVariableValue("TargetPosition", attackPosition);
-        behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Attack);
+        behaviorGraphAgent.SetVariableValue<UnitActions>("UnitActions", UnitActions.Attack);
     }
 
     public void Patrol(Vector3 targetPosition)
@@ -106,8 +104,8 @@ public class BaseAttacker : BaseUnit, IAttacker
             && targetVariable.Value == null && targets.Count > 0)
         {
             behaviorGraphAgent.SetVariableValue("TargetGameObject", targets[0]);
-        }
-        behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Attack);
+            behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Attack);
+        }        
     }
 
     protected virtual void UnitOutOfRange(IAttackable enemyOutOfRange)
@@ -126,6 +124,10 @@ public class BaseAttacker : BaseUnit, IAttacker
             behaviorGraphAgent.SetVariableValue<GameObject>("TargetGameObject", null);
             behaviorGraphAgent.SetVariableValue("TargetLocation", enemyOutOfRange.TargetPosition.position);
             behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Stop);
+            if(this is EnemyController)
+            {
+                this.GetComponent<EnemyController>().AttackTarget();
+            }
         }
 
         /*

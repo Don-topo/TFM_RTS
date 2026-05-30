@@ -133,7 +133,6 @@ public class EnemySpawner : MonoBehaviour
         EnemyType enemyTypeToSpawn = GetEnemyTypeRandomly();
         GameObject enemy = Instantiate(GetEnemyPrefab(enemyTypeToSpawn), selectedSpawnPosition.position, Quaternion.identity);
         enemy.GetComponent<EnemyController>().SetTarget(commandPost);
-        unitRecruitedEvent.Raise(enemy.GetComponent<BaseUnit>());
     }
 
     private IEnumerator SpawnEnemiesCoroutines()

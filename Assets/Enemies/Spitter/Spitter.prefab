@@ -131,7 +131,6 @@ MonoBehaviour:
   m_Graph: {fileID: 5411889504746037112, guid: 1acea659cf56ad14491accc9850a9c9c, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 7721843188496859142
-  - rid: 7721843188496859143
   m_OriginalGraph: {fileID: 0}
   m_IsInitialised: 0
   m_IsStarted: 0
@@ -146,14 +145,6 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 2221879108527537169}
-    - rid: 7721843188496859143
-      type: {class: 'BlackboardVariable`1[[UnitActions, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 16208545908445908422
-          m_Value1: 12445388921349676129
-        Name: UnitActions
-        m_Value: 1
 --- !u!114 &3590857302091536945
 MonoBehaviour:
   m_ObjectHideFlags: 0

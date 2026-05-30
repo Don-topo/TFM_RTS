@@ -101,12 +101,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5757913540112596994}
+  - component: {fileID: 2436373193000637756}
   - component: {fileID: 4521446519522046825}
+  - component: {fileID: 180277718577632821}
   - component: {fileID: 7877084079604107588}
   - component: {fileID: 1979296208514692502}
   - component: {fileID: 5786621897842818193}
-  - component: {fileID: 2436373193000637756}
-  - component: {fileID: 180277718577632821}
   m_Layer: 6
   m_Name: Soldier
   m_TagString: Player
@@ -134,131 +134,6 @@ Transform:
   - {fileID: 2500335400487069994}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &4521446519522046825
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6618063681360896177}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1.75
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.84, z: 0}
---- !u!195 &7877084079604107588
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6618063681360896177}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 600
-  m_StoppingDistance: 0.1
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &1979296208514692502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6618063681360896177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
-  m_Graph: {fileID: 5411889504746037112, guid: 1acea659cf56ad14491accc9850a9c9c, type: 2}
-  m_BlackboardVariableOverridesList:
-  - rid: 7721842868383645801
-  - rid: 7721842868383645802
-  m_OriginalGraph: {fileID: 0}
-  m_IsInitialised: 0
-  m_IsStarted: 0
-  references:
-    version: 2
-    RefIds:
-    - rid: 7721842868383645801
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 1
-          m_Value1: 0
-        Name: Self
-        m_Value: {fileID: 6618063681360896177}
-    - rid: 7721842868383645802
-      type: {class: 'BlackboardVariable`1[[UnitActions, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 16208545908445908422
-          m_Value1: 12445388921349676129
-        Name: UnitActions
-        m_Value: 1
---- !u!114 &5786621897842818193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6618063681360896177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f58286a9d9a11c34fa115428e6e83a0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BaseAttacker
-  <IsSelected>k__BackingField: 0
-  selectionDecal: {fileID: 4993735778481451287}
-  <Actions>k__BackingField:
-  - {fileID: 11400000, guid: 294ac8375577a6641918538431387b6e, type: 2}
-  - {fileID: 11400000, guid: 0dfeed0d651d9914781d989d2175f4fb, type: 2}
-  - {fileID: 11400000, guid: 7a9fd5af16d0aec459dc19e3a86b8e68, type: 2}
-  - {fileID: 11400000, guid: 98ec6ba2f77d5294a91b60abc3edf252, type: 2}
-  <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: 776a3ffbdef940347a794c8cc24f876b, type: 2}
-  <CurrentHealth>k__BackingField: 0
-  <MaxHealth>k__BackingField: 0
-  animator: {fileID: 7796051340904576827}
-  updateHealthEvent: {fileID: 11400000, guid: 13cf27522de45664fb20e006b4905224, type: 2}
-  unitDeathEvent: {fileID: 11400000, guid: 46b246a8aa2a6484aa30cca95cadc3fa, type: 2}
-  visibilityEvent: {fileID: 11400000, guid: 4c29cc4fb5dd7964996a13f20dfd338a, type: 2}
-  visionTransform: {fileID: 2500335400487069994}
-  unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
-  unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
-  <IsVisible>k__BackingField: 0
-  moveAudioClips:
-  - {fileID: 8300000, guid: 9462f4d36b89ce14d8bfb05252d8c35b, type: 3}
-  - {fileID: 8300000, guid: c7e645e8a2cf5d4498ab40285cca81aa, type: 3}
-  - {fileID: 8300000, guid: 6db0ab75fcb948d4f8acd1ebe3a379ac, type: 3}
-  - {fileID: 8300000, guid: d7cc47f5c66a9ce4c8579e93bb255931, type: 3}
-  recruitedEvent: {fileID: 11400000, guid: 4b9a1b36f59f39e47b8e1db68ccb4ec0, type: 2}
-  resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
-  attackSystem: {fileID: 9002209427259762090}
-  unitEnterRange: {fileID: 11400000, guid: a9267367e362866478e1cc864c850a3d, type: 2}
-  unitOutOfRange: {fileID: 11400000, guid: a9267367e362866478e1cc864c850a3d, type: 2}
-  <AttackInfo>k__BackingField: {fileID: 11400000, guid: ac6c663977f575342944b1a9e8f457d5, type: 2}
-  <WeaponGameObject>k__BackingField: {fileID: 0}
 --- !u!54 &2436373193000637756
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -286,6 +161,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &4521446519522046825
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6618063681360896177}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1.75
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.84, z: 0}
 --- !u!82 &180277718577632821
 AudioSource:
   m_ObjectHideFlags: 0
@@ -383,6 +281,99 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!195 &7877084079604107588
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6618063681360896177}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 600
+  m_StoppingDistance: 0.1
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1979296208514692502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6618063681360896177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
+  m_Graph: {fileID: 5411889504746037112, guid: 1acea659cf56ad14491accc9850a9c9c, type: 2}
+  m_BlackboardVariableOverridesList:
+  - rid: 7721842868383645801
+  m_OriginalGraph: {fileID: 0}
+  m_IsInitialised: 0
+  m_IsStarted: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 7721842868383645801
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        m_Value: {fileID: 6618063681360896177}
+--- !u!114 &5786621897842818193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6618063681360896177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f58286a9d9a11c34fa115428e6e83a0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BaseAttacker
+  <IsSelected>k__BackingField: 0
+  selectionDecal: {fileID: 4993735778481451287}
+  <Actions>k__BackingField:
+  - {fileID: 11400000, guid: 294ac8375577a6641918538431387b6e, type: 2}
+  - {fileID: 11400000, guid: 0dfeed0d651d9914781d989d2175f4fb, type: 2}
+  - {fileID: 11400000, guid: 7a9fd5af16d0aec459dc19e3a86b8e68, type: 2}
+  - {fileID: 11400000, guid: 98ec6ba2f77d5294a91b60abc3edf252, type: 2}
+  <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: 776a3ffbdef940347a794c8cc24f876b, type: 2}
+  <CurrentHealth>k__BackingField: 0
+  <MaxHealth>k__BackingField: 0
+  animator: {fileID: 7796051340904576827}
+  updateHealthEvent: {fileID: 11400000, guid: 13cf27522de45664fb20e006b4905224, type: 2}
+  unitDeathEvent: {fileID: 11400000, guid: 46b246a8aa2a6484aa30cca95cadc3fa, type: 2}
+  visibilityEvent: {fileID: 11400000, guid: 4c29cc4fb5dd7964996a13f20dfd338a, type: 2}
+  visionTransform: {fileID: 2500335400487069994}
+  unitSelectEvent: {fileID: 11400000, guid: 165f383715667d0458f92b2b115ec510, type: 2}
+  unitDeselectEvent: {fileID: 11400000, guid: e7fca6a7ef8c4fc4e91b04a248fb6151, type: 2}
+  <IsVisible>k__BackingField: 0
+  moveAudioClips:
+  - {fileID: 8300000, guid: 9462f4d36b89ce14d8bfb05252d8c35b, type: 3}
+  - {fileID: 8300000, guid: c7e645e8a2cf5d4498ab40285cca81aa, type: 3}
+  - {fileID: 8300000, guid: 6db0ab75fcb948d4f8acd1ebe3a379ac, type: 3}
+  - {fileID: 8300000, guid: d7cc47f5c66a9ce4c8579e93bb255931, type: 3}
+  recruitedEvent: {fileID: 11400000, guid: 4b9a1b36f59f39e47b8e1db68ccb4ec0, type: 2}
+  resourceEvent: {fileID: 11400000, guid: 3aef23c60a5f2774f8ea8fb8509fc409, type: 2}
+  attackSystem: {fileID: 9002209427259762090}
+  unitEnterRange: {fileID: 11400000, guid: a9267367e362866478e1cc864c850a3d, type: 2}
+  unitOutOfRange: {fileID: 11400000, guid: a9267367e362866478e1cc864c850a3d, type: 2}
+  <AttackInfo>k__BackingField: {fileID: 11400000, guid: ac6c663977f575342944b1a9e8f457d5, type: 2}
+  <WeaponGameObject>k__BackingField: {fileID: 0}
 --- !u!1 &7352971346458613988
 GameObject:
   m_ObjectHideFlags: 0

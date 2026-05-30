@@ -135,15 +135,16 @@ public class GameManager : MonoBehaviour
     {        
         while(Time.time < startTime + timeBetweenWaves)
         {
-            yield return new WaitForSeconds(1f);
+            float waitEndTime = startTime + timeBetweenWaves;
             // Update watch value
-            float progress = Mathf.Clamp01(Time.time / (startTime + timeBetweenWaves));
+            float progress = Mathf.Clamp01((Time.time - startTime) / (waitEndTime - startTime));
             // Update watch
             progressbar.UpdateProgress(progress);
             // Calculate and update progressbar color
             float normalizeTime = Mathf.SmoothStep(0, 1, 1f - progress);
             Color currentColor = Color.Lerp(Color.red, Color.green, normalizeTime);
             progressbar.SetColor(currentColor);
+            yield return new WaitForSeconds(1f);
         }
         // Start Wave
         snowGameObject.SetActive(false);
