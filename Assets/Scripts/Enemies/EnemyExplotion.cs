@@ -1,25 +1,42 @@
 using UnityEngine;
 
-[RequireComponent(typeof(SphereCollider))]
+[RequireComponent(typeof(AudioSource))]
 public class EnemyExplotion : MonoBehaviour
 {
-    private int damage;
+    private AudioSource audioSource;
+    private SO_AttackInfo attackInfo;
 
     private void Awake()
     {
-        Destroy(this, 1f);
+        Destroy(gameObject, 3f);
+        audioSource = GetComponent<AudioSource>();
     }
 
-    public void SetDamage(int damage)
+    public void SetInfo(SO_AttackInfo attackInfo)
     {
-        this.damage = damage;
+        this.attackInfo = attackInfo;
+        Explode();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void Explode() 
     {
-        if(other.CompareTag("Player") || other.CompareTag("CommandPost"))
+        if (audioSource != null)
         {
-            other.GetComponent<IAttackable>().ApplyDamage(damage);
+            audioSource.Play();
+        }
+
+        // Get nearby enemies
+        Collider[] enemiesInRange = Physics.OverlapSphere(transform.position, attackInfo.AttackRange * 2f);
+
+        foreach (Collider enemyCollider in enemiesInRange)
+        {
+            if (enemyCollider.CompareTag("Player") || enemyCollider.CompareTag("CommandPost"))
+            {
+                if (enemyCollider.TryGetComponent<IAttackable>(out var attackable))
+                {
+                    attackable.ApplyDamage(attackInfo.AttackDamage);
+                }
+            }
         }
     }
 }

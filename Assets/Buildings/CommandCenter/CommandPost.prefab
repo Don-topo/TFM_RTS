@@ -155,7 +155,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 80dfe8cf0fb17a74a9ce2f918cb1200b, type: 2}
   - {fileID: 11400000, guid: 3107001a93c61b7429e3c01e58ed5c81, type: 2}
   - {fileID: 11400000, guid: a314284df906a09479e10d66c0d93eef, type: 2}
-  - {fileID: 11400000, guid: dfca6df8a2147a74abbfc29b6c91166d, type: 2}
   - {fileID: 11400000, guid: 6f9016982df9c7e4fb9b3bc429700cda, type: 2}
   <SO_BaseUnit>k__BackingField: {fileID: 11400000, guid: f30f812a07655994780d7d99d7a012d7, type: 2}
   <CurrentHealth>k__BackingField: 0

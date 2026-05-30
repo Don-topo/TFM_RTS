@@ -32,7 +32,10 @@ public class EnemyController : BaseAttacker
 
     public void AttackTarget()
     {
-        Attack(target.transform.position);
+        if(target != null)
+        {
+            Attack(target.transform.position);
+        }        
     }
 
     void OnDrawGizmos()
@@ -64,7 +67,7 @@ public class EnemyController : BaseAttacker
         {
             GameObject exp = Instantiate(deathExplotion, transform);
             exp.transform.parent = null;
-            exp.GetComponent<EnemyExplotion>().SetDamage(AttackInfo.AttackDamage);
+            exp.GetComponent<EnemyExplotion>().SetInfo(AttackInfo);
         }
         deathEnemy.Raise(null);
         base.Die();

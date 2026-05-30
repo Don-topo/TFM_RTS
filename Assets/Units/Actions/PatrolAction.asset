@@ -21,3 +21,4 @@ MonoBehaviour:
   <ExecuteAudio>k__BackingField: []
   <Restrictions>k__BackingField: []
   <CursorIcon>k__BackingField: {fileID: 2800000, guid: 6e9a3cb41aed05448ba23efee6bd8f05, type: 3}
+  moveAction: {fileID: 11400000, guid: 294ac8375577a6641918538431387b6e, type: 2}
