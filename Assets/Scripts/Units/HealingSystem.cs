@@ -8,6 +8,7 @@ public class HealingSystem : MonoBehaviour
 {
     [Header("Events")]
     [SerializeField] private AllyInRangeEvent allyInRangeEvent;
+    [SerializeField] private AllyInRangeEvent allyOutRangeEvent;
     [SerializeField] private UnitDeathEvent unitDeathEvent;
 
     private List<IHealable> alliesInRange = new List<IHealable>();
@@ -29,7 +30,7 @@ public class HealingSystem : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // Get only if the object is an ally and can take damage
-        if (other.TryGetComponent(out IHealable ally))
+        if (other.TryGetComponent(out IHealable ally) && other.CompareTag("Player"))
         {
             alliesInRange.Add(ally);
             allyInRangeEvent.Raise(ally);
@@ -41,6 +42,7 @@ public class HealingSystem : MonoBehaviour
         if(other.TryGetComponent(out  IHealable healable))
         {
             alliesInRange.Remove(healable);
+            allyOutRangeEvent.Raise(healable);
         }
 
         if (alliesInRange.Count == 0)

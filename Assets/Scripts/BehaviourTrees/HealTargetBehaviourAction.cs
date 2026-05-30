@@ -17,22 +17,40 @@ public partial class HealTargetBehaviourAction : Action
 
     private NavMeshAgent navMeshAgent;
     private Transform selfTransform;
+    private Animator animator;
     private Transform targetTransform;
     private IHealable targetToHeal;
     private float lastHealing;
 
     protected override Status OnStart()
     {
+        if (Self.Value == null || TargetGameObject.Value == null || Allies.Value == null) return Status.Failure;
+
         selfTransform = Self.Value.transform;
         navMeshAgent = selfTransform.GetComponent<NavMeshAgent>();
+        animator = Self.Value.GetComponentInChildren<Animator>();
         targetTransform = TargetGameObject.Value.transform;
         targetToHeal = TargetGameObject.Value.GetComponent<IHealable>();
-        lastHealing = Time.time;
+
+        if (Self.Value.GetComponent<CommonActions>().isDead && navMeshAgent != null)
+        {
+            navMeshAgent.ResetPath();
+            navMeshAgent.isStopped = true;
+            return Status.Success;
+        }
 
         if (!Allies.Value.Contains(TargetGameObject.Value))
         {
+            if (TargetGameObject.Value.GetComponent<BaseUnit>().CurrentHealth == TargetGameObject.Value.GetComponent<BaseUnit>().MaxHealth)
+            {
+                return Status.Success;
+            }
             navMeshAgent.SetDestination(targetTransform.position);
             navMeshAgent.isStopped = false;
+            if (animator != null)
+            {
+                animator.SetFloat("MoveSpeed", 1);
+            }
         }
 
         return Status.Running;
@@ -43,8 +61,22 @@ public partial class HealTargetBehaviourAction : Action
         if (TargetGameObject == null || targetToHeal.CurrentHealth == targetToHeal.MaxHealth
             || targetToHeal.CurrentHealth == 0) return Status.Success;
 
-        if(!Allies.Value.Contains(TargetGameObject.Value)) return Status.Running;
-        
+        if (Self.Value.GetComponent<CommonActions>().isDead && navMeshAgent != null)
+        {
+            navMeshAgent.ResetPath();
+            navMeshAgent.isStopped = true;
+            return Status.Success;
+        }
+
+        if (!Allies.Value.Contains(TargetGameObject.Value)) return Status.Running;
+
+        navMeshAgent.isStopped = true;
+
+        if (animator != null)
+        {
+            animator.SetFloat("MoveSpeed", 0);
+        }
+
         LookAtTarget();
 
         if (Time.time > lastHealing + HealInfo.Value.HealSpeed)
@@ -80,6 +112,12 @@ public partial class HealTargetBehaviourAction : Action
     {
         lastHealing = Time.time;
         targetToHeal.Heal(HealInfo.Value.Amount);
+        animator.SetTrigger("Attack");
+    }
+
+    private bool NeedToHeal()
+    {
+        return false;
     }
 }
 

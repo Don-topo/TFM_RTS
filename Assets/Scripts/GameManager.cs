@@ -10,9 +10,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI remainingDaysText;
     [SerializeField] private GameObject snowGameObject;
     [SerializeField] private GameObject blizzardGameObject;
-    [Header("Managers")]
-    [SerializeField] private DayManager dayManager;
-
     [Header("Game Properties")]        
     [SerializeField] private float timeBetweenWaves = 320f;
     [SerializeField] private float timeBetweenDays;

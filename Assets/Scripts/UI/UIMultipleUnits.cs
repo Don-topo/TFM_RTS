@@ -8,8 +8,6 @@ using UnityEngine.UI;
 public class UIMultipleUnits : MonoBehaviour
 {
     [SerializeField] private UIUnitSelectedButton unitButtonPrefab;
-    [SerializeField] private int maxUnitSelectedSupported = 40;
-    [SerializeField] private int columns = 4;
 
     private GridLayoutGroup gridLayoutGroup;
     private List<CommonActions> unitsSelected = new();
