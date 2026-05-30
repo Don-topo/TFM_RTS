@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1082718640576558490, guid: edb7b43f9e6595449a73ba1069a9dc36, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1082718640576558490, guid: edb7b43f9e6595449a73ba1069a9dc36, type: 3}
       propertyPath: m_LocalPosition.z
@@ -53,6 +53,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3055441328765084317, guid: edb7b43f9e6595449a73ba1069a9dc36, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3055441328765084317, guid: edb7b43f9e6595449a73ba1069a9dc36, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -61,12 +65,20 @@ PrefabInstance:
       value: WoodArea Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4422508749860553673, guid: edb7b43f9e6595449a73ba1069a9dc36, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422508749860553673, guid: edb7b43f9e6595449a73ba1069a9dc36, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6205774428126663234, guid: edb7b43f9e6595449a73ba1069a9dc36, type: 3}
       propertyPath: m_Size.y
-      value: 1
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942310556164726912, guid: edb7b43f9e6595449a73ba1069a9dc36, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7410424190947837723, guid: edb7b43f9e6595449a73ba1069a9dc36, type: 3}
       propertyPath: m_LocalPosition.y

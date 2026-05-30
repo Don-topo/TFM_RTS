@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1229475382064796065, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229475382064796065, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -26,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 4e321fb6075f27a4dabe6e298cf4bc5a, type: 2}
     - target: {fileID: 2830693810254291811, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
       propertyPath: m_Size.y
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2830693810254291811, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
       propertyPath: m_Center.x
@@ -49,8 +53,16 @@ PrefabInstance:
       value: FoodArea Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5478659412641264360, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478659412641264360, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6571007220421284796, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6571007220421284796, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
       propertyPath: m_IsActive
@@ -66,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9102167571610305723, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.02
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9102167571610305723, guid: f7f046bef3d945b448a15ae3f1d0a2ea, type: 3}
       propertyPath: m_LocalPosition.z

@@ -15,9 +15,9 @@ MonoBehaviour:
   <Radius>k__BackingField: 1
   <LayerMask>k__BackingField:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   <HitDetectionStyle>k__BackingField: 2
-  <MustBeFullyOnNaveMesh>k__BackingField: 1
+  <MustBeFullyOnNaveMesh>k__BackingField: 0
   <NavMeshAgentTypeId>k__BackingField: 0
   <NavMeshTolerance>k__BackingField: 0.1
   <Extents>k__BackingField: {x: 1, y: 1, z: 1}
@@ -25,4 +25,4 @@ MonoBehaviour:
   <CheckForResource>k__BackingField: 0
   <ResourceLayer>k__BackingField:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 256

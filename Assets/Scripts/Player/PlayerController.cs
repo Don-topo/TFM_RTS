@@ -33,7 +33,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip invalidAction;
     [Header("Cursor")]
     [SerializeField] private Texture2D defaultCursor;
-
     [SerializeField] private GameObject moveIndicator;
 
 
@@ -58,6 +57,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        LoadConfig();
         selectUnitEvent.Register(SelectedUnit);
         deselectUnitEvent.Register(DeselectUnit);
         actionClicked.Register(ActionClicked);
@@ -88,6 +88,11 @@ public class PlayerController : MonoBehaviour
         actionClicked.Unregister(ActionClicked);
         minimapClickEvent.Unregister(MinimapClicked);
         recruitedEvent.Unregister(AddUnit);
+    }
+
+    private void LoadConfig()
+    {
+
     }
 
     private void SelectedUnit(CommonActions action)
@@ -468,7 +473,7 @@ public class PlayerController : MonoBehaviour
             cameraMovementTransform.transform.position = new Vector3(
                 unitPosition.x, 
                 cameraMovementTransform.transform.position.y, 
-                unitPosition.z - 8f
+                unitPosition.z - 18f
             );
         }
     }

@@ -24,7 +24,8 @@ public class Restriction : ScriptableObject
             OverlapStyle.Sphere => Physics.OverlapSphereNonAlloc(position, Radius, hitColliders, LayerMask),
             OverlapStyle.Box => Physics.OverlapBoxNonAlloc(position, Extents, hitColliders, Quaternion.identity, LayerMask),
             OverlapStyle.Vision => FogOfWar.Instance.IsVisible(position) ? 0 : 1,
-            _ => Physics.OverlapSphereNonAlloc(position, Radius, hitColliders, LayerMask),            
+            OverlapStyle.Resource => IsOnSupportedResource(position) ? 0 : 1,
+            _ => 0,
         };
 
         if (MustBeFullyOnNaveMesh)
@@ -36,7 +37,7 @@ public class Restriction : ScriptableObject
             };
             bool isOnNavMesh = IsFullyOnNavMesh(position, queryFilter);
 
-            return isOnNavMesh && hits == 0 && IsOnSupportedResource(position);
+            return isOnNavMesh && hits == 0;
         }
 
         return hits == 0;
@@ -78,6 +79,7 @@ public class Restriction : ScriptableObject
     {
         Sphere,
         Box,
-        Vision
+        Vision,
+        Resource
     }
 }

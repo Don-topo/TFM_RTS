@@ -61,6 +61,6 @@ public class DifficultySelector : MonoBehaviour
     private IEnumerator FadeOut()
     {
         yield return new WaitForSeconds(1.9f);
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Game");
     }
 }

@@ -25,7 +25,7 @@ public class UIDefeatMenu : MonoBehaviour
     private void RetryGame()
     {
         fadeGameObject.SetActive(true);
-        StartCoroutine(nameof(FadeOut), "SampleScene");
+        StartCoroutine(nameof(FadeOut), "Game");
     }
 
     private void BackToMainMenu()
