@@ -7,8 +7,8 @@ public class UIMinimapManager : MonoBehaviour, IPointerExitHandler, IPointerEnte
 {
     [Header("Minimap Camera")]
     [SerializeField] private Camera minimapCamera;
-    [SerializeField] private Camera mainCamera;
     [SerializeField] private LayerMask layerMask;
+    [SerializeField] private Transform cameraMovementTransform;
 
     [Header("Events")]
     [SerializeField] private ActionClicked actionClicked;
@@ -88,7 +88,7 @@ public class UIMinimapManager : MonoBehaviour, IPointerExitHandler, IPointerEnte
 
         if (RaycastFromMousePosition(mousePosition, out RaycastHit hit))
         {
-            mainCamera.transform.localPosition = new Vector3(hit.point.x, mainCamera.transform.localPosition.y, hit.point.z);
+            cameraMovementTransform.localPosition = new Vector3(hit.point.x, cameraMovementTransform.localPosition.y, hit.point.z);
         }
     }
 

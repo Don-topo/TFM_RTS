@@ -34,6 +34,11 @@ public class PlayerController : MonoBehaviour
     [Header("Cursor")]
     [SerializeField] private Texture2D defaultCursor;
     [SerializeField] private GameObject moveIndicator;
+    [Header("MapLimits")]
+    [SerializeField] private GameObject MaxX;
+    [SerializeField] private GameObject MaxZ;
+    [SerializeField] private GameObject MinX;
+    [SerializeField] private GameObject MinZ;
 
 
     public float edgeSize = 50f;
@@ -141,14 +146,15 @@ public class PlayerController : MonoBehaviour
         if (Mouse.current.position.y.value <= edgeSize)
             dir -= cameraMovementTransform.transform.forward;
 
-        // Map edges
-        /*Vector3 pos = transform.position;
-
-        pos.x = Mathf.Clamp(pos.x, mapLimitX.x, mapLimitX.y);
-        pos.z = Mathf.Clamp(pos.z, mapLimitZ.x, mapLimitZ.y);*/
-
         // Apply movement
         cameraMovementTransform.transform.position += dir * cameraConfig.MoveSpeed * Time.deltaTime;
+
+        cameraMovementTransform.transform.position = new Vector3(
+            Mathf.Clamp(cameraMovementTransform.transform.position.x, MinX.transform.position.x, MaxX.transform.position.x),
+            cameraMovementTransform.transform.position.y,
+            Mathf.Clamp(cameraMovementTransform.transform.position.z, MinZ.transform.position.z, MaxZ.transform.position.z)
+        );
+
     }
 
     private void CameraZoom()
