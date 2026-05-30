@@ -39,7 +39,6 @@ public class OptionsManager : MonoBehaviour
 
     [Header("Gameplay")]
     [SerializeField] private Slider cameraMovementSlider;
-    [SerializeField] private Slider mouseSensitivitySlider;
     [SerializeField] private Button gameplayBackButton;
     [SerializeField] private Button gameplaySaveButton;
 
@@ -108,7 +107,6 @@ public class OptionsManager : MonoBehaviour
         voicesVolumeSlider.onValueChanged.AddListener(val => SetVoicesVolume(val));
         backgroundVolumeSlider.onValueChanged.AddListener(val => SetBackgroundVolume(val));
         cameraMovementSlider.onValueChanged.AddListener(val => SetCameraSpeed(val));
-        mouseSensitivitySlider.onValueChanged.AddListener(val => SetMouseSensibility(val));
     }
 
     private void ClearSliders()
@@ -118,7 +116,6 @@ public class OptionsManager : MonoBehaviour
         voicesVolumeSlider.onValueChanged.RemoveAllListeners();
         backgroundVolumeSlider.onValueChanged.RemoveAllListeners();
         cameraMovementSlider.onValueChanged.RemoveAllListeners();
-        mouseSensitivitySlider.onValueChanged.RemoveAllListeners();
     }
 
     // Save options system using PlayerPrefs
@@ -162,11 +159,6 @@ public class OptionsManager : MonoBehaviour
         }
 
         // Gameplay
-        if (PlayerPrefs.HasKey("mouseSensibility"))
-        {
-            SetMouseSensibility(PlayerPrefs.GetFloat("mouseSensibility"));
-        }
-
         if (PlayerPrefs.HasKey("cameraMovementSpeed"))
         {
             SetCameraSpeed(PlayerPrefs.GetFloat("cameraMovementSpeed"));
@@ -187,7 +179,6 @@ public class OptionsManager : MonoBehaviour
         PlayerPrefs.SetFloat("backgroundVolume", backgroundVolumeSlider.value);
 
         // Gameplay
-        PlayerPrefs.SetFloat("mouseSensibility", mouseSensitivitySlider.value);
         PlayerPrefs.SetFloat("cameraMovementSpeed", cameraMovementSlider.value);
 
         PlayerPrefs.Save();
@@ -276,11 +267,6 @@ public class OptionsManager : MonoBehaviour
     private void SetCameraSpeed(float speed)
     {
         cameraMovementSlider.value = Mathf.Clamp01(speed);
-    }
-
-    private void SetMouseSensibility(float sensibility)
-    {
-        mouseSensitivitySlider.value = Mathf.Clamp01(sensibility);
     }
 
     // Navigations between options canvas

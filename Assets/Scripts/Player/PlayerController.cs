@@ -72,7 +72,6 @@ public class PlayerController : MonoBehaviour
         zoom = camera.transform.localPosition.y;
         cameraStartPosition = cameraMovementTransform.transform.position;
         hideResourceAreaEvent.Raise(null);
-
     }
 
     private void Update()
@@ -99,7 +98,10 @@ public class PlayerController : MonoBehaviour
 
     private void LoadConfig()
     {
-
+        if (PlayerPrefs.HasKey("cameraMovementSpeed"))
+        {
+            cameraConfig.MoveSpeed *= PlayerPrefs.GetFloat("cameraMovementSpeed");
+        }            
     }
 
     private void SelectedUnit(CommonActions action)
