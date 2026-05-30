@@ -8,6 +8,7 @@ public class SO_AttackInfo : ScriptableObject
     [field: SerializeField] public int AttackDamage { get; private set; } = 20;
     [field: SerializeField] public float AttackRange { get; private set; } = 2f;
     [field: SerializeField] public float AttackSpeed { get; private set; } = 1f;
+    [field: SerializeField] public float DetectionRange { get; private set; } = 10f;
     [Header("Releated Actions audio")]
     [field: SerializeField] public List<AudioClip> AttackAudioClips;
     [field: SerializeField] public List<AudioClip> PatrolAudioClips;

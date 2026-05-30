@@ -92,14 +92,6 @@ public class BaseAttacker : BaseUnit, IAttacker
     {
         List<GameObject> targets = SetNearbyEnemiesOnBlackboard();
 
-        /*if (behaviorGraphAgent.GetVariable("TargetGameObject", out BlackboardVariable<GameObject> targetVariable)
-            && targetVariable.Value == null && targets.Count > 0)
-        {
-            behaviorGraphAgent.SetVariableValue("TargetGameObject", targets[0]);
-           // if(behaviorGraphAgent.GetVariable("UnitActions", out BlackboardVariable<UnitActions> act) && act != UnitActions.Patrol)
-            //    behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Attack);
-        }*/
-
         if (behaviorGraphAgent.GetVariable("TargetGameObject", out BlackboardVariable<GameObject> targetVariable)
             && targetVariable.Value == null && targets.Count > 0)
         {
@@ -122,7 +114,6 @@ public class BaseAttacker : BaseUnit, IAttacker
         else
         {
             behaviorGraphAgent.SetVariableValue<GameObject>("TargetGameObject", null);
-            //behaviorGraphAgent.GetVariable("UnitActions", out BlackboardVariable<UnitActions> currentAction);
             behaviorGraphAgent.SetVariableValue("TargetLocation", enemyOutOfRange.TargetPosition.position);
             
             if(this is EnemyController)
@@ -130,37 +121,6 @@ public class BaseAttacker : BaseUnit, IAttacker
                 this.GetComponent<EnemyController>().AttackTarget();
             }
         }
-
-        /*
-        if (!behaviorGraphAgent.GetVariable("TargetGameObject", out BlackboardVariable<GameObject> targetVariable)
-            || enemyOutOfRange.TargetPosition.gameObject != targetVariable.Value) return;
-
-        if (targets.Count > 0)
-        {
-            behaviorGraphAgent.SetVariableValue("TargetGameObject", targets[0]);
-        }
-        else
-        {
-            behaviorGraphAgent.SetVariableValue<GameObject>("TargetGameObject", null);
-            behaviorGraphAgent.GetVariable("UnitActions", out BlackboardVariable<UnitActions> currentAction);
-            if (movePosition != null && Vector3.Distance(transform.position, (Vector3)movePosition) > navMeshAgent.stoppingDistance
-                && currentAction != UnitActions.Patrol)
-            {
-                Move((Vector3)movePosition);
-                return;
-            }
-            else
-            {
-                movePosition = null;
-            }
-
-            if (currentAction != UnitActions.Patrol && currentAction != UnitActions.Attack)
-            {
-                behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Stop);
-            }
-            // Uncomment this to set the enemy position as destination => move to enemy position after killing it
-            //behaviorGraphAgent.SetVariableValue("TargetPosition", enemyOutOfRange.TargetPosition.position);
-        }*/
     }
 
     private List<GameObject> SetNearbyEnemiesOnBlackboard()

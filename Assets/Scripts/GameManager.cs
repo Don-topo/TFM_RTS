@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject blizzardGameObject;
     [Header("Game Properties")]        
     [SerializeField] private float timeBetweenWaves = 320f;
-    [SerializeField] private float timeBetweenDays;
     [SerializeField] private int easyTotalWaves = 25;
     [SerializeField] private int mediumTotalWaves = 25;
     [SerializeField] private int hardTotalWaves = 25;
