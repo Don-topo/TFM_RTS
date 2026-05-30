@@ -255,8 +255,8 @@ MonoBehaviour:
   unitOutOfRange: {fileID: 11400000, guid: a9267367e362866478e1cc864c850a3d, type: 2}
   <AttackInfo>k__BackingField: {fileID: 11400000, guid: 05f4868738f782e48877640a2cf0db83, type: 2}
   <WeaponGameObject>k__BackingField: {fileID: 0}
-  explodes: 0
-  deathExplotion: {fileID: 0}
+  explodes: 1
+  deathExplotion: {fileID: 3872764987757574294, guid: 168ab31cabbafe643ac583630f1c2fe5, type: 3}
   target: {fileID: 0}
   deathEnemy: {fileID: 11400000, guid: 0ce4891f4e178cc48b90497818052367, type: 2}
 --- !u!1 &3279601564120984317

@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     public ShowResourceAreaEvent showResourceAreaEvent;
     public ShowResourceAreaEvent hideResourceAreaEvent;
     public UnitRecruitedEvent recruitedEvent;
+    public UnitDeathEvent unitDeathEvent;
     [Header("Construction Materials")]
     [field: SerializeField] public Material OkPlaceMaterial { get; private set; }
     [field: SerializeField] public Material KoPlaceMaterial { get; private set; }
@@ -58,7 +59,6 @@ public class PlayerController : MonoBehaviour
 
     // Building
     private GameObject placeBuildingInstance;
-    private Renderer renderers;
 
     private void Awake()
     {
@@ -68,6 +68,7 @@ public class PlayerController : MonoBehaviour
         actionClicked.Register(ActionClicked);
         minimapClickEvent.Register(MinimapClicked);
         recruitedEvent.Register(AddUnit);
+        unitDeathEvent.Register(RemoveUnit);
         zoom = camera.transform.localPosition.y;
         cameraStartPosition = cameraMovementTransform.transform.position;
         hideResourceAreaEvent.Raise(null);
@@ -93,6 +94,7 @@ public class PlayerController : MonoBehaviour
         actionClicked.Unregister(ActionClicked);
         minimapClickEvent.Unregister(MinimapClicked);
         recruitedEvent.Unregister(AddUnit);
+        unitDeathEvent.Unregister(RemoveUnit);
     }
 
     private void LoadConfig()
@@ -469,6 +471,12 @@ public class PlayerController : MonoBehaviour
     {
         if(playerUnits.Contains(unit)) return;
         playerUnits.Add(unit);
+    }
+
+    private void RemoveUnit(CommonActions unit)
+    {
+        if (!playerUnits.Contains(unit)) return;
+        playerUnits.Remove(unit);
     }
 
     private void FocusCameraOnSelectedUnit()

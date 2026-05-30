@@ -20,9 +20,12 @@ public class EnemyController : BaseAttacker
         base.Start();
         if(target != null)
         {
-            //Attack(target.transform.position);
+            Attack(target.transform.position);
         }        
     }
+
+    public void SetTarget(GameObject target) => this.target = target;
+
     void OnDrawGizmos()
     {
         if (WeaponGameObject == null) return;
@@ -50,7 +53,9 @@ public class EnemyController : BaseAttacker
     {
         if (explodes && deathExplotion != null)
         {
-            Instantiate(deathExplotion, transform);
+            GameObject exp = Instantiate(deathExplotion, transform);
+            exp.transform.parent = null;
+            exp.GetComponent<EnemyExplotion>().SetDamage(AttackInfo.AttackDamage);
         }
         deathEnemy.Raise(null);
         base.Die();

@@ -110,7 +110,7 @@ public class BaseAttacker : BaseUnit, IAttacker
         behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Attack);
     }
 
-    private void UnitOutOfRange(IAttackable enemyOutOfRange)
+    protected virtual void UnitOutOfRange(IAttackable enemyOutOfRange)
     {
         List<GameObject> targets = SetNearbyEnemiesOnBlackboard();
 

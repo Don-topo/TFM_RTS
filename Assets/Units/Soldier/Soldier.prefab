@@ -171,7 +171,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 600
-  m_StoppingDistance: 0.01
+  m_StoppingDistance: 0.1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -258,6 +258,7 @@ MonoBehaviour:
   unitEnterRange: {fileID: 11400000, guid: a9267367e362866478e1cc864c850a3d, type: 2}
   unitOutOfRange: {fileID: 11400000, guid: a9267367e362866478e1cc864c850a3d, type: 2}
   <AttackInfo>k__BackingField: {fileID: 11400000, guid: ac6c663977f575342944b1a9e8f457d5, type: 2}
+  <WeaponGameObject>k__BackingField: {fileID: 0}
 --- !u!54 &2436373193000637756
 Rigidbody:
   m_ObjectHideFlags: 0
