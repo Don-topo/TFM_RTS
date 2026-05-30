@@ -26,6 +26,22 @@ public class BaseHealer : BaseUnit, IHealer
         healingSystem.SetRange(HealInfo.HealRange);
     }
 
+    protected override void Update()
+    {
+        base.Update();
+
+        if(healingSystem.AlliesInRange().Count > 0)
+        {
+            if (behaviorGraphAgent.GetVariable("TargetGameObject", out BlackboardVariable<GameObject> targetVariable))
+            {
+                behaviorGraphAgent.SetVariableValue("TargetGameObject", GetFirstDamaged(healingSystem.AlliesInRange().ConvertAll(
+                damage => damage.TargetPosition.gameObject)));
+                behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Heal);
+            }            
+        }
+       
+    }
+
     protected override void OnDestroy()
     {
         base.OnDestroy();
@@ -55,6 +71,7 @@ public class BaseHealer : BaseUnit, IHealer
         {
 
             behaviorGraphAgent.SetVariableValue("TargetGameObject", GetFirstDamaged(targets));
+            behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Heal);
         }
     }
 
@@ -66,30 +83,24 @@ public class BaseHealer : BaseUnit, IHealer
             || unit.TargetPosition.gameObject != targetVariable.Value) return;
 
         if (targets.Count > 0)
-        { 
-            behaviorGraphAgent.SetVariableValue<GameObject>("TargetGameObject", GetFirstDamaged(targets));
-        }
-        else
         {
-            behaviorGraphAgent.SetVariableValue<GameObject>("TargetGameObject", null);
-            behaviorGraphAgent.SetVariableValue("TargetPosition", unit.TargetPosition.position);
-
-
-           /* behaviorGraphAgent.SetVariableValue<GameObject>("TargetGameObject", null);
-            behaviorGraphAgent.GetVariable("UnitActions", out BlackboardVariable<UnitActions> currentAction);
-            behaviorGraphAgent.SetVariableValue("TargetLocation", enemyOutOfRange.TargetPosition.position);*/
-        }
+            if (GetFirstDamaged(targets) != default)
+            {
+                behaviorGraphAgent.SetVariableValue<GameObject>("TargetGameObject", GetFirstDamaged(targets));
+                behaviorGraphAgent.SetVariableValue("UnitActions", UnitActions.Heal);
+            }            
+        }      
     }
 
     private List<GameObject> SetNearbyAlliesOnBlackboard()
     {
-        List<GameObject> nearbyEnemies = healingSystem.AlliesInRange().ConvertAll(
+        List<GameObject> nearbyAllies = healingSystem.AlliesInRange().ConvertAll(
                     damage => damage.TargetPosition.gameObject);
-        nearbyEnemies.Sort(new ClosestGameObjectComparer(transform.position));
+        nearbyAllies.Sort(new ClosestGameObjectComparer(transform.position));
 
-        behaviorGraphAgent.SetVariableValue("Allies", nearbyEnemies);
+        behaviorGraphAgent.SetVariableValue("Allies", nearbyAllies);
 
-        return nearbyEnemies;
+        return nearbyAllies;
     }
 
     private GameObject GetFirstDamaged(List<GameObject> allies)
