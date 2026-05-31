@@ -43,7 +43,7 @@ public class BaseUnit : CommonActions, IMoveable, IHealable
     public override void Die()
     {
         base.Die();
-        if (resourceEvent != null)
+        if (resourceEvent != null && this is not EnemyController)
         {
             ResourceOP resource = new ResourceOP(SO_BaseUnit.Cost.SO_Population, SO_BaseUnit.Cost.Population, 0);
             resourceEvent.Raise(resource);
