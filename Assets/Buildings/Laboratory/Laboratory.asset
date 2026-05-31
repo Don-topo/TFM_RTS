@@ -15,8 +15,8 @@ MonoBehaviour:
   <Name>k__BackingField: Laboratory
   <Icon>k__BackingField: {fileID: 21300000, guid: 78e798282098c24409467d0f16389d66, type: 3}
   <UnitPrefab>k__BackingField: {fileID: 4319014900287890985, guid: e12a27ae1a33190409cb3e65c16be569, type: 3}
-  <Health>k__BackingField: 100
-  <GenerationTime>k__BackingField: 8
+  <Health>k__BackingField: 350
+  <GenerationTime>k__BackingField: 12
   <Cost>k__BackingField: {fileID: 11400000, guid: e4a3032933e5dbe428f7a4a717349f0a, type: 2}
   <SelectionAudioClips>k__BackingField:
   - {fileID: 8300000, guid: f9578aedf3ac92f468b071d1e8d4eb5e, type: 3}

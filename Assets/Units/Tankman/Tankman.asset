@@ -15,8 +15,8 @@ MonoBehaviour:
   <Name>k__BackingField: Tankman
   <Icon>k__BackingField: {fileID: 21300000, guid: 0d6e03a108c8b5043a0b92eab8b8d5fd, type: 3}
   <UnitPrefab>k__BackingField: {fileID: 2493820960305583306, guid: 36db33f89cd3ec34e8a81f6e1686f557, type: 3}
-  <Health>k__BackingField: 100
-  <GenerationTime>k__BackingField: 8
+  <Health>k__BackingField: 300
+  <GenerationTime>k__BackingField: 15
   <Cost>k__BackingField: {fileID: 11400000, guid: 0dd040cc0fa6d024684c6a64399309bf, type: 2}
   <SelectionAudioClips>k__BackingField:
   - {fileID: 8300000, guid: 3e211bf8e31cf5b47aed5becf586455e, type: 3}

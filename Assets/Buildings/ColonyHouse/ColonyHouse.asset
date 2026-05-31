@@ -15,7 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: Colony House
   <Icon>k__BackingField: {fileID: 21300000, guid: 18ce42ce45aaddb4ca00026870346457, type: 3}
   <UnitPrefab>k__BackingField: {fileID: 3063000841305874336, guid: ae02a22059035af47b783b9d272f1851, type: 3}
-  <Health>k__BackingField: 1000
+  <Health>k__BackingField: 500
   <GenerationTime>k__BackingField: 35
   <Cost>k__BackingField: {fileID: 11400000, guid: 8d25452f96aa9cf47a36bf30212f67d5, type: 2}
   <SelectionAudioClips>k__BackingField:

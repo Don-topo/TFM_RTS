@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c26b45c28439f641bcfddeafad45703, type: 3}
   m_Name: TeslaTowerAttackInfo
   m_EditorClassIdentifier: Assembly-CSharp::SO_AttackInfo
-  <AttackDamage>k__BackingField: 20
+  <AttackDamage>k__BackingField: 40
   <AttackRange>k__BackingField: 8
-  <AttackSpeed>k__BackingField: 1
+  <AttackSpeed>k__BackingField: 4
+  <DetectionRange>k__BackingField: 10
   AttackAudioClips: []
   PatrolAudioClips: []
-  <AttackEffect>k__BackingField: {fileID: 0}
   <AreaOfEffectRadius>k__BackingField: 2
   <IsDetachedAreaProyectile>k__BackingField: 0
   <IsAttachedAreaEffect>k__BackingField: 1

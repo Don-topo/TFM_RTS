@@ -2082,7 +2082,7 @@ Transform:
   m_GameObject: {fileID: 196496500}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.7, y: 0, z: -1.6}
+  m_LocalPosition: {x: -48.69, y: 0, z: -1.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7409,10 +7409,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8009593511617285897, guid: 0591fa0a357a2cf44915e4715d653115, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12312,11 +12308,6 @@ MonoBehaviour:
   m_Spacing: {x: 200, y: 24.03}
   m_Constraint: 1
   m_ConstraintCount: 2
---- !u!1 &1420241599 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2334650966590091496, guid: 0591fa0a357a2cf44915e4715d653115, type: 3}
-  m_PrefabInstance: {fileID: 733131364}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1442324009 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3257930920521965068, guid: 27b9558babca7a34ea2f3d17de4e0923, type: 3}
@@ -15321,7 +15312,7 @@ MonoBehaviour:
   finishWaveEvent: {fileID: 11400000, guid: c3c25bbcbe630f644b14798604ca637d, type: 2}
   deathEnemyEvent: {fileID: 11400000, guid: 0ce4891f4e178cc48b90497818052367, type: 2}
   unitRecruitedEvent: {fileID: 11400000, guid: 4b9a1b36f59f39e47b8e1db68ccb4ec0, type: 2}
-  commandPost: {fileID: 1420241599}
+  commandPost: []
 --- !u!1 &1784553464
 GameObject:
   m_ObjectHideFlags: 0

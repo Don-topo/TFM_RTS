@@ -15,7 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: Door
   <Icon>k__BackingField: {fileID: 21300000, guid: acedf47427d78074aa01b3bdacbea0f7, type: 3}
   <UnitPrefab>k__BackingField: {fileID: 243146226994124573, guid: 674b68b7fabda2b45bef86374cbca206, type: 3}
-  <Health>k__BackingField: 100
+  <Health>k__BackingField: 400
   <GenerationTime>k__BackingField: 8
   <Cost>k__BackingField: {fileID: 11400000, guid: c9eb2be2ca829354da46b299e7a40503, type: 2}
   <SelectionAudioClips>k__BackingField: []

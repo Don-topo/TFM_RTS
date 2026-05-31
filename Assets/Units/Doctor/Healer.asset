@@ -15,7 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: Doctor
   <Icon>k__BackingField: {fileID: 21300000, guid: 20ec333e35bcaa84194ad428ce893ee5, type: 3}
   <UnitPrefab>k__BackingField: {fileID: 1000108534355725562, guid: 8ddc280836e6068448b1ea4fcc69b3ad, type: 3}
-  <Health>k__BackingField: 240
+  <Health>k__BackingField: 120
   <GenerationTime>k__BackingField: 8
   <Cost>k__BackingField: {fileID: 11400000, guid: 81017829bbc78fd4292b3e59eb0e1ae5, type: 2}
   <SelectionAudioClips>k__BackingField:

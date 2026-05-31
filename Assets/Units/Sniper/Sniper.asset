@@ -15,8 +15,8 @@ MonoBehaviour:
   <Name>k__BackingField: Sniper
   <Icon>k__BackingField: {fileID: 21300000, guid: a4b8cc64e65842642a6ca9106d82bdf5, type: 3}
   <UnitPrefab>k__BackingField: {fileID: 3911447931663980383, guid: 643cea5c9754abb4f9e1d6fe95e8a840, type: 3}
-  <Health>k__BackingField: 100
-  <GenerationTime>k__BackingField: 8
+  <Health>k__BackingField: 120
+  <GenerationTime>k__BackingField: 10
   <Cost>k__BackingField: {fileID: 11400000, guid: 60af0040063b3f1499356162648eb273, type: 2}
   <SelectionAudioClips>k__BackingField:
   - {fileID: 8300000, guid: 9f2fc5926fb2d7844958678919a2da2f, type: 3}

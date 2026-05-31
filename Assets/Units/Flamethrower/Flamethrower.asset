@@ -15,8 +15,8 @@ MonoBehaviour:
   <Name>k__BackingField: Flamethrower
   <Icon>k__BackingField: {fileID: 21300000, guid: 0f712e61b5866a241b9e006cbe01fee1, type: 3}
   <UnitPrefab>k__BackingField: {fileID: 5377168089311033226, guid: 334f7898c4d12f14e9807239fc335061, type: 3}
-  <Health>k__BackingField: 100
-  <GenerationTime>k__BackingField: 8
+  <Health>k__BackingField: 150
+  <GenerationTime>k__BackingField: 12
   <Cost>k__BackingField: {fileID: 11400000, guid: 8e696aed89e8768429fbe5753fc43197, type: 2}
   <SelectionAudioClips>k__BackingField:
   - {fileID: 8300000, guid: 9c7350fbf5b7873418777ad2ea4e1ea5, type: 3}

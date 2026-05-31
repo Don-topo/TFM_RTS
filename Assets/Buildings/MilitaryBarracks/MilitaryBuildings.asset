@@ -15,7 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: Military Barracks
   <Icon>k__BackingField: {fileID: 21300000, guid: 1ba08f893ad5742459eddb7bbbe473cb, type: 3}
   <UnitPrefab>k__BackingField: {fileID: 4058394306275316179, guid: 8b631c6bb9ab89f459b167177b39a338, type: 3}
-  <Health>k__BackingField: 1000
+  <Health>k__BackingField: 300
   <GenerationTime>k__BackingField: 15
   <Cost>k__BackingField: {fileID: 11400000, guid: bebd0f7bd4feac448ba5a9ebc4d3d801, type: 2}
   <SelectionAudioClips>k__BackingField:

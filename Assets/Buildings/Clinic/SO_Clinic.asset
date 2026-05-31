@@ -15,8 +15,8 @@ MonoBehaviour:
   <Name>k__BackingField: Clinic
   <Icon>k__BackingField: {fileID: 21300000, guid: bb6dd8a9a361aed45b818db863fadf91, type: 3}
   <UnitPrefab>k__BackingField: {fileID: 3848502374205284590, guid: 6bd43c639ff17864ea2b0b0bac042cb1, type: 3}
-  <Health>k__BackingField: 600
-  <GenerationTime>k__BackingField: 25
+  <Health>k__BackingField: 400
+  <GenerationTime>k__BackingField: 18
   <Cost>k__BackingField: {fileID: 11400000, guid: 1b8d2d021fb8a534db003fb74d73a17c, type: 2}
   <SelectionAudioClips>k__BackingField:
   - {fileID: 8300000, guid: 36fa8113ffcb5144aa9fe600ad0d4d44, type: 3}

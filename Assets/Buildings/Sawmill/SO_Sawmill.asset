@@ -15,7 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: Sawmill
   <Icon>k__BackingField: {fileID: 21300000, guid: 06c9be87d9edd66418610a9b5cddc026, type: 3}
   <UnitPrefab>k__BackingField: {fileID: 2017433141722882445, guid: f7b1f0d82595f3b44b030844c2620005, type: 3}
-  <Health>k__BackingField: 500
+  <Health>k__BackingField: 250
   <GenerationTime>k__BackingField: 8
   <Cost>k__BackingField: {fileID: 11400000, guid: 5412d1380b35bf648af3913ba3b4708b, type: 2}
   <SelectionAudioClips>k__BackingField:

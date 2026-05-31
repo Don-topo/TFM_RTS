@@ -16,7 +16,7 @@ MonoBehaviour:
   <Icon>k__BackingField: {fileID: 21300000, guid: fc74606edc8e92141bb6d963cabf340a, type: 3}
   <UnitPrefab>k__BackingField: {fileID: 4871337886555064014, guid: 13fd3a339284005419990713d7802d8e, type: 3}
   <Health>k__BackingField: 300
-  <GenerationTime>k__BackingField: 30
+  <GenerationTime>k__BackingField: 15
   <Cost>k__BackingField: {fileID: 11400000, guid: ea5296d1603f67e4f909d04f69a0c268, type: 2}
   <SelectionAudioClips>k__BackingField:
   - {fileID: 8300000, guid: 0dff703a19880334dad5e1c5caa35cfe, type: 3}

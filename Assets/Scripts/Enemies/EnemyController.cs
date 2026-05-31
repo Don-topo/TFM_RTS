@@ -22,7 +22,7 @@ public class EnemyController : BaseAttacker
         if(target != null)
         {
             Attack(target.transform.position);
-        }        
+        }
     }
 
     public void SetTarget(GameObject target)

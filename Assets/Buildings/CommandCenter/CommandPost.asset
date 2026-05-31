@@ -15,7 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: Command Post
   <Icon>k__BackingField: {fileID: 21300000, guid: a12b37301e086bb49a39a95b6eec2edd, type: 3}
   <UnitPrefab>k__BackingField: {fileID: 2334650966590091496, guid: 0591fa0a357a2cf44915e4715d653115, type: 3}
-  <Health>k__BackingField: 10000
+  <Health>k__BackingField: 2500
   <GenerationTime>k__BackingField: 8
   <Cost>k__BackingField: {fileID: 11400000, guid: 9ce5f65423d709446be748d134ea32ef, type: 2}
   <SelectionAudioClips>k__BackingField:
