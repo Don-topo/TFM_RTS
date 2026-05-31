@@ -8,7 +8,7 @@ using UnityEngine.InputSystem.LowLevel;
 public class PlayerController : MonoBehaviour
 {
     [Header("Camera")]
-    [SerializeField] private new Camera camera;
+    [SerializeField] private Camera mainCamera;
     [SerializeField] private CameraConfig cameraConfig;
     [Header("Layers")]
     [SerializeField] private LayerMask selectableUnitsLayers;
@@ -69,14 +69,14 @@ public class PlayerController : MonoBehaviour
         minimapClickEvent.Register(MinimapClicked);
         recruitedEvent.Register(AddUnit);
         unitDeathEvent.Register(RemoveUnit);
-        zoom = camera.transform.localPosition.y;
+        zoom = mainCamera.transform.localPosition.y;
         cameraStartPosition = cameraMovementTransform.transform.position;
         hideResourceAreaEvent.Raise(null);
     }
 
     private void Update()
     {
-        zoom = camera.transform.localPosition.y;
+        zoom = mainCamera.transform.localPosition.y;
         DragMouse();
         CameraZoom();
         BuildingPlacement();
@@ -166,7 +166,7 @@ public class PlayerController : MonoBehaviour
         // Check mouse magnitude => wheel is moving
         if(Mouse.current.scroll.magnitude > 0)
         {
-            zoom = camera.transform.localPosition.y;
+            zoom = mainCamera.transform.localPosition.y;
             // Scroll.value => -1 or 1
             float scroll = Mouse.current.scroll.value.y;
             // Need to be framerate indepenendent
@@ -174,12 +174,12 @@ public class PlayerController : MonoBehaviour
             zoom = Mathf.Clamp(zoom, cameraConfig.MinZoom, cameraConfig.MaxZoom);
 
             // Only update coordinates y and z
-            Vector3 pos = camera.transform.localPosition;
+            Vector3 pos = mainCamera.transform.localPosition;
             pos.y = zoom;
             pos.z = -zoom;
 
             // Update camera position
-            camera.transform.localPosition = pos;
+            mainCamera.transform.localPosition = pos;
 
         }
     }
@@ -188,7 +188,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Keyboard.current.tabKey.wasReleasedThisFrame)
         {
-            camera.transform.position = cameraStartPosition;
+            mainCamera.transform.position = cameraStartPosition;
         }
     }
 
@@ -202,7 +202,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        Ray ray = camera.ScreenPointToRay(Mouse.current.position.ReadValue());
+        Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
         // IssueRightClick
         if(Mouse.current.rightButton.wasReleasedThisFrame 
             && Physics.Raycast(ray, out RaycastHit hitInfo, float.MaxValue, floorLayers | interactableLayers))
@@ -236,8 +236,8 @@ public class PlayerController : MonoBehaviour
 
     private void LeftClick()
     {
-        if (camera == null) return;        
-        Ray cameraRay = camera.ScreenPointToRay(Mouse.current.position.ReadValue());
+        if (mainCamera == null) return;        
+        Ray cameraRay = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
 
         if (addedUnits.Count == 0
             && Physics.Raycast(cameraRay, out RaycastHit hit, float.MaxValue, selectableUnitsLayers)
@@ -304,7 +304,7 @@ public class PlayerController : MonoBehaviour
         {
             if (!unit.gameObject.activeInHierarchy) continue;
 
-            Vector2 unitPosition = camera.WorldToScreenPoint(unit.transform.position);
+            Vector2 unitPosition = mainCamera.WorldToScreenPoint(unit.transform.position);
             if (selectionBoxBounds.Contains(unitPosition))
             {
                 if (!addedUnits.Contains(unit))
@@ -460,7 +460,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        Ray cameraRay = camera.ScreenPointToRay(Mouse.current.position.ReadValue());
+        Ray cameraRay = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
         if (Physics.Raycast(cameraRay, out RaycastHit hit, float.MaxValue, floorLayers))
         {
             placeBuildingInstance.transform.position = hit.point;

@@ -169,18 +169,18 @@ public class OptionsManager : MonoBehaviour
     {
         // Graphics
         PlayerPrefs.SetInt("resolution", resolutionsDropdown.value);
+        SetResolution(resolutionsDropdown.value);
         PlayerPrefs.SetInt("fullScreen", fullScreenToggle.isOn ? 1 : 0);
+        SetScreenMode(fullScreenToggle.isOn);
         PlayerPrefs.SetInt("graphicsQuality", qualitySettingsDropdown.value);
-
+        SetQualitySetting(qualitySettingsDropdown.value);
         // Audio
         PlayerPrefs.SetFloat("generalVolume", generalVolumeSlider.value);
         PlayerPrefs.SetFloat("voicesVolume", voicesVolumeSlider.value);
         PlayerPrefs.SetFloat("effectsVolume", effectsVolumeSlider.value);
         PlayerPrefs.SetFloat("backgroundVolume", backgroundVolumeSlider.value);
-
         // Gameplay
         PlayerPrefs.SetFloat("cameraMovementSpeed", cameraMovementSlider.value);
-
         PlayerPrefs.Save();
 
         GoToOptions();
