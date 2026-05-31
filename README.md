@@ -1,5 +1,8 @@
 Patches relases:
 
+v.1.0 )> 31/05/2026:
+  - Release.
+    
 v.0.42 => 29/05/2026:
   - Finish Area attack.
   - Add main map.
